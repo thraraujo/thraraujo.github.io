@@ -288,7 +288,12 @@ the command</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo -D
 </span></span></code></pre></div><p>Now you can commit and push your modifications to github. If done correctly, our webpage already online &ndash;
 that&rsquo;s the Github pages magic. As a final detail, you might want to pull the modifications to the second
-repo just to keep things syncronized.</p>
+repo just to keep things syncronized. I recommend the following order</p>
+<pre><code>1. push ./repo_01/my_beautiful_website/public
+2. push ./repo_01 
+3. pull ./repo_02.github.io
+</code></pre>
+<p>And that&rsquo;s it.</p>
 
       </div>
 
