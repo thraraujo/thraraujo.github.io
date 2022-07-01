@@ -206,9 +206,9 @@ self &ndash; as Damian Conway said:</p>
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p><a href="https://gohugo.io/">Hugo</a> is a framework to build our website. The advantage of this framework
+<p><a href="https://gohugo.io/">Hugo</a> is the framework we use to build our website. The advantage of this framework
 &ndash; at least for me &ndash; is that we do not need to write a single line of HTML and CSS, this is
-good because my knowledge on these things is very close to zero &ndash; and I don&rsquo;t want to learn them.
+good because my knowledge of these things is very close to zero &ndash; and I don&rsquo;t want to learn them.
 With Hugo, we write our code in <a href="https://www.markdownguide.org/">markdown</a>, and Hugo themes do
 the rest for us. This webpage, for example, uses the theme:
 <a href="https://themes.gohugo.io/themes/hugo-coder/">Coder</a> &ndash; very neat theme.</p>
@@ -221,34 +221,41 @@ Hugo, it is useful to set the Github configuration.</p>
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>We need Github Pages to host our website. It is useful to create two repos. One of them will keep
+<p>We want to use Github Pages to host our website. Let us first create two repos &ndash; it is not necessary,
+but it is useful to keep our website organized. In particular, one of these repos will keep
 track of our Hugo configurations, the markdown, preferences and so on. I have called this repo
-<code>website</code>, but here I will call it <code>&lt;repo_01&gt;</code>. The second repo is the static website we generate
-with Hugo. I must be names as the URL page, in my case <code>thraraujo.github.io</code>, here
-<code>&lt;repo_02.github.io&gt;</code>. This repo will be a submodule of the first one &ndash; we will get there.
-So, in my working directory, I have cloned these two repos:</p>
+<code>website</code> (see my github profile), but here let us call it <code>repo_01</code>. The second repo is the static
+website we generate with Hugo. It must be named as the URL page, in my case <code>thraraujo.github.io</code>, but
+here refer to it as <code>repo_02.github.io</code>. The idea of this second repo is to carry all
+static files (html, css and so on) of the website. It will be a submodule of the first one &ndash; we will
+get there.</p>
+<p>Given what we said in the previous paragraph, I have cloned these two repos in my working directory, so
+I have something of the form:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>./repo_01 
 </span></span><span style="display:flex;"><span>./repo_02.github.io
-</span></span></code></pre></div><p>Something important &ndash; always work in the <code>main</code> branch to avoid conflicts.</p>
+</span></span></code></pre></div><p>Always work in the <code>main</code> branch to avoid conflicts with Github pages. So, rename your
+<code>master</code> branch if necessary. Furthermore, I have initially added a readme to my second repo, and Github pages
+was loading for this file.</p>
 <h2 id="setting-and-testing-the-website">
   Setting and testing the website
   <a class="heading-link" href="#setting-and-testing-the-website">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>Good. Now you run</p>
+<p>Good. Now you run:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd repo_01
 </span></span><span style="display:flex;"><span>hugo new site my_beautiful_website
 </span></span></code></pre></div><p>and Hugo creates a lot of files inside the directory <code>my_beautiful_website</code>. The next step is to
 select a theme to your website. Hugo has a nice collection of <a href="https://themes.gohugo.io/">themes</a>.
 As I said, I have chosen the <a href="https://themes.gohugo.io/themes/hugo-coder/">Coder</a>, but you better
-check the options. Once you have picked your beautiful theme, clone it to the folder
-themes inside the website directory <code>my_beautiful_website</code>.</p>
-<p>Now we need to tweak two things. The file <code>config.toml</code> of <code>my_beautiful_website</code> has all
-the configurations we need to use for our website, and its configuration might be complicated,
-and I prefer the lazy approach: Inside the folder themes, there is the folder with your chosen
-theme. Inside it there should be a example website. Replace the original <code>config.toml</code> of
-<code>my_beautiful_website</code> with the file of the example website and you are almost done.</p>
+check out the options. Once you have chosen your beautiful theme, clone it to the folder
+themes inside the website directory, that is <code>my_beautiful_website/themes</code>.</p>
+<p>Now we need to tweak two things. The file <code>config.toml</code> in <code>my_beautiful_website</code> must have all
+the configurations we need to use for our website &ndash; and configuring it might be complicated.
+Let us use the lazy approach: Inside <code>my_beautiful_website/themes</code>, there is the folder with
+your chosen theme, and onelevel down, there should be a example website. Replace the original
+(and naked) <code>config.toml</code> of <code>my_beautiful_website</code> with the file of the example website &ndash;
+and you are almost done.</p>
 <p>Now, open the <code>config.toml</code> with your favorite editor. The base website is a example URL. Change
 it to your website URL. In other words, you will find</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>baseURL = &#34;http://www.example.com&#34;
@@ -258,10 +265,9 @@ it to your website URL. In other words, you will find</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>./repo_01/my_beautiful_website/content
 </span></span></code></pre></div><p>Add some content &ndash; check the example website once again to understand some parameters, definitions
 and so on. You can also modify one example page to fit your needs. In any case, add some content.
-Once you think you&rsquo;re ready. You might want to check the website if everything is working. The
-command</p>
+Once you think you&rsquo;re ready. You might want to know if you didn&rsquo;t make any mistake. The command</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo server
-</span></span></code></pre></div><p>will create a local server that you can access at <code>http://localhost:1313/</code>. Leave it open to see
+</span></span></code></pre></div><p>will create a local server that you can access at <code>http://localhost:1313/</code>. Keep it open to see
 the modifications.</p>
 <h2 id="deploying-the-website">
   Deploying the website
@@ -271,16 +277,18 @@ the modifications.</p>
 </h2>
 <p>Once you finished all these details, we need to deploy the website. Now it is time to play with
 the second repo <code>repo_02.github.io</code>. We have already cloned this repo, so let us make it a
-submodule of the first repo and link it to the folder <code>./repo_01/my_beautiful_website/public</code>.</p>
+submodule of the first one. Basically we need to link it to the folder
+<code>./repo_01/my_beautiful_website/public</code>.</p>
 <p>So, go to the <code>my_beautiful_website</code> and use the command</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-v" data-lang="v"><span style="display:flex;"><span>git submodule add -b main &lt;<span style="font-weight:bold">URL</span> of repo_02.github.io&gt; public 
-</span></span></code></pre></div><p>Hugo generates its static files inside the <code>public</code> folder. In this case, we are now watching
-all these modifications.</p>
-<p>Finally you can generate your site as</p>
+</span></span></code></pre></div><p>We are now watching watching all these modifications inside this page. We want to keep
+track of these modifications because Hugo generates its static files inside the <code>public</code> folder.
+At this point, this folder is empty, but we can finally generate our site (the static files) with
+the command</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo -D
-</span></span></code></pre></div><p>and now you can commit and push your modifications to github. If done as I said, your webpage
-is deployed. One final detail, you might want to pull the modifications from the second repo to
-keep things syncronized.</p>
+</span></span></code></pre></div><p>Now you can commit and push your modifications to github. If done correctly, our webpage already online &ndash;
+that&rsquo;s the Github pages magic. As a final detail, you might want to pull the modifications to the second
+repo just to keep things syncronized.</p>
 
       </div>
 
