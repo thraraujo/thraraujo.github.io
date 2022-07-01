@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Thiago Araujo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/pt-br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/pt-br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Website com Hugo</title>
+      <link>https://thraraujo.github.io/pt-br/posts/create_website/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/posts/create_website/</guid>
+      <description>Inglês</description>
+    </item>
+    
     <item>
       <title>Vim Cheatsheet I : Basico</title>
       <link>https://thraraujo.github.io/pt-br/posts/vim_cheatsheet_i/</link>

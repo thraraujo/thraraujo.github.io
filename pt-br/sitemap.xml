@@ -2,6 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://thraraujo.github.io/pt-br/categories/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/categories/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/categories/computers/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/categories/computers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/categories/computers/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/tags/foss/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/tags/foss/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/tags/foss/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/tags/hugo/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/tags/hugo/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/posts/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/posts/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/tags/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/tags/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/posts/create_website/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/posts/create_website/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/posts/create_website/"
+                />
+  </url><url>
     <loc>https://thraraujo.github.io/pt-br/tags/biof%C3%ADsica/</loc>
     <lastmod>2022-06-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -16,32 +120,6 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://thraraujo.github.io/pt-br/course/biophysics/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/categories/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/categories/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/categories/computers/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/categories/computers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/categories/computers/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/course/</loc>
@@ -79,19 +157,6 @@
                 href="https://thraraujo.github.io/pt-br/course/fisica1/"
                 />
   </url><url>
-    <loc>https://thraraujo.github.io/pt-br/tags/foss/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/tags/foss/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/tags/foss/"
-                />
-  </url><url>
     <loc>https://thraraujo.github.io/pt-br/categories/gradua%C3%A7%C3%A3o/</loc>
     <lastmod>2022-06-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -106,19 +171,6 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://thraraujo.github.io/pt-br/tags/neovim/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/posts/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/posts/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/series/</loc>
@@ -145,32 +197,6 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://thraraujo.github.io/pt-br/about/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/tags/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/tags/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/tags/vim/</loc>

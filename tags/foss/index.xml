@@ -6,7 +6,19 @@
     <description>Recent content in FOSS on Thiago Araujo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/tags/foss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/tags/foss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Website with Hugo is a breeze</title>
+      <link>https://thraraujo.github.io/posts/create_website/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/posts/create_website/</guid>
+      <description>The goal of this post is twofold. First I want to help other people to build their static website without spending two important resources: time and money. Also, it is an explanation to my future self &amp;ndash; as Damian Conway said:
+&amp;ldquo;Documentation is a love letter that you write to your future self”
+So, let&amp;rsquo;s get started.
+Hugo Hugo is a framework to build our website. The advantage of this framework &amp;ndash; at least for me &amp;ndash; is that we do not need to write a single line of HTML and CSS, this is good because my knowledge on these things is very close to zero &amp;ndash; and I don&amp;rsquo;t want to learn them.</description>
+    </item>
+    
     <item>
       <title>Vim Cheatsheet I : Basics</title>
       <link>https://thraraujo.github.io/posts/vim_cheatsheet_i/</link>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+
+
+
+<meta name="author" content="Thiago Araujo">
+<meta name="description" content="A simple tutorial to create beautiful sites with Hugo.">
+<meta name="keywords" content="blog,physicist,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Website with Hugo is a breeze"/>
+<meta name="twitter:description" content="A simple tutorial to create beautiful sites with Hugo."/>
+
+<meta property="og:title" content="Website with Hugo is a breeze" />
+<meta property="og:description" content="A simple tutorial to create beautiful sites with Hugo." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://thraraujo.github.io/posts/create_website/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-01T00:00:00+00:00" />
+
+
+
+
+  <title>Thiago Araujo</title>
+
+  
+  <link rel="canonical" href="https://thraraujo.github.io/posts/create_website/">
+  
+
+  <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.6b1a4fbc48955b72aea7913e43fabeb45e8bc120da5aa41b598dd33adcac4b59.css" integrity="sha256-axpPvEiVW3Kup5E&#43;Q/q&#43;tF6LwSDaWqQbWY3TOtysS1k=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.39e41a7f16bdf8cb16e43cae7d714fa1016f1d2d2898a5b3f27f42c9979204e2.css" integrity="sha256-OeQafxa9&#43;MsW5DyufXFPoQFvHS0omKWz8n9CyZeSBOI=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+   
+
+
+
+
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+  
+
+  <meta name="generator" content="Hugo 0.101.0" />
+
+
+  
+
+</head>
+
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Thiago Araujo
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/research/">Research</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/course/">Teaching</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://thraraujo.github.io/pt-br/posts/create_website/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://thraraujo.github.io/posts/create_website/">
+              Website with Hugo is a breeze
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2022-07-01T00:00:00Z">
+                July 1, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/computers/">Computers</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/foss/">FOSS</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/hugo/">Hugo</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>The goal of this post is twofold. First I want to help other people to build their static website
+without spending two important resources: time and money. Also, it is an explanation to my future
+self &ndash; as Damian Conway said:</p>
+<blockquote>
+<p><em>&ldquo;Documentation is a love letter that you write to your future self”</em></p>
+</blockquote>
+<p>So, let&rsquo;s get started.</p>
+<h2 id="hugo">
+  Hugo
+  <a class="heading-link" href="#hugo">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><a href="https://gohugo.io/">Hugo</a> is a framework to build our website. The advantage of this framework
+&ndash; at least for me &ndash; is that we do not need to write a single line of HTML and CSS, this is
+good because my knowledge on these things is very close to zero &ndash; and I don&rsquo;t want to learn them.
+With Hugo, we write our code in <a href="https://www.markdownguide.org/">markdown</a>, and Hugo themes do
+the rest for us. This webpage, for example, uses the theme:
+<a href="https://themes.gohugo.io/themes/hugo-coder/">Coder</a> &ndash; very neat theme.</p>
+<p>Hugo has a nice documentation, and a very useful
+<a href="https://gohugo.io/getting-started/quick-start/">quickstart</a>. But before start playing with
+Hugo, it is useful to set the Github configuration.</p>
+<h2 id="github">
+  Github
+  <a class="heading-link" href="#github">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>We need Github Pages to host our website. It is useful to create two repos. One of them will keep
+track of our Hugo configurations, the markdown, preferences and so on. I have called this repo
+<code>website</code>, but here I will call it <code>&lt;repo_01&gt;</code>. The second repo is the static website we generate
+with Hugo. I must be names as the URL page, in my case <code>thraraujo.github.io</code>, here
+<code>&lt;repo_02.github.io&gt;</code>. This repo will be a submodule of the first one &ndash; we will get there.
+So, in my working directory, I have cloned these two repos:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>./repo_01 
+</span></span><span style="display:flex;"><span>./repo_02.github.io
+</span></span></code></pre></div><p>Something important &ndash; always work in the <code>main</code> branch to avoid conflicts.</p>
+<h2 id="setting-and-testing-the-website">
+  Setting and testing the website
+  <a class="heading-link" href="#setting-and-testing-the-website">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Good. Now you run</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd repo_01
+</span></span><span style="display:flex;"><span>hugo new site my_beautiful_website
+</span></span></code></pre></div><p>and Hugo creates a lot of files inside the directory <code>my_beautiful_website</code>. The next step is to
+select a theme to your website. Hugo has a nice collection of <a href="https://themes.gohugo.io/">themes</a>.
+As I said, I have chosen the <a href="https://themes.gohugo.io/themes/hugo-coder/">Coder</a>, but you better
+check the options. Once you have picked your beautiful theme, clone it to the folder
+themes inside the website directory <code>my_beautiful_website</code>.</p>
+<p>Now we need to tweak two things. The file <code>config.toml</code> of <code>my_beautiful_website</code> has all
+the configurations we need to use for our website, and its configuration might be complicated,
+and I prefer the lazy approach: Inside the folder themes, there is the folder with your chosen
+theme. Inside it there should be a example website. Replace the original <code>config.toml</code> of
+<code>my_beautiful_website</code> with the file of the example website and you are almost done.</p>
+<p>Now, open the <code>config.toml</code> with your favorite editor. The base website is a example URL. Change
+it to your website URL. In other words, you will find</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>baseURL = &#34;http://www.example.com&#34;
+</span></span></code></pre></div><p>replace with</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>baseURL = &#34;https://repo_02.github.io/&#34;
+</span></span></code></pre></div><p>The content of the website is in</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>./repo_01/my_beautiful_website/content
+</span></span></code></pre></div><p>Add some content &ndash; check the example website once again to understand some parameters, definitions
+and so on. You can also modify one example page to fit your needs. In any case, add some content.
+Once you think you&rsquo;re ready. You might want to check the website if everything is working. The
+command</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>will create a local server that you can access at <code>http://localhost:1313/</code>. Leave it open to see
+the modifications.</p>
+<h2 id="deploying-the-website">
+  Deploying the website
+  <a class="heading-link" href="#deploying-the-website">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Once you finished all these details, we need to deploy the website. Now it is time to play with
+the second repo <code>repo_02.github.io</code>. We have already cloned this repo, so let us make it a
+submodule of the first repo and link it to the folder <code>./repo_01/my_beautiful_website/public</code>.</p>
+<p>So, go to the <code>my_beautiful_website</code> and use the command</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-v" data-lang="v"><span style="display:flex;"><span>git submodule add -b main &lt;<span style="font-weight:bold">URL</span> of repo_02.github.io&gt; public 
+</span></span></code></pre></div><p>Hugo generates its static files inside the <code>public</code> folder. In this case, we are now watching
+all these modifications.</p>
+<p>Finally you can generate your site as</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo -D
+</span></span></code></pre></div><p>and now you can commit and push your modifications to github. If done as I said, your webpage
+is deployed. One final detail, you might want to pull the modifications from the second repo to
+keep things syncronized.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Thiago Araujo 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  
+  <script src="/js/coder.min.236049395dc3682fb2719640872958e12f1f24067bb09c327b233e6290c7edac.js" integrity="sha256-I2BJOV3DaC&#43;ycZZAhylY4S8fJAZ7sJwyeyM&#43;YpDH7aw="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
