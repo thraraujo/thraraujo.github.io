@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Thiago Araujo</title>
+    <link>https://thraraujo.github.io/pt-br/categories/</link>
+    <description>Recent content in Categories on Thiago Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/pt-br/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computers</title>
+      <link>https://thraraujo.github.io/pt-br/categories/computers/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/categories/computers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ensino</title>
+      <link>https://thraraujo.github.io/pt-br/categories/ensino/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/categories/ensino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graduação</title>
+      <link>https://thraraujo.github.io/pt-br/categories/gradua%C3%A7%C3%A3o/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/categories/gradua%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

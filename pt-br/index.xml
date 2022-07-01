@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thiago Araujo</title>
+    <link>https://thraraujo.github.io/pt-br/</link>
+    <description>Recent content on Thiago Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/pt-br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biofísica</title>
+      <link>https://thraraujo.github.io/pt-br/course/biophysics/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/course/biophysics/</guid>
+      <description>&lt;p&gt;Nesse semestre, ensinarei o curso de biofísica para o curso de Agronomia.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Física 1</title>
+      <link>https://thraraujo.github.io/pt-br/course/fisica1/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/course/fisica1/</guid>
+      <description>&lt;p&gt;Nesse semestre, estou responsável pelo curso de física 1 para alunos de química.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sobre</title>
+      <link>https://thraraujo.github.io/pt-br/about/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/about/</guid>
+      <description>Sou um físico teórico atualmente trabalhando na Universidade Federal de Alagoas como professor substituto. Minha interesse de pesquisa abrange tópicos em modelos integráveis e teorias conformes em 2D.
+Breve CV 2022 - Presente : Professor substituto na Universidade Federal de Alagoas, Brasil 2019 - 2021 : Postdoc na Universidade de Berna, Suíça 2016 - 2019 : Postdoc no Asia Pacific Center for Theoretical Physics, Coréia do Sul 2012 - 2016 : Doutorado na Universidade Estadual Paulista, São Paulo </description>
+    </item>
+    
+    <item>
+      <title>Vim Cheatsheet I : Basico</title>
+      <link>https://thraraujo.github.io/pt-br/posts/vim_cheatsheet_i/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/posts/vim_cheatsheet_i/</guid>
+      <description>Inglês</description>
+    </item>
+    
+    <item>
+      <title>Vim Cheatsheet II : Além do básico</title>
+      <link>https://thraraujo.github.io/pt-br/posts/vim_cheatsheet_ii/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/posts/vim_cheatsheet_ii/</guid>
+      <description>Inglês</description>
+    </item>
+    
+    <item>
+      <title>Pesquisa</title>
+      <link>https://thraraujo.github.io/pt-br/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/research/</guid>
+      <description>Interesses Meus interesses de pesquisa são:
+2021 &amp;ndash; Presente : SageMath 2018 &amp;ndash; Presente : Integrabilidade e análise combinatória em teorias de gauge e física estatística 2016 - 2018 : Holografia em espaços planos, deformações integráveis de supergravidade 2010 - 2017 : Teorias de campos conformes e integráveis, correspondência AdS/CFT e teoria de cordas Publicações Todos os meus artigos estão disponíveis online: Inspire-HEP e arXiv.
+T. Araujo, O. Celikbas, D.</description>
+    </item>
+    
+  </channel>
+</rss>

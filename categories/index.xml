@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Thiago Araujo</title>
+    <link>https://thraraujo.github.io/categories/</link>
+    <description>Recent content in Categories on Thiago Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computers</title>
+      <link>https://thraraujo.github.io/categories/computers/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/categories/computers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teaching</title>
+      <link>https://thraraujo.github.io/categories/teaching/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/categories/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>undergraduate</title>
+      <link>https://thraraujo.github.io/categories/undergraduate/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/categories/undergraduate/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Thiago Araujo</title>
+    <link>https://thraraujo.github.io/tags/</link>
+    <description>Recent content in Tags on Thiago Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>biophysics</title>
+      <link>https://thraraujo.github.io/tags/biophysics/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/tags/biophysics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>course</title>
+      <link>https://thraraujo.github.io/tags/course/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/tags/course/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FOSS</title>
+      <link>https://thraraujo.github.io/tags/foss/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/tags/foss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NeoVim</title>
+      <link>https://thraraujo.github.io/tags/neovim/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/tags/neovim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://thraraujo.github.io/tags/vim/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on Thiago Araujo</title>
+    <link>https://thraraujo.github.io/pt-br/course/</link>
+    <description>Recent content in Courses on Thiago Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/pt-br/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biofísica</title>
+      <link>https://thraraujo.github.io/pt-br/course/biophysics/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/course/biophysics/</guid>
+      <description>&lt;p&gt;Nesse semestre, ensinarei o curso de biofísica para o curso de Agronomia.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Física 1</title>
+      <link>https://thraraujo.github.io/pt-br/course/fisica1/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/pt-br/course/fisica1/</guid>
+      <description>&lt;p&gt;Nesse semestre, estou responsável pelo curso de física 1 para alunos de química.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

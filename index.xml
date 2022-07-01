@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thiago Araujo</title>
+    <link>https://thraraujo.github.io/</link>
+    <description>Recent content on Thiago Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>https://thraraujo.github.io/about/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/about/</guid>
+      <description>I am a theoretical physicist currently working at the Federal University of Alagoas as a lecturer. My research interests span topics in 2D integrable and conformal systems.
+Short CV 2022 - Present : Lecturer at the Federal University of Alagoas, Brazil 2019 - 2021 : Postdoc at the University of Bern, Switzerland 2016 - 2019 : Postdoc at the Asia Pacific Center for Theoretical Physics, South Korea. 2012 - 2016 : Ph.</description>
+    </item>
+    
+    <item>
+      <title>Biophysics</title>
+      <link>https://thraraujo.github.io/course/biophysics/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/course/biophysics/</guid>
+      <description>Portuguese only</description>
+    </item>
+    
+    <item>
+      <title>Physics 1</title>
+      <link>https://thraraujo.github.io/course/fisica1/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/course/fisica1/</guid>
+      <description>Portuguese only</description>
+    </item>
+    
+    <item>
+      <title>Vim Cheatsheet I : Basics</title>
+      <link>https://thraraujo.github.io/posts/vim_cheatsheet_i/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/posts/vim_cheatsheet_i/</guid>
+      <description>Vim Cheatsheet: Basics Let us start with the notation:
+C-a = Ctrl-a Getting Started vim &amp;lt;file&amp;gt; Open file. vim &amp;lt;file1&amp;gt; &amp;lt;file2&amp;gt; Open file1 and file2 vim -R &amp;lt;file&amp;gt; Open file in read mode view &amp;lt;file&amp;gt; Open file in read mode :h[elp] &amp;lt;keyword&amp;gt; Open help for the keyword :term Open a terminal :! &amp;lt;cmd&amp;gt; Execute shell command &amp;lt;cmd&amp;gt; &amp;lt;C-\&amp;gt;&amp;lt;C-n&amp;gt; Go to command mode in the built-in terminal ESC Exit insert mode :q Close document if no modification has been done :w Save the document :wa Save all windows :wq Save and close :x Save and close, equivalent to wq :q!</description>
+    </item>
+    
+    <item>
+      <title>Vim Cheatsheet II : Beyond the Basics</title>
+      <link>https://thraraujo.github.io/posts/vim_cheatsheet_ii/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/posts/vim_cheatsheet_ii/</guid>
+      <description>Vim Cheatsheet: Beyond the Basics Registers When we delete something with vim, the previous 9 deletions are saved in an unnamed register. We can access these registers with numbers from 1 to 9. For example:
+&amp;#34;nP Paste the register n, n from 1 to 9, before the cursor &amp;#34;np Paste the register n, n from 1 to 9, after the cursor On the other hand, one can use named registers.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://thraraujo.github.io/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/research/</guid>
+      <description>Interests My research interests are the following:
+2021 &amp;ndash; Present : SageMath 2018 &amp;ndash; Present : Integrability and combinatorics in gauge theories and in statistical physics 2016 - 2018 : Flat space holography, integrable deformations of supergravity 2010 - 2017 : Integrable and conformal field theories, AdS/CFT, string theory Publications All my papers are available online: Inspire-HEP and arXiv.
+T. Araujo, O. Celikbas, D. Orlando, and S. Reffert, “2D CFTs - Large Charge is not enough,” Phys.</description>
+    </item>
+    
+  </channel>
+</rss>
