@@ -119,22 +119,6 @@
                 href="https://thraraujo.github.io/about/"
                 />
   </url><url>
-    <loc>https://thraraujo.github.io/tags/biophysics/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thraraujo.github.io/course/biofisica/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/course/biofisica/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/course/biofisica/"
-                />
-  </url><url>
     <loc>https://thraraujo.github.io/tags/course/</loc>
     <lastmod>2022-06-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -149,6 +133,22 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://thraraujo.github.io/course/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/tags/general-physics/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thraraujo.github.io/course/fisica_geral/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/course/fisica_geral/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/course/fisica_geral/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/tags/neovim/</loc>

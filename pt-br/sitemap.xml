@@ -106,22 +106,6 @@
                 href="https://thraraujo.github.io/pt-br/posts/create_website/"
                 />
   </url><url>
-    <loc>https://thraraujo.github.io/pt-br/tags/biof%C3%ADsica/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/course/biofisica/</loc>
-    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/course/biofisica/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/course/biofisica/"
-                />
-  </url><url>
     <loc>https://thraraujo.github.io/pt-br/course/</loc>
     <lastmod>2022-06-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -155,6 +139,22 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://thraraujo.github.io/pt-br/course/fisica1/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/tags/f%C3%ADsica-geral/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/course/fisica_geral/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/course/fisica_geral/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/course/fisica_geral/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/categories/gradua%C3%A7%C3%A3o/</loc>
