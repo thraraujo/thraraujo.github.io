@@ -6,7 +6,34 @@
     <description>Recent content on Thiago Araujo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biophysics</title>
+      <link>https://thraraujo.github.io/course/biofisica/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/course/biofisica/</guid>
+      <description>Portuguese only</description>
+    </item>
+    
+    <item>
+      <title>General Physics</title>
+      <link>https://thraraujo.github.io/course/fisica_geral/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/course/fisica_geral/</guid>
+      <description>Portuguese only</description>
+    </item>
+    
+    <item>
+      <title>Physics 1</title>
+      <link>https://thraraujo.github.io/course/fisica1/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/course/fisica1/</guid>
+      <description>Portuguese only</description>
+    </item>
+    
     <item>
       <title>Website with Hugo is a breeze</title>
       <link>https://thraraujo.github.io/posts/create_website/</link>
@@ -27,24 +54,6 @@ Hugo Hugo is the framework we use to build our website. The advantage of this fr
       <guid>https://thraraujo.github.io/about/</guid>
       <description>I am a theoretical physicist currently working at the Federal University of Alagoas as a lecturer. My research interests span topics in 2D integrable and conformal systems.
 Short CV 2022 - Present : Lecturer at the Federal University of Alagoas, Brazil 2019 - 2021 : Postdoc at the University of Bern, Switzerland 2016 - 2019 : Postdoc at the Asia Pacific Center for Theoretical Physics, South Korea. 2012 - 2016 : Ph.</description>
-    </item>
-    
-    <item>
-      <title>General Physics</title>
-      <link>https://thraraujo.github.io/course/fisica_geral/</link>
-      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://thraraujo.github.io/course/fisica_geral/</guid>
-      <description>Portuguese only</description>
-    </item>
-    
-    <item>
-      <title>Physics 1</title>
-      <link>https://thraraujo.github.io/course/fisica1/</link>
-      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://thraraujo.github.io/course/fisica1/</guid>
-      <description>Portuguese only</description>
     </item>
     
     <item>
