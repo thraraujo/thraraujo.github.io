@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thraraujo.github.io/course/biofisica/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/categories/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -29,10 +29,10 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/tags/course/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/course/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -45,10 +45,10 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/tags/general-physics/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/course/fisica_geral/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -59,6 +59,54 @@
                 hreflang="en"
                 href="https://thraraujo.github.io/course/fisica_geral/"
                 />
+  </url><url>
+    <loc>https://thraraujo.github.io/series/</loc>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/series/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/tags/</loc>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/categories/teaching/</loc>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thraraujo.github.io/</loc>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/categories/undergraduate/</loc>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thraraujo.github.io/series/undergraduate-courses/</loc>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/course/fisica1/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
@@ -72,54 +120,6 @@
                 hreflang="en"
                 href="https://thraraujo.github.io/course/fisica1/"
                 />
-  </url><url>
-    <loc>https://thraraujo.github.io/series/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/series/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/tags/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/tags/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/categories/teaching/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thraraujo.github.io/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/categories/undergraduate/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thraraujo.github.io/series/undergraduate-courses/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/categories/computers/</loc>
     <lastmod>2022-07-01T00:00:00+00:00</lastmod>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thraraujo.github.io/pt-br/course/biofisica/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/categories/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/course/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -42,32 +42,19 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/tags/curso/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/series/cursos-de-gradua%C3%A7%C3%A3o/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/categories/ensino/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/course/fisica1/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/course/fisica1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/course/fisica1/"
-                />
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/tags/f%C3%ADsica-geral/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/course/fisica_geral/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -80,10 +67,10 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/categories/gradua%C3%A7%C3%A3o/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/series/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -96,7 +83,7 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/tags/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -109,7 +96,7 @@
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -119,6 +106,19 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://thraraujo.github.io/pt-br/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/course/fisica1/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/course/fisica1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/course/fisica1/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/categories/computers/</loc>
