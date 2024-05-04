@@ -16,7 +16,7 @@
       <description>The goal of this post is twofold. First I want to help other people to build their static website without spending two important resources: time and money. Also, it is an explanation to my future self &amp;ndash; as Damian Conway said:
 &amp;ldquo;Documentation is a love letter that you write to your future self”
 So, let&amp;rsquo;s get started.
-Hugo Hugo is the framework we use to build our website. The advantage of this framework &amp;ndash; at least for me &amp;ndash; is that we do not need to write a single line of HTML and CSS, this is good because my knowledge of these things is very close to zero &amp;ndash; and I don&amp;rsquo;t want to learn them.</description>
+Hugo Link to heading Hugo is the framework we use to build our website.</description>
     </item>
     
     <item>
@@ -25,8 +25,8 @@ Hugo Hugo is the framework we use to build our website. The advantage of this fr
       <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://thraraujo.github.io/posts/vim_cheatsheet_i/</guid>
-      <description>Vim Cheatsheet: Basics Let us start with the notation:
-C-a = Ctrl-a Getting Started vim &amp;lt;file&amp;gt; Open file. vim &amp;lt;file1&amp;gt; &amp;lt;file2&amp;gt; Open file1 and file2 vim -R &amp;lt;file&amp;gt; Open file in read mode view &amp;lt;file&amp;gt; Open file in read mode :h[elp] &amp;lt;keyword&amp;gt; Open help for the keyword :term Open a terminal :! &amp;lt;cmd&amp;gt; Execute shell command &amp;lt;cmd&amp;gt; &amp;lt;C-\&amp;gt;&amp;lt;C-n&amp;gt; Go to command mode in the built-in terminal ESC Exit insert mode :q Close document if no modification has been done :w Save the document :wa Save all windows :wq Save and close :x Save and close, equivalent to wq :q!</description>
+      <description>Vim Cheatsheet: Basics Link to heading Let us start with the notation:
+C-a = Ctrl-a Getting Started Link to heading vim &amp;lt;file&amp;gt; Open file. vim &amp;lt;file1&amp;gt; &amp;lt;file2&amp;gt; Open file1 and file2 vim -R &amp;lt;file&amp;gt; Open file in read mode view &amp;lt;file&amp;gt; Open file in read mode :h[elp] &amp;lt;keyword&amp;gt; Open help for the keyword :term Open a terminal :! &amp;lt;cmd&amp;gt; Execute shell command &amp;lt;cmd&amp;gt; &amp;lt;C-\&amp;gt;&amp;lt;C-n&amp;gt; Go to command mode in the built-in terminal ESC Exit insert mode :q Close document if no modification has been done :w Save the document :wa Save all windows :wq Save and close :x Save and close, equivalent to wq :q!</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ C-a = Ctrl-a Getting Started vim &amp;lt;file&amp;gt; Open file. vim &amp;lt;fil
       <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://thraraujo.github.io/posts/vim_cheatsheet_ii/</guid>
-      <description>Vim Cheatsheet: Beyond the Basics Registers When we delete something with vim, the previous 9 deletions are saved in an unnamed register. We can access these registers with numbers from 1 to 9. For example:
+      <description>Vim Cheatsheet: Beyond the Basics Link to heading Registers Link to heading When we delete something with vim, the previous 9 deletions are saved in an unnamed register. We can access these registers with numbers from 1 to 9. For example:
 &amp;#34;nP Paste the register n, n from 1 to 9, before the cursor &amp;#34;np Paste the register n, n from 1 to 9, after the cursor On the other hand, one can use named registers.</description>
     </item>
     
