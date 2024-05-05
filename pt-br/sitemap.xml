@@ -2,6 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://thraraujo.github.io/pt-br/course/01-cinematica/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/course/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/course/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/course/"
+                />
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/course/02-leis-de-newton/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thraraujo.github.io/pt-br/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thraraujo.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://thraraujo.github.io/pt-br/"
+                />
+  </url><url>
     <loc>https://thraraujo.github.io/pt-br/course/biofisica/</loc>
     <lastmod>2022-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -26,19 +58,6 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://thraraujo.github.io/pt-br/categories/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/course/</loc>
-    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/course/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/course/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/tags/curso/</loc>
@@ -93,19 +112,6 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://thraraujo.github.io/pt-br/tags/"
-                />
-  </url><url>
-    <loc>https://thraraujo.github.io/pt-br/</loc>
-    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://thraraujo.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://thraraujo.github.io/pt-br/"
                 />
   </url><url>
     <loc>https://thraraujo.github.io/pt-br/course/fisica1/</loc>
