@@ -6,32 +6,23 @@
     <description>Recent content on Thiago Araujo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Biophysics</title>
-      <link>https://thraraujo.github.io/course/biofisica/</link>
-      <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+      <title>Cinemática em 2D &amp; 3D</title>
+      <link>https://thraraujo.github.io/notes/01-cinematica/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://thraraujo.github.io/course/biofisica/</guid>
-      <description>Portuguese only</description>
+      <guid>https://thraraujo.github.io/notes/01-cinematica/</guid>
+      <description>Cinemática em 2D e 3D Link to heading Introdução Link to heading O estudo do movimento e de suas causa é um dos principais temas da ciência, desde sua origem. Embora toda separação na ciência seja puramente pedagógica (e portanto artificial), podemos separar o estudo do movimento em dois campos: Cinemática e Dinâmica. Em linhas gerais, a Cinemática lida com os movimentos em si, as trajetórias que os corpos seguem, sua velocidade, sua aceleração.</description>
     </item>
     
     <item>
-      <title>General Physics</title>
-      <link>https://thraraujo.github.io/course/fisica_geral/</link>
-      <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+      <title>Leis de Newton</title>
+      <link>https://thraraujo.github.io/notes/02-leis-de-newton/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://thraraujo.github.io/course/fisica_geral/</guid>
-      <description>Portuguese only</description>
-    </item>
-    
-    <item>
-      <title>Physics 1</title>
-      <link>https://thraraujo.github.io/course/fisica1/</link>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://thraraujo.github.io/course/fisica1/</guid>
-      <description>Portuguese only</description>
+      <guid>https://thraraujo.github.io/notes/02-leis-de-newton/</guid>
+      <description>Leis de Newton Link to heading Introdução Link to heading As 3 leis de Newton formam o pilar da física moderna, e não seria um exagero afirmar que de toda a ciência moderna. É difícil pensar numa área da ciência que não tenha sido influenciada pelo desenvolvimento posterior da mecância Newtoniana. A &amp;quot;termo-dinâmica&amp;quot;, que hoje falamos termodinâmica, que está por trás da primeira revolução indrustrial; todo o desenvolvimento da eletrônica.</description>
     </item>
     
     <item>
@@ -57,6 +48,16 @@ Short CV Link to heading 2023 - Present : Postdoc at the São Paulo State Univer
     </item>
     
     <item>
+      <title>Sobre</title>
+      <link>https://thraraujo.github.io/_about.pt-br/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/_about.pt-br/</guid>
+      <description>Sou um físico teórico atualmente trabalhando no Instituto de Física Teórica, Unesp. Minha interesse de pesquisa abrange tópicos em modelos integráveis e aplicações em física estatística e teoria de cordas.
+Breve CV Link to heading 2023 - Presente : Postdoc na Universidade Estadual Paulista, São Paulo 2023 - 2033 : Postdoc na Universidade de São Paulo, Brasil 2023 - 2023 : Postdoc at the University of São Paulo, Brasil 2022 - 2023 : Professor substituto na Universidade Federal de Alagoas, Brasil 2019 - 2021 : Postdoc na Universidade de Berna, Suíça 2016 - 2019 : Postdoc no Asia Pacific Center for Theoretical Physics, Coréia do Sul 2012 - 2016 : Doutorado na Universidade Estadual Paulista, São Paulo </description>
+    </item>
+    
+    <item>
       <title>Vim Cheatsheet I : Basics</title>
       <link>https://thraraujo.github.io/posts/vim_cheatsheet_i/</link>
       <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
@@ -74,6 +75,17 @@ C-a = Ctrl-a Getting Started Link to heading vim &amp;lt;file&amp;gt; Open file.
       <guid>https://thraraujo.github.io/posts/vim_cheatsheet_ii/</guid>
       <description>Vim Cheatsheet: Beyond the Basics Link to heading Registers Link to heading When we delete something with vim, the previous 9 deletions are saved in an unnamed register. We can access these registers with numbers from 1 to 9. For example:
 &amp;#34;nP Paste the register n, n from 1 to 9, before the cursor &amp;#34;np Paste the register n, n from 1 to 9, after the cursor On the other hand, one can use named registers.</description>
+    </item>
+    
+    <item>
+      <title>Pesquisa</title>
+      <link>https://thraraujo.github.io/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/research/</guid>
+      <description>Interesses Link to heading Meus interesses de pesquisa são:
+2018 &amp;ndash; Presente : Integrabilidade e análise combinatória em teorias de cordas e física estatística 2016 - 2018 : Holografia em espaços planos, deformações integráveis de supergravidade 2010 - 2017 : Teorias de campos conformes e integráveis, correspondência AdS/CFT e teoria de cordas Publicações Link to heading Todos os meus artigos estão disponíveis online: Inspire-HEP e arXiv.
+T. Araujo, “Q-Boson model and relations with integrable hierarchies,&amp;quot; 2405.</description>
     </item>
     
     <item>

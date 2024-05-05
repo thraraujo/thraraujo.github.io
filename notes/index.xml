@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Thiago Araujo</title>
+    <link>https://thraraujo.github.io/notes/</link>
+    <description>Recent content in Notes on Thiago Araujo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://thraraujo.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cinemática em 2D &amp; 3D</title>
+      <link>https://thraraujo.github.io/notes/01-cinematica/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/notes/01-cinematica/</guid>
+      <description>Cinemática em 2D e 3D Link to heading Introdução Link to heading O estudo do movimento e de suas causa é um dos principais temas da ciência, desde sua origem. Embora toda separação na ciência seja puramente pedagógica (e portanto artificial), podemos separar o estudo do movimento em dois campos: Cinemática e Dinâmica. Em linhas gerais, a Cinemática lida com os movimentos em si, as trajetórias que os corpos seguem, sua velocidade, sua aceleração.</description>
+    </item>
+    
+    <item>
+      <title>Leis de Newton</title>
+      <link>https://thraraujo.github.io/notes/02-leis-de-newton/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://thraraujo.github.io/notes/02-leis-de-newton/</guid>
+      <description>Leis de Newton Link to heading Introdução Link to heading As 3 leis de Newton formam o pilar da física moderna, e não seria um exagero afirmar que de toda a ciência moderna. É difícil pensar numa área da ciência que não tenha sido influenciada pelo desenvolvimento posterior da mecância Newtoniana. A &amp;quot;termo-dinâmica&amp;quot;, que hoje falamos termodinâmica, que está por trás da primeira revolução indrustrial; todo o desenvolvimento da eletrônica.</description>
+    </item>
+    
+  </channel>
+</rss>
