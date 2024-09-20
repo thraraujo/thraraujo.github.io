@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Termodinâmica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Leis da Termodinâmica</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Conceitos</h2>
+        </div>
+
+        <img class="side-image"  src="http://www.gadgetify.com/wp-content/uploads/2016/05/18/Glass-Model-of-Stephensons-Steam-Engine.gif" alt="Steam Engine">
+
+        <p>
+          Nessa seção começamos a discutir aspectos da termodinâmica. Em particular, usaremos o teorema do virial 
+          para derivar a expressão para a equação do gás ideal. Em seguida, discutiremos alguns aspectos 
+          qualitativos da termodinâmica. 
+        </p>
+
+        <p>
+          Constante de Boltzmann 
+          \[k_B = 1.38\times 10^{-23} J/ K\]
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <h3>Introdução</h3>
+
+        <p> Termodinâmica é uma teoria fenomenológica dos sistemas térmicos, e
+          como tal, começaremos descrevendo alguns resultados derivados a
+          partir de experimentos. É importante mencionar que dentro do
+          arcabouço moderno da física, muitos dos aspectos fenomenológicos da
+          teoria já foram trazidos a uma linguagem matematica mais precisa,
+          sobretudo dentro do contexto da física estatística, mas nesse texto
+          não exploraremos essa descrição. </p>
+
+        <p> Antes de começarmos a discutir a termodinâmica propriamente dita,
+          temos que mencionar importante e que no final das contas viola o nome
+          do próprio assunto que estamos começando a estudar. No nosso estudo,
+          nos concentraremos na análise de sistemas térmicos em equilíbrio, ou
+          seja, fenômenos essencialmente estáticos. Essa é a chamada
+          termodinâmica de equilíbrio -- termoestática nunca foi um nome
+          utilizado. A área da física estatistica também lida essencialmente
+          com fenêmenos estáticos. Termodinâmica fora do equilíbrio é,
+          evidentemente, muito mais complicada e requer métodos muito mais
+          sofisticados: Teoria Cinética em particular. </p>
+
+        <p>Estudaremos essencialmente a propriedade térmica de gases cujas
+          partículas constituintes interagem muito fracamente umas com as
+          outras e estão suficientemente afastadas umas das outras. Chamamos
+          esse gases de Ideais. Essa situação é complementar ao nosso estudo de
+          fluidos incompressíveis, onde consideramos a situação onde as
+          partpiculas está muito próximas e a interação é (classicamente)
+          imediata. </p>
+
+        <p>Gases ideais satisfazem a seguinte equação \[ PV = N k_B T\] onde
+          \(P\) é a pressão, \(V\) o volume, \(T\) a temperatura, \(N\) o
+          número de partpiculas e \(k_B\) a constante de Boltzmann. É
+          importante mencionar que essa equação foi obtida através de diversos
+          experimentos e podemos pensar nessa expressão como um axioma da
+          teoria. </p>
+
+        <p>Por outro lado, hoje ja dispomos de conhecimentos suficientes para
+          explorar com um pouco mais de atenção essa expressão, e é isso que
+          faremos agora. </p>
+
+        <h3>Teorema do Virial</h3>
+
+        <p>Consideraremos agora um sistema de \(N\) partículas. Considere a
+          seguinte quantidade \[A  = \sum_{i = 1}^N
+          \mathbf{r}_i\cdot\mathbf{p}_i \] Veja que essa quantidade, que não
+          tem um significado físico preciso, carrega informações não triviais
+          sobre o sistema dinâmico. Tomando a derivada temporal temos que \[
+          \dot{A} = \sum_i \left( \dot{\mathbf{r}}_i \cdot \mathbf{p}_i +
+          \mathbf{r}_i \cdot \mathbf{F}_i  \right) \] onde \(\mathbf{F}_i\) é a
+          força sobre a iésima partícula. Essa força é composta de dois termos:
+          Uma força externa \(\mathbf{F}^{(ext)}_i\) e uma resultante da
+          interação dessa partícula com as demais \(N-1\) partículas vizinhas.
+          Mencionamos que vamos considerar que essas interações são
+          negligenciáveis, portanto temos apenas a ação da força externa. </p>
+
+        <p>Observe ainda que o primeiro termo na expressão acima é nada mais
+          que o dobro da Energia cinética do sistema. Finalmente, assumimos que
+          o sistema evolui tempo suficiente para que a média \(\dot{A}_{ave} =
+          \langle \dot{A} \rangle \simeq 0\). Dessa maneira, temos que \[
+          \bar{E}_{cin} = - \frac{1}{2} \langle \sum_i \mathbf{r}_i \cdot
+          \mathbf{F}_i^{ext} \rangle \] onde a \(\bar{E}_{cin}\) denota a
+          energia cinética média. Quando incluímos no resultado acima os termos
+          de interação entre as partículas, o resultado acima é chamado de
+          teoreda do virial.  </p>
+
+        <img class="text-img  equipart" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Thermally_Agitated_Molecule.gif" alt="equiparticao">
+
+        <p>Nosso propósito com esse teorema é analisar a equação do gás ideal.
+          Por simplicidade, vamos considerar o caso onde o gás está confinado
+          num cubo de volume \(V = a^3\). Nesse caso, quando as partículas do
+          gás interage com qualquer uma das paredes, temos a ação de uma força
+          externa perpendicular à essa superfície. Por exemplo, no plano
+          \(P_{0,x} = (0, y, z)\) temos forças \(\mathbf{F}_i^{ext} = (F_i, 0,
+          0)\) ao passo que no plano \(P_{a,x} = (a, y, z)\) temos
+          \(\mathbf{F}_i^{ext} = (-F_i, 0, 0)\). Usando esse resultado vemos
+          que a soma dessas forças é a pressão total sobre o plano multiplicado
+          pela área, e aplicando no teorema do virial concluímos que \[ \bar{E}_{cin}
+          = \frac{3}{2} a (a^2 P) = \frac{3}{2}pV = \frac{3}{2} N k_B T \] De
+          fato, esse resultado será generalizado na física estatística para
+          algo ainda mais poderoso: o teorema de equipartição, que define que
+          cada grau de liberdade da molécula contribuirá com um bit de
+          \(\frac{3}{2} N k_B T\) na energia do sistema. Como estamos
+          considerando apenas partículas, temos apenas graus de liberdade
+          translacionais, 3 deles, o que justifica a presença do termo 3 na
+          equação acima. </p> 
+
+        <p>Essa equação também mostra que energia e temperatura são
+          relacionadas. Se hoje medimos temperatura em Celcius e energia em
+          Joules (ou calorias), a única razão é porque nossos antepassados não
+          faziam ideia de que essas duas quantidades eram relacionadas. Nesse
+          aspecto, a constante de Boltzmann é nada mais que um fator de
+          conversão entre as duas unidades. </p>
+
+        <h3>Equações de Estado e Variáveis Termodinâmicas</h3>
+
+        <img class="text-img varied-term"
+          src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs12039-023-02154-5/MediaObjects/12039_2023_2154_Fig1_HTML.png"
+          alt="variedade termodinâmica">
+
+        <p>Agora que já apresentamos a equação do gás ideal, podemos entender
+          com um pouco mais de generalizado o que esperamos estudar em sistemas
+          termodinâmicos em geral. Buscaremos descrever os estados de um
+          sistema em equilíbrio termodinâmico em termos de variáveis como a
+          pressão, temperatura, energia, entropia, volume, potencial químico,
+          magnetização e outras. Essas quantidades são chamadas de variáveis
+          termodinâmicas. As relações entre variáveis termodinâmicas define uma
+          equação do tipo \[ f(p, V, T, E, \dots) = 0 \] chamada de equação de
+          estado. No caso do gás ideal, que acabamos de discutir, \(f(p, V,T) =
+          pV - N k_B T = 0 \). Evidente que se nossa equação é definida em
+          termos de \(n\) variáveis termodinâmicas, a equação de estado define
+          uma curva (ou hiper-superfície) no espaço Euclidiano
+          \(\mathbb{R}^n\), e essa curva é chamada de curva (ou variedade)
+          termodinâmica. Cada um dos pontos nessa curva é um estado em
+          equilíbrio termodinâmico, pois a equação de estado é satisfeita. No
+          caso do gás ideal, temos uma superfície no espaço euclidiano em 3D, e
+          de fato, ganharemos uma intuição muito grande sobre o sistema
+          termodinâmico considerando a projeção dessa superfície no plano
+          \(PV\). </p>
+
+        <h3>Processos termodinâmicos</h3>
+
+        <p>Como em qualquer estudo dinâmico, precisamos entender como as
+          transformações acontecem nesses sistemas. O problema que desejamos
+          entender é saber como um sistema no equilíbrio sai do ponto A na
+          superfície termodinâmica e chega até o ponto B também nessa
+          superfície.</p>
+
+        <p>Nos concentraremos primeiramente em processos que ocorrem muito
+          lentamente, chamados de processos quasi-estáticos. Em casa intervalo
+          de tempo podemos considerar que o sistema está em equilíbrio, e isso
+          evita que as nossas hipóteses sobre a termodinâmica de equilíbrio
+          deixem de ser válidas. Na prática, estamos avisando aos nossos
+          colegas experimentais para que eles realizem os experimentos com
+          muita calma, caso contrário, os resultados que vamos achar aqui não
+          serão válidos. Um tipo muito especial de processo quasi-estático são
+          os processos reversíveis, o que significa que podemos inverter a
+          evolução temporal do sistema. </p>
+
+        <p>Do ponto de vista geométrico, processos reversíveis descrevem
+          trajetórias sobre a superfície termodinâmica, enquanto que se em
+          qualquer momento a trajetória deixa a superfície, o processo não é
+          mais reversível. </p>
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Lei Zero</h2>
+        </div>
+
+        <img class="side-image"  src="https://www.tec-science.com/wp-content/uploads/2019/01/en-particle-model-temperature-movement-thermal-expansion.gif" alt="Termômetros">
+
+      </section>
+
+      <section class="item">
+
+        <h3>Equilíbrio Termodinâmico</h3>
+
+        <p> A lei zero da termodinâmica é um retcon. Ela lida com conceitos que
+          no inicio do estudo dos fenômenos termodinâmicos eram evidentes, mas
+          que com o desenvolvimento da mecânica estatística, era necessária uma
+          melhor precisão nos axiomas matemáticos da teoria. Do ponto de vista
+          axiomático, a lei zero declara que o equilíbrio termodinâmico é uma
+          relação de equivalência. </p>
+
+        <p>Usando o conceito de temperatura -- que novamente é uma quantidade
+          física dada -- definimos a noção de equilíbrio termodinâmica entre
+          dois corpos quando as suas temperaturas são iguais. Observe que essa
+          é uma definição bastante pedestre do que está acontecendo, mas é o
+          suficiente para o nosso estudo inicial. Em certo aspecto, estamos
+          fingindo ser físicos vitorianos tentando fazer algumas previsões
+          sobre sistemas térmicos. </p>
+
+        <p>A lei zero da termodinâmica nos diz que se um sistema termodinâmico
+          \(A\) está em equilíbrio termodinâmico com o sistema \(B\), ou seja
+          \(A \sim B\), e este está em equilíbrio termodinâmico com o sistema
+          C, \(B \sim C\); então \(A\sim C\).</p>
+
+        <p> Lembre que uma relação de equivalência é uma relação binária
+          (\(\sim\)) entre entidades matemáticas (conjuntos, funções, grupos,
+          variedades diferenciáveis, topologias, ...) que é: <ol>
+          <li><b>Reflexiva:</b> Objetos são equivalentes a si mesmos, \(A\sim
+            A\)</li> <li><b>Simétrica:</b> Se \(A\sim B\), então \(B\sim
+            A\)</li> <li><b>Transitiva:</b> Se \(A\sim B\), e \(B\sim C\),
+            então \(A\sim C\)</li> </ol> </p>
+
+        <p>No nível básico, a lei zero é essencialmente descrita por esse fato
+          pedestre, e não é a toa que ela foi ignorada por muitos anos. Apenas
+          com a maturidade dessa disciplina a lei zero recebeu a devida
+          atenção. No contexto da física estatística, por exemplo, é possível
+          tratar equilíbrio termodinâmico no contexto do ensemble microcanônico
+          o que nos leverá inevitavelmente a expressões precisas do significado
+          de equilíbrio termodinâmico. Outra consequência da lei zero é a
+          própria definição de uma quantidade física que chamamos temperatura.
+          Ou seja, promoveremos temperatura à uma quantidade física que pode
+          ser derivada, e não apenas justificada fenomenologicamente.</p>
+
+        <p>Para o nosso propósito, o tratamento mais básico é suficiente. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Primeira Lei</h2>
+        </div>
+
+        <img class="side-image"  src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2020/04/1824-thermodynamics-engine-2.gif" alt="primeira lei">
+
+        <p>
+          A primeira lei da termodinâmica é a declaração da conservação da energia, e é dada por 
+          \[ dE = -\delta W + \delta Q \]
+          onde \(\delta W\) é o trabalho que o sistema realiza e \(\delta Q\) o calor absorvido 
+          pelo sistema. 
+        </p>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Variáveis e Processos Termodinâmicos</h3>
+
+        <p> Vamos insistir na distinção entre variáveis e processos
+          termodinâmicos mais uma vez. Já discutimos algumas dessas noções, mas
+          é fundamental explorar os seus significados com mais cuidado. </p>
+
+        <p>Quando falamos num estado termodinâmico \(\sigma_0\), por exemplo,
+          estamos declarando um conjunto de parâmetros tais como uma pressão
+          \(p_0\), um volume \(V_0\), temperatura \(T_0\) energia \(E_0\) tal
+          que a função de estado \(f(p_0, V_0, T_0, E_0) = 0\). Ou seja, cada
+          estado identifica um ponto na variedade termodinâmica. Estamos
+          particularmente interessados em caracterizar estados em termos de sua
+          energia \(E = E(p, V, T)\). Pense novamente no  gás ideal como
+          exemplo (sempre faremos isso): sabemos que a equação do gás ideal
+          define é a equação de estado, e também que \(E\sim T\). </p>
+
+        <p>Como falamos brevemente na introdução, variáveis termodinâmicas
+          definem apenas parte do que estamos interessados. Os processos de
+          transformações são necessários, caso contrário nada, literalmente,
+          aconteceria. Então queremos considerar variações da pressão,
+          temperatura, volume, energia e assim por diante. Quando comprimimos
+          um gás, por exemplo, é simples provar que realizamos um trabalho dado
+          por \[ W = \int_{V_i}^{V_f} P dV \] onde a equação de estado implica
+          que a pressão \(p\) é uma função do volume \(V\). </p>
+
+        <p> Além disso, sabemos que o trabalho realizado é a diferença entre a
+          energia cinética do sistema, ou seja: ele é relacionado a diferenças
+          entre estados termodinâmicos, e como tal, não podemos escrever o
+          trabalho como uma função das variáveis \(p, T, V, ...\). Trabalho é
+          um processo.</p>
+
+        <p>Portanto, quando um sistema físico realiza trabalho, a sua energia
+          interna total diminui, e por isso escrevemos \(\Delta E = - W\). Nem
+          toda variação da energia total do sistema pode ser contabilizada com
+          o trabalho. Essa contribuição adicional é chamada de calor, que
+          denotamos por \(Q\). É convencional assumir que estamos doando calor
+          ao sistema e realizado trabalho, por isso frequentemente escrevemos a
+          conservação da energia como \[ \Delta E = - W +Q\] mas não se
+          surpreenda se os sinais não forem os mesmos. O aspecto interpretativo
+          dessa lei é muito mais importante que as convenções que escolhemos. 
+          Essa expressão é chamada de primeira Lei da Termodinâmica, cuja versão 
+          infinitesimal é dada por 
+          \[ 
+          dE = -\delta W + \delta Q
+          \]
+        </p> 
+
+        <h3>Capacidade Térmica e Entalpia</h3>
+
+        <p>Observe que na expressão para a primeira lei da termodinâmica,
+          escrevemos \(dE\) para a versão infinitesimal da Energia, mas
+          \(\delta W\) e \(\delta Q\) para o trabalho e o calor. Isso é apenas
+          para diferenciar o fato de que a energia é uma função do estado, de
+          maneira que podemos escrever \(dE\) como uma 1-forma diferencial
+          exata.
+        </p>
+
+        <p>Como \(\delta W = P dV\), podemos finalmente escrever 
+          \[ \delta Q = P dV + dE\]</p>
+
+        <p><span> \(E = E(P, V)\)</span> Nesse caso temos a relação \[\delta Q
+          = \left[ P +  \left( \frac{\partial E}{\partial V} \right)_P  \right]
+          dV + \left( \frac{\partial E}{\partial P} \right)_V dP \] onde os
+          substritos denotam que estamos mantendo essa quantidade fixa.
+          Definindo a Entalpia como \[ H = E + PV \] temos que \[\delta Q =
+          \left( \frac{\partial H}{\partial V} \right)_P dV + \left(
+          \frac{\partial E}{\partial P} \right)_V dP \] </p>
+
+        <p><span> \(E = E(P, T)\)</span> Nesse caso temos a relação \[\delta Q
+          = P dV + \left( \frac{\partial E}{\partial P} \right)_T dP + \left(
+          \frac{\partial E}{\partial T} \right)_P dT \] Usando a equação de
+          estado de maneira que \(V = V(T, P)\), temos \[\delta Q = \left[ P
+          \left( \frac{\partial V}{\partial P} \right)_T  +  \left(
+          \frac{\partial E}{\partial P} \right)_T  \right] dP + \left(
+          \frac{\partial H}{ \partial T} \right)_P  dT \] No caso onde \(dP =0
+          \), temos que \[ \delta Q = C_P dT \qquad C_P = \left( \frac{\partial
+          H}{ \partial T} \right)_P   \] onde \(C_P\) é chamada de capacidade
+          térmica a pressão constante. Essa é a quentidade \(\delta Q\) de
+          calor necessária para se variar a temperatura \(dT\) do sistema
+          mantendo a pressão fixa. </p>
+
+        <p><span> \(E = E(V, T)\)</span> Nesse caso temos a relação \[\delta Q
+          = \left[P + \left( \frac{\partial E }{ \partial V}\right)_T \right]
+          dV + \left( \frac{\partial E}{\partial T} \right)_V dT \] No caso
+          onde \(dV =0 \), temos que \[ \delta Q = C_V dT \qquad C_V = \left(
+          \frac{\partial E}{ \partial T} \right)_V   \] onde \(C_V\) é chamada
+          de capacidade térmica a colume constante. Essa é a quentidade
+          \(\delta Q\) de calor necessária para se variar a temperatura \(dT\)
+          do sistema mantendo o volume fixo. </p>
+
+        <h3>Exemplo: O gás ideal</h3>
+
+        <p>Vamos considerar o exemplo do gás ideal. Sabemos que a equação de
+          estado é \(PV = N k_B T\) e que a eneria é dada por \(E = 3 N k_B T /
+          2\). Dessa forma, a Entalpia é dada por \( H = E + PV = 5 N k_B
+          T/2\). Nesse caso temos \[ C_P = \frac{5 N k_B}{2} \qquad C_V =
+          \frac{3 N k_B}{2} \qquad C_P - C_V = N k_B  \] </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Segunda Lei</h2>
+        </div>
+
+        <img class="side-image"  src="http://www.converter.cz/fyzici/images/boltzmann.jpg" alt="Boltzmann">
+
+
+      </section>
+
+      <section class="item">
+
+        <h3>Enunciados</h3>
+
+        <img class="text-img eddington" src="https://www.science20.com/files/images/2nd%20law%20-%20Eddington.JPG" alt="Eddington">
+
+        <p> Existem diversos enunciados equivalentes da segunda lei da
+          termodinâmica. Nesse texto concentraremos nossa atenção em 2 deles.
+          Como os grandes desenvolvimentos da termodinâmica foram desenvolvidos
+          no entre o final do século XVIII e o começo do século XIX, é natural
+          que muita da sua formulação ainda seja definida de em termos de
+          objetos um tanto quanto provincianos, tais como máquinas de vapor,
+          bomba térmica e coisas do tipo. </p>
+
+        <p><span> <b>Kelvin:</b></span> Não existem máquinas térmicas que
+          absorvem uma quantidade de calor e o converte <b>completamente</b> em
+          trabalho. </p>
+
+        <p><span> <b>Clausius:</b></span> Não existem máquinas térmicas cujo
+          <b>único</b> efeito é extrair calor de uma fonte fria e lançá-lo numa
+          fonte quente. </p>
+
+        <p>Nos dois enunciados acima, observe que destacamos as palavras único
+          e completamente. Isso significa que máquinas térmicas que realizam
+          essas tarefas podem existir, no caso de Clausius é o refrigerador,
+          por exemplo. O que está sendo proibido são máquinas térmicas que só
+          façam isso. </p>
+
+        <p>Não é difícil concluir que esses dois enunciados são equivalentes.
+          Por exemplo, uma máquina que viola Kelvin seria \(100\%\) eficiente, e
+          poderíamos transportar calor de um reservatório frio para um quente.
+          O que também violaria Clausius. O argumento contrário é
+          auto-evidente. Portanto, esses dois enunciados são equivalentes. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Máquina de Carnot</h2>
+        </div>
+
+        <img class="side-image"  src="https://877trainride.com/assets/img/steam/rodsrev.gif" alt="primeira lei">
+
+
+      </section>
+
+      <section class="item">
+
+        <h3>Máquina de Carnot</h3>
+
+        <img class="text-img carnot" src="https://i.pinimg.com/736x/db/d8/6c/dbd86c4a95b359bcbf3977f685a8d16a.jpg" alt="Ciclo de Carnot">
+
+        <p> Para prosseguirmos com a análise da segunda lei, vamos considerar
+          uma máquina térmica operando em um ciclo de 4 etapas. <ol>
+          <li><b>Expansão Isotérmica:</b> O sistema passa do volume \(V_A\)
+            para \(V_B\) mantendo a temperatura \(T_q\) constante. Nesse ponto
+            o sistema realiza trabalho (e podemos ligar nosso playstation), e
+            absorve calor, \(Q_2\), pois a temperatura é mantida constante. </li>
+          <li><b>Expansão Adiabática:</b> Em seguida consideramos uma expansão
+            adiabática. Ou seja, não existirá nenhuma troca de calor. Nesse
+            ponto o sistema também realizará trabalho, pois o volume vai de
+            \(V_B\) para \(V_C\). O sistema não troca calor com o ambiente,
+            portanto a sua temperatura diminui e passa para \(T_f\). </li>
+          <li><b>Contração Isotérmica:</b> Agora começaremos a retornar o
+            sistema ao seu estado original. Primeiro contraímos mantendo a
+            temperatura \(T_f\) constante. Nesse ponto temos que realizar
+            trabalho sobre o sistema, e como a temperatura é constante, o
+            sistema perde calor \(Q_1\). O volume passa de \(V_C\) para \(V_D\).  </li>
+          <li><b>Contração Adiabática:</b> Finalmente retornamos ao ponto \(A\)
+            por meio de uma contração adiabática. Não haverá troca de calor, a
+            temperatura retornará à \(T_q\). Evidentemente, temos que realizar
+            trabalho sobre o sistema. </li> </ol> </p>
+
+        <p>Todo o processo acima é chamado de ciclo de Carnot, e com ele 
+          ganharemos uma intuição muito forte não apenas sobre a termodinâmica, mas 
+          sobre como o universo funciona. Prepare-se.</p>
+
+        <p>Definimos a eficiência de uma máquina como a razão entre o trabalho
+          que ela realiza e o calor que ela absorve. Ou seja \[\eta =
+          \frac{W}{Q_2}\] Usando a primeira lei da termodinâmica, vemos que
+          \(\Delta E = 0\), pois o processo é cíclico e ela sai e volta ao
+          mesmo estado. O trabalho, no entanto, é dado pelo resultado final de
+          cada uma das etapas. Assim \(W = Q_2 - Q_1\). Logo \[ \eta = 1 -
+          \frac{Q_1}{Q_2}\] Observe que \(Q_1 \neq 0\), o que significa que
+          essa máquina não é \(100\%\) eficiente, logo, não viola a segunda lei
+          da termodinâmica.</p>
+
+        <p>Podemos operar a máquina de Carnot no sentigo contrário, de 4 para
+          1, de tal maneira que ela se comporta como um refrigerador. Isso é
+          muito util para o que precisamos fazer agora. Considerar máquinas
+          mais realistas, em particular, máquinas que não são reversíveis.
+          Consideraremos tal máquina, vamos chamar de máquina de Tonrac, e a 
+          acoplaremos a uma máquina de Carnot no sentido contrário. Isso significa
+          que as duas máquinas estão operando entre as mesmas temperaturas.
+        </p>
+
+        <p>A máquina de Tonrac opera em 4 ciclos, mas absorve \(Q'_2\) de calor
+          e perde \(Q'_1\). Pela nossa hipótese, a máquina de Carnot
+          (funcionando como um refrigerador) é alalimento pela máquina de
+          Tonrac, o que significa que o trabalho satisfaz \[W = Q'_2 - Q'_1 =
+          Q_2 - Q_1 \] Além disso, o sistema 'Carnot+Tonrac', visto como uma
+          única máquina deve satisfazer a segunda lei da termodinâmica. Isso
+          significa, em particular, que o calor que Tonrac absorve \(Q'_2\)
+          menos o calor que Carnot deposita \(Q_2\) deve ser positivo. Caso
+          contrário, o calor estaria fluindo do reservatório frio para o quente
+          de maneira espontânea. Senso assim, \(Q'_2 - Q_2 &gt 0\). </p>
+
+        <p>Com todos esses detalhes, podemos calcular a eficiência da máquina
+          de Tonrac: \[ \tilde{\eta} = \frac{W}{Q'_2} &lt \frac{W}{Q_2} = \eta \]
+          pois \(Q_2 &lt Q'_2\). Isso significa que a máquina de Tonrac é menos
+          eficiente que a máquina de Carnot. </p>
+
+        <p>O resultado acima é conhecido como teorema de Carnot, que estabelece
+          que entre as máquinas operando entre duas temperaturas, a máquina
+          reversível é sempre a mais eficiente. Como um corolário simples desse
+          teorema, se supormos que Tonrac é afinal de contas reverspivel, podemos
+          usar os mesmos argumentos acima para mostrar que \(\tilde{\eta} \geq
+          \eta\) e \(\tilde{\eta}\leq \eta\), portanto \(\tilde{\eta} = \eta\), o
+          que mostra que a máquina de Tonrac é Carnot, e que essa máquina é a
+          máquina mais eficiente operando entre duas temperaturas.</p>
+
+        <h3>Escala Absoluta de Temperatura</h3>
+
+        <p> No teorema de Carnot, observe que a únca variável termodinâmica
+          dando bandeira é a temperatura, portanto é razoável pensar que a
+          eficiência possa ser escrita unicamente em termos das temperaturas
+          \(T_1\) e \(T_2\). Dessa forma, podemos definir uma escala de
+          temperatura usando esse sistema idealizado. Esse é o problema que
+          abraçaremos agora. No final, veremos que existem redundâncias, que
+          fixaremos considerando um exemplo que já conhecemos: O gás ideal
+          novamente. </p>
+
+        <p>Vamos considerar duas máquinas de Carnot operando em série entre as
+          temperaturas \(T_3 &gt T_2 &gt T_1\). Considerando pares de
+          temperaturas \(T_i\) e \(T_j\), \(i, j = 1,2,3\), com \(i&lt j\),
+          temos que a sua eficiência das máquinas operando entre esses pares
+          são: \[ \eta_{ij} = 1 - \frac{Q_i}{Q_j} \], logo \[ Q_i = Q_j (1 -
+          \eta_{ij}) \] </p>
+
+        <p>Dessa forma, temos as seguintes situações \[Q_1 = Q_2 (1 -
+          \eta_{12})\qquad  Q_2 = Q_3 (1 - \eta_{23}) \qquad Q_1 = Q_3 (1 -
+          \eta_{13})  \] Consistência dessas expressões implica que \[ (1 -
+          \eta_{13}) = (1 - \eta_{12})(1 - \eta_{23}) \] </p>
+
+        <p>Nossa hipótese é que essas quantidades dependem apenas das
+          temperaturas, ou seja \( 1 - \eta_{ij} = f(T_i, T_j) \), e de maneira
+          que \[ f(T_i, T_j) f(T_j, T_k) = f(T_i, T_k) \] Portanto, supomos que
+          \[ f(T_i, T_j) = \frac{T_i^\alpha}{T_j^\alpha} \] </p>
+
+        <p>Mostraremos abaixo que \(\alpha = 1\).</p>
+
+        <h3>Gas Ideal</h3>
+
+        <p>Para determinarmos o valor do coeficiente \(\alpha\) que encontramos
+          na seção anterior, vamos considerar um gás ideal operando no ciclo de
+          Carnot. Sabemos que \[ E = \frac{3}{2} N k_B T \qquad PV = N k_B T
+          \]</p>
+
+        <p>Nossa tarefa é, usar a primeira lei da termodinâmica e calcular o
+          calor \(Q_1\) e o calor \(Q_2\) e calcular a razão dessas duas
+          quantidades. Por ser um ciclo fechado, já sabemos que a variação
+          total da energia é nula. </p>
+
+        <p> <span>Expansão Isotérmica:</span> Inialmente a temperatura to
+          sistema  \(T_q\) (quente) constante, logo \(\Delta E = 0\), portanto \[ Q_2 =
+          W_2 = \int_{V_A}^{V_B} d V\frac{N k_B T_q}{V} = N k_B T_q \ln
+          \left(\frac{V_B}{V_A} \right) \] que é uma quantidade positiva, como
+          esperada, pois esse é o trabalho realizado pelo sistema, bem como o
+          calor que ele absorve. </p>
+
+        <p><span>Expansão Adiabática:</span> Nesse caso temos que \(\delta Q =
+          0\), e pela primeira lei da termodinâmica temos que \[ dE = \delta
+          W\] Usando as expressões explícitas para energia e trabalho, temos a
+          igualdade \[ \frac{3}{2}N k_B dT = P dV = \frac{N k_B T}{V} dV \quad
+          \Rightarrow \quad \int_{T_q}^{T_f} \frac{d T}{T} =
+          \frac{2}{3}\int_{V_B}^{V_C}\frac{dV}{V} \quad \Rightarrow \quad
+          \frac{T_f}{T_q} = \left(\frac{V_C}{V_B} \right)^{2/3}\] </p>
+
+        <p><span>Contração Isotérmica:</span> Agora o sistema está na
+          temperatura \(T_f\) (frio), podemos começar a resetar o sistema.
+          Vamos repetir os dois passos que acabamos de descrever. Primeira lei
+          da termodinâmica diz que \[ Q_1 = W_1 = \int_{V_C}^{V_D} dV \frac{N
+          k_B T_f}{V} = N k_B T_f \ln \left( \frac{V_D}{V_C} \right) = - N k_B
+          T_f \ln \left( \frac{V_C}{V_D} \right)  \] Como \(V_D &lt V_C\),
+          temos que \(Q_1 &lt 0\), que denota o calor que o sistema perde, ou o
+          trabalho que realizamos sobre o sistema. Observe que \(W\) negativo
+          denotando o trabalho realizado sobre o sistema é consistente com as
+          definições de sinais que escolhemos. Nesse caso o tabalho que a
+          máquina de Carnot realiza é dado por \(W = Q_1 + Q_2\), ou seja, o
+          sinal negativo foi absorvido na definição do calor. Em física é muito
+          importante prestar muita atenção no significado das nossas contas,
+          mas essas responsabilidade em termodinâmica é crucial.</p>
+
+        <p><span>Contração Adiabática:</span> Mais uma vez temos que \(\delta Q =
+          0\), e pela primeira lei da termodinâmica temos 
+          \[ \int_{T_f}^{T_q} \frac{d T}{T} =
+          \frac{2}{3}\int_{V_D}^{V_A}\frac{dV}{V} \quad \Rightarrow \quad
+          \frac{T_q}{T_f} = \left(\frac{V_A}{V_D} \right)^{2/3}\] </p>
+
+        <p> <span>Eficiência</span> Agora queremos calcular a eficiência dessa
+          máquina, \[ \eta = 1 + \frac{|Q_1|}{Q_2} \] onde tomamos o valor
+          absoluto de \(Q_1\). As curvas adiabáticas implicam a relação \[
+          \frac{T_f}{T_q} = \left( \frac{V_C}{V_B} \right)^{2/3} = \left(
+          \frac{V_D}{V_A} \right)^{2/3}\quad \Rightarrow \quad \frac{V_C}{V_D}
+          = \frac{V_B}{V_A} \] </p>
+
+        <p>As curvas Isotérmicas implicam que \[ \frac{|Q_1|}{Q_2} =
+          \frac{T_f}{T_q} \frac{\ln(V_C/ V_D)}{\ln(V_B/V_A)} = \frac{T_f}{T_q}
+          \] De onde concluímos que  \[ \eta = 1 - \frac{T_f}{T_q}  \] </p>
+
+    </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Entropia</h2>
+        </div>
+
+        <img class="side-image"  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Boltzmann_equation.JPG" alt="entropia">
+
+
+      </section>
+
+      <section class="item">
+
+        <h3>Definição</h3>
+
+        <p>Vimos acima que quando temos um processo cíclico de Carnot, temos
+          uma relação do tipo \[ \frac{Q_1}{Q_2} = - \frac{T_1}{T_2} \quad
+          \Rightarrow \quad \frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0 \] onde o
+          sinal negativo denota que tomamos a calor como uma quantidade
+          positivamente definida. Não é difícil se convencer que podemos
+          escrever processos cíclicos reversíveis como uma coleção infinita de
+          mini ciclos de Carnot, de maneira que a versão finita dessa expressão
+          é \[ \oint_{\mathcal{C}} \frac{dQ}{T} = 0 \] onde \(\mathcal{C}\) é
+          uma curva fechada no espaço das variáveis termodinâmicas que
+          orientamos positivamente (sentido anti-horário). </p>
+
+        <p>Vamos agora dividir a curva \(\mathcal{A}\) em duas seções:
+          \(\mathcal{C} = \mathcal{C}_I \cup \mathcal{C}_{II}\), tal que a
+          curva \(\mathcal{C}_I\) começa no ponto \(A\) e termina no ponto
+          \(B\), enquanto a curva \(\mathcal{C}_B\) começa no ponto \(B\) e
+          termina no ponto \(A\). </p>
+
+        <p>Portanto \[ \oint_{\mathcal{C}} \frac{dQ}{T} = \int_{\mathcal{C}_I}
+          \frac{dQ}{T} + \int_{\mathcal{C}_{II}} \frac{dQ}{T} =   0 \] ou seja
+          \[ \underbrace{ \int_A^B \frac{dQ}{T}}_{\mathcal{C}_I} -
+          \underbrace{\int_A^B \frac{dQ}{T}}_{\mathcal{C}_{II}}   =  0  \] o
+          que mostra que a interal depende apenas dos pontos iniciais e finais,
+          e não do caminho de integração. 
+        </p>
+
+        <p>Isso nos motiva a definir a seguinte quantidade \[ S(x) = \int_0^x
+          \frac{dQ}{T} \] chamada de <b>entropia</b>. De fato, como a entropia
+          depende apenas do ponto final e do inicial, podemos escrever \[ S(B)
+          - S(A) = \int_A^B \frac{dQ}{T} \]</p>
+
+        <h3>Teorema de Clausius</h3>
+
+          <p>Agora podemos considerar o que acontece com essas relações para
+          processos irreversíveis, que no final das contas, são os processos
+          que mais nos interessam do ponto de vista experimental: Processos
+          reversíveis são nossos benchmarks. Sabemos que a eficiência de uma
+          máquina real é menor que a eficiência do ciclo de Carnot, portanto \[
+          \eta = 1 - \frac{\delta Q_1}{\delta Q_2} &lt \eta_{Carnot} = 1 -
+          \frac{T_1}{T_1} \] e assumindo que o calor é uma quantidade positiva,
+          temos que \[ \frac{\delta Q_1}{T_1}  + \frac{\delta Q_2}{T_2} &lt 0
+          \quad \Rightarrow \quad \oint \frac{d Q}{T} &lt 0   \] que é
+          conhecido com teorema de Clausius. De fato, essa é a forma que
+          Clausius enunciou a segunda lei da termodinâmica.</p>
+
+        <p>Vamos novamente dividir a curva em 2 partes, onde apenas a curva
+          \(\mathcal{C}_{II}\) é reversível. Portanto, o teorema de Clausius se
+          decompõe como \[ 0 &lt \oint \frac{d Q}{T} = \int_I \frac{d Q}{T} + \int_{II} \frac{d Q}{T}, \] e como o caminho \(II\) é
+          reversível, podemos escrever essa integral em termos da entropia que
+          acabamos de definir acima, ou seja \[ 0 &lt \int_I \frac{d Q}{T}
+          + S(A) - S(B) \quad \Rightarrow \quad s(B) > S(A) + \int_I
+          \frac{d Q}{T} \] o que mostra que a entropia é uma função
+          crescente. Essa é a forma que em geral é conhecida como segunda lei
+          da termodinâmica, mas que é um corolário dessa lei. </p>
+
+
+
+
+      </section>
+
+  </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

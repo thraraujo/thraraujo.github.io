@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Sistema de Partículas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread"> 
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Sistema de Partículas & Colisões</h1> 
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> Vimos na seção anterior algumas aspectos do sistema dinâmica para
+          partículas que se encontram isoladas. Embora esse seja um importante
+          passo na descrição dos fenômenos naturais, partículas isoladas são
+          idealizações, e como tais, devemos considerar como as leis de Newton
+          e os sistemas dinâmicos são generalizados para o caso onde temos
+          \(N\) partículas interagindo entre si, e sob a ação de alguma força
+          externa. Para nossa sorte, essa generalização não é muito complicada,
+          e consideraremos esse problema nessa seção.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Leis de Newton para um Sistema de Partículas</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+      <p>Vamos começar considerando o caso onde temos \(N\) partículas
+          rotuladas com o índice \(i = 1, \dots, N\), e onde iremos distinguir
+          cada uma dessas partículas pela sua posição \(\mathbf{r}_i\) com
+          relação à origems; e, quando conveniente, pela sua massa \(m_i\).
+          Evidentemente, cada uma dessas posições descreverá uma curva no
+          espaço Euclidiano \(\mathbb{R}^3\), e a nossa função é resolver as
+          equações de Newton para cada uma dessas partículas. Além disso, é
+          muito importante mencionar que a posição relativa entre as partículas
+          \(i\) e \(j\) é dada por \[ \mathbf{r}_{ij} = \mathbf{r}_j -
+          \mathbf{r}_j\], de onde podemos concluir que a velocidade e a
+          aceleração relativa entre essas partículas são dadas por \[
+          \mathbf{v}_{ij} = \dot{\mathbf{r}}_{ij} \qquad \mathbf{a}_{ij} =
+          \ddot{\mathbf{r}}_{ij} \]</p>
+
+        <h3>Momento Linear Total</h3>
+
+        <p> Por mais incrível que pareça, as definições acima são todos os
+          conceitos novos que aparece em dinâmica de \(N\) partículas, todo o
+          resto é apenas usar os mesmos ingredientes sob uma perpectiva mais
+          geral. </p>
+
+        <p>Considere, por exemplo, o caso do momento linear \[ \mathbf{p} = m
+          \mathbf{v} \] Ora, como temos \(N\) partículas, temos que cada uma
+          dessas partículas é rotulada pelo momento linear dado por
+          \(\mathbf{p}_i = m_i \mathbf{r}_i\), o que também significa que cada
+          uma dessas partículas está sob a ação da segunda lei de Newton como
+          \[\mathbf{F}_i = \dot{\mathbf{p}}_i\] Essa expressão nada mais é que
+          a segunda lei de Newton aplicada \(N\) vezes. A questão é que faz
+          sentido considerar a força total como a soma de cada uma das forças
+          individuais atuando sobre as partículas indifidualmente. Observe que
+          essa declaração inocente esconde um outro axioma, que é a linearidade
+          das forças, e em particular, que o princípio da superposição pode ser
+          aplicado. </p>
+
+        <p>Definimos, portanto, a força total sobre esse sistema de \(N\)
+          partículas como \[ \mathbf{F} = \sum_{i=1}^N \mathbf{F}_i \] onde, a
+          partir de agora, omitiremos, quando necessário, os limites desse
+          somatório por simplicidade. Portanto, temos que \[ \mathbf{F} =
+          \sum_i \dot{\mathbf{p}}_i = \frac{d}{dt}\left(\sum_i
+          \mathbf{p}_i\right)  \] e como o leitor mais observador pode
+          concluir, o termo entre parênteses pode ser definido como o momento
+          linear total do sistema. Ou seja \[ \mathbf{F} = \dot{\mathbf{P}}
+          \qquad \text{onde}\qquad  \mathbf{P} = \sum_i \mathbf{p}_i \] </p>
+
+        <h3>Força</h3>
+
+        <p>Agora precisamos lidar com o elefante no meio da sala. Qual a
+          natureza das forças entre as partículas. O fato é que existem dois
+          tipos de forças atuando num sistema de partículas, a interação mútua
+          entre diferentes partículas, e forças externas.</p>
+
+        <p> <ol> <li><b>Forças de Interação:</b> Dado o par de partículas \(i\)
+          e \(j\), exitem interações entre essas partículas tal a força é dada
+          por \[ \mathbf{F}_{ij} = - \mathbf{F}_{ji}  \] onde a antissimetria
+          dos indices é um resultado da terceira lei de Newton. Portanto, na
+          i-ésima partícula temos a força total \[ \mathbf{F}^{(int)}_i =
+          \sum_{j \neq i} \mathbf{F}_{ij} \] onde o somatório é sobre todas as
+          partículas com \(j\neq i\). </li>
+
+          <li><b>Forças Externas:</b> Para cada uma das partículas, podemos
+            ainda ter a ação de forças externas. Por exemplo, se esse sistema
+            estiver imersa num campo gravitacional, então temos que a lei da
+            gravitação universal está atuando sobre cada uma das partículas.
+            Outro exemplo, é supor que algumas dessas partículas são
+            eletricamente carregadas positivamente, outras negativamente
+            carregadas, e algumas neutras. Então temos ações de forças exernas
+            que devem ser contabilizados. As forças externas atuam
+            individualmente</li> </ol> </p>
+
+        <p>Colocando esses fatos juntos, temos que na i-ésima partícula, temos
+          a força \[ \mathbf{F}_i = \mathbf{F}_I^{(ext)} + \sum_{j\neq i}
+          \mathbf{F}_{ij} \] e a força total no sistema é dada por \[
+          \mathbf{F} = \sum_{i} \mathbf{F}_i = \sum_i \mathbf{F}_i^{(ext)} +
+          \sum_i \sum_{j\neq i} \mathbf{F}_{ij}  \] Usando a terceira lei de
+          Newton, podemos ver que existe uma grande simplificação sobre as
+          interações mútuas das partículas. Observe que podemos escrever o
+          somatório como \[ \sum_i \sum_{j \neq i}\mathbf{F}_{ij} =
+          \sum_{i=1}^N \sum_{j=1}^{i-1} \mathbf{F}_{ij} + \sum_{i=1}^N
+          \sum_{j=i+1}^{N} \mathbf{F}_{ij} \] evidente que no caso onde
+          \(i=1\), o primeiro termo da somatória não contribue e temos apenas o
+          somatório com \(j&gt 2\), e para \(i=N\) temos apenas o somatório com
+          \(j &lt N\). Além disso, temos que os indices do somatório são
+          imateriais, ou seja, cosiderando a sequência \(\{a_n\}_{n}\), temos
+          que \[ \sum_n a_n = \sum_m a_m \] Portanto, podemos escrever \[
+          \sum_i \sum_{j \neq i}\mathbf{F}_{ij} =  \sum_{i=1}^N
+          \sum_{j=1}^{i-1} \mathbf{F}_{ij} + \sum_{j=1}^N \sum_{i=j+1}^{N}
+          \mathbf{F}_{ji} \] onde apenas mudamos os índices do seguinte
+          somatório. Ora, mas agora o segundo somatório é exatamente limitado
+          ao caso onde \(j &lt i\), o que significa que as duas somas são
+          exatamente as mesmas, portanto \[ \sum_i \sum_{j \neq
+          i}\mathbf{F}_{ij} =  \sum_{i=1}^N \sum_{j=1}^{i-1}
+          \left(\mathbf{F}_{ij} + \mathbf{F}_{ji}\right) \] e usando a terceira
+          lei de Newton, onde \(\mathbf{F}_{ij} = - \mathbf{F}_{ji}\) vemos que
+          a contribuição das forças de interação para a força total é nula.
+          Portanto \[ \mathbf{F} = \sum_i \mathbf{F}_i^{(ext)} \] Esse
+          resultado é absolutamente maravilhoso, e precisamos entender o que
+          ele está nos dizendo. Antes de mais nada, devo mencionar que esse é
+          um dos resultados que nos permitem estudar física, e ele constitui um
+          dos motivos pelo qual a mecânica Newtoniana é um sucesso. Antes de
+          discutirmos esse resultado, precisamos discutir alguns aspectos
+          matemáticos, mas guarde essa bela expressão no seu coração, pois
+          voltaremos a ela em instantes.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Centro de massa</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Voltemos agora à expressão onde definimos o momento total do sistema
+          de partículas. \[ \mathbf{P} = \sum_i m_i \mathbf{v}_i \] Vamos
+          definir agora um ponto, que chamaremos de <i>centro de massa</i> cujo
+          significado físico será óbvio em alguns instantes. Esse ponto é dado
+          por \[ \mathbf{r}_{cm} = \frac{1}{\sum_i m_i}   \sum_i m_i
+          \mathbf{r}_i \] tal que a velocidade do centro de massa é definido
+          por \[ \mathbf{v}_{cm}= \dot{\mathbf{r}}_{cm} = \frac{1}{\sum_i m_i}
+          \sum_i m_i \dot{\mathbf{r}}_i \] portanto \[ \mathbf{P} = \sum_i m_i
+          \dot{\mathbf{r}}_i = \left( \sum_i m_i \right) \mathbf{v}_{cm} = M
+          \mathbf{v}_{cm} \] onde \(M = \sum_i m_i\) é a massa total do
+          sistema. Ou seja, o momento total do sistema é equivalente à sua
+          massa total multiplicada pela velocidade do centro de massa. Isso
+          significa que um sistema de \(N\) partículas é dinâmicamente
+          equivalente à um sistema com uma única partícula localizada no seu
+          centre de massa. Esse resultado mostra o motivo pelo qual o sistema
+          de apenas uma partícula é tão importante. Por completeza, observe que
+          essa definição não está restrita à sistemas discretos. No caso de uma
+          distribuição contínua de massa temos que \[ \mathbf{r}_{cm} =
+          \frac{1}{M} \int_V d^3 t \rho(\mathbf{r'})\mathbf{r}' \] onde \(M =
+          \int_V d^3r \rho(\mathbf{r})\) onde \(\rho) é a densidade do corpo.
+          De fato, essa definição é mais geral que a que consideramos
+          anteriormente, pois o caso discreto é recuperado com \[
+          \rho(\mathbf{r}') = \sum_i m_i \delta^{(3)}(\mathbf{r}' - \mathbf{r})
+          \]</p>
+
+        <p>Usando agora que a força total é dada pela contribuições da força
+          externa, ao mesmo tempo que é dada pela variação temporal do momento
+          linear total, temos que \[ \mathbf{F} =  \mathbf{F}^{(ext)} = \frac{d
+          \mathbf{P}}{dt} = M \mathbf{a}_{cm}\] temos que a aceleração do
+          centro de massa é unicamente devido à força externa. </p>
+
+        <p>Isso significa que os graus de liberdade podem até mudar a
+          orientação, temperatura de um corpo, mas ele não pode fazer
+          absolutamente nada para mudar a trajetória do centro de massa. Um
+          gato caindo, por exemplo, pode até mudar girar o seu corpo, mas nada
+          pode fazer para mudar a trajetória do seu centre de massa. O problema
+          do gato caindo é uma transformação de gauge, a propósito. Tem um
+          paper famoso que se chama "Gauge theory of the falling cat" onde os
+          autores descrevem o giro do gato como uma transformação de gauge.</p>
+
+        <p>Observe ainda que no caso onde o sistema não está sujeito a nenhuma
+          força externa, então \[ \dot{\mathbf{P}} = 0 \] ou seja, o momento
+          linear total é conservado. Na nossa discussão sobre a conservação da
+          energia total vimos o quão importante leis de conservação são para o
+          estudo de sistemas dinâmicos, e a conservação do momento linear tem
+          profundas consequências para o nosso estudo. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Problema dos dois corpos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Nessa seção faremos uma breve análise do problema dos dois corpos.
+          Nosso objetivo agora é entender como esse problema é nada mais que o
+          problema de um corpo no centro de massa, e essa simplificação é uma
+          cortesia da conservação do momento linear.</p>
+
+        <p>Consideramos dois corpos de massas \(m_1\) e \(m_2\), localizados
+          nas posições \(\mathbf{r}_1\) e \(\mathbf{r}_2\), respectivamente.
+          Definimos a posição do centro de massa como \[ \mathbf{r}_{cm} =
+          \frac{1}{m_1 + m_2} \left( m_1\mathbf{r}_1 +  m_2\mathbf{r}_2 \right)
+          \] A posição relativa entre os corpos é dada por \[ \mathbf{r}_{12} =
+          \mathbf{r}_{2} - \mathbf{r}_1\] Ingenuamente, podemos estudar a
+          dinâmica desse sistema estudando as equações para as duas partículas,
+          mas podemos fazer algo mais inteligente, como veremos agora. </p>
+
+        <p>Vamos escrever as posições \(\mathbf{r}_1\) e \(\mathbf{r}_2\) em
+          termos da posição relativa e do centro de massa. Use que
+          \begin{align} \mathbf{r}_{cm} & = \frac{1}{m_1 +
+          m_2}\left(m_1\mathbf{r}_1 +  m_2\mathbf{r}_2\right) \\ & =
+          \frac{1}{m_1 + m_2}\left(m_1\mathbf{r}_1 +  m_2(\mathbf{r}_1 +
+          \mathbf{r}_{12})\right) \\ & = \mathbf{r}_1 +  \frac{m_2}{m_1 + m_2}
+          \mathbf{r}_{12} \end{align} logo \begin{align} \mathbf{r}_1  & =
+          \mathbf{r}_{cm} - \frac{m_2}{m_1 + m_2} \mathbf{r}_{12}\\
+          \mathbf{r}_2 & = \mathbf{r}_1 + \mathbf{r}_{12}  = \mathbf{r}_{cm} +
+          \frac{m_1}{m_1 + m_2} \mathbf{r}_{12} \end{align} O que a princípio
+          parece redundante, pois estamos substituindo um conjunto de 6
+          incognitas (os dois vetores) por outro conjunto de 6 incognitas: as
+          variáveis do centro de massa e da posição relativa. O pulo do gato
+          acontece quando lembramos que o momento total é conservado, ou seja
+          \(dot{\mathbf{P}} = 0\), logo \(\ddot{\mathbf{r}}_cm = 0\). De onde
+          concluímos que \[ 0 = \mathbf{F} = \mathbf{F}_1 + \mathbf{F}_2 \qquad
+          \Rightarrow \qquad  \mathbf{F}_1 = - \mathbf{F}_2   \] Portanto,
+          temos que \begin{align} \mathbf{F}_1 & = m_1 \ddot{\mathbf{r}}_1 =
+          m_1 \left( \ddot{\mathbf{r}}_{cm} - \frac{m_2}{m_1 + m_2}
+          \ddot{\mathbf{r}}_{12}\right) = - \frac{m_1 m_2}{m_1 + m_2}
+          \ddot{\mathbf{r}}_{12}\\ \mathbf{F}_2 & = m_2 \ddot{\mathbf{r}}_2 =
+          m_1 \left( \mathbf{r}_1 + \mathbf{r}_{12}  = \ddot{\mathbf{r}}_{cm} +
+          \frac{m_1}{m_1 + m_2} \ddot{\mathbf{r}}_{12}\right) =
+          \frac{m_1m_2}{m_1 + m_2} \ddot{\mathbf{r}}_{12}\\ \end{align} Ou
+          seja, precisamos apenas determinar a dinâmica da posição relativa, e
+          todo o resto é trivial. Esse é um presente da conservação do momento
+          linear. De fato, o termos \[ \mu = \frac{m_1 m_2}{m_1 + m_2} \] é
+          chamado de <i>massa reduzida</i>.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Colisões</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>A última aplicação que consideraremos nessa seção é o de colisões.
+          Esse é um dos problemas mais relevantes que podemos estudar em
+          física. Em última análise, estamos interessados nesse tipo de
+          problema devido a sua relevancia na análise de estruturas muito
+          pequenas. Usamos metodos de colisões -- que na física atômica e
+          molecular é chamada de espalhamento -- para entender como moléculas,
+          átomos e seus componentes estão estruturados. Evidente que a análise
+          que faremos aqui é mais romântica, mas é fundamental esse
+          entendimento dos casos mais simples para o estudo mais aprofundado
+          desse problema. </p>
+
+        <h3>Sistema do laboratório</h3>
+
+        <p>Consideramos duas partículas, onde consideramos que uma delas, a com
+          massa \(m_2\) está em repouso. Lançamos uma partícula \(m_1\) com
+          momento linear \(\mathbf{p}_1= m_1 \mathbf{v}_1\). Depois da colisão, as duas
+          partículas são ricocheteadas, ou espalhadas, usando a terminologia
+          padrão, de maneira que a partícula \(m_1\) tem momento final
+          \(\mathbf{q}_1 = m_1 \mathbf{u}_1\) e faz um ângulo \(\theta_1\) com o vetor
+          \(\mathbf{p}_1\), enquanto que a partícula \(m_2\) tem momento
+          \(\mathbf{q}_2 = m_2 \mathbf{u}_2\) e faz um ângulo \(\theta_2\) com o vetor
+          \(\mathbf{p}_1\). Com base nessa descrição, queremos encontrar
+          relações funcionais entre os ângulos de espalhamento, e os momentos
+          iniciais e finais. Além disso, queremos discutir quantas equações
+          independentes obtemos, o que nos diz quantas incognitas são admitidas
+          para que esse sistema seja determinado.</p>
+
+        <p>A primeira observação que faremos é que esse sistema tem duas
+          partículas e não existe nenhuma força externa atuando sobre ele. Isso
+          significa que o momento total é conservado. Portanto, o momento
+          linear total antes e depois da colisão são os mesmos, ou seja \[
+          \mathbf{P} = \mathbf{p}_1 + \mathbf{p}_2 = \mathbf{q}_1 +
+          \mathbf{q}_2 \] onde também devemos lembrar que a partícula 2 está em
+          repouso, portanto \[ \mathbf{p}_1 = \mathbf{q}_1 +  \mathbf{q}_2 \] A
+          primeira conclusão não trivial que chegamos é que esse sistema
+          acontece unicamente no plano definido pelos vetores \( \mathbf{q}_1\)
+          e \(\mathbf{q}_2\), pois o vetor \(\mathbf{p}_1\) é dependente linear
+          dos momentos depois da colisão. Por isso, parametrizamos esse sistema
+          de maneira que o momento antes da colisão esteja orientado na direção
+          \(X\). Dessa forma, temos a seguinte parametrização: \begin{align}
+          \mathbf{p}_1 & = (p_1, 0)\\ \mathbf{q}_1 & = (q_1\cos\theta_1,
+          q_1\sin\theta_1)\\ \mathbf{q}_2 & = (q_2\cos\theta_1, -
+          q_2\sin\theta_2) \end{align} De onde concluímos que a conservação dos
+          momentos implica as duas equações algébricas \[ p_1 = q_1
+          \cos\theta_1 + q_1 \cos\theta_2 \qquad q_1 \sin\theta_1 = q_2
+          \sin\theta_2 \] </p>
+
+        <p>Em processos de colisão, a energia cinética não é, em geral,
+          conservada. De fato, podemos escrever que em colisões temos uma
+          relação da forma \[ \frac{p_1^2}{2 m_1} = \frac{q_1^2}{2 m_1} +
+          \frac{q_2^2}{2 m_2} + Q   \] onde o coeficiente \(Q\) é chamado de
+          coeficiente de elasticidade. Veja que no caso onde \(Q &gt 0\), a
+          energia cinética inicial do sistema é maior que a final, o que
+          significa que após a colisão o sistema perdeu energia. Como a energia
+          total é sempre conservada, isso significa que a energia cinética
+          perdida foi convertida em energia potencial. Para \(Q &lt 0\) temos
+          exatamente o processo contrário. No caso especial onde \(Q = 0\), a
+          colisão é dita <i>elástica</i>.</p>
+
+          <p>Como sabemos que o momento total é conservado, podemos calcular a
+          magnitude \(p_1^2\) em termos das magnitudes dos momenta final
+          (plural de momento é momenta). Portanto temos \[ p_1^2 =
+          \mathbf{p}_1^2 = (\mathbf{q}_1 + \mathbf{q}_2) \cdot (\mathbf{q}_1 +
+          \mathbf{q}_2) = q_1^2 + q_2^2 + 2 q_1 q_2 \cos(\theta_1 + \theta_2)\]
+          Inserindo essas expressões na condição da conservação da energia
+          cinética, temos que \[ \frac{1}{2 m_1} \left( q_1^2 + q_2^2 + 2 q_1
+          q_2 \cos(\theta_1 + \theta_2) \right) =\frac{1}{2 m_1}q_1^2  +
+          \frac{1}{2 m_2}q_2^2 + Q \] de onde encontramos mais uma equação
+          algébrica \[ q_1 \cos(\theta_1 + \theta_2) = \frac{m_1 - m_2}{2m_1
+          m_2} q_2 + \frac{m_1 Q}{q_2} \] Observe que algo muito curioso
+          acontece no caso onde as massas das partículas são iguais e \(Q=0\).
+          Nesse caso devemos ter \(\cos(\theta_1 + \theta_2) = 0\), ou seja, o
+          \(\theta_1 + \theta_2 = \pi/2\). Temos, portanto, o total de 3
+          equações algébricas, mas temos 6 variáveis a ser determinadas:
+          \(\{p_1,q_1, q_2, \theta_1, \theta_2, Q\}\), portanto, 3 delas devem
+          ser obtidas experimentalmente. É mais simples determinar o momento
+          incial, pois temos controle sobre as condições iniciais do
+          experimento, e é relativamente simples determinar os ângulos de
+          espalhamento. Podemos fazer isso com detectores de partículas. Dessa
+          forma, podemos usar as expressões acima para encontrar o coeficiente
+          de elasticidade, e os momentos finais das partículas. O experimento
+          que acabamos de descrever é uma versão junior do que aceleradores de
+          partículas fazem. </p>
+
+        <h3>Sistema do centro de massa</h3>
+
+        <p>Para concluir essa discussão, podemos usar os resultados que encontramos na 
+        nossa discussão do problema dos dois corpos e estudar o problema do espalhamento 
+        do ponto de vista do centro de massa. Veremos que a análise é muito mais simples.</p>
+
+        <p>Com relação ao sistema do centro de massa, a partícula \(m_1\) está
+          na posição \(\mathbf{s}_1\) enquanto que a partícula \(m_2\) está na
+          posição \(\mathbf{s}_2\). Podemos relacionar essas posições com as
+          coordenadas do laboratório como \[ \mathbf{r}_1 = \mathbf{r}_{cm} +
+          \mathbf{s}_1 \qquad \mathbf{r}_2 = \mathbf{r}_{cm} + \mathbf{s}_2 \]
+          As coordenadas do centro de massa são dadas por \[ \mathbf{r}_{cm} =
+          \frac{1}{m_1 + m_2} (m_1 \mathbf{r}_1 + m_2\mathbf{r}_2) \] ao passo
+          que a velocidade do centro de massa é \[ \mathbf{v}_{cm} =
+          \frac{m_1}{m_1 + m_2} \mathbf{v}_1  \] pois de acordo com o nosso
+          estudo anterior, sabemos que no sistema do laboratório, a partícula
+          \(m_2\) está em repouso. Com essa informação, podemos calcular as
+          velocidades das partículas com relação ao centro de massa, ou seja
+          \begin{align} \mathbf{V}_1 \equiv \dot{\mathbf{s}}_1 = \mathbf{v}_1 -
+          \mathbf{v}_{cm} = \frac{m_2}{m_1 + m_2} \mathbf{v}_1  \\ \mathbf{V}_2
+          \equiv \dot{\mathbf{s}}_2 = - \mathbf{v}_{cm} =- \frac{m_1}{m_1 +
+          m_2} \mathbf{v}_1  \\ \end{align} De onde concluímos que o momento
+          total antes da colisão é \[ \tilde{\mathbf{P}} = \tilde{\mathbf{p}}_1
+          + \tilde{\mathbf{p}}_2  = m_1 \mathbf{V}_1 + m_2 \mathbf{V}_2 =
+          \vec{0}  \] ou seja, o total é zero, visto do centro de massa. De
+          fato, o nome mais apropriado para esse sistema de referencial é
+          <i>sistema de momento zero</i>, pois mesmo para partículas sem massa
+          (tipo fótons, gluons, neutrinos(?)) essas considerações ainda podem
+          ser feitas. O momento, no caso de partículas não massivas podem ser
+          definidas como a derivada em termos da velocidade da função
+          Hamiltoniana. </p>
+
+        <p>Ora, se o momento total é zero antes da colisão, após a colisão isso
+          deve permanecer, portanto \[ \tilde{\mathbf{P}} =
+          \tilde{\mathbf{q}}_1 + \tilde{\mathbf{q}}_2 = \vec{0} \quad
+          \Rightarrow \quad \tilde{\mathbf{q}}_1 =- \tilde{\mathbf{q}}_2 \]
+          Essa expressão nos diz algo a mais. Suponha que o vetor
+          \(\tilde{\mathbf{q}}_1\) faz um ângulo \(\psi\) com o vetor
+          \(\tilde{\mathbf{p}}_1\), isso nos diz que o ângulo entre
+          \(\tilde{\mathbf{q}}_1\) e \(\tilde{\mathbf{q}}_2\)  é \(\pi\). 
+        </p>
+
+        <p>Finalmente, podemos usar a condição para conservação da energia
+          cinética (ou não conservação, melhor dizendo), juntamente com
+          \(\tilde{\mathbf{p}}_1 = - \tilde{\mathbf{p}}_2\) e
+          \(\tilde{\mathbf{q}}_1 = - \tilde{\mathbf{q}}_2\) para escrever \[
+          \tilde{p}^2 = \tilde{q}^2 + \frac{2 m_1 m_2}{m_1 + m_2}Q \] </p>
+
+        <p>Observe que no caso onde \(Q=0\), temos que os módulos do momento
+          são iguais. Ou seja, as partículas mudam de direção, mas todo o resto
+          permanece inalterado. Nesse caso, em particular, é simples obter uma
+          relação entre os ângulos \(\theta_1, \theta_2\) e \(\psi\). No sistema do laboratório, temos que 
+        a velocidade final da partícula \(m_1\) é dada por 
+          \[ \mathbf{u}_1 = (u_{1x}, u_{1y}) \quad \Rightarrow \quad \tan \theta_1 = \frac{u_{1y}}{u_{1x}} \]
+          O caso \(Q=0\) é útil pois nesse caso em particular, sabemos que a velocidade da partícula \(m_1\) apenas muda 
+          de direção. Isso significa que a velocidade final da partícula \(m_1\) ainda satisfaz a mesma relação que a velocidade inicial satisfaz com o centro 
+          de massa, ou seja 
+          \[ 
+          \mathbf{U}_1 = \mathbf{u}_1 - \mathbf{v}_{cm}
+          \]
+          Usando que \( \mathbf{U}_1 = (U_1 \cos\psi, U_1 \sin\psi)\) e que \(\mathbf{v}_{cm} = (v_{cm},0) \), temos que 
+          \[ \mathbf{u}_1 = (u_{1x}, u_{1y}) = (U_1 \cos\psi + v_{cm}, U_1\sin\psi) \] 
+          logo 
+          \[ 
+          \tan \theta_1 = \frac{\sin\psi}{\cos\psi +v_{cm/U_1}}
+          \]
+          Podemos simplificar esses resultados com algumas manipulações algébricas, mas elas são desnecessárias agora. O resultado importante já foi obtido. 
+        </p>
+
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

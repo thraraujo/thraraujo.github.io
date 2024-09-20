@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Energia e Trabalho</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread"> 
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Energia e Trabalho</h1> 
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> Vimos na seção anterior que dada uma força que pode ser escrita
+          como o gradiente de potencial, podemos definir uma quantidade \[ E =
+          \frac{\mathbf{p}^2}{2m} + V(\mathbf{r}) \] que é conhecida como
+          energia total, ou energia mecância, que é uma quantidade conservada
+          no tempo. O objetivo desse seção é entender o que exatamente essa
+          quantidade significa.  </p>
+
+        <p>Antes de começarmos a interpretar cada um dos seus termos,
+          precisamos entender o que exatamente significa o conceito de
+          conservação. O objetivo central do estudo da dinâmica é determinar
+          qual a trajetória que uma partícula, sistema de partículas ou corpo
+          descreve quando está sob a ação de uma força \(\mathbf{F}\). As
+          equações que descrevem essas trajetórias são as equações de Newton
+          que obtemos pela segunda lei de Newton. Quando a força pode ser
+          escrita como o gradiente de um potencial, temos que a energia \(E\) é
+          conservada, e isso significa que a qualquer instante do tempo \(t\),
+          o valor dessa quantidade \(E\) é sempre a mesmo -- desde que a
+          equação de movimento seja usada. Isso é uma sutileza importante.</p>
+
+        <p>O fato de ser conservada, nos indica que além das equações de Newton
+          -- que são equações diferenciais de segunda ordem, temos um vínculo
+          adicional que envolve unicamente derivadas de primeira ordem, pois
+          \(\mathbf{p} = m \dot{\mathbf{r}}\). Isso significa que se
+          inicialmente temos 3 equações de segunda ordem para serem resolvidas,
+          a conservação de energia simplifica um pouco esse problema, pois
+          agora temos apenas 2 equações para serem resolvidas, mais uma
+          integral. Discutiremos essas observações com mais cuidado abaixo, mas
+          a importância central de quantidades conservadas como a energia
+          reside precisamente no fato de que elas simplificam a análise do
+          problema.</p>
+
+        <p>De fato, existem classes de problemas tão especiais, e com tantas
+          quantidades conservadas que a análise dinâmica do problema é reduzida
+          ao estudo algébrico do sistema. Essa é a noção de sistemas
+          completamente integráveis, que é uma área de intensa atividade de
+          pesquisa nos dias de hoje. Muitos dos problemas que resolvemos, a
+          equação da órbita, rotores, o oscilador harmônico simples são úteis
+          justamente por serem integráveis.</p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Vinculos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Antes de começar a analisar casa um dos termos intedependentemente,
+          vamos usar as expressões explícidas do momento linear para escrever a
+          energia como \[ E = \frac{1}{2m}\left( p_1^2 + p_2^2 + p_3^2 \right)
+          + V(x_1, x_2, x_3) \] que é conservada. Além disso, sabemos que as
+          equações de Newton são \[ \dot{p}_1 = - \frac{d V}{dx_1} \qquad
+          \dot{p}_2 = - \frac{d V}{dx_2} \qquad \dot{p}_3 = - \frac{d V}{dx_3}
+          \] Usando a conservação de energia, podemos evitar resolver uma
+          dessas equações, pois podemos escrever \[ p_1 = \pm \left[ 2m(E - V)
+          - p_2^2 - p_3^2 \right]^{1/2} \] e usando que \(p_1 = m \dot{x}_1\),
+          temos finalmente que \[ \int_{t_0}^{t}dt =
+          \int_{x_1(t_0)}^{x(t)}\frac{M dx_1}{\sqrt{2m(E- V) - p_2^2 -
+          p_3^2}}\] de onde vemos que a solução de \(x_1(t)\) pode ser obtida
+          através de uma integração. Resolver essa integral pode ser um
+          problema em si, mas o ponto é que do ponto de vista dinâmico, apenas
+          duas das equações são necessárias, e a terceira coordenada é uma
+          integral. </p>
+
+        <p>Isso é tão poderoso que se o sistema for unidimensional (e com
+          apenas 1 grau de liberdade), temos que \(p_2 = p_3=0\), portanto as
+          equações de Newton podem ser completamente ignoradas. Observe que
+          esse é o caso do oscilador Harmônico simples, e também será do
+          problema de Kepler, embora nesse segundo caso, uma outra lei de
+          conservação irá conspirar ao nosso favor: A conservação do momento
+          angular.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Energia Cinética e Potencial</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Observe que podemos escrever a energia total como a soma de dois
+          termos \[ E = T + V \] onde o primeiro termos é chamado de energia
+          cinética \(T\) enquanto o segundo termo, já conhecemos, é o termo
+          cinético \(V\). Precisamos discutir esses dois termos separadamente.
+        </p>
+
+        <h3>Energia Cinética</h3>
+
+        <p>A energia cinética é tradicionalmente escrita como \[ T =
+          \frac{1}{2m} \mathbf{p}^2 = \frac{m}{2}\dot{\mathbf{r}} \] A
+          interpretação para esse termo é muito simples: ela diz respeito ao
+          movimento do corpo. Isso significa que a natureza do corpo e os
+          motivos que fazem com que esse corpo se movimente são completamente
+          irrelevantes para a energia cinética. O importante é que esse corpo
+          se move.</p>
+
+        <h3>Energia Potencial</h3>
+
+        <p>Esse termo é mais interessante pois define o "tipo" de força que
+          estamos lidando. Lembre que a energia potencial foi definida pela
+          condição \[ \mathbf{F} = - \nabla V(\mathbf{r}) \], o que significa
+          que a definição do potencial \(V\) nos diz a natureza da força que o
+          nosso sistema está sujeito, se é a força eletromagnética,
+          gravitacional (ou até a força forte, se aproximarmos essa interação
+          por um potencial, o que quase nunca é uma boa ideia). A mensagem
+          importante é que o potencial é o termo mais informativo sobre o
+          ambiente em que o sistema dinâmica está imerso.</p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Exemplos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Agora que já entendemos de maneira aproximada o que esses termos
+          significam, é importante entender como esses objetos trabalham
+          juntos, e em particular, como a energia cinética e potencial operajam
+          juntas de maneira que a energia mecânica (ou total) seja conservada.
+          Abaixo consideramos dois exemplos simples de potenciais: potenciais
+          lineares e quadráticos.</p>
+
+        <h3>Potencial Linear</h3>
+
+        <p>Considere o caso onde o potencial \(V(\mathbf{r})\) é linear nas
+          componentes do vetor posição, ou seja \[ V(\mathbf{r}) = c_0 +
+          \sum_{i=1}^3 c_i x_i\] onde \(c_0, c_1, c_2, c_3\) são constantes.
+          Nesse caso em partícular, temos que a segunda lei de Newton implica
+          que \[ \mathbf{F}= m \mathbf{a} = - (c_1, c_2, c_3) = - \mathbf{c} \]
+          ou seja, a força é uma constante. Temos portanto que se \(\mathbf{a}
+          = (a_1, a_2, a_3)\) é o vetor aceleração, o potencial acima nos diz
+          que \[ c_i = - m a_i \qquad \Rightarrow \mathbf{c} = - m \mathbf{a}
+          \] Observe que esse é o caso do potencial gravitacional na superfície
+          do planet Terra, onde \(\mathbf{F} = - m g (0, 0, 1)\), portanto
+          \(c_0= c_1 = c_2 = 0\) e \(c_3 = m g\), onde \(g = 9.8m/s^2\). </p>
+
+        <p>Voltando ao caso geral, temos que se a aceleração é constante,
+          podemos usar o que aprendemos sobre cinemática e escrever as
+          componentes da velocidade e da posição como \[ \mathbf{r}(t) =
+          \mathbf{r}_0 + \mathbf{v}_0 t - \frac{1}{2 m}\mathbf{c} t^2 \qquad
+          \mathbf{v}(t) =  \mathbf{v}_0 - \frac{1}{m}\mathbf{c} t\] onde os
+          vetores \(\mathbf{r}_0\) e \(\mathbf{v}_0\) sao determinados pelas
+          condições iniciais para posição e velocidade.</p>
+
+        <p>De posse dessas soluções, podemos encontrar a energia cinética,
+          potencial e total para o potencial linear. Começamos com o potencial
+          pois é o termo mais simples \[ V = c_0 + \sum_{i= 1}^3 c_i x_1 = c_0
+          + \mathbf{c}\cdot \mathbf{r}(t) = c_0 + \mathbf{c} \cdot
+          \left(\mathbf{r}_0 + \mathbf{v}_0 t - \frac{1}{2 m}\mathbf{c} t^2
+          \right) \] Além disso, temos a relação \(\mathbf{c} = - m
+          \mathbf{a}\). A energia cinética é dada por \[ T =
+          \frac{m}{2}\mathbf{v}^2 = \frac{m}{2} \left( \mathbf{v}_0^2 - \frac{2
+          t}{m} \mathbf{c}\cdot \mathbf{v}_0 + \frac{t^2}{m^2} \mathbf{c}^2
+          \right) \] Portanto, temos que \[ E = T + V = c_0 + \frac{m}{2}
+          \mathbf{v}_0^2 +  \mathbf{c}\cdot \mathbf{r}_0 \] que é uma
+          constante, como esperado. </p>
+
+        <h3>Potencial Quadrático</h3>
+
+        <p>Nesse caso, podemos ignorar termos constantes e lineares pois a
+          análise seria redundante. Portanto temos que \[ V(x_1, x_2, x_3) =
+          \sum_{i=1}^3\frac{\kappa_i}{2} x_i^2 \] que rende as equações \[
+          \mathbf{F} = (\kappa_1 x_1, \kappa_2 x_2, \kappa_3 x_3) \] ou seja, a
+          lei de Hooke, que já discutimos cuidadosamene na seção anterior --
+          antes mesmo de mergulharmos na conservação da energia. 
+        </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Trabalho</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+      <p>Precisamos agora encarar um problema que ainda não tratamos e não
+          podemos deixar despercebidos. Observe que a energia total não é uma
+          quantidade unicamente Existem duas fontes de redundancias na
+          definição da energia. A primeira é a energia potencial, que foi
+          definida pela sua relação com a força. Porém, observe que qualquer
+          função do tipo \( V(\mathbf{r}) = V'(\mathbf{r}) + c\) onde \(c\) é
+          uma constante satisfazem as mesmas equações de movimento. Isso indica
+          que esse sistema pode ter energia \[ E = T + V = T + V' + c = E' +
+          c\]. Mas podemos ignorar a constante \(c\) se assim desejarmos, e
+          como \(E \neq E'\), temos que o mesmo sistema pode ter diferentes
+          definições de energia. Na prática, isso também significa que em todos
+          os sistemas que estamos tratando, estamos inadvertidamente escolhendo
+          uma constante \(c\) por baixo dos panos, e em geral essa constante é
+          \(c=0\) -- mas não precisa ser. De fato, essas escolhas que são
+          inocentes agora na física clássica, são cruciais num tratamento mais
+          robusto da mecânica quântica, onde a constante \(c_0\) pode até mesmo
+          ser infinito. 
+          <!-- Outra fonte de redundancia é o fato de que temos se -->
+          <!-- mudarmos de referencial, a velocidade da partícula também mudará, o -->
+          <!-- que significa que a energia cinética também assumirá diferentes -->
+          <!-- valores. -->
+        </p>
+
+        <p>Preste atenção que embora diferentes observadores e diferentes
+          escolhas da constante \(c\) levem a diferentes valores nominais das
+          energias, todos concordam que a energia total é uma quantidade
+          conservada.</p>
+
+        <p>Essa discussão muito importante para que uma coisa fique clara. O
+          importante não é o valor da energia no instante \(t_0\). A quantidade
+          física que realmente podemos medir é a diferença da energia entre
+          dois pontos do espaço ou do tempo. Essa diferença é relacionado à
+          nossa capacidade de ligar uma TV, um playstation, de tomar um banho
+          quente ou mesmo levantar um carro num guincho. Ou seja, a nossa
+          capacidade de realizar algum trabalho. </p>
+
+      <h3>Trabalho</h3>
+
+        <p> Da discussão que acabamos de realizar, sabemos que o importante
+          mesmo é a diferença da energia entre dois pontos, queremos saber o
+          que acontece dinamicamente quando exercemos alguma força sobre um
+          objeto para o arrastar entre dois pontos, \( \mathbf{r}_A\) e \(
+          \mathbf{r}_B\). Podemos capturar esse aspecto físico definindo a
+          integral de linha \[ W = \int_{\mathbf{r}_A}^{\mathbf{r}_B} d
+          \mathbf{r}\cdot \mathbf{F} \] Essa quantidade é chamada de
+          <b>Trabalho</b>. Observe ainda que escrevendo essa expressão em
+          termos do intervalo temporal, temos que \[ W = \int_{t_A}^{t_B} dt
+          \dot{\mathbf{r}}\cdot \mathbf{F} \] e o integrando \[ \mathcal{P} =
+          \dot{\mathbf{r}} \cdot \mathbf{F} \equiv \frac{d W}{dt} \] é chamada
+          de potência. Análise dimensional revela que Trabalho tem unidades de
+          Energia. </p>
+
+        <p>Observe que podemos escrever o trabalho como \[ W = \int_{t_A}^{t_B}
+          dt \ m\dot{\mathbf{r}}\cdot\ddot{\mathbf{r}} = \int_{t_A}^{t_B} dt
+          \frac{d}{dt}\left( \frac{m}{2} \dot{\mathbf{r}}^2 \right) = T(t_B)  -
+          T(t_A)\] ou seja, o trabalho é igual a variação da energia cinética.
+        </p>
+
+        <h3>Conservação da Energia</h3>
+
+        <p>Obviamente, no caso onde a energia é conservada, podemos usar que \[
+          T = E - V \], portanto \[ W = - (V(\mathbf{r}_B) - V(\mathbf{r}_A))
+          \] de onde vemos imediatamente que qualquer redundância na definição
+          do potencial é imediatamente removida com essa expressão. Evidente
+          que no caso onde o ponto inicial e final são os mesmos, então o
+          trabalho se anula</p>
+
+        <p> Podemos fazer essa última analise mais cuidadosamente.  Considere
+          mais uma vez a definição de forças conservativas. \[ \mathbf{F} = -
+          \nabla V(\mathbf{r}) \] Usando nosso conhecimento de calculo
+          vetorial, temos a identidade \[ \nabla \times \mathbf{F} = 0 \] Tendo
+          essa expressão em mente, podemos usar o teorema de Stokes para
+          mostrar que se temos uma curva fechada \(\gamma(t\)\) parametrizada
+          por \(\mathbf{r}(t) = (x_1, x_2, x_2)\), temos que a integral de
+          linha \[ W = \oint_{\gamma} d \mathbf{r}\cdot \mathbf{F} =
+          \int_{\Sigma} d \mathbf{S}\cdot (\nabla \times  \mathbf{F}) = 0 \]
+          onde \(\partial \Sigma = \gamma\). Isso significa que se movermos um
+          objeto por uma curva fechada, a trabalho medido é exatamente zero.
+          Evidente isso explica o motivo pelo qual forças conservativas são tão
+          raras. O mundo está repleto de sistemas com atrito, viscosidade e
+          todo tipo de resistência ao nosso movimento. Então, quando empurramos
+          uma cadeira no chão, o chão irá aquecer um pouco, fazemos barulho e
+          incomodamos o vizinho que mora no apartamento embaixo. Todos esses
+          processos fazem com que exista perda de energia, o que significa na
+          prática que em geral, a energia não seja conservada, e o trabalho num
+          circuito fechado não seja nulo. </p>
+
+        <p>Como um desafio que valerá a pena estudar, a força magnética é muito
+          especial nesse sentido. Considere uma partícula de carga elétrica
+          \(q\) se movendo a uma velocidade \(\mathbf{v}\) na presença de um
+          campo magnético \(\mathbf{B}\). A força magnética é dada por \[
+          \mathbf{F}_m = q \mathbf{v} \times \mathbf{B} \] O mais bizarro dessa
+          expressão é o seguinte: Veja que \( \mathbf{v} \times \mathbf{B}
+          \perp \mathbf{v}\) portanto \(\mathbf{v} \cdot \mathbf{F}_m = 0\), o que
+          significa que o trabalho é <b>sempre</b> zero. Ou seja, a forma
+          magnética <b>nunca</b> realiza trabalho. 
+        </p>
+
+
+
+      </section>
+
+
+
+    </main>
+
+  </body>
+</html>

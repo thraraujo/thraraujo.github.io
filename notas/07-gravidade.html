@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Gravitação</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Gravidade</h1> 
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+          <p>\[G = 6.67430(15)×10^{-11}	N m^2 kg^{-2}\]</p>
+
+      </section>
+
+      <section class="item">
+
+        <p>Até onde sabemos, existem quatro interações fundamentais na
+          natureza, a interação gravitaciona, a interação eletromagnética, e as
+          interações forte e fraca. A interação gravitacional foi a primeira a
+          ser descrita classicamente de maneira satisfatória, por Newton, ainda
+          no século XVII, seguida da interação eltromagnética, e mais
+          recentemente, como o desenvolvimento da mecânica quântica, a
+          interação forte e fraca foram descobertas.</p>
+
+        <p>Apesar de ser a mais senhora das interações, em muitos aspectos, ela
+          é a mais misteriosa. Isso acontece pois a gravidade é a mais frágil
+          de todas as interações. Um pequeno imã, por exemplo, consegue superar
+          toda o efeito gravitacional do planeta Terra por exemplo. Nesse texto
+          exploraremos alguns desenvolvimentos da interação gravitacional, e
+          mostraremos como as hipóteses de Newton foram capazes de responder
+          uma questão que perturbou cientistas por alguns séculos: Qual a
+          trajetória que os corpos celestes descrevem?</p>
+
+        <p> Newton propôs que a interação gravitacional é descrita por uma
+          força central da forma \[ \mathbf{F} = - G\frac{M m}{r^2} \hat{r}
+          \] onde \(m\) e \(M\) são as massas dos dois corpos, \(G\) é uma
+          constante de proporcionalidade que é determinada experimentalmente
+          (por exemplo, no experimento de Cavendish), e \(r\) a distância entre
+          os dois e \(\hat{r}\) o versor na direção que os separa. Além
+          disso, o sinal negativo indica que essa força é sempre atrativa. </p>
+
+        <p>É muito importante entender que a lei da gravitação universal, dada
+          acima, é uma conjectura, e sua validade é medida pelo sucesso que ela
+          tem em descrever os fenômenos naturais. Mais modernamente, a lei
+          acima pode ser recuperada dentro de um arcabouço teórico mais
+          robusto, a relatividade geral, onde derivamos o potencial escalar
+          para a lei acima. Por outro lado, é importante mencionar que -- como
+          toda hipótese científica -- Einstein constroi essa sua teoria com um
+          outro conjunto de hipóteses. </p>
+
+      </section>
+
+
+
+      <section class="item">
+
+        <div class="h2-blocks">
+          <h2>Energia</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Acima enunciamos a lei da gravitação universal de Newton, a primeira
+          observação que podemos fazer é que essa lei é conservativa, pois
+          \(\nabla \times \mathbf{F} = 0\). Isso é um resultado, como já
+          sabemos, do fato de que a força acima pode ser obtida à partir de um
+          potencial \[ \mathbf{F} = -G \frac{M m}{r^2} \hat{r} = - G M m
+          \nabla\left(-\frac{1}{r}\right)   \] ou seja, \[ V(r) = - \frac{G M
+          m}{r} \] é a energia potencial do sistema. Nessas considerações,
+          supomos que uma das partículas está na origem, de maneira que a
+          distância entre elas é dada por \(r = \sqrt{x^2 + y^2 + z^2}\), onde
+          \(\mathbf{r} = (x,y,z)\) é o vetor posição de uma dessas partículas,
+          digamos que seja a partícula com massa \(m\). Isso faz sentido quando
+          a partícula com massa \(M\) é muito massiva e se move pouco com a
+          dinâmica do sistema. No caso do sistema Sol-Terra e Terra-Lua essa é
+          uma aproximação útil. Em geral, porém, é melhor considerar a origem
+          em outro ponto (no centro de massa), tal que a força gravitacional
+          entre os corpos será dada pela expressão \[ \mathbf{F} = -G \frac{M
+          m}{|\mathbf{r} - \mathbf{r}'|^3} (\mathbf{r} - \mathbf{r}')  \] onde
+          \( \mathbf{r} - \mathbf{r}'\) é a distância entre os dois corpos, e
+          \( \mathbf{r}\) e  \(\mathbf{r}'\) são as posições dos corpos com
+          relação à origem.</p>
+
+        <p>Essa expressão geral é muito importante pois existe uma outra
+          hipótese que Newton considerou, mas que é frequentemente ignorada: o
+          princíṕio da superposição. Dado um sistema de \(N\) partículas
+          \(M_i\), supomos que a força resultante desse sistema sobre uma
+          partícula de teste de massa \(m\) é dada pela forma \[\mathbf{F} =
+          \sum_{i=1}^N \frac{(-G M_i m)}{|\mathbf{r} - \mathbf{r}_i|^3}
+          (\mathbf{r} - \mathbf{r}_i) = - G m \sum_{i=1}^N
+          \frac{M_i}{|\mathbf{r} - \mathbf{r}_i|^3} (\mathbf{r} - \mathbf{r}_i)
+          \] onde \(\mathbf{r}_i\) é a posição da iésima partícula \(M_i\).
+          Evidentemente, podemos ainda generalizar esse resultado e considerar
+          um sistema contínuo de massas, de maneira que \[\mathbf{F} =  - G m
+          \int_V d^3r' \frac{\rho(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|^3}
+          (\mathbf{r} - \mathbf{r}') \] onde \(\rho\) é a densidade da
+          distribuição de massa. De fato, poderíamos muito bem começar
+          enunciando essa última expressão e recuperar o caso de \(N\)
+          partículas com uma densidade dada por \( \rho(r) = \sum_{i=1}^N M_i
+          \delta^{(3)}(\mathbf{r} - \mathbf{r}_i) \) Essa é inclusive a forma
+          que acredito ser mais interessante de se definir a Lei da Gravitação
+          Universal, pois particulariza toda a discussão anterior. </p>
+
+        <p>Fora esses detalhes, toda a discussão que tivemos e
+          que teremos é exatamente a mesma -- graças a relatividade de Galileo.
+          Como nesse texto pretendo explorar situações onde um dos corpos é
+          muito maior que o outro, consideramos que \(M\) é estático, logo seu
+          momento linear é nulo, e a origem do sistema de coordenada é em
+          \(M\). Ou seja, toda ação ficará na conta da partícula com massa
+          \(m\). </p>
+
+        <p>Duas observações são necessárias agora. Primeiro, como uma cortesia
+          da segunda lei de Newton, \(\mathbf{F} = \dot{\mathbf{p}}\) (o ponto
+          denota derivação temporal) temos que a Energia total do sistema é
+          conservada. Ou seja, dada a energia mecância, \[ E =
+          \frac{1}{2m}\mathbf{p}^2 + V(\mathbf{r}) \qquad \Rightarrow \quad
+          \dot{E} =  \frac{1}{m}\mathbf{p}\cdot \dot{\mathbf{p}}+
+          \mathbf{r}\cdot \nabla V = 0 \] onde usamos a regra da cadeia na
+          derivação temporal da energia potencial. Além disso, observe que a
+          partícula \(M\) não contribui para o termo cinético. </p>
+
+        <p>Além disso, o potencial acima (e a força, como consequência),
+          dependem unicamente da distância entre as partículas. Interações
+          desse tipo são chamadas de forças centrais e isso tem consequências
+          muito importantes para as trajetórias que as partículas descrevem sob
+          a ação desse tipo de interação. </p>
+
+        <p>Antes de discutirmos as consequências de termos uma força central, 
+        vamos explorar um pouco as consequâncias do que aprendemos até agora 
+        para a situação onde o corpo \(M\) não é apenas muito mais massivo que 
+        \(m\), mas é muito maior.</p>
+
+      </section>
+
+
+
+      <section class="item">
+
+        <div class="h2-blocks">
+          <h2>Campo Gravitacional</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+      <p>Observe que podemos escrever a lei da gravitação universal como \[
+          \mathbf{F} = m \mathbf{g}_M(\mathbf{r}) \] onde
+          \[\mathbf{g}_M(\mathbf{r}) = - G \int_V d^3r'
+          \frac{\rho(\mathbf{r}')}{|\mathbf{r} -\mathbf{r}'|^3}(\mathbf{r}
+          -\mathbf{r}') \] tem uma interpretação física muito simples. Esse
+          campo vetorial, chamado campo gravitacional, define como o corpo
+          \(M\) atuará sobre uma partícula de teste \(m\) colocada no ponto
+          \(\mathbf{r}\). Em outras palavras, esse campo determina a força que
+          o corpo \(M\) exercerá sobre a partícula \(m\). Usando que \[ \nabla
+          \left( \frac{1}{|\mathbf{r} -\mathbf{r}'|}\right) = -
+          \frac{(\mathbf{r} -\mathbf{r}')}{|\mathbf{r} -\mathbf{r}'|^3}\]
+          podemos escrever o campo gravitacional \(\mathbf{g}(\mathbf{r})\) em
+          termos de um potencial \(\Phi(\mathbf{r})\) gravitacional, ou seja \[
+          \mathbf{g}_M(\mathbf{r}) = - \nabla \Phi(\mathbf{r}) \] onde \[
+          \Phi(\mathbf{r}) = -  G \int_V d^3r'
+          \frac{\rho(\mathbf{r}')}{|\mathbf{r} -\mathbf{r}'|} \] </p>
+
+        <p>Escrito nessa forma, podemos tomar a divergência do campo
+          gravitacional \(\mathbf{g}\), portanto \[ \nabla \cdot
+          \mathbf{g}(\mathbf{r}) = -  G \int_V d^3r'
+          \Delta\left(\frac{\rho(\mathbf{r}')}{|\mathbf{r}
+          -\mathbf{r}'|}\right) \] e usando que \( G(\mathbf{r}, \mathbf{r}') =
+          (|\mathbf{r} -\mathbf{r}'|)^{-1} \) é precisamente a função de Green
+          para o operador Laplaciano, ou seja, \[ \Delta G(\mathbf{r},
+          \mathbf{r}') = - 4 \pi \delta( \mathbf{r}- \mathbf{r}') \] temos que
+          \[ \nabla \cdot \mathbf{g}(\mathbf{r}) = - 4 \pi G \int_V d^3r'
+          \rho(\mathbf{r}') \delta( \mathbf{r}- \mathbf{r}') = - 4 \pi G
+          \rho(\mathbf{r}) \] ou seja, \[ \nabla \cdot \mathbf{g}(\mathbf{r}) =
+          - 4 \pi G \rho(\mathbf{r})  \] onde essa belíssima expressão é a lei
+          de Gauss para a gravitação. Integrando sobre toda a superfície que
+          envolve a distribuição de massa e usando o teorema da divergência,
+          encontramos \[ \oint_{\partial V} d \mathbf{S}\cdot \mathbf{g}_M = -
+          4 \pi G M \] </p>
+
+        <p>Podemos usar a lei de Gauss (gravitcional) para calcular o campo
+          gravitacional de uma distribuição esférica de cargas para uma
+          distância \(R\) maior que o raio da distribuição. Como a força
+          depende apenas da distância, temos que o campo em \(R\) é constante,
+          portanto \[ g_M \cdot \oint_{\mathbb{S}^2} d S = - 4 \pi G M \] e
+          como a área da esfera é \(4 \pi R^2\), temos que \[ \mathbf{g}_M = -
+          \frac{G M}{R^2}\hat{r} \] ou seja, o campo graviacional é o mesmo que
+          teríamos se considerássemos toda a carga na origem. </p>
+
+        <p>Esse resultado é muito importante pois podemos usa-lo para calcular
+          o campo gravitacional que experimentamos aqui na superfície do
+          planeta Terra, onde a distância \(R = R_{\oplus} + h\), onde
+          \(R_{\oplus} \simeq 6.37 \times 10^6m \) é o raio médio da Terra e
+          \(h &lt &lt R_{oplus}\) é a altura que geralmente alcançamos mesmo
+          com nossos aviões, por exemplo, \(10^5m \) já pode ser considerado \[
+          \mathbf{g}_M = - \frac{G M}{R^2}\mathbf{e}_3 \simeq - 9.81
+          \mathbf{e}_3 m/s^2 \] onde também aproximamos o versor \(\hat{r}
+          \mapsto \mathbf{e}_3 = (0,0,1) \), pois estamos muito próximos à
+          superfície da Terra. O valor acima é o que chamamos de aceleração
+          gravitacional. </p>
+
+      </section>
+
+
+
+
+      <section class="item">
+
+        <div class="h2-blocks">
+          <h2>Equação da Órbita</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Momento Angular</h3>
+
+        <p>Agora que já entendemos como um corpo de massa \(m\) interage num
+          campo gravitacional muito próximo, precisamos entender o movimento
+          geral que esse corpo descreve quando temos distancias e energias
+          apreciáveis. Em particular, precisamos descrever as órbitas que esse
+          corpo descreve.</p>
+
+        <p>Como as forças são centrais, podemos usar coordenadas esféricas,
+          \((r, \theta, \phi)\) ou cilindricas \((r, \theta, z)\). Mostraremos
+          agora que a análise é muito mais simples usando coordenadas
+          cilindricas.</p>
+
+        <p>Lembre que o momento linear é definido por \[ \mathbf{L} =
+          \mathbf{r}\times \mathbf{p} \], onde no nosso caso, \(\mathbf{r}\) é
+          a posição da partícula \(m\) e \(\mathbf{p}\) é o seu momento linear.
+          Lembre que o corpo \(M\) é tão massivo que sua dinâmica pode ser
+          negligenciada. Esse corpo será nosso Sol, por exemplo. Dessa
+          expressão, podemos encontrar o torque como \[ \vec{\tau} =
+          \mathbf{r}\times \mathbf{F} = \dot{\mathbf{L}}\], mas como a força é
+          central, temos que \(\mathbf{r} \parallel \mathbf{F}\), logo
+          \(\vec{\tau}=0\), de onde imediatamente concluímos que o momento
+          angular é uma quantidade conservada. </p>
+
+        <p>Isso significa que o momento angular, sendo conservado, é sempre
+          ortogonal à velocidade e ao momento da partícula \(m\). Portanto,
+          como os dois vetores definem um plano (um resultado elementar de
+          algebra linear), definindo o plano no instante \(t_0\), esse plano
+          sempre será o mesmo quando o sistema gravitacional evolui. Isso
+          significa que podemos escolher esse plano para ser o plano XY (com
+          \(z = 0\)), de maneira que podemos considerar coordenadas cilindricas
+          no nosso estudo. </p>
+
+        <p>Portanto, temos que a posição da partícula é dada por \(\mathbf{r}=
+          r \hat{r}\), sendo as coordenadas cilindricas definidas pelos
+          versores \[\hat{r} = (\cos\theta, \sin\theta, 0) \qquad \hat{\theta}
+          = (-\sin\theta, \cos\theta, 0) \qquad \hat{k} = (0,0,1) \] portanto,
+          temos que a velocidade e a aceleração são dadas por \[ \mathbf{v} =
+          \dot{r}\hat{r} + r \dot{\theta} \hat{\theta} \qquad \mathbf{a} =
+          (\ddot{r} - r \dot{\theta}^2)\hat{r} + (r \ddot{\theta} + 2
+          \dot{r}\dot{\theta} ) \hat{\theta} \] Usando agora a segunda lei de
+          Newton, e a lei da gravitação universal, temos que \[ m(\ddot{r} - r
+          \dot{\theta}^2) = - \frac{G m M}{r^2}  \qquad  r \ddot{\theta} + 2
+          \dot{r}\dot{\theta} = 0 \] A segunda expressão pode ainda ser escrita
+          como \[ \frac{1}{r} \frac{d}{dt} ( r^2 \dot{\theta}) = 0 \] o que
+          parece indicar a existência de uma nova quantidade conservada. Uma
+          análise mais cuidadosa revela, no entando, que esse termo é apenas o
+          momento angular disfarçado. \[ \mathbf{L} = L_z \hat{k} = m (r
+          \hat{r})\times ( \dot{r}\hat{r} + r \dot{\theta} \hat{\theta} ) = m
+          r^2 \dot{\theta} \hat{k} \] portanto, temos que \[ \dot{\theta} =
+          \frac{L_z}{m r^2} \] Substituindo essa expressão na equação na
+          direção radial temos que \[ m \ddot{r} = - \frac{G m M}{r^2} +
+          \frac{L_z^2}{m r^3}  \] que é conhecida como equação da órbita. Isso
+          significa que se quisermos descobrir qual a trajetória \(r= r(t)\)
+          que uma partícula descreve no potencial gravitacional gerado por
+          \(M\), essa é a equação que precisamos resolver. </p>
+
+        <h3>Potencial Efetivo</h3>
+
+        <p>Observe ainda que podemos escrever a equação da órbita como \[ m
+          \ddot{r} = - \frac{d V_{eff}}{dr} \] onde \[ V_{eff} = - \frac{G M
+          m}{r} + \frac{L_z^2}{2m r^2}  \] é chamado de potencial efetivo.
+          Podemos entender um pouco melhor o que esse potencial representa,
+          analisando a energia total desse sistema. Usando a expressão para a
+          velocidade e para o momento angular, é simples provar que \[ E =
+          \frac{m \dot{r}^2}{2} + V_{eff} \] e temos que para \(r \to \infty\),
+          temos que \( E \to 0\), enquanto que para \(r\to 0\), temos que \(E
+          \to \infty\), onde o temos dominante é  o termo que envolve o momento
+          angular. Isso significa que é muito custoso energetivamente para a
+          partícula \(m\) se aproximar da partícula \(M\). O termo adicional no
+          potencial é chamado de barreira do momento angular, e aparece na
+          análise de outros sistemas com simetrias centrais, por exemplo, na
+          lei de Coulomb. 
+        </p>
+
+        <p>Calculando o mínimo do potencial efetivo temos que \(V'_{eff}(r) =
+          0\) encontramos que o mínimo ocorre para \[ r_{min} = \frac{L_z^2}{G
+          M m^2}  \] e nesse ponto temos que a energia do sistema é \[ E_{min}
+          = V_{eff}(r_{min}) = - \frac{(GM)^2 m^3}{2 L_z^2} \] Com essa
+          informação, já podemos obter alguma intuição sobre o comportamento da
+          partícula. Por exemplo, se a partícula tiver a energia mínima, então
+          a distântia entre os dois corpos é constante, mas como a partícula
+          ainda tem velocidade angular, ela descreve um circulo. </p>
+
+        <p>Caso a partícula tenha energia maior que a energia mínima, mas menor que 
+        zero, então a distância varia entre dois pontos, um de máximo e outro mínimo, e a 
+        partícula descreve uma elípse. Finalmente, para distâncias maiores que zero a partícula 
+        descreve uma hipérbole. </p>
+
+        <h3>Resolvendo a equação da órbita</h3>
+
+        <p>A análise qualitativa do potencial efetivo é importante para que
+          tenhamos uma noção das soluções que precisamos encontrar, mas como
+          somos físicos (e não políticos), precisamos provar as nossas
+          afirmações. A primeira observação é que não é muito útil usar a
+          distância \(r\), como uma função do tempo, é muito melhor escrever
+          uma relação dependente do ângulo \(\theta(t)\). Portanto, temos que
+          \[ \dot{r} = \dot{\theta} \frac{d r}{d \theta} = \frac{L_z}{m}
+          \frac{1}{r^2} \frac{d r}{d\theta} \] onde na segunda igualdade usamos
+          que \(m r^2\dot{\theta} = L_z\). Agora observe que podemos reescrever
+          essa derivada como \[ \dot{r} = - \frac{L_z}{m}
+          \frac{d}{d\theta}\left( \frac{1}{r} \right)\] Tomando a derivada
+          desse termo, temos \[\ddot{r} =  - \frac{L_z}{m}
+          \dot{\theta}\frac{d^2}{d\theta^2}\left( \frac{1}{r} \right) = -
+          \frac{L_z^2}{m^2} \frac{1}{r^2}\frac{d^2}{d\theta^2}\left(
+          \frac{1}{r} \right)  \] Dessa maneira, podemos reescrever a equação
+          da órbita como \[ m \ddot{r} = - \frac{G m M}{r^2} + \frac{L_z^2}{m
+          r^3} \quad \Rightarrow \quad - \frac{L_z^2}{m}
+          \frac{1}{r^2}\frac{d^2}{d\theta^2}\left( \frac{1}{r} \right) = -
+          \frac{G m M}{r^2} + \frac{L_z^2}{m r^3} \] ou ainda, \[
+          \frac{L_z^2}{m} \frac{d^2}{d\theta^2}\left( \frac{1}{r} \right) +
+          \frac{L_z^2}{m r} = G m M  \quad \Rightarrow \quad
+          \frac{d^2}{d\theta^2}\left( \frac{1}{r} \right) + \frac{1}{r} =
+          \frac{G m^2 M}{L_z^2} \] Finalmente, definindo \[ u(\theta) =
+          \frac{1}{r} -  \frac{G m^2 M}{L_z^2}\] temos a equação para o
+          oscilador harmônico simples, cuja solução é dada por \[ \frac{1}{r} =
+          A \cos\theta(t) +  \frac{G m^2 M}{L_z^2}\] onde a amplitude \(A\)
+          pode ser obtida experimentalmente considerando o periélio (o ponto de
+          menor distância entre o Sol e a Terra), pois \(A = r_{min} - \frac{G
+          m^2 M}{L_z^2}&gt 0\). Dessa forma, concluímos que \[ r(\theta) = \frac{1}{
+          A \cos\theta(t) +  \frac{G m^2 M}{L_z^2}} = \frac{r_0}{e \cos\theta +
+          1} \] onde definimos \[ e = \frac{A L_z^2}{G M m^2}\qquad r_0 =
+          \frac{L_z^2}{G m^2 M} \] onde \(e\) é a excentricidade e \(r_0\) é a
+          distância média entre os dois corpos. </p>
+
+        <p>Portanto, nosso trabalho está essencialmente finalizado, pois a
+          expressão acima é a definição das seções cônicas em coordenadas
+          polares. Escrevendo \(x = r \cos \theta\) e \(y = r \sin\theta\),
+          podemos reduzir essa expressão à suas formas usuais em coordenadas
+          cartesianas. Finalmente, o tipo de seção cônica considerada dependerá
+          evidentemente, da excentricidade. </p>
+
+        <p>Uma discussão importante que deveríamos realizar agora é a análise
+          das leis de Kepler. Deixaremos essa discussão como um exercício, pois
+          ela não é das mais complicadas e é uma leitura bastante divertida. No
+          lugar dessa análise, trataremos a equação da órbita de um ponto de
+          vista um pouco mais moderno, usando a conservação do Vetor de
+          Laplace-Runge-Lenz.</p>
+
+      </section>
+
+
+      <section class="item">
+
+        <div class="h2-blocks">
+          <h2>Laplace-Runge-Lenz</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Considere agora o vetor \(\mathbf{p}\times \mathbf{L}\), onde agora
+          não assumimos nenhum sistema de coordenadas em particular. Tomando a
+          derivada desse vetor temos \[ \frac{d}{dt} (\mathbf{p}\times
+          \mathbf{L}) =  \dot{\mathbf{p}}\times \mathbf{L} \] onde usamos que o
+          momento angular é conservado. Além disso, a segunda lei de Newton
+          garante que \[ \dot{\mathbf{p}} = - \frac{G M m}{r^3}\mathbf{r} \]
+          onde \(r = \sqrt{\mathbf{r}\cdot \mathbf{r}}\). Portanto \[
+          \frac{d}{dt} (\mathbf{p}\times \mathbf{L}) = \dot{\mathbf{p}}\times
+          \left( \mathbf{r} \times \mathbf{p} \right) = - \frac{G M
+          m^2}{r^3}\mathbf{r}\times \left( \mathbf{r} \times \dot{\mathbf{r}}
+          \right) \] Usando a simbolo de Levi-Civita, temos \[
+          \left.\mathbf{r}\times \left( \mathbf{r} \times \dot{\mathbf{r}}
+          \right)\right|_i = \epsilon_{ijk}\epsilon_{mnk} r_j r_m \dot{r}_n =
+          (\delta_{im}\delta_{jn} - \delta_{in}\delta_{jm})r_j r_m \dot{r}_n =
+          r_i r_j \dot{r}_j - r_j r_j \dot{r}_i \] ou seja, temos que
+          \[\mathbf{r}\times \left( \mathbf{r} \times \dot{\mathbf{r}} \right)
+          = ( \mathbf{r}\cdot \dot{\mathbf{r} } ) \mathbf{r}  - (\mathbf{r}
+          \cdot \mathbf{r}) \dot{\mathbf{r}}  \] Observe agora que \(
+          \mathbf{r}\cdot \dot{\mathbf{r}} = \frac{1}{2}\frac{d}{dt}
+          (\mathbf{r}\cdot \mathbf{r}) \) Portanto \[\mathbf{r}\times \left(
+          \mathbf{r} \times \dot{\mathbf{r}} \right) = \frac{1}{2}\frac{d}{dt}
+          (\mathbf{r}\cdot \mathbf{r}) \mathbf{r}  - (\mathbf{r} \cdot
+          \mathbf{r}) \dot{\mathbf{r}}\] Observe agora que podemos escrever \[
+          \frac{d}{dt}\left( \frac{1}{r} \right) =  \frac{d}{dt}\left(
+          \frac{1}{ \sqrt{\mathbf{r} \cdot \mathbf{r}} } \right) = -
+          \frac{1}{2} \frac{1}{ (\mathbf{r} \cdot \mathbf{r})^{3/2}}
+          \frac{d}{dt}\left( \mathbf{r} \cdot \mathbf{r} \right) = -
+          \frac{1}{2} \frac{1}{  r^3} \frac{d}{dt}\left( \mathbf{r} \cdot
+          \mathbf{r} \right)  \] portanto \[\mathbf{r}\times \left( \mathbf{r}
+          \times \dot{\mathbf{r}} \right) = - r^3\frac{d}{dt}
+          \left(\frac{1}{r}\right)\mathbf{r} - r^2\dot{\mathbf{r}} = - r^3
+          \left( \frac{d}{dt} \left(\frac{1}{r}\right) \mathbf{r} + \frac{1}{r}
+          \dot{\mathbf{r}}  \right) = - r^3 \frac{d}{dt}
+          \left(\frac{\mathbf{r}}{r}\right)\] Portanto, concluímos que \[
+          \frac{d}{dt} (\mathbf{p}\times \mathbf{L}) = G M m^2 \frac{d}{dt}
+          (\hat{r}) \] de onde concluímos que o vetor \[ \mathbf{S} =
+          \mathbf{p}\times \mathbf{L} - GM m^2 \hat{r} \] é conservado. Esse
+          vetor é chamado de Laplace-Runge-Lenz. </p>
+
+        <p>De posse desse vetor, não esperamos que a quanidade conservada
+          definida por esse vetor seja independente. De fato, podemos escrever
+          o seu módulo em termos da energia. Calculando a sua magnitude, temos
+          \[ S^2 = \mathbf{S}\cdot \mathbf{S} = (\mathbf{p} \times
+          \mathbf{L})^2 - 2 \frac{G M m^2}{r} \mathbf{r}\cdot (\mathbf{p}
+          \times \mathbf{L}) + (G M m^2)^2 \] Observe que \[ \mathbf{r}\cdot
+          (\mathbf{p} \times \mathbf{L}) =   (\mathbf{r} \times \mathbf{p})
+          \cdot \mathbf{L} =  \mathbf{L}\cdot \mathbf{L} = L^2 \] Além disso,
+          temos \[ (\mathbf{p} \times \mathbf{L})^2 = \epsilon_{ijk}
+          \epsilon_{mnk} p_j L_k p_m L_n = \mathbf{p}^2 \mathbf{L}^2 -
+          (\mathbf{p}\cdot \mathbf{L})^2 = p^2 L^2 \] onde o segundo termo é
+          nulo pois momento linear e angular são ortogonais. Portanto, temos
+          que \[ S^2 = p^2 L^2 - 2  \frac{G M m^2}{r} L^2  + (G M m^2)^2 =
+          \left( \frac{p^2}{2m} - \frac{GM m}{r} \right) 2m L^2  + (G M m^2)^2
+          \] Agora podemos usar que a energia é dada por \[ E = \frac{p^2}{2m}
+          - \frac{G M m}{r} \] Logo \[ S^2 = 2m L^2 E + (G M m^2)^2 \] ou seja,
+          podemos escrever a magnitude do vetor de Laplace-Runge-Lenz em termos
+          da energia e do momento. 
+        </p>
+
+        <p>Como não definimos o sistema de coordenadas (ainda), podemos
+          escolher esse sistema de tal maneira que o angulo entre o vetor
+          posição e o vetor de Laplace-Runge-Lenz seja \(\theta\). Portanto,
+          temos que \(\mathbf{r}\cdot \mathbf{S} = r S \cos\theta\), de maneira
+          que \[ rS \cos\theta = \mathbf{r}\cdot (\mathbf{p}\times \mathbf{L})
+          - G M m^2 r  \] Já sabemos que \( \mathbf{r}\cdot (\mathbf{p}\times
+          \mathbf{L}) = L^2\), logo \[ r = \frac{L^2}{S \cos\theta + GM m^2} =
+          \frac{r_0}{e \cos\theta + 1} \] onde \[ e = \frac{S}{ G M m^2} \qquad
+          r_0 =  \frac{L^2}{ G M m^2} \] Ou seja, recuperamos a solução da
+          órbita, mas usando apenas as cargas conservadas do sistema. 
+        </p>
+
+      </section>
+
+
+    </main>
+
+  </body>
+</html>

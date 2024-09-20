@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Leis de Newton</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread"> 
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Leis de Newton</h1> 
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> As 3 leis de Newton formam o pilar da física moderna, e não seria
+          um exagero afirmar que de toda a ciência moderna. É difícil pensar
+          numa área da ciência que não tenha sido influenciada pelo
+          desenvolvimento posterior da mecância Newtoniana. A
+          "termo-<b>dinâmica</b>", que hoje falamos termodinâmica, que está por
+          trás da primeira revolução indrustrial; todo o desenvolvimento da
+          eletrônica. Enfim, o salto tecnológico que houve nos últimos 300 anos
+          não tem precedente na história da humanidade, e Newton (e os
+          iluministas) são os grandes responsáveis. O nosso objetivo nesse
+          texto é discutir as três leis de Newton, entender seu sifnigicado e
+          algumas das suas consequências. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Primeira Lei</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> Antes de Galileo e de Newton, acreditava-se que o repouso era o
+          estado natural dos objetos. Em outras palavras, acreditava-se que se
+          deixassemos um objeto isolado, ele tenderia ao repouso. Galileo e
+          Newton estabeleceram (o primeiro experimentalmente, enquanto o
+          segundo matematicamente) o que conhecemos hoje como o princípio da
+          inércia, que de modo muito simplicado nos garante que se o corpo
+          estiver livre de forças, ele permanecerá em movimento uniforme, ou
+          seja, com uma velocidade constante (lembre que \(v=0\) também é uma
+          velocidade constante) e retilínea. </p>
+
+        <p>De maneira mais precisa, Galileo e Newton estabeleceram a existência
+          dos chamados referênciais inerciais, ou seja, referênciais em que as
+          partículas movem-se, exatamente, com velocidade constante. De fato,
+          existem um conjunto infinito de referênciais inerciais, e a primeira
+          lei de Newton garante que para um corpo livre de forças, podemos
+          encontrar um referêncial inercial onde a partícula encontra-se em
+          repouso.</p>
+
+        <p>Esse fato tem grandes consequências para toda a dinâmica. Primeiro,
+          discutiremos como existem transformações (chamadas de transformações
+          de Galileo) que garantem a equivalência de diferentes referenciais
+          inerciais. Podemos rotacionar, transladar e considerar movimentos de
+          referênciais inerciais. Na prática, um observador é incapaz de
+          distringuir esses referênciais inerciais sem recorrer a fatores
+          externos -- por exemplo, o seu movimento relativo à pontos fixos,
+          estrelas, por exemplo. Quando a velocidade é variável, por outro
+          lado, Newton percebeu que existiam deformações contrárias à esse
+          movimento. Por exemplo, a forma que suas costam "empurram" o banco
+          quando o seu veículo começa a mover-se. Newton percebeu que essa
+          variação da velocidade estabelece um critério objetivo e individual
+          para a definição de forças. </p>
+
+        <p>Em outras palavras, Newton perceber que embora a velocidade seja um
+          critério relativo (por isso podemos encontrar diferentes referenciais
+          inerciais), a aceleração não é um critério relativo. E é precisamente
+          esse valor absoluto que relaciona a definição de aceleração e
+          força.</p>
+
+        <p>Newton ainda notou que velocidade e aceleração não são boas
+          quantidades dinâmicas, pois elas não capturam, completamente, as
+          características dos corpos. Isso porque uma observação simples,
+          mostra que um acidente com um Gurgel é bem menor violento que um
+          acidente com uma Scania. Newton percebeu, no entanto, que o produto
+          entre a massa e a velocidade é uma quantidade dinamicamente mais
+          rica, pois captura essa diferença de magnitude entre o "tamanho" dos
+          objetos. Essa quantidade, vetorial, é o momento linear, e é dada por
+          \[ \mathbf{p} = M \mathbf{v} \]</p>
+
+        <p>Com essa discussão, a primeira lei de Newton pode ser enunciada de
+          maneira mais clara da seguinte maneira: <blockquote>
+          \(1^\circ\)<b>Lei</b>: <i>"Na ausência de forças, podemos encontrar
+            um referencia no qual o momento da partícula é
+            constante."</i></blockquote> </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Segunda Lei</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> A segunda lei de Newton é uma consequência imediata do que acabamos
+          de discutir. Ora, se na ausência de forças o momento do corpo é nulo,
+          então na presença de forças, o momento é uma quantidade variável. De
+          fato, a segunda lei de Newton é dada precisamente por: <p>A segunda
+          lei de Newton pode ser enunciada como <blockquote>
+          \(2^\circ\)<b>Lei</b>: <i>" A força atuando sobre uma partícula é a
+            variação temporal do momento linear. "</i></blockquote> \[
+        \mathbf{F} = \dot{\mathbf{p}} = \frac{d \mathbf{F}}{dt} \] onde o ponto
+        denotando derivação temporal é uma notação desenvolvida pelo próprio
+        Newton. </p>
+
+        <p> Frequentemente consideramos casos onde a massa da partícula é uma
+          constante, portanto achamos a forma mais frequente da segunda lei de
+          Newton, \[ \mathbf{F} = M \mathbf{a} \] onde \(\mathbf{a}\) é a
+          aceleração da partícula.</p>
+
+        <p>Com a segunda lei de Newton nas nossas mãos, podemos mais uma vez
+          revisitar a primeira lei de Newton e entender como podemos construir
+          referenciais inerciais. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Transformações de Galileo</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Como falamos acima, Galileo e Newton entenderam que existem uma
+          infinidade de referenciais inerciais, e mesmo existindo apenas 1 onde
+          a partícula está em repouso, ele é dinamicamente equivalente a uma
+          infinidade de outros referenciais inerciais em movimento. A segunda
+          lei de Newton estabelece critérios objetivos para a construção desses
+          referênciais. Essa construção é conhecida como relatividade de
+          Galileo.</p>
+
+        <h3>Translação Temporal</h3>
+
+        <p>Uma transformação óbvia que temos é a translação temporal. Na
+          prática, não importa se marcamos o começo no nosso cronômetro agora
+          ou amanhã ou em 100 anos. Um referencial inércial hoje, sempre será
+          um referêncial inercial, a não ser que a gente perturbe esse sistema.
+          Portanto, a transformação \[ t \mapsto t' = t + s_0 \] onde \(s_0\) é
+          uma constante, define uma transformação que preserva os referenciais
+          inerciais. A prova é simples. Uma vez que \[ dt = dt' \] temos
+          imediatamente que \[ \mathbf{F} = \frac{d\mathbf{p}(t)}{\mathbf{dt}}
+          = \frac{d\mathbf{p}(t')}{\mathbf{dt'}}\] portanto, no caso onde \[
+          \mathbf{F} = 0\], uma translação temporal preserva essa relação. 
+        </p>
+
+        <p>É muito útil pensar nessas transformações como transformações de
+          coordenadas no próprio universo. Era dessa forma que Newton pensava.
+          O universo Newtoniano é dado pelo produto Cartesiano \( \mathbb{R}_+
+          \times \mathbb{R}^3\) onde \(\mathbb{R}_+\) define o tempo, e
+          \(\mathbb{R}^3\) o espaço tridimensional. A translação temporal que
+          acabamos de discutir é uma simples translação no termo temporal. 
+        </p>
+
+        <h3>Translação Espacial</h3>
+
+        <p>Agora podemos usar os mesmos argumentos para considerar translações espaciais 
+          \[ \mathbf{r}\mapsto \mathbf{r}' = \mathbf{r} + \mathbf{s} \]
+          onde \(\mathbf{s}\) é um vetor constante. Nesse caso, temos que o momento é 
+          invariante, portanto essa transformação também preserva os referênciais inerciais. 
+          Pensando na transformação em termos do universo Newtoniano, essa transformação nada mais 
+          é que uma translação na direção espacial \(\mathbb{R}^3\). 
+        </p>
+
+
+        <h3>Rotações</h3>
+
+        <p>O caso mais simples de uma rotação espacial são rotações ao redor de
+          um dos eixos coordenados. Por exemplo, rotações ao redor do eixo Z
+          são dadas por matrizes \[ R_z(\theta) = \begin{pmatrix} \cos \theta &
+          - \sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 &
+          1\end{pmatrix}\] de tal maneira que um vetor posição (que escrevemos
+          como uma matrix linha) é transformado como \[ \begin{pmatrix} x_1 &
+          x_2 & x_3 \end{pmatrix} \mapsto \begin{pmatrix} x'_1 & x'_2 & x'_3
+          \end{pmatrix} = \begin{pmatrix} x_1 & x_2 & x_3 \end{pmatrix}\cdot
+          R_z  \] onde o produto considerado é o produto matricial ordinário.
+          Em geral, é possível mostrar que rotações ao redor de qualquer eixo
+          \( \hat{n}\), podem ser parametrizada por 3 ângulos (os ângulos de
+          Euler), e são dadas por matrizes \(R_n\) \(3 \times 3\) com entradas
+          reais, ortogonais e com determinante unitário. Esse conjunto é
+          denotado por \(SO(3, \mathbf{R})\) (pois trata-se de um grupo). Em
+          outras palavras, elementos do conjunto definido abaixo são rotações
+          no espaço Euclidiano \(\mathbf{R}^3\) \[ SO(3, \mathbf{R}) = \{ R \in
+          Mat(3, \mathbf{R}) | R^T = R^{-1} \; , \ \det(R) = 1 \} \] Observe
+          que \(R_z\) acima satisfaz essas propriedades. Um bom livro para ver
+          uma discussão mais madura sobre esse assunto pode ser encontrada no
+          livro de física matemática do Arfken. Portanto, temos que rotações
+          são dadas por \[ \mathbf{r}' = \mathbf{r}\cdot R \] e se
+          considerarmos que os angulos são constantes, então temos que \[
+          \mathbf{v}' = \mathbf{v}\cdot R \qquad  \mathbf{p}' = \mathbf{p}\cdot
+          R  \] e no caso onde a força é nula, rotações também preservam os
+          referenciais inerciais. Veja, novamente, que rotações acontecem
+          apenas no espaço tridimensional real. 
+        </p>
+
+        <h3>Boosts de Galileo</h3>
+
+        <p>Para o leitor mais inquisitivo, pode parecer que as transformações
+          acima são de certa forma trivial, pois mantém a decomposição do
+          produto Cartesiano no universo Newtoniano. Em particular, parece que
+          essas transformações podem ser tratadas de maneira independente. Isso
+          até estudarmos os <i>boosts de Galileo</i>. Essas transformações são
+          muito importantes para o desenvolvimento posterior da mecânica, e em
+          última análise nos levará às transformações de Lorentz, que foram o
+          ponto de partída para uma revolução na física que começou em 1905. A
+          relatividade Especial e Gera. Essas transformações são muito
+          importantes para o desenvolvimento posterior da mecânica, e em última
+          análise nos levará às transformações de Lorentz, que foram o ponto de
+          partída para uma revolução na física que começou em 1905. A teoria da
+          relatividade</p>
+
+        <p>Boosts de Galileo são definidos por transformações em que um dos
+          referênciais se move com velocidade constante com relação à um outro.
+          Ou seja, as coordenadas são relacionadas como \[ \mathbf{r}' =
+          \mathbf{r} + \mathbf{u}_0 t \] e como a força envolve derivadas
+          segundas da posição, e a velocidade relativa \(\mathbf{u}_0\) é
+          constante, vemos que a força é inalterada, e portanto o referencial
+          inercial é preservado.</p>
+
+        <p>O mais bonito dessa relação é que ela mostra que transformações de
+          Galileo não são preservam essa estrutura do produto Cartesiano, pois
+          elas misturam o termo temporal com o espacial. Do ponto de vista
+          matemático, ela envolve o produto semi-direto dos dois termos --
+          muito embora a sua representação em termos de matrizes é muito mais
+          convoluta. </p>
+
+        <p> Em um tratamento mais moderno da mecânica, usando o formalismo
+          Lagrangiano ou Hamiltoniano, é possível mostrar que essas
+          transformações levam a cargas conservadas. Esse é o teorema de
+          Noether. Em particular, temos que Energia, Momento Linear e Momento
+          Angular são quantidade conservadas como um resultado dessas
+          transformações de Galileo.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Terceira Lei</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Finalmente, podemos estudar a terceira lei de Newton. Essa é a lei
+          mais simples de ser enunciada. <blockquote> \(3^\circ\)<b>Lei</b>:
+          <i>"Dados dois corpos \(A\) e \(B\) exercendo forças mútuas um sobre
+            o outro, de tal maneira que \(\mathbf{F}_{AB}\) é a força que a
+            partícula \(A\) exerce sobre \(B\), e \(\mathbf{F}_{BA}\) é a força
+            que a partícula \(B\) exerce sobre \(A\). Então temos que a força
+            \(\mathbf{F}_{BA}\) tem a mesma magnitude e direção contrária à
+            força \(\mathbf{F}_{AB}\)."</i></blockquote> </p>
+
+        <p>De fato, por se tratar de um axioma, podemos encontrar uma versão um
+          pouco mais restritiva dessa lei: mais simples de ser enunciada.
+        <blockquote> \(3^\circ\)<b>Lei</b>: <i>"Dados dois corpos \(A\) e \(B\)
+          exercendo forças mútuas um sobre o outro, de tal maneira que
+          \(\mathbf{F}_{AB}\) é a força que a partícula \(A\) exerce sobre
+          \(B\), e \(\mathbf{F}_{BA}\) é a força que a partícula \(B\) exerce
+          sobre \(A\). Então temos que a força \(\mathbf{F}_{BA}\) tem a mesma
+          magnitude e direção contrária à força \(\mathbf{F}_{AB}\). Onde essa
+          direção é a reta que une as partículas."</i></blockquote>
+        Matematicamente temos que \[ \mathbf{F}_{AB} = - \mathbf{F_{BA}} \] Uma
+        das consequências dessa pequena sutileza é que na primeira versão, a
+        conservação do momento angular exigirá a condição adicional que impomos
+        no segundo enunciado. Na segunda forma, já adicionamos essa condição no
+        princípio. Ou seja, já impomos uma condição que sabemos que vamos
+        precisar. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Tipos de Forças</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>O nosso objetivo, a partir de agora, é considerar alguns tipos de
+          forças onde poderemos ganhar alguma intuição adicional sobre as 3
+          leis de Newton. Mas antes disso, precisamos aprender um pouco sobre
+          os diferentes tipos de forças. Esse é o nosso objetivo nessa breve
+          seção. </p>
+
+        <h3>Forças de Contato e Campos</h3>
+
+        <p>A primeira distinção que fazemos é entre àquelas forças que requerem
+          contato entre os agentes e aquelas que não precisam de contato. Por
+          exemplo, se empurramos uma caixa, precisamos evidentemente tocar, ter
+          contato, com a caixa. Essas forças são as mais familiares.</p>
+
+        <p>Existe, por outro lado, uma outra família de forças (uma pequena
+          família, aparentemente) que podem atuar à distância. Um exemplo disso
+          é a interação gravitacional. O Sol está à milhões de kilômetros de
+          distância da Terra, mas a sua força gravitacional é o que mantém a
+          Terra em órbita. A interação elétrica e magnética são outros dois
+          exemplos de forças de campos.</p>
+
+        <p>A origem para esse nome <i>campos</i> se dá ao fato que a ferramenta
+          matemática que usamos para descrever essas forças (do ponto de vista
+          clássico, ou não quântico) são campos vetoriais. Essa descrição,
+          embora tenha alguns problemas que só são manifestos quando estamos
+          considerando o limite da descrição Newtoniana (altas velocidades, ou
+          sistemas muito pequenos ou muito grandes) é bastante útil e nesse
+          texto não é necessário nenhum refinamento dessas noções.</p>
+
+
+        <h3>Forças Consevativas e Não-Conservativas</h3>
+
+        <p>O segundo tipo de distinção que podemos fazer é entre forças
+          conservativas e não conservativas. Para explicar o significado desses
+          termos, vamos começar com uma definição matemática. Definimos forças
+          conservativas como àquelas forças que podem ser definidas como o
+          gradiente de uma função \( \mathbf{F} = - \nabla V(\mathbf{r})\) onde
+          o sinal de menos é apenas por conveniência.</p>
+
+        <p>Consideramos essa definição curiosa, pois se a força é escrita dessa
+          forma, podemos definir uma quantidade conservada, chamada de energia
+          mecância ou energia total, que é dada por \[ E = \frac{\mathbf{p}^2}{2M}
+          + V(\mathbf{r}) \] onde o quadrado do vetor significa o produto
+          escalar \(\mathbf{p}^2 = \mathbf{p}\cdot \mathbf{p}\).</p>
+
+        <p>Tomando a derivada temporal da energia mecânica, e usando que a
+          função \(V\) depende do tempo através das coordenadas especiais,
+          temos que \[ \dot{E} = \frac{\mathbf{p}}{M}\cdot \dot{\mathbf{p}} +
+          \dot{\mathbf{r}} \cdot \nabla V \] usando agora a definição de forças
+          conservativas e a segunda lei de Newton, temos que a energia \(E\) é
+          uma quantidade constante ao longo da trajetória que a partícula. Ou
+          seja, é uma quantidade conservada. Essa é uma belíssima cortesia das
+          nossas definições. O primeiro termo na energia mecânica é chamada de
+          energia cinética, enquanto o segundo termo é chamado de energia
+          potencial. Precisamos estudar essas definições com bastante carinho
+          no futuro, mas agora é suficiente saber que as forças conservativas
+          são assim chamadas pois conservam a energia total. Como é de se
+          esperar, forças que não podem ser escritas como o gradiente de um
+          potencial, são chamadas de forças não conservativas.</p>
+
+        <p>Curiosamente, não existe uma única força de contato conhecida que
+          seja conservativa. Todas envolvem atritos, viscosidade, resistência.
+          E isso faz com que sempre exista algum tipo de perda energética.
+          Evidentemente, boa parte da nossa análise envolverá algum tipo de
+          aproximação para forças conservativas, mas na prática, forças de
+          contato sempre são não conservativas. Por outro lado, todas as forças
+          de campos conhecidas (podem) ser conservativas. Gravidade sempre é
+          conservativa, mas a força elétromagnética pode ou não ser
+          conservativa. Mantenha isso em mente quando for estudar
+          eletromagnetismo. Observe que como a força elétrica é dada pelo
+          gradiente de um potencial, temos que \( \nabla \times \mathbf{F} =
+          0\) para forças conservativas. No caso do campo elétrico, nem sempre
+          isso é verdade, pois a equação de Maxwell-Faraday nos garantem que o
+          rotacional da força elétrica é \( \nabla \times \mathbf{F}_e = - Q
+          \partial_t \mathbf{B} \). Portanto, apenas para o caso estático, as
+          forças são conservativas.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Lei de Hooke</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Oscilador Harmônico Simples</h3>
+
+      <p>Nessa seção, vamos considerar a lei de Hooke, que é uma força linear
+          na variação espacial, ou seja, a força tem uma magnitude que cresce a
+          medida que nos distanciamos de um ponto de equilíbrio, que é um ponto
+          a força é nula. Além disso, essa força tem direção contrária ao
+          movimento. Ou seja, a lei de Hooke é dada por \[ \mathbf{F}  =-
+          \kappa (\mathbf{r} - \mathbf{r}_0) \] Onde \(\kappa\) é uma constante
+          de proporcionalidade que tem dimensões de \(N/m\). Essa constante é
+          chamada de constante elástica. Observe que essa expressão denota
+          exatamento tipo de força que descrevemos. 1) Ela é contrária ao
+          movimento, pois o seu sinal é negativo. 2) O ponto de equilíbrio é
+          dado por \(\mathbf{r}_0 = (x_{01}, x_{02}, x_{03})\) e a medida que
+          nos distanciamos desse ponto, a magnitude dessa força aumenta. </p>
+
+        <p>Em termos práticos, a lei de Hooke acima é a força mais fácil que
+          não é trivial, em sua essência. Forças que são constantes implicam
+          que a aceleração é constante, e o corpo segue uma trajetória
+          uniformemente acelerada. No caso onde a força é nula, sabemos tudo
+          sobre o corpo, pela primeira lei de Newton. Nesse sentido, a lei de
+          Hooke nos oferece algo novo.</p>
+
+        <p>Aplicando a segunda lei de Newton, temos que resolver as 3 equações
+          diferenciais \[ m \ddot{x}_i = - \kappa(x_1 - x_{0i}) \qquad i =
+          1,2,3 \] Observe que é redundante tentar resolver a mesma equação 3
+          vezes, pois se trata do mesmo problema. Por isso, a partir de agora
+          vamos ignorar o indice \(i\) e vamos considerar apenas as expressões
+          escalares.</p>
+
+        <p>Podemos ganhar uma intuição desse problema, observando que essa lei
+          é conservativa, pois o pois o potencial dado por \[ V(x) =
+          \frac{\kappa}{2}(x-x_0)^2 \] nos dá a lei de Hooke, ou seja \[ F =
+          m \ddot{x} = - \frac{d}{dx}V(x)\] O potencial \(V(x)\) define uma
+          parábola, e o ponto \(x_0\) será um mínimo, ou um máximo, a depender
+          do sinal da constante \(\kappa\). Para ser ainda mais preciso,
+          chamamos a equação de lei de Hooke apenas o caso onde \(\kappa &gt
+          0\)</p>
+
+        <p><span>\( \kappa &lt 0 \)</span> Vamos considerar primeiro o caso
+          onde \(\kappa &lt 0 \). Nesse caso, o ponto \(x_0\) é um ponto de
+          máximo, pois temos que \( V'' = \kappa &lt 0\), logo, esse ponto é um
+          máximo global, pelo teste da derivada segunda.</p>
+
+        <p>Podemos resolver a lei de Hooke \[ \ddot{x} - \frac{|\kappa|}{m} (x
+          - x_0) = 0  \quad \Rightarrow \quad  x(t) = x_0 + a \exp\left(
+          \sqrt{\frac{|\kappa|}{m}} t\right) + b \exp\left(
+          -\sqrt{\frac{|\kappa|}{m}} t\right)\] onde \(a\) e \(b\) são
+          constantes, que podem ser determinadas pelas condições iniciais da
+          posição e da velocidade. Fisicamente, temos que a distância a partir
+          do equilíbrio cresce a medida que o tempo passa. De fato, observe que
+          o termo com a constante \(a\) é o termo dominante.  </p>
+
+        <p>Observe que podemos encontrar a energia desse sistema (considerando
+          apenas 1 direção, por simplicidade). \[E = \frac{p^2}{2m} -
+          \frac{|\kappa|}{2} \left( x - x_0 \right)^2 \] e usando a solução que
+          encontramos acima temos que \[p^2 =|\kappa| m\left[a^2 \exp\left(
+          2\sqrt{\frac{|\kappa|}{m}} t\right) - b^2 \exp\left(
+          -2\sqrt{\frac{|\kappa|}{m}} t\right) - 2 ab\right] \] Portanto temos
+          que a energia é dada por  \[ E  = - |\kappa| a b \] que é,
+          naturalmente, uma constante. </p>
+
+        <p><span>\( \kappa &gt 0 \)</span> O caso onde a constante elástica
+          \(\kappa\) é positiva é muito mais interessante e muito mais
+          (infinitamente mais) importante. Esse é chamado de Oscilador
+          Harmômico Simples. Sidney Coleman, provavelmente o físico teórico de
+          altas energias mais famoso entre os físicos, mas completamente
+          anônimo entre o público em geral disse que: <blockquote> <i>"The
+          career of a young theoretical physicist consists of treating the
+          harmonic oscillator in ever-increasing levels of abstraction."</i>
+        </blockquote> Esse é o nosso primeiro nível de abstração. </p>
+
+        <p>Nesse caso, o ponto \(x_0\) é um ponto de mínima, e a solução para a
+          equação de Hooke é \[ \ddot{x} - \frac{\kappa}{m} (x - x_0) \quad
+          \Rightarrow \quad x(t) = x_0 + A \cos(\omega t + \phi_0) \] onde
+          \(\omega^2 = \kappa/m\) é a frequência angular. Nesse caso, vemos que
+          a solução descreve um sistema que oscila ao redor do ponto mínimo. A
+          constante \(A\) é chamada de amplitude, enquanto que a constante
+          \(\phi_0\) é chamada de fase inicial.  
+        </p>
+
+        <p>Podemos mais uma vez, calcular a energia desse sistema, que
+          esperamos ser uma constante. Veja que \[ p = m \dot{x} = - A
+          \omega\sin(\omega t + \phi_0) \] portanto \[ E = \frac{A^2 \kappa}{2}
+          \] Um olhar mais atento, revela que no espaço definido por \((x,p)\),
+          chamado de espaço de fase, a expressão para a energia descreve uma
+          elípse. Essa simples observação é um dos pontos iniciais de uma das
+          áreas mais bonitas da física: Sistemas Completamente Integráveis.
+        </p>
+
+        <h3>Oscilador Amortecido</h3>
+
+        <p>Na discussão sobre forças de contato, discutimos como forças reais
+          não são força conservativas, então é muito importante entender como
+          isso se manifesta nesse modelo simples que estamos discutindo.
+          Existem diferentes maneiras que os termos não conservativos podem se
+          manifestar nesse caso. Consideramos agora a contribuição que vem da
+          resistência, do atrito, ou qualquer forma de amortecimento que faz
+          com que a amplitude do sistema diminua com o tempo. </p>
+
+        <p>Suponha, por exemplo, que o nosso sistema oscilatório está apoiado
+          em alguma superfície. O termo de atrito surge nesse contato, e é
+          perpendicular (também chamado de normal) à essa superfície. Forças
+          desse tipo são conhecidas como forças normais, e no nosso caso,
+          podemos considerar que \[ |\mathbf{F}| \propto | \mathbf{N}| \] Para
+          o nosso problema, temos que a força de atrito é na mesma direção que
+          a velocidade do sistema, mas no sentido oposto ao do movimento. Além
+          disso, a força fricção é tão mais intensa quanto a magnitude da
+          velocidade. Concluímos portanto que a lei de Hooke deve ser corrigida
+          por um a força da forma \[ \mathbf{F}_a = - \gamma \mathbf{v} \] onde
+          o termos \(\gamma\) é uma constante d proporcionalidade, que deve ser
+          determinada experimentalmente -- assim como a constante elástica
+          \(\kappa\). Portanto, temos que resolver a seguinte equação de
+          movimento \[ \ddot{x} + \frac{\gamma}{m} \dot{x} + \omega_0^2 (x -
+          x_0) = 0 \] Usando o ansätz \(x(t) = e^{at}\) e resolvendo a equação
+          algébrica para o coeficiente \(a\), temos que a solução gera para
+          essa equação é dada por \[ x(t) = x_0 + e^{-\frac{\gamma}{2m}}\left(
+          A e^{t\sqrt{\frac{\gamma^2}{m^2} - 4 \omega_0^2}} + B
+          e^{-t\sqrt{\frac{\gamma^2}{m^2} - 4 \omega_0^2}}  \right) \] Observe
+          que no caso onde \(\gamma=0\), recuperamos a solução oscilatória que
+          tinhamos antes. No caso onde \(\gamma^2 - 4 \omega_0^2m^2 &gt 0\)
+          temos que a solução decai vagarosamente sem apresentar nenhuma
+          característica oscilatória. Esse caso é chamado de super-amortecido.
+          O caso \(\gamma^2 - 4 \omega_0^2m^2 = 0\) decai um pouco mais rápido,
+          não apresenta nenhum perfil oscilatório e é chamado de criticamente
+          amortecido. Finalmente, o caso \(\gamma^2 - 4 \omega_0^2m^2 &lt 0\)
+          decai, mas apresenta um perfil oscilatório e é chamado de
+          sub-amortecido. </p>
+
+
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

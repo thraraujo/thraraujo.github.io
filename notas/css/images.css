@@ -1,0 +1,101 @@
+.text-img {
+  border: 1px solid;
+  margin: 1em;
+}
+
+.side-image {
+  float: right;
+  width: 30%;
+  border: 1px solid;
+  margin: 1.5em;
+}
+
+.lorentz {
+  float: right;
+}
+
+.rotacao {
+  width: 25%;
+  float: left;
+}
+
+.cone {
+  width:30%;
+  float: right;
+}
+
+.time {
+  width:25%;
+  float: left;
+}
+
+.espaco {
+  width:45%;
+  float: right;
+}
+
+.equipart {
+  float: right;
+}
+
+.varied-term {
+  width:25%;
+  float: right;
+}
+
+.eddington {
+  width:35%;
+  float: right;
+}
+
+.carnot {
+  width:35%;
+  float: left;
+}
+
+.standing {
+  width:35%;
+  float: left;
+}
+
+.diffraction {
+  width:25%;
+  float: left;
+}
+
+.rectangle {
+  width:25%;
+  float: right;
+}
+
+.circular {
+  width:35%;
+  float: left;
+}
+
+.torricelli {
+  width:35%;
+  float: right;
+}
+
+.whoCares {
+  width:65%;
+  float: right;
+}
+
+.parabolic {
+  width:25%;
+  float: right;
+}
+
+.hoop {
+  width:25%;
+  float: right;
+}
+
+.moment {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:55%;
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Fluidos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Fluidos</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Forças num fluido</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos de difração de ondas.
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Vamos considerar um elemento infinitesimal de um fluido. As forças
+          atuando sobre esse volume podem ser descritas como:</p>
+
+        <p> <b>Força Volumétrica:</b> A força atua em todo volume do sistema,
+          tal que podemos definir uma <i>densidade força volumétrica </i> como
+          \[ \mathbf{f}= \frac{d \mathbf{F}}{dV} \quad \Rightarrow \quad d
+          \mathbf{F} = \mathbf{f} dV \] </p>
+
+        <p> <b>Força Superficial:</b> Termos que atuam na direção normal à
+          superfície que contém o fluido, como no caso anterior, podemos
+          definir uma <i>densidade força-superficial</i> como ou seja \[
+          \tilde{\mathbf{f}}= \frac{d \mathbf{F}}{dA} \quad \Rightarrow \quad d
+          \mathbf{F} = \mathbf{f} dA \] Evidentemente, temos que \(
+          \tilde{\mathbf{f}} = p \hat{n} \) onde \(p\) é a pressão que o fluido
+          exerce sobre a superfície, e \(\hat{n}\) é o versor normal à
+          superfície. Portanto, escrevemos esse termo como \[ d \mathbf{F} = p
+          d\mathbf{S} \] </p>
+
+        <p>Consideramos o sistema em equilíbrio, o que significa que as
+          contribuições volumétricas e superfíciais se anulam, ou seja  \(
+          \mathbf{f}dV = p d\mathbf{S} \) Vamos calcular os dois lados dessa
+          expressão independentemente. Vamos chamar \(LHS = \mathbf{f}dV\) e
+          \(RHS = p d\mathbf{S} \)  </p>
+
+        <p>Consideramos um volume infinitesimal tal que \[ \mathbf{f}dV =
+          dV\sum_{i=1}^3 f_i \mathbf{e}_i  \] onde \((\mathbf{e}_i)_j =
+          \delta_{ij}\) é a base orthogonal para \(\mathbf{R}^3\). Usando que o
+          elemento de volume é dado por \[ dV = dx_1 \wedge dx_2 \wedge dx_3 \]
+          onde frequentemente usamos a notação \(dV = dx_1 dx_2 dx_3\), mas
+          deixamos explícitos o produto exterior na expressão acima para
+          evidenciar a orientabilidade da superfície. Isso significa que
+          podemos escrever a densidade força volumétrica como \[ LHS =
+          \mathbf{f}dV = \sum_{i=1}^3 f_i \mathbf{e}_i dx_1 \wedge dx_2 \wedge
+          dx_3  \] que organizamos mais convenientemente como 
+          \begin{align} 
+          LHS & = \mathbf{f}dV\\
+          & = f_1 dx_1\wedge (\mathbf{e}_1 dx_2 \wedge dx_3) + f_2 dx_2\wedge
+          (\mathbf{e}_2 dx_3 \wedge dx_1) + f_3 dx_3\wedge (\mathbf{e}_3 dx_1
+          \wedge dx_2) \\
+          & = \sum_i f_i dx_i \wedge d \mathbf{S}_i 
+          \end{align} 
+          onde \(d
+          \mathbf{S}_i\) é o elemento da área da superfície orientável definida
+          pelo versor normal \(\hat{n}=\pm\mathbf{e}_i\). Obsrve que temos 6
+          dessas superfícies, pois \[ d \mathbf{S}_i = \frac{1}{2} \sum_{j, k =
+          1}^3 \mathbf{e}_i \epsilon_{ijk} dx_j \wedge dx_k \] o que justifica
+          o uso do produto exterior. </p>
+
+        <p>Para o calculo do \(RHS\) -- o termos superfícial -- devemos
+          considerar as pressões nas differentes superfícies, ou seja \[ RHS =
+          p d\mathbf{S} = \sum_{i=1}^3 \left( p(x_i + dx_i) - p(x_i) \right) d
+          \mathbf{S}_i\] onde escrevemos na pressão apenas os argumentos que
+          variamos. Ou seja, \(p(x_1+dx_2)\equiv p(x_1 + dx_1, x_2, x_3)\) e
+          assim sucessivamente. </p>
+
+        <p>Expandindo em série temos que \[ \delta p(x_i) = p(x_i + dx_i) -
+          p(x_i) = dx^i \frac{\partial p(x_i)}{\partial x_i} \equiv dx^i
+          \partial_i p(x_i)  \] onde na última igualdade usamos a notação
+          \(\partial_i\) para representar a derivada na coordenada \(x_i\) --
+          apenas por conveniência. Portanto temos que \[ RHS =  \sum_{i=1}^3
+          \partial_i p(x_1, x_2, x_3) dx_i \wedge d\mathbf{S}_i \] </p>
+
+        <p>Comparando ambos os resultados chegamos a conclusão que \[
+          \mathbf{f} = \nabla p \] ou seja, a densidade força é nada mais que
+          o gradiente da pressão. Esse é um principais resultados que
+          discutiremos nesse texto.</p>
+
+        <h3>Lei de Stevin</h3>
+
+        <p>Como uma aplicação muito simples do resutado que acabamos de
+          demonstrar, podemos provar um importante resutado da hidrostática
+          chamado lei de Stevin, que relaciona a pressão em um fluido como uma
+          função da sua profundidade. Considere que estamos considerando um
+          fluido em repouso num sistema gravitacional. Sabemos que a gravidade
+          é uma força conservativa e que \[ \mathbf{F} = m\mathbf{g}\] onde
+          \(\mathbf{g} = -g \mathbf{e}_3\), com \(g  =9.8m/s^2\). Como a massa é
+          dada por \(m = \rho V\), onde \(\rho \) é a densidade do corpo e
+          \(V\) o seu volume, temos que a densidade força é nada mais que \[
+          \mathbf{f} = - \rho \mathbf{g}\], de onde podemos definir uma
+          densidade energia cinética \[u = \rho g z \] tal que \( \mathbf{f} = -
+          \nabla u\). Portanto, usando a relação entre pressão e densidade
+          força, temos que \[ \mathbf{f} = - \nabla(\rho g z ) = \nabla p \quad
+          \Rightarrow \quad p = - \rho g z + C_0 \] onde \(C_0\) é uma
+          constante. Assumindo que na posição \(z = z_0\) a pressão é conhecida
+          e dada por \(p_0\), temos que \(C_0 = p_0 + \rho g z_0\), logo \[
+          p(z) = p_0 + \rho g (z_0 - z) \] que é conhecida como <b>Lei de
+            Stevin</b>.
+        </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Equação da Continuidade</h2>
+        </div>
+
+        <!-- <img class="side-image" src="https://physicstravelguide.com/_media/equations/venturi.gif?w=640&tok=a5fc23" alt="continuidade"> -->
+
+      </section>
+
+
+      <section class="item">
+
+        <p> Embora a expressão que derivamos na seção anterior seja de extrema
+          importância na análise de sistemas hidrostáticos, precisamos
+          derivas as equações dinâmicas para fluidos em movimento. De fato,
+          nesse texto vamos restringir nossa análise a uma classe especial de
+          fluidos: Invíscidos e Incompressíveis, ou seja, sem viscosidade, e
+          fluidos cujas moléculas estão táo próximas que sua densidade é
+          praticamente constante. Essa simplificação ignora diversos sistemas
+          físicos importantes, tais como uma ampla variedade de gases (que
+          tratamos melhor no estudo de termodinâmica). Por outro lado, essa
+          simplificação não significa que estamos tratando de toy models. Os
+          sistemas que consideramos tem diversas aplicações realistas, como
+          veremos abaixo. </p>
+
+        <p>A primeira coisa que devemos fazer é introduzir movimento ao nosso
+          fluido. Considere novamente um elemento de volume \(dV\) e um
+          fluido se movendo a uma velocidade \(\mathbf{u} = \mathbf{u}(t,
+          \mathbf{r})\) que, observe, depende do tempo \(t\) e da posição
+          \(\mathbf{r} = (x_1, x_2, x_2)\) que estamos considerando a
+          partícula do fluido. Essa é uma das primeiras idiossincrasias que
+          encontraremos no estudo de dinâmica dos fluidos -- outras virão.
+        </p>
+
+        <p>Evidente que com a evolução do tempo, ou do seu parâmetro, melhor
+          dizendo, a massa do sistema pode variar -- ou seja, a massa de
+          fluido ocupando o elemento de volume é uma função do tempo, ou seja
+          \[ M(t) = \int_V \rho(t, \mathbf{r}) dV \] Observe que nesse
+          estágio, ainda admitimos que a densidade é uma função do tempo e da
+          posição. Tomando a derivada da massa temos \[ \partial_t M(t) =
+          \int_V dV \partial_t \rho \] que tem unidades de \(Massa/ Tempo\).
+          No sistema internacional essa quantidade é dada em \(Kg/s\) e ela
+          nos informa a quantidade de massa que está entrando (pois estamos
+          considerando o sinal positivo) no volume \(V\) por unidade de
+          tempo. </p>
+
+        <p>Mas tempos que balancear essa quantidade de massa entrando no
+          volume com a mesma quantidade de massa saindo no sistema -- por
+          conservação de massa. Podemos usar essa observação trivial para
+          relacionar quantidades diferentes do sistema e encontrar uma lei de
+          conservação. Essa lei é a equação da continuidade. </p>
+
+        <p>Definimos o fluxo de massa como \[ \mathbf{j}(t, \mathbf{r}) =
+          \rho \mathbf{u}(t, \mathbf{r})  \] que é dada (no SI) por \(kg
+          /(ms)^2\) que define a quantidade de massa que passa num ponto por
+          unidade de tempo. Integrando essa quantidade numa área
+          perpendicular à velocidade, temos a massa da partícula por unidade
+          de tempo, ou seja \[ \Phi = \int_{\Sigma} d \mathbf{S}\cdot
+          \mathbf{j} \]</p>
+
+        <p>Usando essa ultima relação, podemos considerar considerar que a
+          superfície \(\Sigma\) é àquela na qual o fluido está deixando o
+          volume \(V\), portanto a lei de conservação da massa é traduzida na
+          relação \[ \partial_t M = - \int_{\Sigma} d\mathbf{S}\cdot \mathbf{j} \]
+          Considerando a integral sobre todo o volume, e usando que nessas
+          direções a integral se anula pois a velocidade é perpendicular aos
+          outros volumes de área, podemos usar o teorema da divergência para
+          provar que \[ \partial_t \rho + \nabla\cdot \mathbf{j} = 0 \] que é
+          conhecida como <b>equação da continuidade.</b> </p>
+
+        <h3>Fluidos Incompressíveis</h3>
+
+        <p>Como mencionamos anteriormente, vamos considerar apenas fluidos
+          Incompressíveis, o que significa que a densidade é uma constante,
+          portanto \(\partial_t \rho = 0 \) e usando que \( \mathbf{j}= \rho
+          \mathbf{u}\), de onde concluímos que \[\nabla \cdot \mathbf{u} =
+          0\] Observe no entando que embora fluidos Incompressíveis impliquem
+          que a divergência da velocidade é nula, a relação inversa não é
+          verdadeira em geral. Essa é uma sutileza frequentemente ignorada
+          por diversos autores. Observe que podemos reescrever a equação da
+          continuidade como \[ \partial_t \rho + \mathbf{u}\cdot \nabla \rho
+          + \rho \nabla \cdot \mathbf{u} = 0 \] de onde vemos que a condição
+          \[ \partial_t \rho + \mathbf{u}\cdot \nabla \rho = 0  \] também
+          implica \(\nabla \cdot \mathbf{u}=0\). Fluidos que satisfazem essa
+          condição são compressíveis, mas de uma maneira controlada (chamado
+          de estratificação), e aparece, por exemplo, no caso dos oceanos
+          onde a densidade varia com a profundidade. Como uma nota adicional,
+          a expressão \[ D_t = \partial_t + \mathbf{u}\cdot \nabla \] recebe
+          o nome de derivada material, e é muito importante no estudo de
+          dinâmica dos fluidos. De fato, quando estamos falando em derivadas
+          temporais em fluidos, ou num volume infinitesimal dos fluidos,
+          geralmente estamos tratando das derivadas materiais. Isso tem um
+          importante papel nas considerações que faremos a seguir.  
+        </p>
+
+        <p> <span>Exemplo:</span> Para fluidos imcompressíveis, podemos
+          calcular o fluxo \(\Phi\) facilmente. Usando a equação da
+          continuidade temos que \[ \nabla\cdot \mathbf{u} = 0 \] num dado
+          ponto do fluido. Isso significa que embora a velocidade varie com o
+          tempo, a velocidade num ponto localizado na superfície \(\Sigma\) é
+          uma constante, ou seja \[ \hat{n} \cdot \mathbf{u} = u = constante
+          \] e escrevemos o fluxo como \[ \frac{\Phi}{\rho} = u A_{\Sigma} \]
+          onde \(A_{\Sigma}\) é a área da superfície \(\Sigma\). Essa relação é
+          muito útil para o caso onde consideramos um fluido movend-se numa
+          região de áreas transversais variáveis. Em particular, se
+          consideramos dois pontos onde as áreas transversais são \(A_1\) e
+          \(A_2\), veja que, como a razão entre o fluxo e a densidade é uma
+          constante, temos que \[ v_2 = \frac{A_1}{A_2} v_1 \] de onde vemos
+          que se \(A_1 &gt A_2\), então \(v_2 &gt v_1\) e vice-versa. Esse
+          resultado é aplicado, por exemplo, no fenômeno de Venturi, que
+          discutiremos mais adiante. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Equação de Euler</h2>
+        </div>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Consideraremos agora o que vem a ser a 'F=ma' do estudo de dinâmica
+          dos fluidos. Provamos na primeira seção desse pequeno ensaio que a
+          densidade força é dada por \[ \mathbf{f} = \nabla p\] o que
+          naturalmente implica que a força do sistema é dada por \[ \mathbf{F}
+          = - \int dV \nabla p\] onde consideramos o sinal negativo por mera
+          convenciência. Esse sinal indica que a força está atuando sobre o
+          sistema, ou seja, para dentro do volume onde o fluido está contido.
+          Alternativamente, considerando o final positivo, seria a força que o
+          fluido exerce sobre o seu recipiente. Pela terceira lei de Newton,
+          ambas descrições são equivalentes. Além disso, a expressã acima
+          assume que o sistema está isolado, o que em geral (sobretudo para
+          aplicações em engenharia, por exemplo), não é muito útil, e devemos
+          assumir que existem forças externas atuando sobre o sistema: força
+          gravitacional, eletromagnética (o que leva à uma das áreas mais
+          interessantes da dinâmica dos fluidos, a <i>magnetohidrodinâmica</i>)
+          e assim por diante. Nesse texto consideramos apenas ação da força
+          gravitacional, portanto \[ \mathbf{F} = - \int dV  \left( \nabla p +
+          \rho \mathbf{g}\right)\] </p>
+
+        <p>Ainda não podemos fazer nada com essa expressão, pois sabemos apenas
+          que a pressão existe e que está na presença de um campo
+          gravitacional. Newton nos ensinou que o poder real aparece quando
+          usamos a sua segunda lei para escrever uma equação diferencial de
+          segunda ordem que relaciona a energia potencial com o momento linear
+          \(\mathbf{P}\). No nosso caso, onde temos fluidos, o momento linear
+          pode ser definido usando o fluxo de massa \(\mathbf{j} = \rho
+          \mathbf{u}\) como \[ \mathbf{P} = \int dV \rho \mathbf{u} \] e usando
+          a segunda lei de Newton temos \[ \mathbf{F} = \dot{\mathbf{P}} \] e é
+          nesse ponto que devemos ter um cuidado extra. </p>
+
+        <p>A derivada temporal na segunda lei de Newton é a derivada total,
+          portanto devemos levar em consideração que \(\mathbf{u} =
+          \mathbf{u}(t, \mathbf{r}(t))\), logo (usando a regra da cadeia) temos
+          que \[ \mathbf{F} = \dot{\mathbf{P}} = \int dV \frac{d}{d t}(\rho
+          \mathbf{v}) = \int dV\left(  \frac{\partial }{\partial t}(\rho
+          \mathbf{v}) + \rho\frac{\partial x_i}{\partial t} \partial_i
+          \mathbf{u} \right) = \int dV\left(\frac{\partial }{\partial t}(\rho
+          \mathbf{v}) + \rho\mathbf{u}\cdot \nabla(\mathbf{u}) \right) = D_t
+          \mathbf{P} \] onde também usamos a convenção de Einstein para indices
+          repetidos, ou seja \(a_i b_i = \sum_i a_i b_i\). Ou seja, a segunda
+          lei de Newton (para fluidos) é igual a derivada material do momento.
+        </p>
+
+        <p>Coletando todos esses dados que achamos até agora, temos que a
+          equação dinâmica para o estudo de fluidos é dada por \[ D_t(\rho
+          \mathbf{u}) = -\nabla p - \rho \mathbf{g} \] que é conhecida como
+          <b>Equação de Euler.</b> </p>
+
+        <p>De posse dessa equação, podemos discutir uma grade variedade de
+          problemas hidrostáticos e hidrodinâmicos, e essa é a tarefa que
+          faremos agora. </p>
+
+      </section>
+
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Hidrostática</h2>
+        </div>
+
+        <p>\[ \rho_{agua} = 10^3 kg/m^3 \]
+          \[ \rho_{mercurio} = 13.546 \times 10^3 kg/m^3 \]</p>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Vamos começar com fenômenos mais simples onde o fluido tem
+          velocidade nula, ou seja, sistemas estáticos. Nesse caso, a equação
+          de Euler é nada mais que \[ \nabla p = -\rho \mathbf{g} \] que já
+          falamos brevemente no começo desse texto. A partir dessa expressão
+          podemos rederivar a lei de Stevin \[ p(z) = p_0 + \rho g (z_0 - z)\]
+          o que, embora não nos ensine nada novo, mostra que a consistência dos
+          resultados que obtemos. </p>
+
+        <p><span>Princípio de Pascal</span> O princípio de Pascal diz, em
+          palavras, que para fluidos incompressíveis, uma variação da pressão
+          num dado ponto é transmitida por todo o fluido de maneira uniforme.
+          Esse é um belíssimo resultado e pode ser reescrito de maneira
+          matemática através de um tratamento álgebrico muito simples da dei de
+          Stevin. Considerando dois pontos \(z\neq z'\), temos que \[\Delta p =
+          p(z') - p(z) = - \rho g \Delta z \], onde \(\Delta z = z' - z\)</p>
+
+        <p> Podemos considerar um arranjo onde de um lado temos uma área
+          \(A_1\) tal que a sua variação de pressão é dada por \( \delta P =
+          \frac{F_1}{A_1} \) Mas como a pressão é pressão é uniformemente
+          distribuída (segundo o princípio de Pascal), temos que podemos
+          considerar um outro ponto onde a área transversal é \(A_2\) e a
+          pressão deve ser dada por \( \delta P = \frac{F_2}{A_2}\) e
+          comparando esses dois resultados temos \[ F_2 = \frac{A_2}{A_1}F_1 \]
+          Em termos práticos, isso significa que se \(A_2 &gt &gt A_1\) temos
+          um efeito multiplicador. Ou seja, podemos aplicar uma força
+          \(\mathbf{F}\) com uma magnitude pequena, e obteremos uma força
+          \(\mathbf{F}_2\) com uma magnitude suficientemente grande. Esse
+          princípio está por trás de elevadores hidráulicos, por exemplo. 
+        </p>
+
+        <img class="text-img torricelli"  src="https://3.bp.blogspot.com/-iuj6e8sumj0/WfNtG8p_cDI/AAAAAAAAAJw/U8qHlva51Jk-A5d_1PU-eQAlG5iZMV8RwCLcBGAs/s1600/263-ccnnmecpg843680.jpg" alt="experimento de torricelli">
+
+        <p><span>Experimento de Torricelli</span> Uma outra aplicação da Lei de
+          Stevin é o experimento de Torricelli. Ainda hoje existem ferramentas
+          hidráulicas (tipo o carneiro mecânico) que são usados para bombear
+          água de uma região mais baixa para uma mais alta. Nas formas mais
+          primitivas, a bomba consiste apenas de um <i>grande canudo</i>.
+          Histórias apócrifas citam que Torricelli achou curioso o fato de que
+          esses intrumentos não funcionavam para bombear água a alturas pouco
+          maiores que \(10m\). Por isso, Torricelli conjecturou que o ar (o
+          aceano de ar, como ela supostamente falou) exerce pressão sobre o
+          líquido, e quando removemos o ar de dentro do <i>canodo</i>, o ar
+          empurra o líquido para cima. Assim ele elaborou um experimento em que
+          cilindro fechado era preenchido com mercúrio, e em seguida
+          mergulhávamos esse cilindro dentro de um prato com mercúrio, e o
+          deixávemos de cabeça para baixo. Quando a altura estabilizava,
+          podíamos calcular a altura dessa coluna de mercúrio. Como mostra 
+          a figura ao lado, Torricelli encontrou que a altura é de \(z = 760mm\). 
+        </p>
+
+        <p>Podemos mostrar esse resultado usando a lei de Stevin. Sabemos que a
+          pressão no nível do mar \(z_0 = 1 Atm = 1.01325 \times 10^5 Pa\),
+          temos e que no topo to tubo temos vácuo (pois o tubo estava
+          inicialmente preenchido com mercúrio), logo \(p(h)=0\), onde \(h\) é
+          a altura da coluna de mercúrio. Portanto, usando a lei de Steven
+          achamos \[ 0 = p_0 - g h \rho_{mercurio} \quad \Rightarrow \quad h
+          =\frac{p_0}{g \rho_{mercurio}} = 0.76m = 760mm \] Podemos, inlusive,
+          calcular qual a altura máxima que a água pode alcançar \[ h_{agua} =
+          \frac{p_0}{g \rho_{mercurio}} = 10.3m  \] A água, contudo, é um
+          péssimo líquido para se fazer esse experimento pois evapora muito
+          facilmente, o que mudaria a pressão no topo do tubo. De fato, observe
+          que esse experimento é uma maneira muito simples de se encontrar a
+          densidade de um líquido. </p>
+
+        <p>É muito comum (sobretudo na medicina), usar unidades de pressão como
+          mm Hg (ou milímetros de mercúrio), pois como sabemos que em \(1
+          atm\), uma coluna de mercúrio sobre \(760mm\), podemos definir
+          \(1atm\) como precisamente \(760mm Hg = 76cm Hg\). Na medicida,
+          sempre vemos medida de pressão formada por 2 números, por exemplo
+          12/8 (doze por oito). O primeiro diz respeito à pressão que o coração
+          exerce quando ela se contrai (chamado de sístole) e o segundo número
+          diz respeiro a pressão quando o coração relaxa (diástole). Cada um
+          desses números está na unidade de \(cm Hg\). </p>
+
+        <p>De posse dessas ferramentas, podemos elaboras diversos problemas
+          engenhosos sobre hidrostática -- alguns bastante complicados, mas
+          esses problemas são variações sobre o mesmo tema.</p>
+
+        <p><span>Princípio de Arquimedes</span> O último exemplo que
+          consideraremos é o princípio de Arquimedes. Considere um corpo
+          (objeto) de volume \(V_{obj}\) (inicialmente) submerso num líquido de
+          densidade \(\rho\). Evidentemente, quando esse líquido está submerso,
+          ele desloca um volume de líquido igual ao volume do objeto. Pela
+          equação de Euler para hidrostática, temos que \[ \int_{V_{obj}} dV
+          \left( \nabla p + \rho \mathbf{g} \right) = 0 \] onde temos que
+          \(\mathbf{g} = - g \mathbf{e}_3\), logo \[ \int_{V_{obj}} dV \nabla p
+          = - \mathbf{g} \int_{V_{obj}} \rho dV = - \mathbf{g} M_{des} \] onde
+          \(M_{des}\) é a massa de líquido que se deslocou quando mergulhamos o
+          objeto. A força \[ \mathbf{E} = \int_{V_{obj}} dV \nabla p \] é
+          chamada de empuxo, e em palavras, a expressão acima diz que o empuxo
+          é uma força com magnitude igual (e direção oposta) ao peso do massa
+          deslocada \(\mathbf{W}_{des} = M_{des} \mathbf{g}\). Esse é o
+          princípio de Arquimedes. Ou seja \[ \mathbf{E} = -\mathbf{W}_{des} \]
+          Observe que embuxo e peso tem direções opostas. </p>
+
+        <p>Uma análise muito bonita que podemos fazer agora é estudar quais as
+          condições para que um corpo entre m equilíbrio quando o mergulhamos
+          num líquido. Quando mergulhado num líquido, o corpo terá inicialmente
+          uma resultante não nula, ou seja \[ \mathbf{R} = \mathbf{E} +
+          \mathbf{W}_{obj} \] e esse sistema entrará em equilíbrio apenas
+          quando o peso do objeto \( \mathbf{W}_{obj}\) for igual ao empuxo.
+        </p>
+
+        <p>Podemos agora escrever essa relação de maneira mais explícita como
+          \[ \mathbf{R} = \left( - \rho_f V_{des} +  \rho_{obj} V_{obj} \right)
+          \mathbf{g} \] onde \(\rho_f\) e \(\rho_{obj}\) são as densidades do
+          fluido e do objeto, respectivamente. Suponha inicialmente que
+          mergulhamos todo o objeto e depois o soltamos, nesse caso \(V_{obj} =
+          V_{des}\), portanto temos que a resultante é \[ \mathbf{R} = \left( -
+          \rho_f +  \rho_{obj} \right) V_{obj} \mathbf{g} \] </p> 
+
+        <p> Agora temos casos diferentes a serem analisados. <ol>
+          <li><b>Densidades Iguais:</b> Considere que a densidade do fluido e
+            do objeto são as mesmas. Nesse caso a resultante é nula e o objeto
+            permanecerá onde o deixamos. </li>
+
+          <li><b>Objeto mais denso que o fluido:</b> Considere que o objeto é
+            mais denso que o fluido, então a resultante é \[ \mathbf{R} =
+            -\left( - \rho_f  +  \rho_{obj}  \right) V_{obj} g \mathbf{e}_3 \]
+            e como \( - \rho_f V_{des} +  \rho_{obj} &gt 0 \) temos que a
+            resultante é orientada para baixo. Nesse caso o objeto afunda
+            encontrando o equilíbrio apenas no fundo do recipiente. </li>
+
+          <li><b>Objeto menos denso que o fluido</b> Nesse caso, a resultante é
+            orientada para cima pois \[ \mathbf{R} = -\left( - \rho_f  +
+            \rho_{obj}  \right) V_{obj} g \mathbf{e}_3 \] \( - \rho_f V_{des} +
+            \rho_{obj} &lt 0 \). Nesse caso, o objeto será empurrado para cima
+            (pelo embuxo), até que apenas uma fração do corpo fique submerso.
+            Nesse caso, o volume deslocado é uma fração do volume do objeto, ou
+            seja \( V_{des} = \eta V_{obj}\), onde \(\eta &lt 1\). Nesse
+            instante, o sistema entra em equilíbrio mais uma vez, ou seja \[
+            (\rho_{obj} - \eta \rho_f) V_{obj} \mathbf{g} = 0 \] ou seja \[
+            \eta = \frac{\rho_{obj}}{\rho_f} &lt 1 \] Esse é o exemplo famoso
+            onde os livros de física básica pedem para os alunos determinarem a
+            fração de gelo que fica submersa na água. Sabendo as densidades da
+            água e do gelo, isso é uma tarefa de calcular a razão entre as
+            duas. Para referência, a densidade do gelo é, aproximadamente
+            \(90\%\) da densidade da água potável, isso significa que apenas
+            \(10\%\) do gelo fica fora da água. "A ponta do iceberg". </li>
+
+        </ol>
+        </p>
+
+      </section>
+
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Equação de Bernoulli</h2>
+        </div>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Agora que já aprendemos um pouco de Hidrostática, é necessário
+          analisar alguns fatos da hidrodinâmica. Vamos começar reduzindo a
+          equação de Euler para sistemas um pouco mais simples. Observe que  a
+          equação de Euler ainda é bastante complicada. </p>
+
+        <p>A primeira simplificação que faremos é considerar o caso
+          estacionário, ou seja, onde a velocidade não depende do tempo. Nesse
+          caso, a equação de Euler se torna \[ \mathbf{u} \cdot \nabla
+          \mathbf{u} = - \nabla \left( \frac{p}{\rho} + g z\right) \] Primeira
+          tarefa que temos que fazer é usar algumas identidades para reescrever
+          o lado esquerdo dessa equação em termos de um gradiente. </p>
+
+        <p>Vamos agora usar o simbolo de Levi-Civita para calcular a expressão
+          \(\mathbf{u} \times (\nabla \times \mathbf{u})\). Claro que podemos
+          fazer isso usando força bruta, mas em geral, usando as componentes é
+          muito mais rápido. \[ \mathbf{u} \times (\nabla \times \mathbf{u})|_i
+          = \epsilon_{ijk} u_j (\nabla \times \mathbf{u})_k =  \epsilon_{ijk}
+          \epsilon_{kmn} u_j \partial_m u_n \] Agora usamos que o produto de
+          dois simbolos de Levi-Civita é dado pelo determinante \[
+          \epsilon_{ijk} \epsilon_{lmn} = \begin{vmatrix} \delta_{il} &
+          \delta_{im} & \delta_{in} \\ \delta_{jl} & \delta_{jm} & \delta_{jn}
+          \\ \delta_{kl} & \delta_{km} & \delta_{kn} \end{vmatrix} \] portanto
+          temos que \[ \mathbf{u} \times (\nabla \times \mathbf{u})|_i  =
+          \left( \delta_{im} \delta_{jn} - \delta_{in} \delta_{jm}  \right) u_j
+          \partial_m u_n = \frac{1}{2}\partial_i(\mathbf{u}\cdot \mathbf{u}) -
+          \mathbf{u} \cdot \nabla u_i \] o que diz que \[ \mathbf{u} \cdot
+          \nabla \mathbf{u} = \nabla\left( \frac{u^2}{2} \right)  -  \mathbf{u}
+          \times (\nabla \times \mathbf{u})  \] onde \(u^2 = \mathbf{u} \cdot
+          \mathbf{u}\). Esse é exatamente a expressão do lado esquerdo da
+          equação de Euler. Temos portanto \[ \nabla \left( \frac{u^2}{2} +
+          \frac{p}{\rho} + g z \right) = \mathbf{u} \times (\nabla \times
+          \mathbf{u})  \] Agora temos um termo inconveniente envolvendo o
+          produto vetorial do lado esquerdo. Pioramos a situação? Não tão
+          rápido. Observe que esse termo envolvendo o produto vetorial é
+          ortogonal à velocidade do fluido \( \mathbf{u} \times (\nabla \times
+          \mathbf{u}) \perp \mathbf{u} \), o que significa que se seguirmos uma
+          trajetória que seja sempre perpenducular à esse produto vetorial,
+          podemos simplificar essa expressão. </p>
+
+        <p>Essas curvas em que a velocidade é sempre tangente à essa curva são
+          chamadas de <i>streamlines</i> e são definidas pela condição \[
+          \gamma(s) = (\tilde{x}_1(s), \tilde{x}_2(s), \tilde{x}_3(s)) \] onde
+          \(s\) parametriza essa curva. O importante é que para sistemas
+          estacionários, como o que estamos considerando, essas curvas são
+          exatamente as curvas que as partículas que compõem o fluido seguem.
+          Essas curvas são definidas, como falamos acima, de maneira que a
+          velocidade do fluido seja sempre tangente à essa curva, e isso
+          significa que o vetor tangente e a velocidade são paralelos, ou ainda
+          \[ \frac{d \gamma(s)}{ds} \times \mathbf{u}(\gamma(s)) = 0 \] Agora
+          podemos determinar o que isso implica para a curva, mas essa análise
+          é desnecessária no momento. O importante é que se tomarmos o produto
+          escalar da equação de Euler acima com a velocidade definida na
+          streamline, temos que \[ \mathbf{u}(\gamma(s))\cdot\nabla \left(
+          \frac{u^2}{2} + \frac{p}{\rho} + g z \right) = 0 \] e por definição,
+          \(D_{ \mathbf{u}(\gamma)} =  \mathbf{u}(\gamma(s))\cdot\nabla \) é a
+          derivada direcional ao longo de vetor \( \mathbf{u}(\gamma(s))\). De
+          onde concluímos que ao longo das streamlines, temos que \[
+          \frac{u^2}{2} + \frac{p}{\rho} + g z  = constante \] Que é um
+          belíssimo resultado conhecido com <b>equação de Bernoulli.</b> Na
+          verdade, essa discussão pode ser desenvolvida um pouco mais onde é
+          possível demonstar que existe a lei de conservação da energia, um
+          resultado conhecido como Teorema de Bernoulli. Para uma discussão
+          mais profunda desse tópico ver o livro do Landau de Mecânica dos
+          Fluidos. </p>
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Hidrodinâmica</h2>
+        </div>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Agora vamos para a parte mais divertida. Vamos considerar algumas
+          aplicações. O protocolo para resolver problemas usando a equação de
+          Bernoulli é muito simples. O procedimento é o seguinte. O problema
+          informará alguns dados, como posição, velocidade ou pressão em 2
+          pontos. Como a equação de Bernoulli descreve uma relação entre essas
+          quantidades que é sempre constante, somos capazer de usar essa
+          expressão para fixar a quantidade que desconhecemos. Observe que como
+          temos apenas 1 equação, temos que ter apenas uma variável
+          desconhecida. </p>
+
+        <h3>Fenômeno de Venturi</h3>
+
+        <p>Um exemplo que já discutimos brevemente é o fenômeno de Venturi.
+          Esse é um cano de seção transversal variável. No ponto \(I\), temos a
+          área \(A_I\), a velocidade \(u_I\) e a pressão \(p_I\). No ponto
+          \(II\) temos a área \(A_{II}\), a velocidade \(u_{II}\) e a pressão
+          \(p_{II}\). Assumindo que \(A_I &gt A_{II})\), já sabemos que a
+          equação da continuidade implica que \[ u_{II} = \frac{A_I}{A_II}u_I
+          \qquad u_{I} &lt u_{II} \] ou seja, onde a área transversal é menor,
+          a velocidade é maior. Usando a equação de Bernoulli podemos
+          determinar a relação entre as pressões nos dois pontos. Em
+          particular, vamos assumir que os dois pontos estão na mesma altura,
+          portanto temos que \[ \frac{u_I^2}{2} + \frac{p_I}{\rho} =
+          \frac{u_{II}^2}{2} + \frac{p_{II}}{\rho} \] portanto temos que \[
+          p_{II} = p_I + \frac{\rho}{2}(u_I^2 - u_{II}^2) \] e como já sabemos
+          que \(u_I &lt u_{II}\) temos o, surpreendente, resultado de que a
+          pressão no ponto \(II\) é menor que a pressão no ponto \(I\), ou seja
+          \[ p_{I} &gt p_{II} \] Esse resultado é o contrário do que o que
+          Venturi esperava. Ele pensava que no ponto \(II\), as partícular
+          estariam mais "apertadas", e portanto a pressão deveria ser maior. A
+          natureza tem mecanismos mais interessantes que a nossa intuição. </p>
+
+        <h3>Tubo de Pitot</h3>
+
+        <p>Esse exemplo é tristemente interessante. Uma das razões que
+          motivaram o famoso (infamous) acidente do avião da Air France foi uma
+          falha na medição da velocidade do avião (é muito interessante
+          observar que essa é a medição da velocidade relativa com relação ao
+          fluido, e não necessariamente com relação ao solo. Ess distinção é
+          irrelevante para o nosso exemplo). No caso do avião da Air France, o
+          instrumento usado para medir essa velocidade acabou entupido com
+          cristais de gelo, e por isso as medições dos instrumentos necessários
+          para navegação pararam de funcionar.</p>
+
+        <p>O instrumento usado para fazer essa medição é chamada de tubo de
+          Pitot, e é o que duscutiremos agora. Uma das coisas mais
+          interessantes desse instrumento é que ela é relativamente
+          simples.</p>
+
+        <p>O instrumento consiste, essencialmente, de um tudo com duas
+          abertura, \(O\) e \(A\). Ele é elaborado para que eles estejam na
+          mesma altura -- o que implica que o termo envolvendo a altura na
+          equação de Bernoulli pode ser desconsiderado, assim como no exemplo
+          do fenômeno de Venturi. Além disso, o ponto \(O\) é feito de tal
+          maneira que a velocidade nesse ponto seja igual (ou muito próxima) do
+          zero. Logo, usando a equação de Bernoulli temos \[ u_A^2 =
+          \frac{\rho}{2}(p_O - p_A) \] Sabemos pelo fenômeno de Venturi que a
+          pressão no ponto \(O\) é maior que a pressão no ponto \(A\), portanto
+          nosso estudo está consistente. A questão agora é sabemos como podemos
+          medir a diferença de pressão \(p_O - p_A\). </p>
+
+        <p>Ora, para medir a diferença de pressão, podemos acoplar o tubo de
+          Pitot com alguns instruento hidrostático (chamado de manômetro), para
+          algum fluido de densidade \(\rho_0\) conhecida, onde usando a lei de
+          Stevin podemos determinar a diferença de pressão baseado na diferença
+          de altura entre as superfícies desse fluido, ou seja, \[ p_O - p_A =
+          \rho_0 g h\] Dessa forma, podemos calcular a velocidade desse avião
+          com relação ao fluido -- ou equivalentemente, podemos medir a
+          velocidade do fluido com relação ao instrumento \[ v_A =
+          \sqrt{\frac{2 \rho_0 g h}{\rho}} \] que é outro belíssimo resultado
+          da dinâmica dos fluidos. </p>
+
+      </section>
+
+
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Ondas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Ondas</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos das ondas.
+          \[ h = 2 \pi \hbar = 6, 626 \times 10^{-34} J/Hz\]
+        </p>
+
+      </section>
+
+      <section class="item">
+
+        <p> A física de ondas é frequentemente apresentada de maneira muito
+        direta e, geralmente, em contextos muito pouco inspiradores: em
+        movimento de cordas e membranas, luz e assim por diante. Isso faz com
+        que o assunto não seja reconhecido pela sua beleza, e não receba a
+        atenção que realmente merece. Ainda pior, muitos alunos criam
+        concepções erradas sobre o assunto, por exemplo, que todas as ondas são
+        senoidais. </p>
+        
+        <p>O objetivo desse texto é fazer um estudo transversal das ondas com
+        um olhar para na mecânica ondulatória, que é onde o entendimento de
+        ondas se manifesta com toda sua glória.</p>
+
+        <p>Antes de começarmos nosso estudo, vamos tentar descrever o que vem a
+        ser fenômenos ondulatórios. Esses são disturbios coletivos que
+        acontecem num ponto \(\mathbf{r}_0\) do espaço, que aqui assumimos ser
+        o espaço Euclidiano em 3D \(\mathbb{R}^3\), e que se propaga para o
+        ponto vizinho \(\mathbf{r}_0 + \delta\mathbf{r}_0\) adjacente num
+        momento \(t + \delta t\). Chamamos de ondas o objeto matemático que
+        descreve esse tipo de fenômeno coletivo.</p>
+
+        <p>O processo em que essa onda perturba os seus pontos vizinhos é
+        chamado de <b>propagação de onda</b> e a região onde a onda se propaga
+        é chamado de <b>meio</b>: o meio pode ser o ar, a água, uma corda, o
+        vácuo ou até mesmo o espaço em si -- no caso das ondas gravitacionais.
+        </p>
+
+        <p>Ondas são caracterizadas por duas quantidades básicas. O seu
+        comprimento \(\lambda\), que podemos pensar como a sua periodicidade
+        espacial -- ou a distância entre picos (ou vales), e o seu período
+        temporal, que chamamos apenas de período \(T\), que é dada pelo inverso
+        da frequência \(T = \nu^{-1}\). De fato, é muito mais comum
+        considerarmos quantidades relacionadas, o número de onda \(k\) e a sua
+        frequência angular \(\omega\) \[ k = \frac{2\pi}{\lambda} \qquad \omega
+        = 2\pi \nu \] De fato, o número de onda \(k\) é a magnitude de um vetor
+        \(\mathbf{k}\) que define a direção de propagação da onda. Esse vetor é
+        chamada de vetor de onda.</p>
+
+        <p>Frequência angular e número de onda são relacionados, e a nossa
+        função ao estudarmos ondas é entender essa essas relações, ou seja,
+        esperamos entender a relação funcional \[ \omega = \omega(k) \] que é
+        chamado de <b>relação de dispersão.</b> </p>
+
+        <p>Além disso, observe que do ponto de vista dimensional, o nómero de
+        onda tem unidades de inverso do comprimento, ao passa que a frequência
+        angular tem unidades de inverso do tempo, portanto o quociente \(
+        \omega / k\) tem unidades de velocidade \(v\). Essa é chamada de
+        <b>velocidade de fase</b>. Observe, porém, que essa não é a única noção
+        de velocidade possível, a derivada \(\frac{\partial \omega}{\partial
+        k}\) também tem unidades de velocidade, e é chamada de <b>velocidade de
+        grupo</b>.</p>
+
+      <p>Os casos mais simples possuem valocidade de grupo e velocidade de
+      fases iguais, portanto, temos que \[ w = v k \] </p>
+
+      <p>Evidentemente que essa relação de dispersão é a mais simples possível,
+      mas não é a mais interessante. Em 1923, logo no começo do estudo da
+      mecânica quântica, Louis de Broglie postulou que partículas materiais
+      também seguem uma relação de dispersão. Sua hipótese é que uma partícula
+      de massa \(m\) com momento linear \(\mathbf{p}\) e energia \(E\) tem
+      vetor de onda e frequência angular dados por \[ \mathbf{p} = \hbar
+      \mathbf{k} \qquad E = \hbar \omega \] onde a constante \(h = 2\pi\hbar\)
+      é chamada de constante de Planck. Observe que o valor da constante de
+      Planck é ridicularmente pequeno, da ordem \(10^{-34}\), o que significa
+      que para o momento e a energia das partículas materiais sejam sensíveis,
+      então o comprimento de onda da partícula também deve ser da mesma ordem.
+      Isso explica o motivo pelo qual temos descrições matemáticas tão
+      diferentes para esses dois assuntos. </p>
+
+      <p>O que nos interessa é que assumindo que o postulado de de Broglie seja
+      verdadeiro, então devemos ter uma relação de dispersão para partícular
+      materiais, e essa relação pode ser obtida a partir da relação entre
+      energia total e cinética e potencial, ou seja \[ E =
+      \frac{\mathbf{p}^2}{2m} + V(\mathbf{r})  \qquad \Rightarrow \qquad \omega
+      = \frac{\hbar}{2m}\mathbf{k} + \hbar^{-1}V(\mathbf{r})\] </p>
+
+      <p>Usando essa relação, é possível ver que a velocidade de fase é pouco 
+      interessante, mas a velocidade de grupo é nada mais nada menos que o modulo 
+      da velocidade da partícula, ou seja 
+      \[ v_g = \frac{\partial \omega}{\partial k} = \frac{ \hbar k}{m} = \frac{p}{m} \]
+      e essa relação tem, definitivamente, algo a nos dizer.</p>
+
+      <p>O objetivo do texto a seguir é tornar a discussção que acabamos de
+      fazer aqui na introdução sejam mais inteligíveis.</p>
+        
+      </section>
+
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Ondas Lineares</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+      <h3>Equação da Onda</h3>
+
+        <p>Nessa seção começamos com uma discussão heurística sobre ondas
+        lineares, ou seja, ondas que satisfazem uma equação diferencial linear.
+        Existem diferentes maneiras de se encontrar a equação de onda linear,
+        mas um dos grandes problemas da maioria das derivações é a falta de
+        generalidade. Em particar, gostaríamos de usar uma derivação que não
+        usasse um sistema físico específico, e que deixasse claro aspectos
+        comuns dos fenômenos ondulatórios que consideramos. </p>
+
+        <p>O ponto importante da equação de onda é que ela deve relacionar a
+        variação da perturbação que ocorre devido a passagem do tempo num dado
+        ponto, com a variação que ocorre quando a onda se propaga no espaço.
+        Considerando que a conda é descrita por uma função \(u = u(t, x_1, x_2,
+        x_3) = u (t, \mathbf{r})\), podemos considerar perturbações
+        infinitesimais como \[ u(t_0 + \delta t, \mathbf{r}_0 + \delta
+        \mathbf{r}_0) = u(t_0, \mathbf{r}_0)  + \delta t \frac{\partial  u(t_0,
+        \mathbf{r}_0)}{\partial t} + \frac{1}{2}(\delta t)^2 \frac{ \partial^2
+        u(t_0, \mathbf{r}_0)}{\partial t^2} + \mathcal{O}(\delta t^3) \] </p>
+
+        <p>A equação de onda é obtida quando supomos que a variação da função
+        \( u(t_0, \mathbf{r}_0) \) é contrabalanceada pela sua variação
+        espacial, ou seja \[ u(t_0, \mathbf{r}_0 + \delta \mathbf{r}) = u(t_0,
+        \mathbf{r}_0)  + \delta \mathbf{r}\cdot \nabla u(t_0, \mathbf{r}_0) +
+        \frac{1}{2}(\delta \mathbf{r})^2 \Delta u(t_0, \mathbf{r}_0) +
+        \mathcal{O}(|\delta \mathbf{r}_0|^3) \] </p>
+
+        <p>Reescrevendo \[ \mathbf{v} = \frac{ d \mathbf{r}}{d t} =
+        \lim_{\delta t\to 0 } \frac{  \delta \mathbf{r}}{\delta t} \qquad
+        \Rightarrow \qquad \delta \mathbf{r} = \mathbf{v}\delta t \quad \delta
+        \mathbf{r}^2 =|\mathbf{v}|^2(\delta t)^2 \] chegamos a conclusão que as
+        duas variações se equilibram quando \[  \mathbf{v} \cdot \nabla u(t,
+        \mathbf{r}) = \frac{ \partial u(t, \mathbf{r}) }{ \partial t} \qquad
+        \mathbf{v}^2\Delta u(t, \mathbf{r})  = \frac{\partial^2 u(t_0,
+        \mathbf{r}_0) }{\partial t^2} \] a primeira expressão é nada mais que a
+        regra da cadeia, logo é trivial. A segunda, no entando, é bastante não
+        trivial, e é chamada de equação da onda, mas é na verdade, a equação de
+        um tipo de onda, ondas lineares.  </p>
+
+      <h3>Princípio Variacional</h3>
+
+      <p>Para finalizar essa discussão dinâmica, é importante mencionar que
+      embora a nossa discussão aqui foi puramente perturbativa, é possível
+      encontrar o mesmo resultado usando um princípio variacional. Por exemplo,
+      como a propagação de onde se trata de um sistema contínuo, mecânica
+      desses sistemas nos ensina que devemos levar em conta, além do termo
+      cinético e do termo potencial (no nosso caso é nulo), um termo
+      gradiente.Isso significa uma densidade Lagrangiana da forma \[
+      \mathcal{L} = \frac{\rho}{2} \left( \frac{ d u }{d t} \right) -
+      \frac{\kappa}{2} ( \nabla u )^2 \] onde as constantes \(\rho\) e
+      \(\kappa\) são densidades cujo significado físico depende da natureza da
+      função \(u(t, \mathbf{r})\). Considerando o funcional ação, \(S = \int dt
+      d^3 \mathcal{L}\) e usando a derivada variácional \[ \frac{\delta u(t,
+      \mathbf{r})}{\delta u(t', \mathbf{r}')} = \delta(t - t')
+      \delta^{(3)}(\mathbf{r} - \mathbf{r}') \] é simples verificar que a
+      equação de Euler-Lagrange é reduzida à equação de onda que acabamos de
+      derivar, para \(v^2 = \kappa^2 / \rho^2\). Isso significa, na prática,
+      que a equação de onda pode ser, e é, interpretada como nossa equação
+      dinâmica. </p>
+
+      </section>
+      
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Ondas em 1D</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Considere agora o caso onde as ondas se propagam em 1 dimensão
+        espacial. Nesse caso, temos que a equação de onda é simplesmente \[
+        \left(v^2 \frac{\partial^2}{\partial x^2} -
+        \frac{\partial^2}{\partial t^2} \right) u(t, x)= 0  \] </p>
+
+      <h3>Ondas Viajantes</h3>
+
+      <p>Vamos decompor a equação da onda como \[ \left(v
+      \frac{\partial}{\partial x} + \frac{\partial}{\partial t} \right) \left(v
+      \frac{\partial}{\partial x} - \frac{\partial}{\partial t} \right) u(t,
+      x)= 0  \] e é simples verificar que uma solução do tipo \[ u(t, x) =
+      f_+(vt + x) + f_-(vt - x)  \] resolve a equação da onda. No caso onde
+      estamos considerando ondas eletromagnéticas, é comum escrevermos \(x_\pm
+      = x \pm ct\) que chamamos de coordenadas no cone-de-luz.</p>
+
+      <p>Considerando que o máximo da função \(f_-(vt - x)\) ocorre quando
+      \(f_-(0)\), temos que no instante \(t=0\) o máximo ocorre no ponto
+      \(x=0\). No instante seguinte \(t&gt 0\), temos que o máximo ocorre para
+      \(x = vt\), ou seja, a o onda se deslocou para a direita, e por isso
+      dizemos que essa é uma onda que se move para a direita. Análise similar
+      revela que a a onda \(f_+(vt + x)\) é uma onda que se desloca para a
+      esquerda.</p>
+
+      <p>Como uma exemplo, podemos considerar casos especificos. É do nosso
+      interesse considerar funções trigonométricas. De fato, vamos considerar
+      uma solução geral na forma \[ u(t, x) = A^c_+ \cos(k(x + vt)) + A^s_+
+      \sin(k(x + vt)) + A^c_- \cos(k(x - vt)) + A^s_- \sin(k(x - vt)) \] onde o
+      coeficiente \(k\) foi introduzido para que a fase (o argumento nas
+      funções trigonométricas) sejam quantidades adimensionais. Fomos capazer
+      de escrever a solução como essa soma pois, pra nossa sorte, a equação de
+      ondas é uma equação linear. Esse é o reflexo do princípio da
+      superposição, que afirma que se somarmos duas soluções de uma equação
+      linear, essa soma também será solução dessa mesma equação. </p>
+
+      <p>A partir dessas expressões, é simples de notar que temos a frequência
+      angular \[ \omega \equiv k v \] De fato, supondo que essa onda tem
+      comprimento \(\lambda\), como definimos acima, temos que a função \(u(t,
+      x)\) tem periodicidade espacial tal que \[ u(t, x + \lambda) = u(t, x)\]
+      observe que estamos considerando que a onda tem uma periodicidade
+      espacial, mas chegamos ao mesmo resultado se considerarmos que a função é
+      definida num intervalo finito de comprimento \(\lambda\).</p>
+
+      <p>Agora observe com atenção o seguinte fato. Se desejamos, realmente,
+      considerar funções mais gerais para a equação de onda, que tenha
+      periodicidade espacial, então a solução que apresentamos acima é bastante
+      restritiva. De fato, podemos cozinhar uma infinidade de soluções apenas
+      usando a periodicidade, temos que  \[ u^{(n)}(t, x) = A^c_+ \cos(k_n(x +
+      vt)) + A^s_+ \sin(k_n(x + vt)) + A^c_- \cos(k_n(x - vt)) + A^s_-
+      \sin(k_n(x - vt)) \] onde \[ k_n = n k \qquad n \in \mathbf{Z} \]</p> 
+
+      <h3>Ondas Estacionárias</h3>
+
+      <p>Antes de continuarmos analisando as soluções acima -- o que nos conduzirá 
+      a um importante resultado físico, vamos ganhar alguma intruição sobre essas soluçoes 
+      viajantes considerando exatamente o caso estacionário. </p>
+
+      <p>Assuma que a nossa solução da equação de onda possa ser escrita como o produto 
+      \[ u(t, x) = T(t) X(x) \]. Substituindo essa solução na equação de onda temos que 
+      \[ \frac{\ddot{T}(t)}{T(t)} = v^2\frac{X''(x)}{X(x)}\] e como as relações funcionais 
+      dessas duas expresões são distintas, a única maneira dessa condição ser satisfeita é 
+      através de uma constante. Isso implicará duas condições distintas. Se a constante for 
+      positiva, teremos soluções que decaem ou crescem exponencialmente. Caso a função seja 
+      negativa temos funções oscilatórias, que é exatamente o comportamente que precisamos. Portanto 
+      \[ \ddot{T}(t) = - \omega^2 T(t) \qquad X''(x) =- \frac{\omega^2}{v^2}X(x)\]
+      Portanto, a solução geral é 
+      \[ u(t, x) = A \sin(\omega t + \phi_t) \cos(k x + \phi_x) \qquad \omega = k v \]
+      onde \(\phi_x, \phi_t\) são as fases iniciais e \(A\) é chamado de amplitude, definido pela 
+      condição \(A = \max(u(t, x))\). 
+      </p>
+
+      <img class="standing text-img" src="https://www.surfertoday.com/images/stories/standingwave.gif" alt="standing waves">
+
+      <p>O que essas ondas significam? Podemos pensar no termo \(A \sin(\omega t + \phi_t)\) 
+      como uma amplitude variável, o que significa que a função de \(x\) tem aplitude variável -- 
+      ela oscila num ponto fixo do espaço. </p>
+
+      <p>O importante é que não é difícil perceber que podemos escrever essa onda estacionária 
+      como a soma de duas ondas viajantes: uma deslocando-se para a esquerda e a outra para 
+      direita. De fato, temos que 
+      \[ u(t, x) = \frac{A}{2} \left( \sin(kx + \omega t + \phi_+) + 
+      \sin(kx - \omega t + \phi_-) 
+      \right)\]
+      onde redefinimos as fases iniciais.</p>
+
+      <p>O estudo de ondas estacionárias é bastante importante e com diversas aplicações interessantes, 
+      na música e na engenharia. Nosso propósito aqui é outro, e por isso deixamos essa análise 
+      de lado, mas para o leitor interessado, os livro do Alonso e Finn e do Crawford tem 
+      tratamentos muito completos desse assunto. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Análise de Fourier</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+      <h3>Série de Fourier</h3>
+
+      <p>Isso significa que uma solução completamente geral para ondas
+      viajantes na verdade é escritica como \[ u(t, x) = \sum_{n\in \mathbf{Z}}
+      u^{(n)} (t, x) = \sum_{n\in \mathbf{Z}} u_+^{(n)} (x + vt) + \sum_{n\in
+      \mathbf{Z}} u_-^{(n)} (x - vt)\] Mas ora, discutimos acima que sabendo a
+      forma da função de onda no ponto \(t=0\), podemos recuperar a dependência
+      temporal deslocando a solução para a esquerda ou para direita, de maneira
+      que podemos simplesmente considerar o caso \(t=0\) o que simplifica as
+      nossas considerações.Nesse caso temos \[ u(0, x) \equiv u(x) = a_0 +
+      \sum_n \left( a_n \cos(k_n x) + b_n \sin(k_n x) \right) \] onde
+      reorganizamos nossas constantes para redefinir outras \(\{a_n, b_n\}\)
+      mais apropriadas para a nossa análise. 
+      </p>
+
+      <p>O resultado acima nada mais é que a expressão da expansão de Fourier.
+      Em geral, usar funções trigonométricas pode ser bastante inconveniente, e
+      frequentemente consideramos a expansão de Fourier complexa e no final do
+      dia tomamos a sua parte real ou imaginária (o que for mais conveniente,
+      ou seja), podemos considerar \[ u(x) = \sum_{n \in \mathbf{Z}} c_n e^{i
+      k_n x} \] onde seus coeficientes podem ser determinados pela relação de
+      ortogonalidade \[ \int_{-\lambda/2}^{\lambda/2} dx
+      e^{\frac{2\pi}{\lambda} i(m-n)x} = \lambda \delta_{mn} \quad n, m \in
+      \mathbf{Z} \] onde \(\delta_{mn}\) é o delta de Kronecker. Portanto, os
+      coeficientes \(c_n\) são dados por \[ c_n =
+      \frac{1}{\lambda}\int_{-\lambda/2}^{\lambda/2} dx \ u(x) e^{-i k_n x} \]
+      O leitor mais atencioso percebeu que temos um pequeno problema ainda a
+      ser enfrentado. Embora funções periódicas apareçam em diversos fenômenos
+      físicos, há de se reconhecer que eles não representam os fenômenos mais
+      gerais possíveis, por isso é muito importante remover esse último
+      obstáculo nas nossas considerações. Ondas não periódicas significam que o
+      seu comprimento de onda satisfaz \(\lambda \to \infty\).</p>
+
+      <p>Para tomar o limite acima, vamos considerar o coeficiente de Fourier
+      com \[ \tilde{f}(k) := \lim_{\lambda\to \infty} \frac{\lambda c_n}{2\pi}
+      = \frac{1}{2\pi} \int_{\mathbb{R}} dx \ u(x) e^{-i k x} \] onde nos
+      devemos observar que nesse limite, o número de onda discreto \(k_n\)
+      torna-se uma quantidade contínua. Esse objeto \(\tilde{f}(k)\), que é 
+      uma função do número de onda, é chamada de <b>transformada de Fourier.</b>
+      </p>
+
+      <p>Usando a representação integral da função delta de Dirac 
+      \[ \delta(x - y) = \frac{1}{2\pi} \int_{\mathbb{R}} dk e^{ik(x-y)} \]
+      podemos encontrar a transformada inversa, ou seja, podemos escrever a 
+      função \(u(x)\) em termos da função \(\tilde{f}(k)\), ou seja 
+      \[ 
+      u(x) = \int_{\mathbb{R}} dk \tilde{f}(k) e^{ikx}
+      \]
+      que do ponto de vista matemático, nada mais é que a expansão da função 
+      \(u(x)\) numa base oscilatória onde os coeficientes são dados pela função 
+      \(\tilde{f}(k)\). Ou seja, é exatamente o que fizemos anteriormente, mas 
+      para funções não periódicas. A solução com dependência temporal pode ser 
+      reintroduzida assumindo um shift no tempo como 
+      \[ 
+      u(t, x) = \int_{\mathbb{R}} dk \tilde{f}(k) e^{ikx - i\omega t}
+      \]
+      que é uma belíssima expressão. 
+      </p>
+
+      <p>Outro aspecto muito importante dessa "soma" é que a posição é o número
+      de onda são quantidades conjugadas -- que na prática significa dizer que
+      uma pode ser obtida através da transformada de Fourier da outra. Isso tem
+      grandes consequências para toda a física. No caso que veremos adiante,
+      isso impricará uma relação entre os objetos quânticos (operatores), que
+      descrevem a posição e o momento. Evidente que podemos repetir essa
+      análise para a parte temporal das ondas, onde chegaremos a concluão que a
+      transformada de Fourier relacionará o tempo e a frequência angular -- que
+      são nesse caso, variáveis conjugadas. Na mecânica ondulatória, isso
+      implicará relações entre intervalos temporais e energia.</p> 
+
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Generalização para 3D</h2>
+        </div>
+
+        <p>Nessa seção exploraremos alguns aspectos de soluções da equação de
+          onda em 3D. Esse estudo é de suma importância para o estudo de ondas
+          em situações mais realistas. No estudo de difração e da mecânica
+          quântica.</p>
+
+      </section>
+
+      <section class="item">
+
+      <h3>Ondas Planas</h3>
+
+      <p>Até agora consideramos uma onda propagando-se na direção \(X\) com
+      velocidade \(v\). Podemos pensar que nesse sistema como um plano com
+      \(x=constante\) propagando-se com velocidade \(\mathbf{v} = (v, 0, 0)\).
+      O vetor posição para qualquer ponto nessa frente de onda é dado por
+      \(\mathbf{r} = (x, y, z)\), e tomando o vetor de onda na direção da
+      velocidade, demos que \(\mathbf{k}= (k, 0, 0)\) de maneira que o produto
+      \(\mathbf{k}\cdot \mathbf{r} = kx \). Dessa forma, podemos reescrever a
+      solução geral acima como \[ e^{ikx - i\omega t} = e^{i \mathbf{k}\cdot
+      \mathbf{r} - i\omega t}\] Ora, a generalização desse resultado para uma
+      onda propagando-se em qualquer direção é imediada, e apenas devemos
+      assumir que \(k = |\mathbf{k}| = \frac{\omega}{v}\). Ondas da forma \[
+      u_k(t, x) =  e^{i \mathbf{k}\cdot \mathbf{r} - i\omega t} \] são chamadas
+      de ondas planas, e uma solução geral da equação de onda pode ser escrito
+      nessa base como \[ u(t, x) = \frac{1}{\sqrt{(2\pi)^{3}}}\int d^3k
+      \tilde{f}(\mathbf{k}) e^{i \mathbf{k}\cdot \mathbf{r} - \omega(k) t}   \]
+      onde \(\omega = k v\), mas que podemos substituir por uma expressão mais 
+      geral, portanto \(\omega = \omega(k)\)</p>
+
+      <p> Isso significa que essas ondas planas são os blocos fundamentais para
+      ondas mais sofisticadas. De certa forma, isso é um pouco óbvio, pois
+      podemos ver em cursos mais avançados que se temos uma onda circular ou
+      cilindrica por exemplo, olhando ela bem perte, teremos uma onda plana.
+      Isso está por trás do princíṕio de Huygens, que é bastante importante no
+      estudo de fenômenos de interferência. </p>
+
+        <h3>Ondas Esféricas</h3>
+
+        <p>Agora consideramos um exemplo fundamental no nosso estudo. Esse
+          exemplo será relacionado ao cálculo dos níveis atômicos em átomos,
+          mas esse não é o único motivo pelo qual o consideraremos.
+          Consideraremos, antes de mais nada, a transformada de Fourier no
+          tempo, ou seja \[ u(t, \mathbf{r}) = \frac{1}{2\pi}\int d
+          \omega \psi_{\omega}(\mathbf{r}) e^{-i\omega t} \] o que na prática
+          significa uma separação de variáveis e onde chamamos a transformada
+          de Fourier de \(\tilde{u}(\mathbf{r}, \omega)\equiv
+          \psi_{\omega}(\mathbf{r})\) por mera conveniência. Inserindo essa
+          expressão na equação de onda encontramos \[ \Delta
+          \psi_{\omega}(\mathbf{r}) = - k^2 \psi_{\omega}(\mathbf{r})  \]
+          que é conhecida como <b>equação de Helmholtz</b>. 
+        </p>
+
+        <p>Considerando o operador Laplaciano em coordenadas Cartesianas
+          podemos recuperar toda a discussão que fizemos anteriormente. Aqui
+          consideramos o operador Laplaciano em coordenadas esféricas, que é
+          dado por \[ \Delta(\#) = \frac{1}{r^2}\frac{\partial}{\partial r}
+          \left( r^2 \frac{\partial (\#)}{\partial r} \right) + \frac{1}{r^2
+          \sin\theta} \frac{\partial}{\partial \theta} \left(  \sin\theta
+          \frac{\partial (\#)}{\partial \theta} \right)  +  \frac{1}{r^2
+          \sin^2\theta} \frac{\partial^2(\#)}{\partial \phi^2} \] observe além
+          disso que \[ \frac{1}{r^2}\frac{\partial}{\partial r} \left( r^2
+          \frac{\partial (\#)}{\partial r} \right) =
+          \frac{1}{r}\frac{\partial^2}{\partial r^2} \left( r (\#)\right) \] um
+          fato que será útil logo abaixo. Reescrevemos esse operador como \[
+          \Delta(\#) = \frac{1}{r}\frac{\partial^2}{\partial r^2} \left( r
+          (\#)\right) + \frac{1}{r^2} \Delta^{\mathbb{S}^2} \] </p>
+
+          <p> Existem duas maneiras de se derivar esse resultado, uma laboriosa
+          e uma conceitualmente complicada. A laboriosa é o cálculo a bruta
+          força, simplesmente reescrevemos todas as nossas coordenadas e usando
+          a regra da cadeia passamos de coordenadas cartesianas para
+          coordenadas esféricas. A outra maneira é separar a parte radial da
+          parte angular, e calcular a operador de Laplace-Beltrami para a
+          esfera. </p>
+
+        <p>Relacionado ao operador \(\Delta^{\mathbb{S}^2}\), suas autofunções
+          são os harmônicos esféricos, que satisfazem \[ \Delta^{\mathbb{S}^2}
+          Y_{lm}(\theta, \phi) = - l(l+1) Y_{lm}(\theta, \phi) \] e cuja
+          formula explícita pode ser encontrada em livros de física matemática,
+          mecânica quântica ou no livro de Eletrodinâmica do Jackson. Esse
+          operador é relacionado ao operador quântico \(L^2\), o quadrado do
+          momento angular total. </p>
+
+        <p>Usando essa base de autofunções, podemos expandir a solução da
+          equação de Helmholtz como \[ \psi(\mathbf{r}, \omega) = \sum_{l,m}
+          f_l(\mathbf(r) Y_{lm}(\theta, \phi)) \] e inserindo essa expressão na
+          equação de Helmholtz temos a equação radial \[
+          \frac{1}{r}\frac{d^2}{dr^2}(r f_l(r)) + \left( k^2 -
+          \frac{l(l+1)}{r^2} \right)f_l(r)  = 0 \] que pode ser reescrita como
+          a equação de Bessel. </p>
+
+        <p>A solução que realmente estamos interessados nesse nosso curto
+          ensaio é dado por \(l=0\), que será relacionado à soluções que
+          chamamos de ondas esféricas. Nesse caso, \(Y_{00}= 1/\sqrt{4\pi}\), e
+          a a equação de Helmholtz é \[ \frac{d^2}{dr^2}(r f_0) + k^2(r f_0) =
+          0 \] que vemos imediatamente que a função \(u(r) = r f_0(r)\)
+          satisfaz a equação do oscilador harmônico, portanto \[ f_0(r) \equiv
+          f(r) = \frac{1}{r} e^{ikr}\] portanto \[ u(\mathbf{r}, t) =
+          \frac{1}{4\pi} \int d\omega \frac{1}{r} e^{ikr - i\omega t}  \] que
+          podemos ver que apresenta um termos de onda viajante ao longo da
+          direção radial. Dessa expressão, também podemos extrair a forma da
+          função de Green \[ G(r) = \frac{1}{r} e^{ikr} \] </p>
+
+        <p>Do nosso estudo de eletrostática, já conhecemos a forma da função de
+          Green para o caso \(k=0\), de maneira que \[ (\Delta + k^2)G(r) = -
+          4\pi \delta(r) \] o que implica a forma acima. </p>
+
+      </section>
+
+
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Pacotes de Ondas</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Antes de continuarmos nosso estudo, é importante considerar um exemplo
+        de uma onda não periódica e muito importante na física. Vamos considerar
+        uma solução de onda da forma \[ u(0,x) = u(x) = \exp \left(
+        -\frac{1}{2}\left( \frac{x}{\sigma_x}\right)^2 \right) \] que, como já
+        sabemos, podemos introduzir a dependencia temporal com um shift \(\pm
+        vt\). Observe que nos pontos \(z= \pm \sigma_x\), temos que \(u(\pm
+        \sigma) = 0.6 u(0)\), ou seja, essa é uma função que decai muito
+        rápido.</p>
+
+        <p>Podemos encontrar a sua transformada de Fourier como \[ \tilde{f}(k) =
+        \frac{1}{2\pi} \int dx u(x) e^{i k x} =  \frac{1}{2\pi} \int dx \exp
+        \left( - \frac{1}{2}\left(\frac{x}{\sigma_x} \right)^2 + ik x \right)  \]
+        que é uma integral Gaussiana. Completando quadrados temos \[ -
+        \frac{1}{2}\left(\frac{x}{\sigma_x} \right)^2 + ik x = - \frac{1}{2
+        \sigma_x^2}\left( ( x - i\sigma_x^2 k)^2 + \sigma_x^4 k^2 \right)\] e
+        integrando sobre as coordenadas \[ y = \frac{1}{\sqrt{2}\sigma_x}( x -
+        i\sigma_x^2 k) \] temos \[ \tilde{f}(k) = \frac{ \sqrt{2}\sigma_x}{2\pi}
+        e^{- \sigma_x^2 k^2/2} \int dx e^{-y^2} = \frac{\sigma_x}{\sqrt{2 \pi}}
+        e^{- \sigma_x^2 k^2/2} \] que também é uma onda Gaussiana com \( \sigma_k
+        = \sigma_x^{-1}\), e essa relação será relacionada ao princípio da
+        incerteza de Heisenberg quando estivermos discutindo mecânica quântica.
+        </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Mecânica Ondulatória</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>
+        Vimos na introdução que o nosso objetivo nesse texto era fazer uma leitura 
+        tranversal de alguns fenõmenos ondulatórios com um olhar na mecânica ondulatória. 
+        Já discutimos que por causa de hipótese de De Broglie, partículas devem seguir 
+        uma relação de dispersão do tipo 
+        \[ \hbar \omega = \frac{\hbar^2 k^2}{2m} + V(x)\]
+        que vem da energia cinética total 
+        \[ E= \frac{p^2}{2m} + V(x)\]
+        onde energia e momento são relacionados com a frequência angular e com o número 
+        de onda como 
+        \[ E = \hbar \omega \qquad \mathbf{p} = \hbar \mathbf{k} \]
+        onde usamos o vetor de onda. No caso unidimensional nos naturalmente temos que 
+        \(p = \hbar k\). 
+        </p>
+
+        <p>O que precisamos achar agora é uma equação da onda que justifique a
+        relação de dispersão acima. Em outras palavras, é evidente que a
+        equação de ondas que descrevemos acima não explica o compostamente
+        ondulatório da matéria, e precisamos justificar essa problema detalhe.
+        </p>
+
+        <p>Vamos restringir nossa atenção a partícula livre,
+        \(V(\mathbf{r})=0\),  pois o caso onde as partículas estão num
+        potencial exie um tratamento diferente, e a prova da equação de onda
+        para esse caso precisa de um pouco de relatividade especial.</p>
+
+        <p>O fato é que deve existir uma solução dessa equação de onda elusiva,
+        que chamaremos de \(\phi(t, \mathbf{r})\) tal que quando aplicamos o
+        operador diferencial \(\mathcal{L} :
+        \mathcal{C}^{(\infty)}(\mathbb{R}_+ \times \mathbb{R}^3)\to
+        \mathcal{C}^{(\infty)}(\mathbb{R}_+ \times \mathbb{R}^3)\), temos a
+        relação de dispersão como uma condição para que a equação diferencial
+        seja satisfeita. Em outras palavras, temos que \[ \mathcal{L} \psi(t,
+        \mathbf{r}) = 0 \quad \Rightarrow \quad \left(E-
+        \frac{p^2}{2m}\right)\psi(t, \mathbf{r}) = 0  \] </p>
+
+        <p> Expandido em Fourier, consideramos uma solução do tipo 
+        \[ \psi(t,
+        \mathbf{r}) = \frac{1}{\sqrt{(2 \pi)^3}} \int d^3p
+        \tilde{\psi}(\mathbf{p}) e^{\frac{i}{\hbar} (\mathbf{p}\cdot \mathbf{r}
+        - E t)}  \] 
+        observe que pelas relaões de de Broglie, apenas
+        reescrevemos a transformada de Fourier em termos do momento e da
+        energia, nada demais. ou seja, estamos considerando uma soma de ondas
+        planas. Ondas planas não não muito úteis para a descrição de
+        partículas, pois elas significariam que a partícula está em qualquer
+        ponto do espaço. </p>
+
+        <p>Usando a expansão de Fourier acima, é simples verificar que \[ E
+        \psi(t, \mathbf{r}) =  i \hbar \frac{\partial}{\partial t} \psi(t,
+        \mathbf{r}) \qquad  \mathbf{p}^2 \psi(t, \mathbf{r}) = - \hbar^2 \Delta
+        \psi(t, \mathbf{r}) \] de onde concluímos que a relação de dispersão
+        acima segue da seguinte equação diferencial \[ i\hbar
+        \frac{\partial}{\partial t} \psi(t, \mathbf{r}) =  - \frac{\hbar^2}{2m}
+        \Delta  \psi(t, \mathbf{r})  \] que é conhecida com equação de
+        Schrödinger. De fato, o caso mais geral deve ser acrescentado \[ i\hbar
+        \frac{\partial}{\partial t} \psi(t, \mathbf{r}) = \left( -
+        \frac{\hbar^2}{2m} \Delta + V(\mathbf{r})\right)  \psi(t, \mathbf{r})
+        \] A beleza dessas expressões é que, como já discutimos na introdução,
+        a velocidade de grupo dessa onda de matéria é igual a velocidade que a
+        partícula clássica massiva teria. Esse é certamente um dos resultados
+        mais bonitos que seguem imediatamente da hipótese de de Broglie. </p>
+
+        <p>Apenas para concluir nossa discussão, podemos fazer uso dos pacotes
+        de ondas Gaussianos que estudamos acima. Vamos retornar ao caso
+        unidimensional. Assumindo que a função de onda descreve uma partícula
+        (ou onda) localizada numa região finita do espaço, consideramos uma
+        transformada de Frourier da forma \[ \tilde{\psi}(p) = \exp\left(
+        - \frac{(p - p_0)^2 - p_0^2}{2 \hbar^2 \sigma_p} \right)\] Observe que podemos essa função
+        está centrada em \(p = p_0\), e também adicionamos um termo constante
+        \(p_0^2\) para que a função fique mais organizada nas contas abaixo.
+        </p>
+
+        <p>Inserindo essa tranformada na função de onda temos que 
+        \[ \psi(t,
+          x) = \frac{1}{\sqrt{2 \pi}} \int dp
+        \exp\left( - \frac{p^2 - 2 p p_0 }{2 \hbar^2 \sigma_p} + \frac{i p x}{\hbar} - \frac{i t p^2}{2\hbar m} t\right)\] 
+        Agora vamos completar quadrados no argumento da exponencial 
+        \[  - \frac{p^2 - 2 p p_0 }{2 \hbar^2 \sigma_p} + \frac{i p x}{\hbar} - \frac{i t p^2}{2\hbar m} t =
+        - \frac{p^2}{2}\left( \frac{1}{\hbar^2 \sigma_p} + \frac{i t }{m \hbar}\right) + 
+        p \left( \frac{ix}{\hbar} + \frac{p_0}{\hbar^2 \sigma_p}\right) = -\frac{\alpha(t)}{2}p^2 + \beta p
+        \]
+        ou seja
+        \[ \psi(t, x) 
+        = \frac{1}{\sqrt{2 \pi}} \int dp
+        \exp\left( - \frac{\alpha}{2}\left( p - \frac{\beta}{\alpha} \right)^2  - \frac{\beta^2}{2 \alpha}\right)\] 
+        onde \[ \alpha = \frac{1}{\hbar^2 \sigma_p} + \frac{i t }{m \hbar} \qquad \beta = \frac{ix}{\hbar} + \frac{p_0}{\hbar^2 \sigma_p} \]
+        A integral acima é apenas uma integral Gaussiana, portanto 
+        \[ \psi(t, x)  = 
+        \sqrt{\frac{2 \pi}{\alpha(t)}}
+        \exp\left(- \frac{\beta^2}{2 \alpha}\right)\] 
+        </p>
+
+        <p>Observe que a largura da onda no espaço das posições é inversamente proporcional à largura da onda no espaço dos 
+        momentos. Em particular, temos que 
+        \[ \Delta p^2 = \sigma_p \qquad \Delta x^2 = \hbar^2 |\alpha(t)| &gt  \hbar^2 |\alpha(0)| = \frac{1}{\sigma_p}\]
+        E isso significa que 
+        \[ \Delta x^2 \Delta p^2 \geq \hbar^2 \]
+        que é a expressão para o princípio da inverteza.</p>
+
+      </section>
+      
+
+
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Ondas Eletromagnéticas</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos das ondas eltromagnéticas. 
+        </p>
+
+        <p> \[ \varepsilon_0 = 8.854\times 10^{-12} C^2 s^2 m^{-3} kg^{-1} \]
+          \[ \mu_0 = 4 \pi \times 10^{-7} m kg C^{-2} \] \[ c =
+          \frac{1}{\sqrt{\mu_0\varepsilon_0}} = 299792458 m/s \] \[ \partial_t
+          \equiv \frac{\partial }{\partial t} \quad  \partial_i \equiv
+          \frac{\partial }{\partial x^i} \] </p>
+
+      </section>
+
+      <section class="item">
+
+        <p>Considere as equações de Maxwell no vácuo e na ausência de fontes.
+          Ou seja \[ \nabla \cdot \mathbf{E} = 0 \quad \nabla \cdot\mathbf{B} =
+          0 \qquad \nabla \times \mathbf{B} = \mu_0 \varepsilon_0 \partial_t
+          \mathbf{E} \qquad \nabla \times \mathbf{E} = -\partial_t \mathbf{B}
+          \] </p>
+
+        <p>De posse desse sistema de equações, é uma tarefa simples provar que 
+          \[ 
+          \partial_t^2 \mathbf{E} = \partial_t \left( \partial_t \mathbf{E}\right)
+          = \partial_t \left( \frac{1}{\mu_0\varepsilon_0} \nabla\times \mathbf{B} \right) = 
+          \frac{1}{\mu_0\varepsilon_0} \nabla\times \left( \partial_t \mathbf{B} \right) =  
+          \frac{1}{\mu_0\varepsilon_0} \nabla\times (-\nabla \times \mathbf{E})
+          \] Finalmente, usando a lei de Gauss temos que 
+          \[ 
+          \frac{\partial^2 \mathbf{E}}{\partial t^2} = c^2\Delta \mathbf{E} 
+          \]
+          Aplicando o mesmo tipo de raciocínio para o campo magnético, temos que 
+          \[ 
+          \frac{\partial^2 \mathbf{B}}{\partial t^2} = c^2\Delta \mathbf{B} 
+          \]
+          Ou seja, tanto o campo elétrico quanto o campo magnético satisfazem 
+          uma equação de onda na ausência de fontes. 
+        </p>
+
+        <p>O mais interessante desse sistema é que as equações de onda não
+          estão restritos aos campos em si. É possível mostrar que se
+          escolhemos o gauge de Lorenz, os potenciais escalar e vetor também
+          satisfazem equações de onda. </p>
+
+        <h3>Ondaas Planas</h3>
+
+        <p>Vamos começão estudando uma solução muito simples, mas que nos
+          ajudará a entender soluções um pouco mais sofisticadas. Vamos
+          considerar ondas planas, propagando-se ao longo do eixo \(X\). Isso
+          signific que os campos são independentes das coordenadas \((y, z) \).
+          Portando os campos são escritos como \[ \mathbf{E}= (E_1(t, x),
+          E_2(t, x), E_3(t, x)) \qquad  \mathbf{B}= (B_1(t, x), B_2(t, x),
+          B_3(t, x))  \] Temos inicialmente 6 graus de liberdade para serem
+          definidos. </p>
+
+        <p>As leis de Gauss elétrica e magnética implicam que as componentes
+          \(E_1\) e \(E_2\) são constantes. Escolhendo essas constantes para
+          serem nulas, temos 4 graus de liberdade para serem definidos. Além
+          disso, é possível ver que os campos são ortogonais a direção de
+          propagação: Ondas eletromagnéticas são transversais. </p>
+
+        <p>A equação de Faraday-Maxwell impõe mais duas condições para as
+          coordenadas, o que reduz os graus de liberdade pela metade, e a
+          equação de Ampère-Maxwell reduz os graus de libedade pela metade
+          novamente, o que implica que no final temos apenas 1 grau de
+          liberdade físico.</p>
+
+        <p>Vamos fixar o campo elétrico como \[ \mathbf{E} = (0, E(t,x), 0) \]
+          tal que a equação da onda é reduzida a \[ \left( \partial_t^2 - c^2
+          \partial_x^2 \right) E(t, x) = 0 \] que já sabemos que as soluções
+          são da forma \[ E(t, x) = f_+(x + ct) + f_-(x - ct) \] </p>
+
+        <p>Dentre as possíveis soluções da equação acima, uma classe
+          particularmente importante são onda senoidais. que possuem apenas uma
+          frequência (são monocromáticas) e podem ser escritas como \[ E(t, x)
+          = E_0 \sin(kx - ct) \quad \Rightarrow \quad \mathbf{E} = E \hat{j} =
+          E_0 \sin(kx - ct) \hat{j} \] com relação de dispersão dada por
+          \(\omega^2 = k^2 c^2\). De posse dessa expressao, podemos encontrar o
+          campo magnético aplicando as equações de Maxwell. Usando a lei de
+          Faraday temos \[ \partial_t \mathbf{B} = -\nabla \times \mathbf{E} =
+          -(\partial_1 E) \hat{i}\times \hat{j} = - E_0 k \cos(kx - \omega t)
+          \] Portanto, \[\mathbf{B} = \frac{k}{\omega} E_0 \sin(kx - \omega t)
+          \hat{k} \] </p>
+
+        <p>Além disso, podemos calcular  vetor de Poyinting como \[\mathbf{S} =
+          \frac{1}{\mu_0} \mathbf{E}\times \mathbf{B} = \frac{1}{c\mu_0}E_0^2
+          \sin^2(kx -\omega t) \]</p>
+
+        <p>De fato, embora os campos físicos sejam reais, é muito mais
+          conveniente usar campos complexos nesse estudo -- em linhas gerais,
+          trabalhar com emponenciais é muito mais simples que trabalhar com
+          funções trigonométricas. Para considerar os campos físicos, devemos
+          apenas tomar a parte real ou imaginária dos campos complexos -- pois
+          por linearidade da equação de onda, tanto a parte real quanto a
+          imaginária são soluções da equação. Portanto, podemos escrever \[
+          \mathbf{E} = E_0 \hat{j} e^{i(kx - \omega t)}\qquad \mathbf{B} =
+          \frac{E_0}{c} \hat{k} e^{i(kx - \omega t)}\] </p>
+
+          <h3>Polarização</h3>
+
+        <p>Vamos considerar agora uma solução de ondas planas propagando-se
+          numa direção qualquer definida pelo vetor de onda \(\mathbf{k}\).
+          Escrevemos a solução geral como \[ \mathbf{E} = \mathbf{E}_0
+          \exp\left( i \mathbf{k} \cdot \mathbf{r} - i\omega t \right) \qquad
+          \mathbf{B} = \mathbf{B}_0 \exp\left( i \mathbf{k} \cdot \mathbf{r} -
+          i\omega t \right) \] Usando as leis de Gauss elétrica e magnética
+          temos que \[ \nabla \cdot \mathbf{E} = 0 \Rightarrow i
+          \mathbf{k}\cdot \mathbf{E}_0 = 0 \qquad \nabla \cdot \mathbf{B} = 0
+          \quad\Rightarrow \quad i \mathbf{k}\cdot \mathbf{B}_0 = 0 \] Ou seja,
+          os campos elétrico e magnético oscilam de perpendicularmente à
+          direção de propagação da onda. Isso nos diz que as ondas são
+          transversais. Além disso, usando a equação de Maxwell-Faraday temos
+          \[ \nabla \times \mathbf{E} = - \partial_t \mathbf{B} \quad
+          \Rightarrow \quad  i \mathbf{r}\times \mathbf{E}_0 = i\omega
+          \mathbf{B}_0  \] Observe que a princípio, os vetores \(\mathbf{E}_0\)
+          e \(\mathbf{B}_0\) são complexos, o que significa que diferentes
+          escolhas podem nos entregar resultados diferentes e interessantes.
+          Lembre que para considerarmos os campos físicos, temos que tomar a
+          parte real (ou imaginária) do resultado final. </p>
+
+
+        <p><span>Polarização Linear</span> O caso mais simples é quando os
+          vetores \(\mathbf{E}_0\) e \(\mathbf{B}_0\) são reais. Nesse caso
+          temos que \[ \mathbf{B}_0 = \frac{1}{\omega} \mathbf{k}\times
+          \mathbf{E}_0\] Podemos escrever \( \mathbf{k} = k \hat{n}\) onde
+          \(\hat{n}\) é o versor normal à onda plana, e define a direção de
+          propagação. Usando a relação de dispersão, temos que \[ \mathbf{B}_0
+          = \frac{1}{c} \hat{n}\times \mathbf{E}_0\] Esse é exatamente o caso
+          que analisamos anteriormente. </p>
+
+        <p><span>Polarização Elíptica</span> Vamos considerar agora um caso
+          mais interessante. Assuma que \[ \mathbf{E}_0 = \vec{\alpha} - i
+          \vec{\beta}\] Portanto, a parte real do campo elétrico é dada por \[
+          \mathbf{E} = \vec{\alpha} \cos(\mathbf{k}\cdot \mathbf{r} - \omega t)
+          + \vec{\beta}\sin (\mathbf{k}\cdot \mathbf{r} - \omega t)  \] </p>
+
+        <p>Lei de Gauss e independencia linear das funções trigonométricas
+          implicam que \[ \mathbf{k}\cdot \vec{\alpha} = \mathbf{k}\cdot
+          \vec{\beta} = 0  \] O que mais uma vez mostra que o campo elétrico é
+          pertpendicular à direção de propagação da onda. </p>
+
+        <p>Fixando um plano, a origem por exemplo, temos que o campo elétrico
+          rotacional com o tempo, e como os vetores \(\vec{\alpha}\) e
+          \(\beta\) possuem magnitudes diferentes, temos uma polarização
+          elíptica, em geral. Evidente que no caso em que esses vetores tem
+          mesma magnitude, temos a polarização circular. </p>
+
+
+        <h3>Expansão de Fourier</h3>
+
+        <p>Em geral, o campo elétrico (e magnético) são escritos como uma
+          combinação de infinitas frequências, o que significa que devemos
+          escrever uma expansão de Fourier na forma \[ \mathbf{E}(t,\mathbf{r})
+          = \int \frac{d^3k}{(2\pi)^3} \mathbf{E}(\mathbf{k}) e^{i
+          \mathbf{k}\cdot \mathbf{r} - i\omega t} \]</p>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+  </main>
+
+</body>
+</html>

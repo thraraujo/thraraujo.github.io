@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Cinemática</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread"> 
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Cinemática em 2D e 3D</h1> 
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> O estudo do movimento e de suas causa é um dos principais temas da
+          ciência, desde sua origem. Embora toda separação na ciência seja
+          puramente pedagógica (e portanto artificial), podemos separar o
+          estudo do movimento em dois campos: <i>Cinemática</i> e
+          <i>Dinâmica</i>. Em linhas gerais, a Cinemática lida com os
+          movimentos em si, as trajetórias que os corpos seguem, sua
+          velocidade, sua aceleração. Em certo aspecto, a cinemática é o estudo
+          geométrico do movimento, pois tentamos descobrir as curvas (relações
+          funcionais) que os corpos descrevem. Dinâmica, por sua vez, explica
+          os motivos pelos quais os corpos se movem, as forças, e interações
+          entre os corpos. O estudo dinâmico nos trás as equações de movimento
+          que regem as trajetórias que estudamos na cinemática. Nesse texto,
+          discutiremos aspectos cinemáticos.</p>
+
+        <p> Antes de embarcarmos na discussão cinemática, temos que entender o
+          motivo pelo qual nos estudamos isso, afinal de contas. O ponto
+          crucial é entender que na dinâmica de partícular (para começar) e dos
+          meios contínuos, temos equações de movimento que descrevem a evolução
+          do nosso sistema físico -- que chamaremos sistemas dinâmicos. Isso
+          significa, na prática, que se tivermos uma partícula pontual, que é
+          caracterizada por um conjunto de observáveis (clássicos, a
+          princípio), tais como a massa, sua carga elétrica, por exemplo, então
+          teremos equações que regem como essa partícula evolui, ou seja, a
+          trajetória que essa partícula descreve no espaço tridimensional
+          \(\mathbb{R}^3\) como uma função do tempo.</p>
+
+        <p>As equações dinâmica que definem o movimento das partículas são as
+          equações de Newton, que pode ser colecionada na forma vetorial como
+          \[ \mathbf{F} = m \ddot{\mathbf{r}} \] onde os dois pontos denotam
+          derivadas temporais (essa notação é devida ao próprio Newton). Em
+          termos das suas componentes, temos que as equações de Newton são três
+          equações diferenciais na forma \[ F_1 = m \ddot{x}_1 \quad F_2 = m
+          \ddot{x}_2 \quad F_3 = m \ddot{x}_3 \] Evidentemente, essas equações
+          são podem ser resolvidas uma vez conhecemos a força \(\mathbf{F}\).
+          Uma classe muito importante é dada por forças conservativas, que são
+          forças que podem ser escritas como o gradiente de um potencial
+          \(\mathbf{F} = - \nabla V(\mathbf{r})\). Resolvendo essas equações
+          diferenciais, definimos as trajetórias das partículas como uma função
+          do tempo, ou seja, encontraremos a curva \[ \mathbf{r} =
+          \mathbf{r}(t) = (x_1(t), x_2(t), x_3(t)) \] que, evidentemente,
+          define uma curva no espaço Euclidiano tridimensional. </p>
+
+        <p>Antes de entendermos as equações diferenciais acima, e as sutilezas
+          das leis de Newton, temos que compreender melhor as noções de
+          posição, velocidade e aceleração. Esse é o objetivo desse texto.</p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Posição, velocidade e aceleração</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Posição</h3>
+
+        <p>Como discutimos na introdução, a posição da partícula num dado
+          instante do tempo \(t\), é dada por um vetor no espaço
+          \(\mathbb{R}^3\), ou seja \[ \mathbf{r} = (x_1(t), x_2(t), x_3(t)) \]
+          Para fins práticos, porém, o instante de tempo pode mudar, o que
+          significa que esse vetor posição também muda. Logo, temos uma curva
+          paramétrica (onde o parâmetro é, evidentemente, o tempo) no espaço
+          Euclidiano.</p>
+
+        <p>Podemos escrever o vetor posição (em coordenadas Cartesianas) como
+          \[ \mathbf{r}(t) = (x_1, x_2, x_3) = x_1 \hat{i} + x_2 \hat{j} + x_3
+          \hat{k} = x_1 \mathbf{e}_1 + x_2 \mathbf{e}_2+ x_3 \mathbf{e}_3 \]
+          onde \(\hat{i}= \mathbf{e}_1 = (1,0,0)\), \(\hat{j}= \mathbf{e}_2 =
+          (0,1,0)\) e \(\hat{k}= \mathbf{e}_3 = (0,0,1)\). </p>
+
+        <h3>Velocidade e Aceleração</h3>
+
+        <p>Como essa expressão desine uma curva no espaço Euclidiano em 3D, que
+          podemos chamar de \[ \gamma:  \mathbb{R}_+ \to \mathbb{R}^3 \qquad
+          \gamma:  t\in \mathbb{R}_+ \mapsto \gamma(t) = \mathbf{r}(t) \in
+          \mathbb{R}^3 \] a cada instante de tempo podemos definir um vetor
+          tangente à essa curva, e esse é o vetor velocidade naquele ponto.
+          Esse vetor velocidade é dado por
+          \begin{align} 
+          \mathbf{v}(t) & \equiv \dot{\mathbf{r}}(t):= \dot{\gamma}(t) 
+          = \lim_{\Delta t \to 0} \frac{1}{\Delta t} \left( \gamma(t + \Delta t) 
+          - \gamma(t) \right)\\
+          & = (\dot{x}_1(t), \dot{x}_2(t), \dot{x}_3(t)) \\
+          & = (v_1(t), v_2(t), v_3(t)) 
+          \end{align}
+        </p>
+
+        <p>Finalmente, a aceleração é a derivada da velocidade, ou seja
+          \begin{align} \mathbf{a}(t) & \equiv \dot{\mathbf{v}}(t) =
+          \ddot{\mathbf{r}}(t):= \ddot{\gamma}(t) \\ & = (\ddot{x}_1(t),
+          \ddot{x}_2(t), \ddot{x}_3(t)) \\ & = (\dot{v}_1(t), \dot{v}_2(t),
+          \dot{v}_3(t)) \\ & = (a_1(t), a_2(t), a_3(t)) \end{align} </p>
+
+        <p>No sistema internacional, a posição será dada em metros \((m)\),
+          enquanto que velocidade e aceleração são dadas, respectivamente, em
+          metros por segundo \((m/ s)\) e metros por segundo ao quadrado \((m/
+          s^2)\)</p>
+
+        <p>É muito importante entender que como a segunda lei de Newton define
+          equações diferenciais de segunda ordem, no que se refere ao estudo
+          dinâmico, não precisamos considerar derivadas da aceleração. Isso não
+          significa, no entanto, que derivadas de ordem mais altas sejam
+          desnecessárias. No estudo de engenharia estrutural, é muito
+          importante sebar, por exemplo, o efeito que variações de força podem
+          ter na estrutura dos corpos (carros, aviões e navios por exemplo).
+          Nesse caso, precisamos entender variações da aceleração, o que
+          significa tomar derivadas de ordem 3. Em biologia, outro exemplo
+          importante, precisamos entender como o corpo de um animal responde a
+          grandes variações de aceleração, e isso é muito importante na
+          construção de carros (por exemplo). Mais uma vez, derivadas da
+          aceleração precisam ser conhecidas. Essa quantidade é tão importante
+          que tem um nome: <i>Arranque</i> ou <i>jerk</i>. Como o leitor pode
+          supor, podemos considerar derivadas de ordens ainda mais altas, e é
+          bem possível que se possa encontrar alguma aplicação na engenharia.
+        </p>
+
+        <h3>Cinemática em 1D e 3D</h3>
+
+        <p>Finalmente, é bem possível que o corpo que estamos estudando esteja
+          confinado a se mover apenas no plano, ou ao longo de uma reta. Quando
+          isso acontece, podemos simplificar a nossa notação.</p>
+
+        <p>No caso do plano, por exemplo, podemos orientar nosso sistema de
+          coordenadas (no caso de termos apenas 1 partícula, sempre podemos
+          fazer isso) para que esse movimento aconteça no plano \(XY\),
+          portanto os vetores que definimos acima se tornam \[ \mathbf{r} =
+          (x_1, x_2, 0) \qquad \mathbf{v} = (v_1, v_2, 0)  \qquad \mathbf{a} =
+          (a_1, a_2, 0)  \] e quando a partícula está confinada a se mover numa
+          reta, podemos escrever \[ \mathbf{r} = (x_1, 0, 0) \qquad \mathbf{v}
+          = (v_1, 0, 0)  \qquad \mathbf{a} = (a_1, 0, 0)  \] Veja, no entanto,
+          que carregar tantos zeros pode ser inconveniente, e é em linhas
+          gerais, uma notação ingênua. Por isso, no caso em 2D, geralmente
+          ignoramos esses zeros, e escrevemos simplesmente \[ \mathbf{r} =
+          (x_1, x_2) \qquad \mathbf{v} = (v_1, v_2)  \qquad \mathbf{a} = (a_1,
+          a_2)  \] O caso em 1D, podemos fazer o mesmo, ou simplesmente ignorar
+          toda a notação vetorial, e considerar apenas as quantidades escalares
+          \(x_1(t)\), \(v_1(t)\) e \(a_1(t)\). Vetores, no entanto, carregam
+          mais informações que quantidades escalares, então devemos suplementar
+          o caso em 1D com a direção e o sentido do movimento. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Exemplos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Aceleração Constante</h3>
+
+        <p> Considere o caso onde a aceleração da partícula é constante,
+          portanto temos que \[\mathbf{a}_0 = \ddot{\mathbf{r}} = (a_1, a_2 ,
+          a_3 )\] onde \(a_i\), \(i = 1, 2, 3\) são constantes. Nesse caso, é
+          muito simples integrar essa expressão e encontrar velocidade e
+          aceleração. \begin{align} \mathbf{r}(t) & = \mathbf{r}_0 +
+          t\mathbf{v}_0 + \frac{t^2}{2}\mathbf{a}_0\\ \mathbf{v}(t) & =
+          \mathbf{v}_0 + t\mathbf{a}_0 \end{align} </p>
+
+        <h3>Equação de Torricelli</h3>
+
+        <p>Em algumas situações, sabemos a relação funcional entre posição e
+          aceleraração, e não a relação paramétrica dessas quantidades com o
+          tempo. Como podemos determinar a velocidade dessa partícula? Esse é
+          um problema bastante comum no estudo da cinemática, por isso
+          precisamos nos dedicar a ela por alguns instantes.</p>
+
+        <p>Para esse problema, assumimos que conhecemos a relação funcional
+          entre aceleração e posição, ou seja \(\mathbf{a} =
+          \mathbf{a}(\mathbf{r})\). Usando as definições de aceleração e
+          velocidade, temos que \begin{align} \mathbf{a}\cdot\mathbf{v} & =
+          \dot{\mathbf{v}}\cdot\mathbf{v} = \frac{1}{2}\frac{d}{dt}(
+          \mathbf{v}\cdot\mathbf{v}) \\ \mathbf{a}\cdot\mathbf{v} & =
+          \mathbf{a}\cdot\dot{\mathbf{r}} \end{align} Igualando essas duas
+          quantidade e integrando sobre um intervalo espacial temos que \[
+          \mathbf{v}_f^2 - \mathbf{v}_i^2 = 2 \int_{t_i}^{t_f} d\mathbf{r}
+          \cdot \mathbf{a} \] </p>
+
+        <p>Encontramos, frequentemente, esse problema em 1D com uma aceleração
+          constante. Nesse caso, recuperamos a expressão de Torricelli na sua
+          forma mais "tradicional" \[ v^2_f - v_i^2 = 2 a \Delta x \]</p>
+
+        <h3>Lançamento Parabólico</h3>
+
+        <p>O último exemplo que consideraremos, e um dos mais recorrentes, é o
+          lançamento parabólico. Esse problema consiste em calcular a posição
+          de uma partícula que é lançada a uma velocidade inicial \[
+          \mathbf{v}_0 = (v_{01}, v_{02}, 0) \] na superfície da Terra
+          (orientamos o sistema de coordenadas para que o eixo \(Y\) seja
+          vertical). Ignorando efeitos de resistência do ar e curvatura da
+          Terra, esse movimento acontece apenas no plano definido pela
+          velocidade inicial e do vetor posição inicial, que assumimos ser \(
+          \mathbf{r}_0 = (x_{01}, x_{02}, 0)\). Como a aceleração para esse
+          problema é apenas a aceleração da gravidade, temos ainda que \(
+          \mathbf{a} = (0, -g, 0)\) onde \(g = 9.8m/s^2\), ou seja, é um
+          problema com aceleração constante, e por isso o problema está,
+          essencialmente resolvido: \begin{align} \mathbf{r}(t) & = (x_1(t),
+          x_2(t)) = (x_{01} + t v_{01}, x_{02} + t v_{02} - g\frac{t^2}{2})\\
+          \mathbf{v}(t) & = (v_1(t), v_2(t))  = (v_{01}, v_{02} - gt )\\
+          \mathbf{a}(t) & = (0, -g) \end{align} veja que ignoramos as
+          coordenadas no eixo \(Z\), afinal, essas coordenadas são nulas.
+          Observe, além disso, que é possível eliminar o parâmetro \(t\) da
+          relação funcional \(x_2(t)\) em favor de uma relação \(x_2(x_1)\), ou
+          numa notação mais familiar, podemos escrever \(y(x)\), e numa
+          inspeção simples, vemos que se trata de uma relação quadrática do
+          tipo \( x_2 = - a x_1^2 + b x_1 + c\), ou seja, uma parábola, e as
+          constantes \(\, b, c\) podem ser determinadas por meio de uma simples
+          álgebra, que (como não temos muito tempo) fica como um  exercício
+          para o aluno mais diligente. </p>
+
+        <p>Com a solução acima, podemos determinar, por exemplo, qual a altura
+          máxima e a distância horizontal máxima (alcance) que esse corpo
+          atinge se conhecermos a sua velocidade inicial.</p>
+
+        <p>Suponha que a partícula leva o tempo \(\tilde{t}\) para atingir a
+          altura máxima. Nesse instante, temos que a velocidade vertical é zero
+          (afinal, a velocidade tem que mudar de sentido), portanto temos que
+          \[ 0 = v_{02} - g \tilde{t} \quad \Rightarrow \quad \tilde{t} =
+          \frac{v_{02}}{g}\] Ou seja, sabendo a velocidade inicial, podemos
+          facilmente determinar o instante em que a partícula atinge sua altura
+          máxima. Usando esse tempo, podemos substituir na expressão para
+          \(x_{02}\) para determinar a altura máxima, ou seja \[x_{2}^{(max)}
+          = x_{2}(\tilde{t}) = x_{02} + \frac{v_{02}^2}{2g}  \] </p>
+
+        <p>Para determinar o alcance, podemos simplesmente usar a relação
+          funcional \(x_2 = x_2(x_1)\), pois no ponto de alcance \(x_{max}\),
+          temos que \(x_2(x_{max} = 0\). Portanto, temos que \[ x_{xmax} = -
+          \frac{1}{2a} \left( - b \pm \sqrt{b^2 + 4 a c} \right)  \] essa
+          quantidade deve ser positiva (afinal, se trata de um comprimento),
+          portanto apenas a solução dada por \[ x_{xmax} = - \frac{1}{2a}
+          \left( - b - \sqrt{b^2 + 4 a c} \right)  \] é fisicamente aceitável.
+          Frequentemente, livros mais básicos propõem esse problema dando a
+          magnitude e a inclinação da velocidade inicial. Isso significa que
+          podemos reescrever a solução que achamos acima em coordenadas
+          polares. Além disso, frequentemente o problema é proposto assumindo
+          que a partícula é lançada a partir da origem, o que simplifica
+          bastante a análise que fizemos acima. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Sistemas de Coordenadas Cilindricos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Posição</h3>
+
+        <p>Até agora consideramos apenas sistemas de coordenadas cartesianos, o
+          que é insuficiente para diversos sistemas físicos que precisaremos
+          analisar no nosso estudo dinâmico. Quer dizer, ignorando outros
+          sistemas de coordenadas, podemos continuar estudando e encontrando as
+          equações e soluções corretas, mas isso seria muito laborioso.
+          Escolhendo um sistema de coordenadas apropriado pode levar a grandes
+          simplificações. </p>
+
+        <p>No nosso estudo de dinâmica, veremos que dois desses sistemas de
+          coordenadas são o cilindrico e o esférico. Entre esses dois, o
+          sistema de coordenadas cilindricos é uma estrela, e por isso
+          trataremos dele nesse texto. </p>
+
+        <p>O fato de analisarmos apenas o sistema de coordenadas cilindricos
+          não quer dizer, porém, que coordenadas esféricas não são importantes.
+          Elas aparecem no estudo de ondas esféricas e do átomo de Hidrogênio.
+          O estudo de autovalores do operador Laplaciano, os Harmônicos
+          Esféricos, é um importante tópico em toda física teórica. Começamos
+          com as coordenadas cilindricas pois, é mais simples, também aparece
+          em diversos problemas físicos, e com esse sistemas, a generalização
+          para coordenadas esféricas é mais ou menos direta.</p>
+
+        <p>No sistemas de coordenadas cartesianos, que estudamos até agora,
+          consideramos que o espaço Euclidiano em 3D é parametrizado pelo
+          produto Carteriano de 3 espaços reais \(\mathbb{R}^3\), e de fato,
+          usamos essa notação para nos referir ao espaço Euclidiano em si. No
+          caso das coordenadas cilindricas, identificamos o espalo Euclidiano
+          como um conjunto infinito de cilindros coaxiais. Ou seja
+          \[\mathbb{R}^3 \simeq \mathbb{R}_+ \times \mathbb{S}^1 \times
+          \mathbb{R}\] onde \(\mathbb{R}_+\) define o raio do cilindro,
+          \(\mathbb{S}^1\) um circulo e \(\mathbb{R}\) define a sua altura. Ou
+          seja, escrevemos os vetores posição como \[ \mathbf{r}(t) = \rho(t)
+          (\cos\theta, \sin \theta, 0) + z(t) \hat{k}= \rho(t) \hat{\rho} + z
+          \hat{k} \] A manitude do vetor posição é \[ r^2 = \rho^2 + z^2 \] e
+          no caso particular onde \(z = 0\), podemos escrever \[ \mathbf{r}(t)
+          = r(t) \hat{r} = \rho(t) \hat{\rho}  \] </p>
+
+        <p>Podemos contruir um terceiro versor na direção \(\theta\) como \(
+          \hat{\theta} = \frac{d\hat{\rho}}{d\theta} = (-\sin\theta, \cos
+          \theta, 0)\). Nesse ponto, é fácil ver que os versor a seguir formam
+          uma base para o espaço Euclidiano real \[ \hat{\rho} = (\cos\theta,
+          \sin\theta, 0) \qquad \hat{\theta}= (-\sin\theta, \cos \theta, 0)
+          \qquad \hat{k} = (0,0,1) \] Esse é o sistema de coordenadas
+          cilindricas. É muito simples verificar que \[ \hat{\rho}\times
+          \hat{\theta} = \hat{k} \qquad \hat{\theta}\times \hat{k} = \hat{\rho}
+          \qquad \hat{k}\times \hat{ \rho} = \hat{\theta} \]</p>
+
+        <h3>Velocidade</h3>
+
+        <p>Vamos agora escrever o vetor velocidade de duas formas bastante
+          convenientes, dependendo do problema que estamos interessados.
+          Primeiro, vamos fazer a derivação temporal, ou seja \[ \mathbf{v} =
+          \dot{\mathbf{r}} = \dot{\rho} \hat{\rho} + \rho\dot{\hat{\rho}} +
+          \dot{z} \hat{k} = \dot{\rho} \hat{\rho} + \rho
+          \dot{\theta}\hat{\theta} + \dot{z} \hat{k} \] onde o primeiro termo é
+          a velocidade radial, e o segundo termo a velocidade tangencial. Essa
+          expressão será muito útil na análise de sistemas dinâmicos, sobretudo
+          quando precisarmos estudas a magnitude da velocidade. Podemos, no
+          entanto, usar a ortonormalidade do sistema de coordenadas para
+          escrever essa velocidade como \[ \mathbf{v} = \dot{\rho} \hat{\rho} +
+          \rho \dot{\theta}\hat{k}\times\hat{\rho} + \dot{z} \hat{k} =
+          \dot{\rho} \hat{\rho} + (\dot{\theta}\hat{k})\times(\rho\hat{\rho}) +
+          \dot{z} \hat{k} = \dot{\rho} \hat{\rho} +
+          \vec{\omega}\times(\rho\hat{\rho}) + \dot{z} \hat{k} \] onde o termos
+          \(\vec{\omega} = \dot{\theta} \hat{k}\) é chamado de velocidade
+          angular. De fato, como a velocidade angular foi definida na direção
+          \(\hat{k}\), temos que \[ \mathbf{v} = \dot{\rho} \hat{\rho} +
+          \vec{\omega}\times\mathbf{r}+ \dot{z} \hat{k} = \tilde{\mathbf{v}} +
+          \vec{\omega}\times\mathbf{r} \] onde definimos \[ \tilde{\mathbf{v}}
+          = \dot{\rho} \hat{\rho} + \dot{z} \hat{k} \] que é a expressão que um
+          observador movendo-se junto com a partícula chamaria de velocidade.
+        </p>
+
+        <h3>Aceleração</h3>
+
+        <p>Tomando a derivada da expressão acima, temos que a aceleração é dada
+          por \[ \mathbf{a} = \dot{\tilde{\mathbf{v}}} + \vec{\alpha}\times
+          \mathbf{r} + \vec{\omega} \times \mathbf{v} \] onde \(\vec{\alpha} =
+          \ddot{\theta} \hat{k}\) é a aceleração angular. Usando a expressão
+          para a velocidade, temos que \[ \mathbf{a} = (\ddot{\rho} \hat{\rho}
+          + \dot{\rho} \dot{\theta} \hat{\theta} + \ddot{z}\hat{k}) +
+          \vec{\alpha} \times \mathbf{r} + \vec{\omega} \times (
+          \tilde{\mathbf{v}} + \vec{\omega} \times \mathbf{r} ) \] Observe, no
+          entanto, que podemos escrever \[ \dot{\rho} \dot{\theta} \hat{\theta}
+          =   \dot{\rho} \dot{\theta} \hat{k}\times \hat{\rho} = \vec{\omega}
+          \times (\dot{\rho} \hat{\rho}) \equiv \vec{\omega} \times
+          \tilde{\mathbf{v}}  \] Portanto, temos que a aceleração é dada por \[
+          \mathbf{a} = \tilde{\mathbf{a}} + 2 \vec{\omega} \times
+          \tilde{\mathbf{v}} + \vec{\omega} \times (\vec{\omega} \times
+          \mathbf{r})  + \vec{\alpha} \times \mathbf{r} \] onde definimos a
+          aceleração \[  \tilde{\mathbf{a}} = \ddot{\rho} \hat{\rho} +
+          \ddot{z}\hat{k} \] que é o que um observador na partícula chamaria de
+          aceleração. Existe muita coisa acontecendo aqui, e por isso
+          discutiremos os termos extras individualmente. </p>
+
+        <p>A aleceração angular \(\alpha\) é a mais simples de ser entendida.
+          Esse termo descreve como o observador percebe a taxa com a qual o
+          corpo rotaciona. Em diversos problemas na física, essa aceleração é
+          nula. Um exemplo onde esse termo é relevante é no estudo das óbitas
+          dos corpos celestes. No caso dos planetas, por exemplo, a sua
+          velocidade angular aumenta conforme o planeta está mais próximo do
+          Sol. Embora a velocidade angular não seja constante, a relação entre
+          posição velocidade e aceleração angular conspiram para que uma nova
+          quantidade seja constante, o momento angular, e isso simplifica
+          bastante a análise das órbitas planetárias.</p>
+
+        <p>Para discutir os demais termos, vamos continuar explorando o planeta
+          Terra, mas a sua rotação. </p>
+
+      </section>
+
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Movimento relativo ao planeta Terra</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Aceleração Angular</h3>
+
+        <p>O plenta Terra se move com uma velocidade angular (aproximadamente)
+          constante. Podemos calcular essa velocidade de maneira muito simples.
+          Primeiro, a excentricidade da Terra é aproximadamente de \(e=0.1\),
+          portanto é uma trajetória relativamente circular. Observe que como o
+          ano tem 365 dias, a cada dia a Terra translada, aproximadamente, um
+          ângulo de \(\gamma \simeq 0.98^\circ = 0.017 rad\). Isso é muito
+          importante pois, em \(24h = 86400s\), a Terra rotaciona um ângulo de
+          \(2\pi + \gamma\). Dessa forma, sua velocidade angular é de \[ \omega
+          = \frac{2\pi + \gamma}{8.64 \times 10^4} = 7.29 \times 10^{-5} rad/s
+          \] </p>
+
+        <p>Isso significa, em particular, que a aceleração angular da rotação
+          Terrestre é zero.</p>
+
+        <p>Portanto, temos que a aceleração é dada por \[ \mathbf{a} =
+          \tilde{\mathbf{a}} + 2 \vec{\omega} \times \tilde{\mathbf{v}} +
+          \vec{\omega} \times (\vec{\omega} \times \mathbf{r}) \] Chamamos o
+          segundo termo no lado direito de <b>aceleração de Coriolis</b>
+          enquanto que o terceiro termo na equação acima é chamado de
+          <b>aceleração centripeta</b>.</p>
+
+        <h3>Aceleração Centrípeta</h3>
+
+        <p>Consideramos agora o planeta Terra parametrizado em coordenadas
+          cilindricas, onde o plano \(z=0\) corresponde ao Equador. Um ponto no
+          planeta é dado por \[ \mathbf{r} = \rho \hat{\rho} + z \hat{k} \]
+          Assuma que esse é um ponto acima da superfície do Planeta. Vamos
+          considerar que \(z\) é fixo -- por simplicidade, afinal não queremos
+          considerar o caso mais geral, queremos apenas entender o que os
+          termos na aceleração significam. Isso significa que
+          \(\tilde{\mathbf{v}} = \dot{\rho}\hat{\rho}\) </p>
+
+        <p>Definimos o vetor normal \[\hat{r} = \frac{\mathbf{r}}{r}\] que é um
+          vetor na direção do centro da Terra. Considere, inicialmente, a
+          situação onde o \(\dot{\rho} = 0\), portanto temos que \[ \mathbf{a}
+          = \tilde{\mathbf{a}} + \vec{\omega} \times (\vec{\omega} \times
+          \mathbf{r}) \] Pensando nessa configuração dada, observadores na
+          superfície do planeta reconhecem que a única aceleração nesse sistema
+          é dada pela aceleração da gravidade. Ou seja \[ \mathbf{a} =
+          \mathbf{g}_0 = -9.8 \hat{r} \] logo \[ \tilde{\mathbf{a}} =
+          \mathbf{g}_0 - \vec{\omega} \times (\vec{\omega} \times \mathbf{r})
+          \] Calculando o último termo explicitamente, temos que \[
+          \vec{\omega} \times (\vec{\omega} \times \mathbf{r}) = -\rho
+          \dot{\theta}^2 \hat{\rho}\] Ou seja, esse termo contribuirá para
+          corrigir o que o observador no ponto fixo \(\mathbf{r}\) entende como
+          aceleração gravitacional. </p>
+
+        <h3>Aceleração de Coriolis</h3>
+
+        <p>O termo de Coriolis é ainda mais maquiavélico. Considere agora que o
+          observador está em queda livre com velocidade radial dada por \[
+          \tilde{\mathbf{v}} = v_0 \hat{r} = \frac{v_0}{r} \left( \rho
+          \hat{\rho} + z \hat{z} \right) \] Calculando o termo de Coriolis
+          temos \[ \vec{\omega} \times \tilde{\mathbf{v}} = \frac{ v_0
+          \dot{\theta}}{r}\hat{\theta} \] Portanto, embora o observador pense
+          que ele está se movendo unicamente para baixo, ele sente uma
+          aceleração o desviando para o lado. Isso é um resultado do sistema de
+          referêncial rotatório que ele se encontra. 
+        </p>
+
+        <p>É claro que agora poderíamos cozinhar diversas situações onde o
+          termo de Coriolis desvia os objetos, mas tudo é apenas uma análise
+          simples do movimento rotatório.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Conclusões</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Nesse texto, discutimos aspectos básicos do estudo da cinemática em 3D e suas 
+        resuções para 1D e 2D. O estudo cinemático é fundamental para desenvolvimento posterior 
+        dos conceitos dinâmicos.</p>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

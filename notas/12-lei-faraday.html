@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Lei de Faraday</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Lei de Faraday & Equações de Maxwell</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Força Eletromotriz</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos da lei de Faraday. 
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <h3>Correntes e Campos Estáticos</h3>
+
+        <p> 
+          Quando discutimos a lei de Ampère, consideramos correntes elétricas
+          \(\mathbf{J}\), mas não fomos muito precisos sobre a sua origem e
+          como as cargas são postas em movimento. Estudando esse problema mais
+          de perto nos conduzirá a lei de Faraday. 
+        </p>
+
+        <p> 
+          Usando força de Lorentz, podemos calcular o trabalho necessário para deslocar a 
+          partícula num circuito fechado
+          \[ 
+          W = Q \oint \left( \mathbf{E} + \mathbf{v}\times \mathbf{B} \right) \cdot d \mathbf{r}
+          \]
+          Sabemos porém que força magnética não realiza trabalho, portanto toda
+          a contribuição ao trabalho deve vir do campo elétrico. </p>
+
+        <p>No caso de campos eletrostáticos, porém, o campo elétrico é escrito
+          como o gradiente de um potencial, e isso significa que o trabalho
+          para uma carga se deslocar num circuito fechado é zero. Isso é
+          relevante pois deslocar cargas em circuitos fechados é exatamente o
+          que precisamos. Concluímos, portanto, que campos estáticos não podem
+          ser responsáveis por manter uma corrente estacionária -- como o que
+          precisamos no nosso tratamento da lei de Ampère.
+        </p>
+        
+        <p>Definimos o trabalho realizado para deslocar uma carga elétrica \(Q\), por unidade 
+        de carga como a força eletromotriz 
+          \[ \mathcal{E} = \frac{W}{Q} = \oint \mathbf{F}\cdot d\mathbf{r} \]
+          Em todo e qualquer texto onde a força Eletromotriz é discutida, haverá um parágrafo 
+          falando como essa terminologia não é muito apropriada. Observe que \(\mathcal{E}\)
+          tem unidades de tensão, Joules por Coulomb, e portanto, não se trata de uma força 
+          no sentido estrito da palavra. Força eletromotriz é uma "força" numa terminologia 
+          leiga pois é o "motivo" que faz com que as cargas se movimentem ao num circuito
+          fechado. 
+        </p>
+        
+        <p>Ainda não explicamos qual é agente faz com que as cargas se movam. Para discutir 
+        esse aspecto, vamos considerar a lei de Ohm.</p>
+
+      </section>
+
+      
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Lei de Ohm</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos da lei de Faraday. 
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <h3>Lei de Ohm</h3>
+        
+        <p>Já sabemos que para haver alguma corrente fluindo no circuito, devemos ter 
+        alguma força "empurrando" as cargas elétricas. Para diversos materiais, a corrente 
+          elétrica (sua densidade na verdade) é proporcial a densidade de força \(\mathbf{f}\), 
+          ou seja 
+          \[ 
+          \mathbf{J} = \sigma_c \mathbf{f} = \sigma_c (\mathbf{E} + \mathbf{v}\times \mathbf{B} )
+          \]
+          onde a constante de proporcionalidade \(\sigma_c\) é chamada de <b>condutividade</b>.
+          A recíproca \(\rho_r = \sigma_c^{-1}\) é chamada de <b>resistividade</b>. 
+          Quando a velocidade da carga é suficientemente pequena, o termo magnético pode ser 
+          ignorado e encontramos que corrente e campo elétrico são relacionados por 
+          \[ 
+          \mathbf{J} = \sigma_c \mathbf{E} 
+          \]
+          Essa expressão é conhecida como Lei de Ohm, mas é muito importante mencionar 
+          que ela não "merece" essa posição pois se trata, na verdade, de uma regra de Ohm, 
+          que em muitas situações não é obedecida. Podemos pensar nessa expressão como 
+          a primeira contrinuição de uma série, de maneira que termos não lineares nos 
+          campos elétricos e magnéticos podem ser relevantes. Materiais onde essa lei é 
+          satisfeita são chamados de materiais ohmicos. 
+        </p>
+
+        <p>Podemos trazer a expressão acima para uma forma mais conhecida quando consideramos 
+        um campo elétrico uniforme, tal que \(E = \Delta V / L\), onde \(L\) é um intervalo 
+          onde consideramos uma diferença de potencial \(\Delta V\). Nesse caso, podemos calcular 
+          a corrente elétrica como \[ I = \int \mathbf{J}\cdot \hat{n} dA = \sigma_c E A \] 
+          onde \(A\) é a área transversal de um fio onde a corrente está fluindo. Nesses termos, 
+          é muito simples verificar que 
+          \[ \Delta V = R I\qquad R = \frac{L}{\sigma A} \] 
+          onde \(R\) é a resistência do material.
+        </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Lei de Faraday</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos da lei de Faraday. 
+        </p>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Lei de Faraday</h3>
+
+        <p>Numa série de experimentos, Michael Faraday percebeu que
+          considerando-se um circuito elétrico fechado na presença de um campo
+          magnético, variando-se esse campo, uma corrente elétrica era gerada.
+          Isso motivou Faraday -- e mais precisamente Maxwell, pois o que
+          entendemos atualmente como Lei de Faraday foi, do ponto de vista
+          matemático, derivado por James Clerk Maxwell. </p>
+
+        <p>Para analisar o experimento de Faraday, vamos considerar um circuito
+          elétrico \(\mathcal{C}\) na presença de um campo magnético
+          \(\mathcal{B}\). Como o circuito é fechado, vemos que o circuito pode
+          ser pensado como o contorno de uma superfície \(\Sigma\), ou seja
+          \(\mathcal{C} = \partial \Sigma\). Agora vamos calcular o fluxo do
+          campo magnético passando por essa superfície \[ \Phi  = \int_{\Sigma}
+          \mathbf{B}\cdot d \mathbf{S} \] O que Faraday observou é que quando
+          variamos o campo magnético, uma corrente é produzida, e isso
+          significa que a variação do fluxo acima deve ser, de alguma forma,
+          relacionado à força eletromotriz. Vamos agora provar essa declaração
+          matemáticamente. </p>
+
+        <p> Consideramos a variação do fluxo acima como \[ \Phi(t +\delta t) =
+          \Phi(t) + \delta t \frac{\partial \Phi}{\partial t} +
+          \mathcal{O}(\delta t^2) \] que é nada mais que uma expansão em série
+          de Taylor onde ignoramos termos de ordem mais altas. </p>
+
+        <p>Podemos usar algo que Faraday não tinha: conhecimento da
+        relatividade especial e das transformações de Lorentz em particular. Ao
+        considerar a variação do fluxo, temos dois efeitos que devem ser
+        levados em consideração: O primeiro é a variação do campo magnético em
+        si. O segundo é a variação do circuito propriamente dito, ou seja,
+        podemos considerar o circuito movendo-se. Portanto \[ \delta\Phi =
+        \Phi(t +\delta t) - \Phi(t) = \int_{\Sigma + \delta
+        \Sigma}\mathbf{B}\cdot d\mathbf{S} + \delta t \int_{\Sigma}
+        \frac{\partial\mathbf{B}}{\partial t}\cdot d \mathbf{S} -
+        \int_{\Sigma}\mathbf{B}\cdot d\mathbf{S} + \mathcal{O}(\delta t^2) \] a
+        variação da superfície deve ser linear em \(\delta t\), por isso
+        ignoramos termos de ordem quadrática. </p>
+
+        <p>Observe que temos a diferença de dois termos envolvendo a diferença
+        entre duas superfícies, e por isso escrevemos essas diferenças como \[
+        \int_{\Sigma + \delta \Sigma}\mathbf{B}\cdot d\mathbf{S} -
+        \int_{\Sigma}\mathbf{B}\cdot d\mathbf{S} \equiv \int_{\Sigma}
+        \mathbf{B}\cdot \delta(d \mathbf{S}) \] Para calcular a variação do
+        elemento de área, vamos orientar o nosso sistema de coordenada tal que
+        a velocidade que movemos o nosso circuito seja ao longo do vetor
+        \(\mathbf{r}\), tal que \(\delta \mathbf{r} = \mathbf{v}\delta t\), de
+        maneira que o elemento de área seja \[ d\mathbf{S} = \mathbf{r} \times
+        d \mathbf{l} \quad \Rightarrow \quad \delta(d\mathbf{S}) =
+        (\delta\mathbf{r}) \times d \mathbf{l}  = \delta t \left( \mathbf{v}
+        \times d \mathbf{l}\right) \] de onde concluímos que \[ \int_{\Sigma +
+        \delta \Sigma}\mathbf{B}\cdot d\mathbf{S} -
+        \int_{\Sigma}\mathbf{B}\cdot d\mathbf{S} \equiv \delta t
+        \oint_{\partial\Sigma} \mathbf{B}\cdot (\mathbf{v} \times d\mathbf{l})
+        = \delta t \oint_{\partial\Sigma} (\mathbf{B} \times \mathbf{v}) \cdot
+        d \mathbf{l} \]
+
+        </p>
+
+        <p>Portanto temos \[ \delta\Phi(t) = \delta t \frac{\partial
+        \Phi}{\partial t} = \delta t \int_{\Sigma}
+        \frac{\partial\mathbf{B}}{\partial t}\cdot d \mathbf{S} - \delta t
+        \oint_{\partial\Sigma} \cdot (\mathbf{v} \times \mathbf{B}) \cdot d
+        \mathbf{l} \] Observe que a integral é sobre a fronteira da superfície.
+        Para integrar sobre a área precisamos apenas considerar uma integração
+        sobre o tempo. </p>
+
+        <p>Temos portanto que \[ \frac{\partial \Phi}{\partial t} =
+        \int_{\Sigma} \frac{\partial\mathbf{B}}{\partial t}\cdot d \mathbf{S} -
+        \oint_{\partial\Sigma} \cdot (\mathbf{v} \times \mathbf{B}) \cdot d
+        \mathbf{l} \] Aqui que a genialidade de Michael Faraday se manifesta.
+        Ele considerou que a variação do fluxo \(\Phi\) é menos a força
+        Eletromotriz \(\mathcal{E}\) de tal maneira que \[ \frac{\partial
+        \Phi}{\partial t} = - \mathcal{E}\] e como \[\mathcal{E} =
+        \oint_{\partial \Sigma}d \mathbf{l}\cdot \left(\mathbf{E} +
+        \mathbf{v}\times \mathbf{B}\right)\] o que significa que \[
+        \int_{\Sigma} \frac{\partial\mathbf{B}}{\partial t}\cdot d \mathbf{S} =
+        - \oint_{\partial \Sigma}d \mathbf{l}\cdot \mathbf{E} \] que é a
+        expressão que conhecemos como Lei de Faraday -- na sua forma integral.
+        De fato, utilizando o teorema de Stokes podemos escrever a lei de
+        Faraday na sua forma diferencial como \[ \nabla \times \mathbf{E} = -
+        \frac{\partial\mathbf{B}}{\partial t} \]</p>
+
+        </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Equações de Maxwell</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos da lei de Faraday. 
+        </p>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Corrente de Deslocamento</h3>
+
+        <p>Com a lei de Faraday que acabamos de derivar, é fácil observar que 
+        a lei de Ampère não é consistente com as demais equações. Isso é esperado 
+        pois derivamos a lei de Ampère assumindo o caso estático, então precisamos 
+        revisitar essa equação.
+        </p>
+
+        <p>Lembre que a lei de Ampère é escrita como \[ \nabla \times
+        \mathbf{B} = \mu_0 \mathbf{J} \] E tomando a derivada temporal dessa
+        expressão e comparando com o rotacional da lei de Faraday, encontramos
+        que \[ \nabla \times (\nabla \times \mathbf{E}) = - \mu_0
+        \frac{\partial \mathbf{J}}{\partial t} \] o que em geral não é
+        verdadeiro. </p>
+
+        <p>Modificaremos então a lei de Faraday para acomodar um novo termo tal
+        que \[ \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \tilde{\mathbf{J}}
+        \] onde \(\mathbf{\mathbf{J}}\) é chamada de corrente de deslocamento.
+        Para determinar esse termo, simplesmente impomos a equação da
+        continuidade, ou seja \[\mu_0\nabla \cdot \mathbf{J} + \nabla \cdot
+        \tilde{\mathbf{J}}=0\quad \Rightarrow \quad \nabla \cdot
+        \tilde{\mathbf{J}} = - \nabla \cdot \mathbf{J} =  \mu_0 \frac{\partial
+        \rho}{\partial t}\] Usando a lei de Gauss, temos que \[
+        \nabla\cdot\tilde{\mathbf{J}} =   \mu_0 \frac{\partial \rho}{\partial
+        t} =  \mu_0 \varepsilon_0 \frac{\partial}{\partial t} \nabla \cdot
+        \mathbf{E} \] de onde concluímos que \[ \tilde{\mathbf{J}} =
+        \mu_0\varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \] E vemos
+        que a equação de Ampère é promovida à \[ \nabla \times \mathbf{B} =
+        \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{ \partial \mathbf{E}}{
+        \partial t} \right) \] </p>
+
+        <h3>Equações de Maxwell</h3>
+
+        <p>A equação que acabamos de derivar, juntamente com a lei de Gauss
+        elétrica e para o magnetismo, e com a lei de Faraday formam um quarteto
+        de equações chamada de equações de Maxwell.</p>
+
+        <p>As equações de Maxwell são: 
+        \[ \nabla \cdot \mathbf{E} =
+        \frac{\rho}{\varepsilon_0} \qquad \nabla \cdot \mathbf{B} = 0 \] \[
+        \nabla \times \mathbf{B} = \mu_0 \left( \mathbf{J} + \varepsilon_0
+        \frac{ \partial \mathbf{E}}{ \partial t} \right) \] \[ \nabla \times
+        \mathbf{E} = - \frac{ \partial \mathbf{B}}{ \partial t} \] 
+        </p>
+
+        <p>Lembrando que \[ \rho_b = - \nabla \cdot \mathbf{P} \qquad
+        \tilde{\mathbf{J}}_b = \nabla \times \mathbf{M} \] podemos escrever \[
+        \mathbf{J}_b = \nabla \times \mathbf{M} + \frac{\partial \mathbf{P}
+        }{\partial t}\] onde essa corrente satisfaz uma equação da
+        continuidade. Quanto consideramos matéria, as equações de Maxwell se
+        tornam \[ \nabla \cdot \mathbf{D} = \rho \qquad \nabla \cdot \mathbf{B}
+        = 0 \] \[ \nabla \times \mathbf{H} - \frac{ \partial \mathbf{D}}{
+        \partial t}  = \mathbf{J} \] \[ \nabla \times \mathbf{E} = - \frac{
+        \partial \mathbf{B}}{ \partial t} \] Observe que parte das equações são
+        escritas em termos dos campos fundamentais, e outras em termos dos
+        campos macroscócpicos. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Conservação de Energia</h2>
+        </div>
+
+        <p>
+          Vetor de Poynting. 
+        </p>
+
+        <p>Abaixo usamos a identidade \[ \nabla\cdot \left( \mathbf{A}\times
+          \mathbf{B} \right) = \partial_i  \left( \mathbf{A}\times \mathbf{B}
+          \right)_i \] usando o simbolo de Levi-Civita é simples provar que 
+          \[
+          \nabla\cdot \left( \mathbf{A}\times \mathbf{B} \right) = (\nabla
+          \times \mathbf{E}) \cdot \mathbf{B} -  \mathbf{E} \cdot (\nabla
+          \times \mathbf{B})  \] 
+        </p>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Transpote de Energia</h3>
+
+        <p>Um último aspecto que gostaríamos de entender nessa seção é o fato
+          de que queremos entender como os campos elétromagnéticos transportam
+          energia. Esse fato é de extrema importância pois a luz que vem do Sol
+          é a nossa maior fonte de energia, e queremos entender como essa
+          energia chega até o nosso planeta.  </p>
+
+        <p>Vamos começar essa análise calculando a potência \[ \frac{d W}{dt} =
+          Q\left( \mathbf{E} + \mathbf{v}\times \mathbf{B} \right) \cdot
+          \mathbf{v} =  Q \mathbf{E}  \cdot \mathbf{v} \] Escrevendo a carga
+          elétrica em termos da sua densidade, temos \[ \frac{d W}{dt} =
+          \int_V d\tau \ \rho \mathbf{E}  \cdot \mathbf{v} =  \int_V d\tau  \
+          \mathbf{E}  \cdot \mathbf{J} \] onde \(d\tau\) é o elemento de
+          volume. </p>
+
+        <p>Na expressão acima, inserimos a equação de Ampère-Maxwell, 
+          \[ 
+          \frac{d W}{dt} =  \int_V d\tau  \ \mathbf{E}  \cdot 
+          \left( - \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} 
+          + 
+          \frac{1}{\mu_0} \nabla\times \mathbf{B}
+          \right) 
+          \]
+          e usando que \(\mathbf{E}\cdot (\nabla \times \mathbf{B}) = 
+          \nabla(\mathbf{E}\times \mathbf{B}) - \mathbf{B} \cdot (\nabla \times \mathbf{E}) \)
+          temos 
+          \[ 
+          \frac{d W}{dt} = \int_V d\tau  \ 
+          \left( - \frac{\varepsilon_0}{2} \frac{\partial \mathbf{E}^2}{\partial t} 
+          + \frac{1}{\mu_0} (\nabla \times \mathbf{E})\cdot \mathbf{B} 
+          - \frac{1}{\mu_0}\nabla\cdot (\mathbf{E}\times \mathbf{B}) 
+          \right) 
+          \]
+          Usando agora a lei de Faraday-Maxwell, temos que 
+          \[
+          \frac{d W}{dt} = 
+          \int_V d\tau  \  
+          \left( - \frac{\varepsilon_0}{2} \frac{\partial \mathbf{E}^2}{\partial t} 
+          - \frac{1}{2\mu_0} \frac{\partial \mathbf{B}^2}{\partial t}
+          - \frac{1}{\mu_0}\nabla\cdot (\mathbf{E}\times \mathbf{B}) 
+          \right) 
+          \]
+        </p>
+
+        <p>Temos então que a potencia é dado pela soma 
+          \[ \frac{d W}{dt} = - \frac{\partial U_{em}}{\partial t} - s \]
+          onde 
+          \[ U_{em} = \int_V d\tau \ u_{em} = 
+          \int_V d\tau  \  \frac{1}{2}  
+          \left( \varepsilon_0\frac{\partial \mathbf{E}^2}{\partial t} +
+          \frac{1}{\mu_0} \frac{\partial \mathbf{B}^2}{\partial t}\right)
+          \]
+          é a energia total dos campos eletromagnéticos. Usando o teorema da divergência, 
+          temos que a segunda integral é um termos de superfície 
+          \[ s = \int_{\partial V} d\mathbf{a} \cdot 
+          \frac{1}{\mu_0}\mathbf{E}\times\mathbf{B} \]
+          e representa a taxa com a qual a energia flui através da fronteira do volume \(V\). 
+          O vetor
+          \[ \mathbf{S} = 
+          \frac{1}{\mu_0}\mathbf{E}\times\mathbf{B} \]
+          é chamado de <b>vetor de Poyinting.</b> e representa a densidade do fluxo de energia. 
+        </p>
+
+        <h3>Equação da Continuidade</h3>
+
+        <p>Usando os resultados acima, podemos concluir que temos uma equação da continuidade 
+        para a energia. Em particular, sabemos do nosso estudo da mecânica Newtoniana, que 
+        o trabalho realizado sobre as partículas irá aumentar a energia mecânica do sistema, 
+        portanto temos que 
+          \[
+          \frac{dW}{dt} = \frac{\partial}{\partial t} \int_V d \tau \ u_{mec}
+          \]
+        de onde concluímos que para um sistema eletromagnético temos que 
+        \[ \frac{\partial }{\partial t}(u_{mec} + u_{em}) = - \nabla\cdot \mathbf{S} \]
+        que é a equação da continuidade para a energia de um sistema eletromagnético.
+        </p>
+
+      </section>
+
+
+  </main>
+
+</body>
+</html>

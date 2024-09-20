@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Relatividade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Relatividade Especial: Cinemática</h1> 
+      </section>
+
+      <!-- PRIMEIRA PARTE  -->
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Relatividade de Galileo</h2>
+        </div>
+
+        <img class="side-image"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg/330px-Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg" alt="Galileo Galilei">
+
+        <p>
+        Escrevemos vetores no espaço 
+        Euclidiano \(\mathbf{R}^3\) como 
+        \(\mathbf{v} = (v_1, v_2, v_3)\). 
+        </p>
+
+        <p>
+        Importantes conceitos a serem revisados:
+        <ul>
+          <li>Translação temporal</li>
+          <li>Translação espacial</li>
+          <li>Boosts de Galileo</li>
+          <li>Rotações</li>
+        </ul>
+        </p>
+
+      </section>
+
+
+      <!-- SEGUNDA PARTE -->
+      <section class="item">
+
+        <h3>Transformações de Galileo</h3>
+        <p>
+        Relatividade é frequentemente associado à Einstein, mas esse tópico é
+        tão antigo quanto a própria mecânica clássica. Considere a segunda lei
+        de Newton 
+        \[
+        \mathbf{F} = \frac{d \mathbf{p}}{dt}\qquad \mathbf{p} = M \dot{\mathbf{r}}
+        \]
+        onde \(M\) é a massa, que assumimos ser uma constante. 
+        </p>
+        <p>
+        A relatividade de Galileo lida com transformações que deixam a segunda
+        lei de Newton covariante -- ou covariante, que é a terminologia mais
+        apropriada. 
+        </p>
+
+        <p>
+        <b>TRANSLAÇÃO TEMPORAL:</b> \(t \mapsto t' = t + s_0\), onde \(s_0\) é
+        uma constante. Como \(dt = dt'\), a equação de Newton é \[ \mathbf{F} =
+        \frac{d \mathbf{p}}{dt} = \frac{d \mathbf{p}}{dt'} \]
+        </p>
+        <p>
+        <b>TRANSLAÇÃO ESPACIAL:</b> \(\mathbf{r} \mapsto \mathbf{r}' =
+        \mathbf{r} + \mathbf{s}\), onde \(\mathbf{s}\) é um vetor constante. Como 
+        \(\dot{\mathbf{r}}' = \dot{\mathbf{r}}\), o momento linear é invariante. 
+        O que implica que tranlações espaciais também preservam a segunda lei de Newton. 
+        </p>
+        <p> 
+        <b>BOOSTS DE GALILEO:</b> \(\mathbf{r} \mapsto \mathbf{r}' = \mathbf{r}
+        + \mathbf{v}_0 t\), onde \(\mathbf{v}_0\) é um vetor constante. Nesse
+        caso, o sistema de coordenadas \(S'\) definido por \(\mathbf{r}'\) move-se com
+        velocidade constante com relação ao sistema de coordenadas \(S\) definido por
+        \(\mathbf{r}\). Nesse caso, o momento linear não é invariante,
+        \(\mathbf{p}' = \mathbf{p} + M \mathbf{v}_0 \), mas a força é
+        preservada. 
+        </p>
+        <p> 
+        <b>ROTAÇÕES:</b> Finalmente, rotações são definidas por matrizes ortogonais 
+        \(3\times3\) com entradas reais. Escrevendo o vetor \(\mathbf{r}\) como 
+        uma matriz coluna, uma rotação genérica é denotada por 
+        \[ 
+        \mathbf{r}' = \mathbf{R}\mathbf{r}\quad \Rightarrow \quad 
+        \begin{pmatrix}
+        x_1 \\ x_2 \\ x_3
+        \end{pmatrix}  = 
+        \begin{pmatrix}
+        R_{11} & R_{12} & R_{13} \\
+        R_{21} & R_{22} & R_{23} \\
+        R_{31} & R_{32} & R_{33} \\
+        \end{pmatrix}
+        \begin{pmatrix}
+        x_1 \\ x_2 \\ x_3
+        \end{pmatrix}
+        \]
+        Essas transformações formam um grupo denotado por \(\mathbf{SO}(3)\). 
+        </p>
+
+        <p> As diferenças entre invariante e covariante são sutis.
+        <b>Invariante</b> denota, geralmente, quantidades que não mudam com a
+        evolução do sistema dinâmico. Por exemplo, a energia total num sistema
+        conservativo é invariante. <b>Covariante</b> significa que as equações
+        de movimento para um sistema físico tem a mesma forma em diferentes
+        sistemas de coordenadas. As transformações de Galileao (e as de
+        Lorentz, que discutiremos abaixo), implicam covariância das equações.
+        Claro que podemos dizer que uma equação é invariante -- e farei isso
+        abaixo. Dizer que uma quantidade física é covariante é, em geral,
+        estranho. </p>
+
+        <h3>Métrica</h3>
+        <p>
+        É muito importante mencionar que intervalos de tempo e distâncias são
+        invariantes por transformações de Galileo. No espaço Euclidiano
+        \(\mathbb{R}^3\), dados dois pontos \(\mathbf{r} = (x_1, x_2, x_3)\) e
+        \(\mathbf{r} + d \mathbf{r} = (x_1 + dx_1, x_2 + dx_2, x_3 + dx_3)\), 
+        o quadrado da distância é medido como:
+        \[ 
+        ds^2 = dx_1^2 + dx_2^2 + dx_3^2
+        \]
+        Essa quantidade é, frequentemente, chamada de métrica; embora a definição 
+        matemática de métrica é como um tensor de rank 2 que quando atuamos sobre 
+        elementos de produto \(\mathbf{R}^3 \times \mathbf{R}^3 \to \mathbf{R}\). 
+        Essas sutilezas não são tão importantes no momento. 
+
+        A mensagem que deve ficar, no entanto, é que no caso da relatividade especial 
+        que discutiremos abaixo, estamos interessados em uma métrica diferente. 
+        </p>
+      </section>
+
+
+      <!-- TERCEIRA PARTE -->
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Relatividade de Einstein</h2>
+        </div>
+        <p>
+        <img class="side-image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F_2BiG4q7GCqk%2FTTHot-b6_mI%2FAAAAAAAAB2M%2FLq1m4BviklI%2Fs1600%2FAlbert_Einstein_Photo%2BII.jpg&f=1&nofb=1&ipt=da2d41d790caf77aece763b9f1601b5822100aeb76600c4789ac45808b5b64a0&ipo=images" alt="Albert Einstein">
+        Postulados de Einstein:
+        <ol>
+          <li>As leis da física devem ser as mesmas em todos os referenciais 
+          inérciais.</li>
+          <li>A velocidade da luz no vácuo é a mesma em todos os referenciais inerciais.</li>
+        </ol>
+        </p>
+        <p>
+        A velocidade da luz é dada por 
+        \[ 
+        c = \frac{1}{\sqrt{\epsilon_0 \mu_0}} = 299 792 458 m/s
+        \]
+        onde 
+        \[
+        \epsilon_0 = 8,8541878176×10^{-12} F/m 
+        \]
+        e
+        \[
+        \mu_0 = 1.25663706212(19)×10^{−6} 
+        \]
+        são, respectivamente, a permissividade do vácuo e a 
+        permeabilidade do vácuo.
+        </p>
+
+        <p>As transformações de Lorentz são: 
+        \[
+        \begin{pmatrix} c t' \\ x' \end{pmatrix} = 
+        \begin{pmatrix} \gamma & -\beta \gamma \\ -\beta \gamma & \gamma  \end{pmatrix}
+        \begin{pmatrix} c t \\ x \end{pmatrix}
+        \]
+        onde \(\beta = v/c\) e \(\gamma^{-2} = 1 - v^2/ c^2\)
+        </p>
+      </section>
+
+
+      <!-- QUARTA PARTE -->
+      <section class="item">
+
+        <h3>Transformações de Lorentz</h3>
+
+        <p>
+        Considere dois sistemas de coordenadas identificados com \(S\) e
+        \(S'\), e por simplicidade vamos usar o sistema internacional de
+        unidades. Em \(S\), dado um intervalo de tempo de \(t\) segundos, temos
+        que a luz percorre um intervalo de \(x = ct\) metros. 
+        </p>
+
+        <p>
+        Suponha que o referência \(S'\) move-se com valocidade constante
+        \(\mathbf{v}\) com relação ao referêncial \(S\). De fato, como estamos
+        trabalhando apenas com uma partícula, podemos orientar o sistema de
+        coordenadas tal que \(\mathbf{v} = (v_1, 0, 0)\). Nesse sistema, dado um 
+        intervalo de tempo \(t'\), um raio de luz percorre a distância \(x'= ct'\). 
+        </p>
+
+        <p>
+        Podemos tentar relacionar essas distâncias usando as transformações de
+        Galileo que discutimos acima, mas inevitavelmente encontraremos que a
+        velocidade da luz no referêncial \(S'\) seria maior que no referêncial
+        \(S\), o que viola o postulado de Einstein. Isso significa que devemos
+        modificar as transformações de Galileo. 
+        </p>
+
+        <p>
+        As novas transformações entre os dois referênciais são dadas por
+        funções do tipo 
+        \[ 
+        x' = f_1(x, t) \qquad 
+        t' = f_2(x, t)
+        \]
+        </p>
+
+        <p>
+        Usando algumas propriedades físicas podemos fixar a forma dessas
+        transformações.
+        <ol>
+          <li>Como estamos lidando com referênciais inerciais, essas
+            transformações devem ser lineares, pois termos com potênciais
+            maiores significa forças não nulas. Portanto: \[ x' = \alpha_1 x +
+            \alpha_2 t \qquad t' = \alpha_3 x + \alpha_4 t \qquad \] Onde os
+            coeficientes \(\alpha\) acima dependem da velocidade \(v\). </li>
+          <li>Se o observador \(S'\) está em repouso, então \(x'=0\). Com
+            relação a \(S\), a sua posição é dada por \(x = vt\). Consistência
+            desse fato com o ansatz acima significa que \(\alpha_2 =
+            -v\alpha_1\) e escrevemos \(\alpha_1 \equiv \gamma\). Logo \[ x' =
+            \gamma( x - vt) \]</li>
+          <li>Podemos aplicar os memos argumentos acima mas assumindo que o
+            observador em \(S\) está em repouso. Isso significa que \[ x =
+            \gamma( x' + vt) \]</li>
+          <li>Observe que simetria rotacional impõe a inexistência de qualquer
+            dependência angular nesse sistema. Além disso, não pode existir
+            nenhuma depedência na direção da velocidade do sistema de
+            coordenadas, portanto concluímos que o coeficiente \(\gamma\) é uma
+            função par da velocidade. </li>
+          <li>Nesse ponto, se admitirmos que a velocidade da luz pode mudar,
+            recuperamos as transformações de Galileao. Faremos, no entando, uso
+            do segundo postulado de Einstein, em particular, a luz percorre
+            distências \(x = ct\) e \(x' = ct'\) nos referenciais \(S\) e
+            \(S'\), respectivamente. Substituindo essas expressões nas fórmulas
+            acima temos \[ ct' = \gamma(ct - vt)  =\gamma (c-v)t \qquad ct
+            =\gamma (ct' + vt') =\gamma (c + v)t'\] Multiplicando a primeira
+            expressão por \(c\) temos \[ c^2t' = \gamma(c - v)ct = \gamma (c-v)
+            x\] inserindo \(ct = \gamma(c + v)t'\), concluímos que \[ c^2 t' =
+            \gamma^2 (c-v) (c + v) t'  \] ou seja, \[ \gamma = \frac{1}{\sqrt{
+            1 - \frac{v^2}{c^2}}}\] </li>
+          <li>Usando as transformações para \(x\) e \(x'\) podemos fixar as
+            transformações para os tempos como: \[ x = \gamma x' + v \gamma t'
+            = \gamma(\gamma x - v \gamma t) + v \gamma t' \] logo \[ v \gamma
+            t' = ( 1 - \gamma^2 )x + v \gamma^2 t = - \frac{\gamma^2 v^2}{c^2}
+            x + v \gamma^2 t  \] De onde finalmente concluímos que \[t' =
+            \gamma \left(- \frac{v}{c^2} x + t \right)\] e de maneira similar
+          \[t = \gamma \left(\frac{v}{c^2} x + t' \right)\]</li>
+        </ol>
+        </p>
+
+       <img class="text-img rotacao" src="https://phys.libretexts.org/@api/deki/files/16025/clipboard_e24b9f10fe939bb9efdb19f5e4e86f705.png?revision=1" alt="rotação hiperbolica"> 
+
+        <p>Observe que dado \(\gamma^2 = (1 - \frac{v^2}{c^2})^{-1}\),
+        definimos a constante \(\beta = v/c\) tal que \[\gamma^2 - (\gamma
+        \beta)^2 = 1\] Nessa forma, escrevemos as transformações de Lorentz
+        como: \[ \begin{pmatrix} c t' \\ x' \end{pmatrix} = \begin{pmatrix}
+        \gamma & -\beta \gamma \\ -\beta \gamma & \gamma  \end{pmatrix}
+        \begin{pmatrix} c t \\ x \end{pmatrix} \] onde \(\beta = v/c\) e
+        \(\gamma^{-2} = 1 - v^2/ c^2\). </p>
+
+        <p>A relação entre as constantes \(\gamma\) e \(\beta\) é semelhante as
+        relações hiperbolicas. Escrevendo \(\gamma = \cosh \alpha\) e \(\beta
+        = \tanh \alpha\), podemos pensar nas transformações de Lorentz
+        como rotações hiperbolicas \[ \begin{pmatrix} c t' \\ x' \end{pmatrix}
+        = \begin{pmatrix} \cosh\alpha & -\sinh\alpha \\ -\sinh\alpha &
+        \cosh\alpha  \end{pmatrix} \begin{pmatrix} c t \\ x \end{pmatrix} \] 
+        </p> 
+
+        <h3>Diagramas do Espaço-Tempo</h3>
+
+        <p>
+        Vamos agora definir o diagrama do Espaço-Tempo, ou diagrama de
+        Minkowski como o plano em 2D onde o eixo vertical é dado por \(ct\) e o
+        horizontal é o eixo \(x\). Observe que, como a luz percorre a distância
+        \(x = ct\) num intervalo de tempo \(t\), temos que no diagrama de
+        Minkowski a reta com inclinação \(\pi/4\) denota partículas caminhando
+        a velocidade da luz. 
+        </p>
+
+        <img class="text-img lorentz" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/MinkBoost2.gif/256px-MinkBoost2.gif" alt="transformações de lorentz">
+
+        <p>
+        Pontos nesse diagrama são chamados de eventos, e as trajetórias que as
+        partículas descrevem são chamadas de <em>linhas mundo</em>. Além disso,
+        veremos mais adiante que partículas materiais sempre se movem para cima
+        nesse diagrama e num ângulo maior que \(\pi/4\) com relação a vertical.
+        Podemos ganhar alguma intuíção nesse fato com uma simples observação.
+        Podemos facilmente ficar em repouso na nossa casa, mas nunca podemos
+        ficar parado no tempo. Isso significa que ainda estamos nos movendo
+        para cima no diagrama do espaço-tempo. Além disso, a reta \(\pi/4\)
+        representa partículas movendo-se na velocidade da luz, que não podemos
+        alcançar. 
+        </p>
+
+        <p>De fato, quando uma partícula material se move com velocidade \(v\), vimos 
+        que podemos pensar nas transformações de Lorentz como rotações hiperbolicas.
+        Com essa perspectiva geométrica, é simples entender o significado das transformações 
+        de Lorentz. Elas descrevem nada mais nada menos que a relação entre um sistema 
+        de coordenadas ortogonal -- onde a partícula está em repouso -- e um outro sistema 
+        rotacionado (por uma rotação hiperbolica, lembre) -- que é onde a partícula está se 
+        movendo com relação ao primeiro referencial. Essa perspectiva geométrica é muito 
+        útil para o entendimento de alguns fenômenos relativísticos. 
+        </p>
+      </section>
+      
+
+      <!-- QUINTA PARTE -->
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Física Relativística</h2>
+        </div>
+        <p>
+        <img class="side-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Relativity_of_Simultaneity_Animation.gif/220px-Relativity_of_Simultaneity_Animation.gif" alt="simultaneidade">
+        Nessa seção queremos analisar alguns aspectos de partículas movendo-se próximos 
+        à velocidade da luz. Discutiremos agora:
+        <ul>
+          <li>Simultaneidade</li>
+          <li>Causalidade</li>
+          <li>Dilatação Temporal</li>
+          <li>Contração Espacial</li>
+        </ul>
+      </section>
+
+
+      <!-- SEXTA PARTE -->
+      <section class="item">
+
+        <h3>Simultaneidade</h3>
+
+        <p>
+        Suponha que dois eventos, A e B, no referência \(S\) são simultâneos. A
+        pergunta que queremos responder agora é: Esses eventos são também
+        simultâneos no referêncial \(S'\)?  Veja a figura ao lado para um
+        melhor entendimento. 
+        </p>
+
+        <p>
+        Como no referêncial \(S\) os eventos são simultâneos, então temos
+        evidentemente que \(t_A = t_B \equiv t\). Lembre que eventos são pontos
+        no diagrama do espaço-tempo, então podemos parametrizá-los como
+        \(\mathbf{e}_A = (ct, x_A)\) e \(\mathbf{e}_B = (ct, x_B)\). Usando as
+        transformações de Lorentz que acabamos de ver, temos que 
+        \[ 
+        c t'_A = \gamma (ct - \beta x_A)
+        \qquad 
+        c t'_B = \gamma (ct - \beta x_B)
+        \]
+        e como \(x_A \neq x_B\), temos que esses eventos não são simultâneos no
+        referêncial \(S'\). 
+        </p>
+
+        <p> Na figura ao lado temos uma boa representação do significado da
+        simultaneidade, mas agora quero pensar no problema contrário. Suponha
+        dois eventos que não são simultâneos no referencial \(S\). Portanto,
+        temos que existirá um referêncial \(S'\) tal que esses eventos ocorrem
+        simultaneamente se \(c t'_A = c t'_B = c t'\), o que implica a seguinte
+        relação: \[ c t_A - \beta x_A = c t_B - \beta x_B   \quad \Rightarrow
+        \quad \beta^2 = \frac{c^2(t_B- t_A)^2}{(x_B - x_A)} \] Como \(1 > \beta
+        = v/c\), temos que podemos encontrar um referêncial onde os dois
+        eventos são simultâneos se a seguinte condição for satisfeita: 
+        \[ (x_B - x_A)^2 > c^2 (t_B - t_A)^2 \] 
+        Intervalos desse tipo, em que podemos
+        achar um referêncial onde eles são simultâneos, são chamados de
+        intervalos do tipo <em>espaço</em>. </p>
+
+        <p> Mas isso nos trás outra questão. É possível fazer uma transformação
+        de Lorentz que traga os dois eventos para o mesmo ponto do espaço, mas
+        em tempos diferentes? Considere novamente os dois eventos no
+        referencial \(S\): \(\mathbf{e}_A\) e \(\mathbf{e}_A\). Esses dois
+        eventos ocorrem no mesmo ponto do referencial \(S'\) se \(x'_A =
+        x'_B\). Usando as transformações de Lorentz temos \[\beta^2 =
+        \frac{(x_B - x_A)^2}{c^2(t_B - t_A)^2} \quad \Rightarrow \quad c^2 (t_B
+        - t_A)^2 > (x_B - x_A)^2   \] Intervalos em que podemos colocar os
+        eventos no mesmo ponto do espaço são chamados do tipo <em>tempo</em>. </p>
+
+        <p>Mesmo do ponto de vista conceitual esses resultados são evidentes:
+        No referêncial transformado, se colocarmos 2 eventos no mesmo ponto do
+        espaço e do tempo, o novo observados verá apenas 1 evento. E isso não
+        faz sentido do ponto de vista físico. </p>
+
+        <p>Observe ainda que para a luz, temos que \(\beta = 1\), portanto temos que 
+        \[ 
+        (x_B - x_A)^2 = c^2 (t_B - t_A)^2
+        \]
+        Esses intervalos são chamados do tipo <em>luz</em>.
+        </p>
+
+        <h3>Causalidade</h3>
+
+        <img class="text-img cone" src="https://i0.wp.com/jfsdigital.org/wp-content/uploads/2021/09/1-lightcone-of-a-point-in-a-three-dimensional-min-1.png?resize=708%2C749" alt="light-cone">
+
+        <p> Uma das consequências do que acabamos de discutir é o conceito de
+        causalidade. Intervalos do tipo tempo descrevem eventos causais, ou
+        seja, podemos garantir que um ocorre após o outro. Sabemos que no
+        diagrama do espaço-tempo, partículas movendo-se a velocidades menos que
+        a da luz tem \(1 > \beta^2 \), portanto o ângulo \(\alpha\) é menor que
+        \(\pi/4\) com relação ao eixo horizontal. </p>
+
+        <p> Isso significa que todas as partículas movendo-se com velocidades
+        menores que a valocidade da luz estão confinadas à região entre as
+        retas \(ct = \pm x \) -- chamado de <em>cone de luz</em>. Dados dois
+        pontos dentro d cone de luz, é sempre possível encontrar um referêncial
+        (por meio de uma transformação de Lorentz) em que esses dois eventos
+        ocorrem no mesmo ponto do espaço. Portanto, esses são intervalos do
+        tipo tempo; portanto, são eventos causais. </p>
+
+        <h3>Dilatação Temporal</h3>
+
+        <p>Observe que existe uma grande engenhosidade da natureza para que a
+        velocidade da luz seja uma constante em todos os referenciais
+        inerciais. Na prática isso significa que tanto itervalos espaciais
+        quanto os intervalos temporais devem sem modificados de acordo com a
+        velocidade da luz seja sempre a mesma.  
+        </p>
+
+        <p>Vamos considerar um observador \(S'\) movendo-se com velocidade
+        relativa \(v\) com relação ao observador \(S\). O observador \(S'\)
+        mede um intervalo de tempo \(\Delta t' = t'_f - t'_i\). Por definição,
+        esse observador está fixo no seu próprio sistema de coordenadas.
+        Portanto, ao calcular um intervalo temporal, o observador registrou
+        dois eventos \(\mathbf{e}'_i = (ct'_i, 0)\) e \(\mathbf{e}'_f = (ct'_f,
+        0)\). Esse intervalo de tempo onde o relógio está estacionário é chamado de 
+        tempo próprio.</p>
+
+        <img class="text-img time" src="https://64.media.tumblr.com/cfe9f5e3876ae06bde05e4c092410421/48c62490abbab336-71/s540x810/cd351afb93479587e6d68134c7688bcb6034beb9.gifv" alt="dilatação temporal">
+
+        <p>
+        Reescreveremos algora esses eventos em termos das coordenadas do
+        observador \(S\). Em particular, mediremos os intervalos \( \Delta t =
+        t_f - t_i \) e \(\Delta x = x_f - x_i\). Portanto 
+        \[ 
+        \begin{pmatrix} c \Delta t' \\ 0 \end{pmatrix} = \begin{pmatrix} \gamma
+        & - \beta \gamma \\ - \beta \gamma & \gamma  \end{pmatrix} =
+        \begin{pmatrix} c \Delta t \\ \Delta x \end{pmatrix} \quad \Rightarrow
+        \quad \begin{array}{l} \Delta x = c \beta \Delta t \\ c \Delta t' =
+        \gamma c \Delta t - \beta \gamma \Delta x \end{array}
+        \]
+        Trabalhando as duas últimas expressões temos
+        \[ 
+        c \Delta t' = \gamma c \Delta t - \beta \gamma \Delta x  = \gamma c
+        \Delta t - \beta^2 \gamma  c \Delta t  = c \gamma (1 - \beta^2) \Delta
+        t \quad \Rightarrow \quad \Delta t' = \frac{1}{\gamma}\Delta t
+        \]
+        Como \(\gamma > 1\), temos que o intervalo medido pelo observador
+        \(S'\), onde o relógio permanece estacionário, é menor que o intervalo
+        medido por \(S\), onde o relógio está em movimento relativo. Podemos dizer, 
+        de maneira um pouco menos confuso, que o tempo próprio é o menor intervalo 
+        de tempo que pode ser medido em referenciais inerciais.
+        </p>
+
+        <h3>Contração Espacial</h3>
+
+        <img class="text-img espaco"  src="https://www.askamathematician.com/wp-content/uploads/2011/01/tallball.jpg" alt="espaco">
+
+        <p>Faremos agora a análise do que acontece com comprimentos durante o movimento. 
+        Consideramos uma barra fixa de comprimento \(\Delta x\) com o observador \(S'\) com velocidade 
+        relativa \(v\). O comprimento medido pelo observador que se move junto com o objeto é 
+        chamado de comprimento próprio. Queremos saber como o observador \(S\) mede tal objeto. O que torna 
+        a análise desse caso mais simples é o fato de que para medirmos comprimentos, temos que 
+        fazer o experimento no mesmo instante de tempo, portanto temos que \(\Delta t = \Delta t' = 0\), logo
+        \[ 
+        \begin{pmatrix} 0 \\ \Delta x' \end{pmatrix} = \begin{pmatrix} \gamma
+        & - \beta \gamma \\ - \beta \gamma & \gamma  \end{pmatrix} =
+        \begin{pmatrix} 0 \\ \Delta x \end{pmatrix} \quad \Rightarrow
+        \quad 
+        \Delta x' = \gamma \Delta x 
+        \]
+        Ou seja, o comprimento próprio é o maior intervalo espacial que pode ser medido. 
+        </p>
+      </section>
+
+
+      <!-- SETIMA PARTE -->
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Espaço de Minkowski</h2>
+        </div>
+        <p>
+        <img class="side-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flibrary.ethz.ch%2Fen%2Flocations-and-media%2Fplatforms%2Fshort-portraits%2Fhermann-minkowski-1864-1909%2F_jcr_content%2Fpar%2Ftextimage%2Fimage.imageformat.textdouble.1958009020.jpg&f=1&nofb=1&ipt=dbb454ef544fd1d706d4ee8d67082a54bf2edde5493cbc9c62a33f704b3f6bc7&ipo=images" alt="Minkowski">
+        Nessa seção consideraremos a definição do espaço de Minkowski. Além disso, temos 
+        os seguintes conceitos:
+        <ul>
+          <li>Métrica no espaço de Minkowski
+          \[ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2 \]</li>
+          <li>Grupo de Lorentz \(SO(1,3)\)</li>
+        </ul>
+        </p>
+
+        <p>Tipos de intervalos:
+        <ul>
+          <li>Tipo Tempo: \(ds^2 < 0\)</li>
+          <li>Tipo Espaço: \(ds^2 > 0\)</li>
+          <li>Tipo Luz: \(ds^2 = 0\)</li>
+        </ul>
+        </p>
+      </section>
+
+      <!-- OITAVA PARTE -->
+      <section class="item">
+
+        <h3>Invariantes</h3>
+
+        <p>Vimos que transformações de Galileo preservam comprimentos e
+        intervalos de tempo no espaço Euclidiano \(\mathbb{R}^3\), mas o mesmo
+        não ocorre com transformações de Lorentz. Acabamos de ver, no entando,
+        que quando existe movimento relativo, as magnitudes de comprimentos
+        quanto intervalos de tempo são movificados em direções contrárias.</p>
+
+        <p>Com isso, definimos um espaço dado por \(\mathbb{R}_+ \times
+        \mathbb{R}^3 \equiv \mathbb{R}^{1,3}\), chamado de espaço de Minkowski
+        tal que seus intervalos sejam definidos por uma métrica do tipo \[ 
+        ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2
+        \]</p>
+
+        <p>Nosso objetivo agora é provar que essa métrica é invariante por transformações de 
+        Lorentz. Claro que podemos usar as expressões explícitas para as transformações, mas 
+        faremos algo menos laborioso. Apenas escreva a métrica como o produto 
+        \[ 
+        ds^2 = \begin{pmatrix} c dt & dx & dy & dz \end{pmatrix}
+        \begin{pmatrix}
+        -1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1\\
+        \end{pmatrix}
+        \begin{pmatrix} c dt \\ dx \\ dy \\ dz \end{pmatrix} 
+        \]
+        Usando agora que podemos escrever uma transformação de Lorentz na direção \(X\)
+        como 
+        \[
+        \begin{pmatrix} c dt \\ dx \\ dy \\ dz \end{pmatrix}
+        \begin{pmatrix}
+        \gamma & \gamma\beta & 0 & 0\\
+        \gamma \beta & \gamma & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1\\
+        \end{pmatrix}
+        \begin{pmatrix} c dt \\ dx \\ dy \\ dz \end{pmatrix} 
+        \]
+        Portanto, temos que 
+        \[ 
+        ds^2 = \begin{pmatrix} c dt' & dx' & dy' & dz' \end{pmatrix}
+        \begin{pmatrix}
+        \gamma & \gamma\beta & 0 & 0\\
+        \gamma \beta & \gamma & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1\\
+        \end{pmatrix}
+        \begin{pmatrix}
+        -1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1\\
+        \end{pmatrix}
+        \begin{pmatrix}
+        \gamma & \gamma\beta & 0 & 0\\
+        \gamma \beta & \gamma & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1\\
+        \end{pmatrix}
+        \begin{pmatrix} c dt' \\ dx' \\ dy' \\ dz' \end{pmatrix} 
+        \]
+        e usando que \(\gamma^2 - \gamma^2 \beta^2 = 1\), temos que 
+        \[ 
+        ds^2 = \begin{pmatrix} c dt' & dx' & dy' & dz' \end{pmatrix}
+        \begin{pmatrix}
+        -1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1\\
+        \end{pmatrix}
+        \begin{pmatrix} c dt' \\ dx' \\ dy' \\ dz' \end{pmatrix} 
+        \]
+        ou seja, 
+        \[ 
+        ds^2 = -c^2 dt'^2 + dx'^2 + dy'^2 + dz'^2
+        \]
+        </p>
+
+        <h3>Composição de Velocidades</h3>
+
+        <p> Agora que já aprendemos os aspectos mais importantes da cinemática
+        relativistica, existe apenas um ponto que precisamos discutir: a lei de
+        composição das velocidades. Em outras palavras, dado um Como podemos
+        relacionar as velocidades medidas nos referenciais \(S\) e \(S'\) por
+        meio da velocidade relativa \(v\) entre esses referenciais? </p>
+
+        <p>Temos as seguintes definições: \[ \mathbf{u}' =
+        \left(\frac{dx'}{dt'}, \frac{dy'}{dt'}, \frac{dz'}{dt'}\right) \qquad
+        \mathbf{u} = \left(\frac{dx}{dt}, \frac{dy}{dt}, \frac{dz}{dt}\right)
+        \] E usando as transformações de Lorentz é possível ver que \[ u'_x =
+        \frac{(- \beta c + u_x )}{(1 - \beta u_x / c)}\qquad u'_y = \frac{u_y}{
+        \gamma (1 - \beta u_x / c)} \qquad u'_z = \frac{u_z}{ \gamma (1 - \beta
+        u_x / c)} \] Observe que mesmo no caso onde o movimento relativo é ao
+        longo do eixo X, as velocidades \(u_y\) e \(u_z\) são modificadas.
+        Apenas para velocidades muito pequenas, os resultados de Galileo são
+        recuperados. Essas equações são realmente deselegantes e detestáveis.
+        Um dos grandes problemas dessas expressões é que ela não é exatamente
+        covariante, e as coordenadas são tratadas de maneiras diferentes apenas
+        por considerarmos o movimento ao logo de um dos eixos. Um outro
+        problema é que não temos um critério único para definirmos a nossa
+        velocidade, pois temos uma infinidade de referenciais inerciais. </p>
+
+        <p> Vimos, no entanto, que temos apenas um referencial onde a partícula
+        está em repouso, e nele podemos definir o tempo próprio. Por isso,
+        vamos parametrizar o nosso movimento em termos do tempo próprio, em
+        particular, vamos denotá-lo por \(\tau\). Para intervalos do tipo tempo
+        escrevemos a métrica como \(ds^2 = - c^2 d\tau^2 \), ou seja \[ - c^2
+        d\tau^2 = - c^2 dt^2 + dx^2 + dy^2 + dz^2 \] Portanto
+        \[ - c^2 d\tau^2 = - c^2 dt^2\left(1 - \frac{1}{c^2}
+        \left(\frac{dx}{dt}\right)^2 + \frac{1}{c^2}
+        \left(\frac{dy}{dt}\right)^2 + \frac{1}{c^2} \left(\frac{d
+        z}{dt}\right)^2\right) \] Como estamos no referêncial onde \(dx' = dy' = dz' = 0\), 
+        temos \(u_y = u_z = 0\), de onde concluímos que \(u_x^2 = v^2\), de onde concluímos que   
+        \[ 
+        d\tau = dt ( 1 - \beta^2 ) = \frac{dt}{\gamma}\qquad \frac{dt}{d\tau } = \gamma
+        \]
+        </p>
+
+        <p>Por isso, vamos parametrizar as nossas coordenadas em função do
+        tempo próprio \(\tau\) de tal maneira que podemos definir um vetor no
+        espaço de Minkowski como \[ X(\tau) = \begin{pmatrix} c t(\tau) \\
+        x(\tau) \\ y(\tau) \\ z(\tau) \end{pmatrix} \] Frequentemente
+        escrevemos as componentes \(X^0 = ct\), \(X^1 = x\), \(X^2 = y\) e
+        \(X^3 = z\). Portanto, a velocidade é dada por \[ U(\tau) =
+        \frac{X(\tau)}{d\tau} = \begin{pmatrix} c \frac{dt}{d\tau} \\ \frac{d
+        x}{d\tau} \\  \frac{d y}{d\tau} \\ \frac{d z}{d\tau} \end{pmatrix} =
+        \gamma \begin{pmatrix} c \\ u_x \\ u_y \\ u_z \end{pmatrix} \] </p>
+      
+        <h3>4-Momento</h3>
+
+        <p> Finalmente, definimos o quadri-momento como \[ P(\tau) = M U(\tau)
+        = M\gamma\begin{pmatrix} c \\ u_x(\tau) \\ u_y(\tau) \\ u_z(\tau)
+        \end{pmatrix} \] As componentes \(i =1 , 2 , 3\) do quadri-momento são
+        generalizações naturais do momento Newtoniano, mas o termo \(P^0\)
+        exige nossa atenção. Observe que ela é dado por \[ P^0 = \gamma Mc =
+        \frac{Mc}{\sqrt{1 - \frac{v^2}{c^2}}} \] Para interpretarmos o seu
+        significado, vamos considerar o caso onde \(v/c \simeq 0\), ou seja, o
+        limite Newtoniano. Expandindo em Taylor temos \[ P^0 = Mc \left( 1 -
+        \frac{v^2}{2 c^2}  + \mathcal{O}(4)\right)\; , \] ou seja \[ P^0 = Mc -
+        \frac{1}{c} \frac{M v^2}{2}\; , \] Reconhecendo a energia
+        cinética como \(M v^2 /2\), podemos escrever a expressão acima como a
+        energia relativística da partícula, onde o termo \(E = mc^2\) é a
+        famosa expressão de Einstein para uma partícula em repouso. Dessa
+        maneira, escrevemos \(P^0 = E / c\) </p>
+
+
+
+        <h3>Grupo de Lorentz</h3>
+
+        <p> Um ponto que ainda precisamos discutir é a fato de que consideramos
+        apenas transformações de Lorentz ao longo do eixo \(X\). Fizemos isso
+        por questões didáticas, mas preciso generalizar isso para velocidades
+        genéricas do tipo \(\mathbf{v} = (v_1, v_2, v_3)\). Essa não é uma
+        tarefa muito complicada, mas é um pouco laboriosa, por isso vamos adiar
+        um pouco essa tarefa. O importante agora é perceber que essas
+        transformações gerais também devem preservar a métrica que acabamos de
+        definir. </p>
+
+        <p>Para simplificar a notação, vamos escrever a métrica como \[ ds^2 =
+        \langle dv, dv \rangle = dv^T \cdot \eta \cdot dv \] onde \[ dv =
+        \begin{pmatrix} c dt \\ dx \\ dy \\ dz \end{pmatrix} \qquad \eta = diag
+        (-1, 0, 0, 0) \] Uma transformação de Lorentz geral, \(dv \mapsto dv' =
+        \Lambda dv\), é definida de maneira que \[ ds^2 = \langle dv, dv
+        \rangle = \langle dv', dv' \rangle \] o que implica a relação \( \eta =
+        \Lambda^T \cdot \eta \cdot \Lambda\). Matrizes que satisfazem essa
+        condição formam um grupo conhecido como grupo de Lorentz, que é
+        denotado por \(SO(1,3)\). </p>
+
+        <p>Finalmente, é muito importante entender o que intervalos do tipo
+        tempo, espaço e luz significam do ponto de vista da métrica. Deixamos
+        isso como um simples exercício. </p>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

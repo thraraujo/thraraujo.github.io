@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Lei de Gauss</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Eletrostática: Lei de Gauss</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Eletrostática</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos da lei de Gauss.
+        </p>
+
+        <p>
+          Permissividade do vácuo
+          \[\varepsilon_0 = 885\times 10^{-2} C^2  N^{-1} m^{-12}\] 
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <h3>Axiomas da teoria</h3>
+
+        <p>Vamos começar nosso estudo com os axiomas da teoria, ou como físicos
+          preferem, os postulados. Esses poostulados são os dados experimentais
+          que foram obtidos, e que constituem a base para o desenvolvimento
+          matemático do eletromagnetismo. Existem dois resultados fundamentais
+          para os fenômenos eletrostáticos: 
+          <ul> 
+          <li>Lei de Coulomb. A lei de Coulomb diz que dadas duas
+          partículas com cargas \(q\) e \(Q\), a força entre as duas partículas
+          é dada por \[ \mathbf{F} = \frac{1}{4 \pi \varepsilon_0}\frac{q
+          Q}{r^2}\hat{r} \] </li>
+          <li>Princípio da Superposição: Esse fala que dada um sistema
+          de N cargas \(\{q_i, i = 1, dots, N\}\), a força desse sistema sobre
+          uma partícula \(Q\) colocada na posição \(\mathbf{r}\) é dada pela
+          soma: \[ \mathbf{F} = \sum_{i=1}^N\mathbf{F}_i = \frac{Q}{4 \pi
+          \varepsilon_0}\sum_{i=1}^N \frac{q_i}{|\mathbf{r}-
+          \mathbf{r}_i|^3}(\mathbf{r}- \mathbf{r}_i) \]</li> 
+          </ul> 
+        </p>
+
+        <p>Antes de continuarmos, observe que a lei de Coulomb define uma força conservativa, 
+        pois podemos escrever 
+          \[ 
+          \frac{ (\mathbf{r}- \mathbf{r}_i)}{|\mathbf{r}- \mathbf{r}_i|^3} = - \nabla \left(\frac{1}{|\mathbf{r}- \mathbf{r}_i|}\right)
+          \]
+        </p>
+
+        <h3>Campo Elétrico</h3>
+
+        <p>De fato, usando a lei de Coulomb acima, definimos que a distribuição
+          de N partículas gera um campo elétrico no ponto \(\mathbf{r}\)
+          definido por \[ \mathbf{E} = \frac{1}{4 \pi \varepsilon_0}\sum_{i=1}^N
+          \frac{q_i}{|\mathbf{r}- \mathbf{r}_i|^3}(\mathbf{r}- \mathbf{r}_i) \]
+          de onde vemos que a força elétrica é nada mais que \(\mathbf{F} = Q
+          \mathbf{E}\). </p>
+
+        <p>No caso onde a distribuição de cargas é contínua, podemos escrever o
+          campo elétrico como 
+          \[ \mathbf{E}(\mathbf{r}) = \frac{1}{4 \pi
+          \varepsilon_0}\int\frac{dq(\mathbf{r}')}{|\mathbf{r}-
+          \mathbf{r}'|^3}(\mathbf{r}- \mathbf{r}') \] 
+          onde é muito importante
+          observar que a integração é realizada sobre as coordenadas com
+          linhas. </p>
+
+        <p><span>Cargas lineares</span> Se as cargas estiverem distribuídas
+          sobre uma linha, temos que \(dq = \lambda d\ell\) onde \(\lambda\) é
+          uma densidade linear de cargas, então 
+          \[ \mathbf{E} = \frac{1}{4 \pi
+          \varepsilon_0}\int_L d \ell\frac{\lambda(\mathbf{r}')}{|\mathbf{r}-
+          \mathbf{r}'|^3}(\mathbf{r}- \mathbf{r}') \] 
+        </p>
+
+        <p><span>Cargas Superfiíciais</span> Se as cargas estiverem
+          distribuídas sobre uma superfície, temos que \(dq = \sigma d a\) onde
+          \(\sigma\) é uma densidade superficial de cargas, então \[ \mathbf{E}
+          = \frac{1}{4 \pi \varepsilon_0}\int_S d
+          a\frac{\sigma(\mathbf{r}')}{|\mathbf{r}- \mathbf{r}'|^3}(\mathbf{r}-
+          \mathbf{r}') \] </p>
+
+        <p><span>Cargas Volumétrica</span> Se as cargas estiverem distribuídas
+          sobre um volume, temos que \(dq = \rho d \tau\) onde \(\rho\) é uma
+          densidade volumétrica de cargas, então \[ \mathbf{E} = \frac{1}{4 \pi
+          \varepsilon_0}\int_V d \tau\frac{\rho(\mathbf{r}')}{|\mathbf{r}-
+          \mathbf{r}'|^3}(\mathbf{r}- \mathbf{r}') \] </p>
+
+        <p>O problema que esperamos resolver no caso eletrostático é calcular o
+          campo elétrico para uma dada uma distribuição de cargas.</p>
+
+        <h3>Lei de Gauss</h3>
+
+        <p> Usando que a lei de Coulomb é conservativa, vamos escrever o campo
+          elétrico como \[ \mathbf{E}(\mathbf{r}) = - \nabla V(\mathbf{r}) \]
+          onde a quantidade \(V(\mathbf{r})\) é chamada de potencial elétrico,
+          e não deve ser confundida com a energia potencial \(U(\mathbf{r})\)
+          do sistema. Evidentemente, essas duas quantidades são relacionadas
+          por \(U(\mathbf{r}) = Q V(\mathbf{r})\). Usando que 
+          \[ \frac{
+          (\mathbf{r}- \mathbf{r}')}{|\mathbf{r}- \mathbf{r}'|^3} = - \nabla
+          \left(\frac{1}{|\mathbf{r}- \mathbf{r}'|}\right) \] 
+          temos que \[
+          V(\mathbf{r}) = \frac{1}{4 \pi \varepsilon_0} \int d\tau \frac{
+          \rho(\mathbf{r}')}{ |\mathbf{r}- \mathbf{r}'|}\] Nessa forma, temos o
+          nosso primeiro resultado com relação ao campo elétrico. Como ele pode
+          ser escrito como o gradiente de uma função, tempos que o campo
+          elétrico é irrotacional, ou seja, \[\nabla \times \mathbf{E} =
+          \mathbf{0}\] </p>
+
+        <p>No sistema internacional de unidades, a força é dada em Newtons (N),
+          a carga é dada em Coulombs (C). Portanto, o campo elétrico é dado em
+          N/C. De fato, como a energia potencial elétrica (\(U\)) (Joules, J) é
+          relacionado ao potencial elétrico como \(U = Q V\), definimos a
+          unidade do potencial \(V\) como Volts \(V = J/C\). Usamos o mesmo
+          símbolo para se denotar o potencial e a sua unidade, desculpe, mas é
+          uma notação padrão, mas felizmente, haverá pouca margem para
+          confusão. </p>
+
+        <p>Agora consideramos o divergente \(\nabla \cdot \mathbf{E} = - \Delta V\).
+          Usando a expressão para o campo elétrico, vemos imediatamente que precisamos 
+          calcular 
+          \[ \nabla \cdot \left(\frac{
+          (\mathbf{r}- \mathbf{r}')}{|\mathbf{r}- \mathbf{r}'|^3}\right) = - \Delta
+          \left(\frac{1}{|\mathbf{r}- \mathbf{r}'|}\right) \] 
+        </p>
+
+        <p>Para simplificar nossa análise, definimos 
+          \[\mathbf{R} = \mathbf{r} - \mathbf{r}' = ( R_1, R_2, R_3) = (x_1 - x'_1, x_2 - x'_2, x_3 - x'_3)\]
+          \[R = |\mathbf{r} - \mathbf{r}'| = \sqrt{R_1^2 + R_2^2 + R_3^2}\] 
+        </p>
+
+        <p><span>\(\mathbf{R} \in \mathbb{R}^3\setminus \{(0,0,0)\}\)</span>
+          Nesse caso, é muito simples verificar que
+          \[ \nabla \cdot \left(\frac{
+          \mathbf{R}}{R^3}\right) = - \Delta
+          \left(\frac{1}{R}\right) = \frac{3}{R^3} - \frac{3}{R^3} = 0  \] 
+        </p>
+
+        <p><span>\(\mathbf{R} = (0,0,0)\)</span> Precisamos ser mais cuidadosos
+          na origem do sistema de coordenadas. Vamos considerar a integral do 
+          divergente sobre uma esfera sólida \(\mathbb{B}^2\) de raio 
+          \(\epsilon \to 0\). Ou seja, 
+          \[ \lim_{\epsilon\to 0 }\int_{\mathbb{B}^2} d \tau \ \nabla 
+          \cdot \left(\frac{ \mathbf{R}}{R^3}\right) = \lim_{\epsilon\to 0 } \epsilon^{-2}
+          \int_{\partial \mathbb{B}} d \mathbf{S} \cdot \hat{R}
+          \] 
+          onde na segunda igualdade usamos teorema da divergência, 
+          \(\partial\mathbb{B}\) é a casca esférica \(\mathbb{S}^2\) de raio \(\epsilon\). 
+          A integral sobre a casca esférica é a sua área \(4 \pi \epsilon^2\), portanto
+          \[ \lim_{\epsilon\to 0 }\int_{\mathbb{B}^2} d \tau \ \nabla \cdot \left(\frac{ \mathbf{R}}{R^3}\right) = 4 \pi 
+          \] 
+        </p>
+
+        <p>Combinando os resultados acima, temos que 
+          \[ 
+          \nabla \cdot \left(\frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right) =
+          \Delta \left(\frac{1}{|\mathbf{r} - \mathbf{r}'|} \right) = 4 \pi \delta^{(3)}(\mathbf{r} - \mathbf{r}')
+          \]</p>
+
+        <p>Onde finalmente vemos que o campo elétrico \(\mathbf{E}\) satisfaz a seguinte equação diferencial 
+          \[ \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} \]
+          que é conhecida como <b>Lei de Gauss</b> -- na forma diferencial.
+        </p>
+
+
+        <h3>Lei de Gauss na forma Integral</h3>
+                  
+        <p>Considerando um campo vetorial genérico \(\vec{\xi}\), definimos o
+          fluxo desse campo através de uma superfície \(\Sigma\) como a
+          quantidade \[ \Phi_{\vec{\xi}} = \int_{\Sigma} \vec{\xi} \cdot
+          d\mathbf{S} \] onde \(d \mathbf{S}\) é o elemento de área da
+          superfície \(\Sigma\).</p>
+
+        <p>Com esse conhecimento, vamos envolver a distribuição de cargas com
+          uma superfície grande o suficiente. Essa superfície é chamada de
+          superfície Gaussiana. Em seguida, integramos a lei de Gauss acima
+          sobre todo o volume ocupada por ela, portanto 
+          \[ \int_V d \tau \nabla \cdot \mathbf{E} = \frac{1}\int_V d \tau
+          \rho(\mathbf{r}') = \frac{Q_{enc}}{\varepsilon_0} \] onde \(Q_{enc}\)
+          denota a carga elétrica dentro da superfície Gaussiana. Usando o
+          teorema da divergência temos que 
+          \[ \frac{Q_{enc}}{\varepsilon_0} = \int_{\Sigma} d\mathbf{S}\cdot \mathbf{E} \]
+          onde o contorno do volume \(V\) é, evidentemente, a superfície 
+          Gaussiana \(\partial V = \Sigma\). 
+        </p>
+
+        <p>Essa expressão é conhecida como Lei de Gauss na forma integral.</p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Dipolo Elétrico</h2>
+        </div>
+
+        <p>
+          Campo elétrico do dipolo:  
+          \[  
+          \mathbf{E} = - \frac{1}{4 \pi \varepsilon_0} \nabla \left( \frac{( \mathbf{r} 
+          - \mathbf{r}_-)\cdot \mathbf{p}}{| \mathbf{r} - \mathbf{r}_-|^3} \right)
+          \]
+
+          Nessa seção começamos a discutir aspectos da lei de Gauss.
+        </p>
+
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Nessa seção consideramos duas partículas de cargas \(q\) e \(-q\)
+          nas posições \(\mathbf{r}_+\) e \(\mathbf{r}_-\), respectivamente.
+          Considerando que a distância entre essas partículas é \(\mathbf{d} =
+          \mathbf{r}_+ - \mathbf{r}_-\), queremos calcular o campo elétrico na
+          posição \(\mathbf{r}\) no limite onde \(\mathbf{d} &lt&lt |
+          \mathbf{r} - \mathbf{r}_-|\).</p>
+
+        <p>De fato, é muito mais conveniente calcular o potencial
+          \(V(\mathbf{r})\). Portanto, \[ V(\mathbf{r}) = \frac{q}{4 \pi
+          \varepsilon_0} \left( \frac{1}{|\mathbf{r} - \mathbf{r}_+|} -
+          \frac{1}{|\mathbf{r} - \mathbf{r}_-|}   \right) \] que escrevemos
+          unicamente em termos das coordenadas \(\mathbf{r}_-\) como \[
+          V(\mathbf{r}) = \frac{q}{4 \pi \varepsilon_0} \left(
+          \frac{1}{|\mathbf{r} - \mathbf{r}_- - \mathbf{d}|} -
+          \frac{1}{|\mathbf{r} - \mathbf{r}_-|}   \right) \] </p>
+
+        <p>Usaremos agora que \[ |\mathbf{r} - \mathbf{r}_- - \mathbf{d}|^2 =
+          (\mathbf{r} - \mathbf{r}_- - \mathbf{d})\cdot (\mathbf{r} -
+          \mathbf{r}_- - \mathbf{d})  \] que aproximamos como \[ |\mathbf{r} -
+          \mathbf{r}_- - \mathbf{d}|^2 = |\mathbf{r} - \mathbf{r}_-|^2 - 2
+          \mathbf{d} \cdot (\mathbf{r} - \mathbf{r}_-) + |\mathbf{d}|^2 \]
+          Expandindo em Taylor temos \[ |\mathbf{r} - \mathbf{r}_- -
+          \mathbf{d}|^{-1} \simeq |\mathbf{r} - \mathbf{r}_-|^{-1}\left(1 -
+          \frac{\mathbf{d} \cdot (\mathbf{r} - \mathbf{r}_-)}{|\mathbf{r} -
+          \mathbf{r}_-|^2}  \right) \] onde ignoramos o termo quadrátido em
+          \(|\mathbf{d}|\). Dessa forma, vemos imediatamente que \[
+          V(\mathbf{r}) = - \frac{1}{4 \pi \varepsilon_0}
+          \frac{\mathbf{p}\cdot(\mathbf{r} - \mathbf{r}_-)}{|\mathbf{r} -
+          \mathbf{r}_-|^3} \] onde escrevemos \(\mathbf{p} = q \mathbf{d}\),
+          que é chamado de <b>momento de dipolo</b>. Um importante detalhe
+          desse potencial é que ele tem uma potencia com expoente \(-3\),
+          portanto o campo o termo dominente é inversamente proporcional ao
+          cubo da distância, o que deve ser contrastado com o caso do monopolo
+          elétrico. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Campo em Matéria</h2>
+        </div>
+
+        <p>
+          Campo elétrico do dipolo:  
+          \[  
+          \mathbf{E} = - \frac{1}{4 \pi \varepsilon_0} \nabla \left( \frac{( \mathbf{r} 
+          - \mathbf{r}_-)\cdot \mathbf{p}}{| \mathbf{r} - \mathbf{r}_-|^3} \right)
+          \]
+
+          Nessa seção começamos a discutir aspectos da lei de Gauss.
+        </p>
+      </section>
+
+
+      <section class="item">
+
+        <p>Vamos agora considerar o comportamento de matéria isolante,
+          dielétrica, na presença de um campo elétrico externo. Como a matéria
+          isolante é neutra, podemos imaginar que o campo externo tem pouca
+          relevância nessa situação, mas isso é falso. O núcleo atômico, que é
+          carregado positivamente, e a núvem eletrônica são desviados em
+          direção oposta, o que significa que o átomo é polarizado; com dipolo
+          induzido dado por \( \mathbf{p} = q \mathbf{d}\)</p>
+
+        <p>Em diversos materiais, o momento de dipolo induzido é proporcional
+          ao campo elétrico externo: \[ \mathbf{p} = \alpha \mathbf{E}\] onde a
+          constante \(\alpha\), chamada de constante de polarização, depende do
+          material e é obtida experimentalmente.
+        </p>
+
+        <p>Um problema que podemos enfrentar se usarmos essa descrição, é que
+          ela é impraticável de ser estudada no mundo real, afinal, um corpo é
+          constituído de uma quantidade astronômica de átomos, portanto, não
+          podemos esperar calcular o momento de dipolo em cada um deles.
+          Felizmente não precisamos fazer isso, pois usamos uma abordagem
+          estatística, e consideramos a média dessa momento, que denotamos por
+          \(\mathbf{P}\), chamado de <b>polarização</b>. Definimos a polarização como 
+          \[ \mathbf{P} = \varepsilon_0 \chi_e \mathbf{E} \]
+          onde usamos que o momento de dipolo é proporcional ao campo elétrico externo. 
+          Na prática, reduzimos o trabalho dos nossos colegas experimentalistas, 
+          à determinação da constante \(\chi_e\), que é conhecida como 
+          susceptibilidade elétrica. 
+        </p>
+
+        <p>
+          Agora queremos calcular o potencial elétrico associado à essa material isolante. 
+          Já calculamos o potencial para o dipolo elétrico, agora podemos integrar sobre todo 
+          o material, de maneira que 
+          \[ 
+          V(\mathbf{r}) 
+          = - \frac{1}{4 \pi \varepsilon_0} \int_V d \tau' \frac{\mathbf{P}(\mathbf{r}')\cdot(\mathbf{r} - \mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|^3} 
+          =  \frac{1}{4 \pi \varepsilon_0} \int_V d \tau' \mathbf{P}(\mathbf{r}')\cdot \nabla \left(\frac{1}{|\mathbf{r} - \mathbf{r}'|} \right)
+          \] 
+          Além disso, temos que \(\nabla = - \nabla'\), e itegrando por partes temos 
+          \[ 
+          V(\mathbf{r})
+          = \frac{1}{4 \pi \varepsilon_0} \int_V d \tau'
+          \left[
+          \nabla'\cdot \left(\frac{\mathbf{P}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\right)
+          - \left(\frac{ \nabla'\cdot \mathbf{P}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} \right]
+          \right)
+          \] 
+          O primeiro termo no integrando define um termo de superfície, enquanto que o segundo define uma densidade 
+          de carga ligada, ou seja 
+          \[ \rho_b = - \nabla'\cdot \mathbf{P} \]
+        </p>
+
+        <p>Devemos portanto, adicionar esse termo à lei de Gauss, ou seja 
+          \[ \nabla \cdot \mathbf{E} = \frac{\rho + \rho_b}{\varepsilon_0} \]
+          e definindo o deslocamente elétrico como 
+          \[ \mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P} \]
+          temos 
+          \[ \nabla \cdot \mathbf{D} = \rho \]
+        </p>
+
+        <p>De fato, para dielétricos lineares, temos que \(\mathbf{P} = \varepsilon_0 \chi_e \mathbf{E}\), portanto 
+          \[ \mathbf{D} = \varepsilon_0 (1 + \chi_e) \mathbf{E} \equiv \varepsilon\mathbf{E}  \]
+        onde \(\varepsilon\) é chamado de permissividade do material. </p>
+
+
+      </section>
+
+
+  </main>
+
+</body>
+</html>

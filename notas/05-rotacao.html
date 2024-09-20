@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Rotações</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread"> 
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Rotações, Torque, Momento Angular</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> Vimos nas seções anteriores uma discussão particular sobre rotações
+          ao redor do eixo \(Z\), e em particular, usamos o sistema de
+          coordenadas cilindricos para discutir a noção de velocidade e
+          aceleração angular. Nessa seção gostaríamos de generalizar essa
+          discussão, bem como estudar aspectos dinâmicos das rotações. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Rotações</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> Considere o vetor posição dado por \[ \mathbf{r} = x_1 \mathbf{e}_1
+          + x_2 \mathbf{e}_2 + x_3 \mathbf{e}_3 \] O nosso objetivo é
+          considerar uma rotação ao redor de um eixo genérico \(\hat{n}\).
+          Inicialmente, iremos definir a versor \[ \hat{r} =
+          \frac{\mathbf{r}}{r} \qquad r = \sqrt{x_1^2 + x_2^2 + x_3^3} \] Temos
+          agora que definir dois versores orgotonais. O primeiro deles é o eixo
+          que é normal ao plano de rotação, que chamamos de \(\hat{n}\), e o
+          segundo versor é o versor que definine a direção angular. </p>
+
+        <p>Começamos definindo a direção angular \(\hat{\theta}\). Considere
+          uma rotação infinitesimal \(d \theta\), isso significa que o vetor
+          \(\mathbf{r}\) muda sua direção, mas por se tratar de uma rotação, a
+          sua magnitude permanece constante. Dessa forma, apenas a direção do
+          versor \(\hat{r}\) é modificada -- e é isso o que queremos. Então
+          temos que \[ d \mathbf{r} = r d \hat{r} \equiv r \frac{d \hat{r}}{d
+          \theta} d \theta \] Por construção, o vetor \( \hat{\theta} = \frac{d
+          \hat{r}}{d \theta}\) é perpendicular à \(\hat{r}\). Podemos checar
+          isso explicitamente tomando a derivada de \(\hat{r}\) e considerando
+          a dependencia \(x_i = x_i(\theta)\), ou podemos usar que \[ \hat{r}
+          \cdot  \hat{\theta} =  \hat{r} \cdot \frac{d \hat{r}}{d \theta} =
+          \frac{1}{2} \frac{d (\hat{r}\cdot \hat{r})}{d \theta} = 0\]
+          Precisamos apenas provar que \( \hat{\theta}\) é unitário. Isso é, de
+          certa forma, trivial, pois mesmo que esse vetor não seja unitário,
+          podemos redefinir esse mesmo vetor dividindo-o pela sua magnitude.
+          Esse caso acontece, por exemplo, com o sistema de coordenadas
+          esférico. O aspecto mais importante que precisamos analisar agora, é
+          a sua variação com relação a uma rotação. Por ortogonalidade, devemos
+          ter \[ \frac{d \hat{\theta}}{d\theta} = s \hat{r}, \qquad s = \pm 1
+          \] Portanto, temos que normalizando o versor \(\hat{\theta}\), temos
+          \[ 0 = \frac{d}{d \theta}( \hat{\theta} \cdot \hat{r} ) = \frac{d
+          \hat{\theta}}{d\theta} \cdot \hat{r} + \hat{\theta} \cdot\frac{d
+          \hat{r}}{d\theta} = s + \hat{\theta} \cdot \hat{\theta}\] de onde
+          concluímos que \(s = -1\). Finalmente, com todas essas definições,
+          podemos definir o versor normal ao plano definido por \(\hat{r}\) e
+          \(\hat{\theta}\) pela relação \[ \hat{n}:= \hat{r}\times \hat{\theta}
+          \quad \Rightarrow \quad  \hat{r}= \hat{\theta}\times \hat{n} \quad
+          \hat{\theta}= \hat{n}\times \hat{r}\] </p>
+
+        <p>Com essas definições, podemos revisitar a definição de velocidade e
+          aceleração em termos dessas rotações gerais. Portanto, temos que \[
+          \mathbf{v} = \dot{\mathbf{r}} = \dot{r}\hat{r} + r \dot{\theta}
+          \hat{\theta} = \dot{r}\hat{r} + \vec{\omega} \times \mathbf{r}\] onde
+          \(\vec{\omega} = \dot{\theta} \hat{n}\) é a velocidade angular. A
+          aceleração é dada por \[ \mathbf{a} = \ddot{\mathbf{r}} = \ddot{r}
+          \hat{r} + \vec{\alpha}\times \mathbf{r} + 2 \vec{\omega}\times
+          (\dot{r}\hat{r}) + \vec{\omega}\times (\vec{\omega} \times \mathbf{r}) \]
+        </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Forças não-inerciais</h2>
+        </div>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Agora que entendemos um pouco melhor o conceito de rotações de um ponto de vista mais 
+        geral, podemos revisitar um tópico que discutimos brevemente anteriormente. A aceleração de 
+        Coriolis e Centrifuga.</p>
+
+        <p>Observe que nas nossas considerações anteriores, temos dois sistemas
+          de coordenadas. No primeiro, que chamamos de referencial \(S\),
+          escrevemos o vetor posição como \[ \mathbf{r} = \sum_{i=1}^3 x_i
+          \mathbf{e}_i = x_i \mathbf{e}_i  \] onde na segunda igualdade usamos
+          a convenção da soma para indices repeticos. No segundo referencial,
+          que chamaremos de \(S'\), escrevemos esse mesmo vetor como \[
+          \mathbf{r} = x'_i \mathbf{e}'_i \] O referencial \(S\) tem seus eixos
+          coordenados fixos, enquanto que o referencial \(S'\) esta
+          rotacionando com uma velocidade angular \(\vec{\omega}\). Portanto,
+          os vetores base satisfazem \[ \dot{\mathbf{e}}'_i = \vec{\omega}
+          \times \mathbf{e}'_i\] dessa forma, temos que a derida temporal do
+          vetor posição pode ser escrita nas duas bases como \begin{align}
+          \dot{\mathbf{r}} & = \dot{x}_i \mathbf{e}_i \equiv \left(\frac{d
+          \mathbf{r}}{dt}\right)_{S}\\ & = \dot{x}'_i \mathbf{e}'_i + x'_i
+          \vec{\omega} \times \mathbf{e}'_i  \equiv \left(\frac{d
+          \mathbf{r}}{dt}\right)_{S'} + \vec{\omega} \times \mathbf{r}
+          \end{align} de onde concluímos que \[ \left(\frac{d
+          \mathbf{r}}{dt}\right)_{S} = \left(\frac{d
+          \mathbf{r}}{dt}\right)_{S'} + \vec{\omega} \times \mathbf{r}\] </p>
+         
+        <p>A expressão acima define a relação entre a velocidade entre os dois
+          referenciais. Podemos usar ideias semelhantes para considerar a
+          relação entre as acelerações. Ou seja, \begin{align}
+          \ddot{\mathbf{r}} & = \left( \frac{d^2\mathbf{r}}{dt^2}\right)_{S}\\
+          & = \left( \frac{d^2\mathbf{r}}{dt^2}\right)_{S'} + \dot{x}'_i
+          \vec{\omega}\times \mathbf{e}'_i + \vec{\alpha}\times \mathbf{r} +
+          \vec{\omega} \times \left( \left(\frac{d \mathbf{r}}{dt}\right)_{S'}
+          + \vec{\omega} \times \mathbf{r}\right)\\ 
+          & = \left(
+          \frac{d^2\mathbf{r}}{dt^2}\right)_{S'} + 2 \vec{\omega}\times
+          \left(\frac{d \mathbf{r}}{dt}\right)_{S'} + \vec{\alpha}\times
+          \mathbf{r} + \vec{\omega} \times (\vec{\omega} \times \mathbf{r})
+          \end{align} 
+          onde \(\vec{\alpha}\) é a aceleração angular. </p>
+
+        <h3>Forças não-inerciais</h3>
+
+        <p>A expressão para a aceleração acima é o ponto que precisamos para
+          entender detalhadamente as forças atuando em referenciais que estão
+          rotacionando. Em termos da aceleração no referencial \(S\), onde a
+          base está fixa, a segunda lei de Newton é \[ \mathbf{F} = m \left(
+          \frac{\mathbf{r}}{dt} \right)_S \] e substituindo a expressão que
+          encontramos acima, temos que \[ \mathbf{F} = m \left(
+          \left(\frac{d^2\mathbf{r}}{dt^2}\right)_{S'} + 2 \vec{\omega}\times
+          \left(\frac{d \mathbf{r}}{dt}\right)_{S'} + \vec{\alpha}\times
+          \mathbf{r} + \vec{\omega} \times (\vec{\omega} \times \mathbf{r})
+          \right) \] ou seja \[ m \left(\frac{d^2\mathbf{r}}{dt^2}\right)_{S'}
+          = \mathbf{F} - 2m \vec{\omega}\times \left(\frac{d
+          \mathbf{r}}{dt}\right)_{S'} - m\vec{\alpha}\times \mathbf{r} - m
+          \vec{\omega} \times (\vec{\omega} \times \mathbf{r}) \] Isso
+          significa que no referencial rotatório, temos ficticios aparecem na
+          definição da força, e eles são chamados genericamente de forças
+          <b>não-inerciais</b>. Esses termos ficticios são: \[
+          \begin{array}{c|c|c} \text{Força de Centrifuga} &  \text{Força de Coriolis} 
+          & \text{Força de Euler}\\ \hline - m \vec{\omega} \times
+          (\vec{\omega} \times \mathbf{r}) & -2m\vec{\omega}\times
+          \left(\frac{d \mathbf{r}}{dt}\right)_{S'}  & - m\vec{\alpha}\times
+          \mathbf{r}\\ \hline \end{array} \] </p>
+
+        <p><b>Euler:</b> Começando com a força de Euler, não temos muita coisa
+          interessante acontecendo aqui. Esse termo essencialmente denota a
+          variação da frequencia angular.</p>
+
+        <p><b>Centrifuga:</b> Usando as coordenadas rotatórias que definimos
+          acima, temos que \[ \mathbf{F}_{cent} = - m \vec{\omega} \times
+          (\vec{\omega} \times \mathbf{r}) = -m \dot{\theta}^2 r \hat{n}\times
+          ( \hat{n}\times \hat{r}) = -m \dot{\theta}^2 r \hat{n} \times
+          \hat{\theta} = m r \dot{\theta}^2 \hat{r} \] e podemos ver que esse
+          termo contribui com uma força ficticia na direção radial. Esse termo
+          é muito relevante quando temos um sistema físico sob o efeito de
+          forças centrais (como no caso da gravitação). Então, a força
+          centrífuga contribui com uma força na direção oposta à atração
+          gravitacional. </p>
+
+        <p><b>Coriolis:</b> A força de Coriolis é muito semelhante ao termo
+          magnético na Força de Lorentz. Em particular, se definimos
+          \(\tilde{\mathbf{v}}\) como a velocidade medida pelo referencial
+          giratório, temos que \[ \mathbf{F}_{cor} = - 2 m \vec{\omega} \times
+          \tilde{\mathbf{v}} \] Dessa forma, a velocidade angular faz o papel
+          do campo magnético, então considere uma partícula movendo-se num
+          plano giratório, de tal maneira que \(\vec{\omega} = \dot{\theta}
+          \hat{n}\) onde \(\hat{n}\) é normal ao plano onde a partícula
+          move-se. Suponha que a partícula tenha velocidade
+          \(\tilde{\mathbf{v}} = \tilde{v} \hat{v}\), a força de Coriolis faz
+          com que o observador \(S'\) sinta uma força lateral tal que \[
+          \mathbf{F}_{cor} = - 2 m \dot{\theta} \tilde{v} \hat{v}_{\perp} \]
+          onde \(\hat{v}_{\perp}\) é ortogonal à velocidade da partícula e à
+          velocidade angular. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Energia</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> Com as definições acima, podemos começar a analisar os efeitor
+          dinâmicos que os movimentos rotatórios implicam. Em particular,
+          observe que podemos escrever a energia total em termos das
+          coordenadas em rotação. Em particular, uma vez que \[E = \frac{m}{2}
+          \mathbf{v}^2 + V(\mathbf{r})\] temos que \[E = \frac{m}{2} \left(
+          \dot{r}^2+ r^2 \dot{\theta}^2 \right) \mathbf{v}^2 + V(\mathbf{r})\]
+          que mostra a dependência da energia na velocidade angular. O
+          potencial, \(V(\mathbf{r})\), em linhas gerais, depende das
+          coordenadas \(x_1\) \(x_2\) e \(x_3\) de maneiras distintas. Por
+          exemplo, na superfície do planeta Terra, temos que o potencial é dado
+          por \(V(x_3) = m g x_3\), de onde vemos que apenas a direção ao longo
+          do eixo \(Z\) temos uma relação não trivial.</p>
+
+        <p>Usando o sistema de coordenadas geral acima, podemos ter um
+          potencial que depende do raio \(r\), da direção \(\theta\) e da
+          distância com relaão ao plano definido por \(\hat{r}\) e
+          \(\hat{\theta}\). Usando coordenadas cilindricas e esféricas, isso
+          significa que temos potenciais na forma \[ V = V(r, \theta, z) \qquad
+          \text{ou} \qquad V = V(r, \theta, \phi) \] Para o caso onde temos
+          rotações, uma classe muito importante de potenciais são aqueles que
+          independem da direção que olharmos, potenciais com simetrias
+          centrais. Ou seja, potenciais que \[ V = V(r)\] Exemplos de
+          potenciais desse tipo são os potenciais gravitacional e
+          eletrostático, ambos na forma geral \[ V = \frac{\kappa}{r} \] onde
+          a constante \(\kappa\) define o tipo de interação que estamos
+          estudando, e cuja forma específica não é relevante no momento. </p>
+
+        <p>Potenciais desse tipo, implicam a existência de uma força que é
+          puramente radial, ou seja \[\mathbf{F} = - \frac{\kappa}{r^2} \hat{r}
+          \] de tal maneira que se usarmos a segunda lei de Newton, onde \[
+          \mathbf{F}  =m \mathbf{a} \] de onde concluímos que apenas os termos
+          na direção radial contribuem para a força. Em particular, podemos ser
+          ainda mais explícitos se escrevermos a aceleração como \[\mathbf{a} =
+          \left( \ddot{r} - r \dot{\theta}^2 \right)\hat{r} + \left( r
+          \ddot{\theta} + 2 \dot{r} \dot{\theta} \right) \hat{\theta}  \] de
+          onde concluímos que potenciais com simetrias centrais (ou de rotação)
+          satisfazem as duas equações \[ m(\ddot{r} - r \dot{\theta}^2) =
+          -\frac{\kappa}{r^2} \qquad m(r \ddot{\theta} + 2 \dot{\theta} \dot{r}
+          ) = 0 \] que, a princípio parece um par de equações diferenciais
+          acopladas, mas que com um pouco mais de cuidado, podemos ver que a
+          segunda equação é nada mais que a relação \[ 0 = m(r \ddot{\theta} +
+          2 \dot{\theta} \dot{r}) = \frac{1}{r} \frac{d}{dt}\left( m r^2
+          \dot{\theta} \right) = 0   \] ou seja, a simetria angular nos permite
+          definir uma outra quantidade conservada, que chamaremos de \(\ell = m
+          r^2 \dot{\theta}\), e que estudaremos logo abaixo. o importante é que
+          com essa quantidade, podemos escrever a equação de movimento como \[
+          \ddot{r} - \frac{\ell^2}{m^2 r^3} = -\frac{\kappa}{mr^2} \] e embora
+          essa equação pareça ser muito complicada de ser resolvida, veremos em
+          aulas futuras que com um pouco de criatividade poderemos reescrever
+          essa expressão como a equação para o oscilador harmônico simples. 
+        </p>
+
+        <p>A lição que fica é que existe alguma quantidade conservada que está
+          por trás dessa simplificação que obtivemos agora. Já encontramos
+          antes a energia, que é conservada por causa da segunda lei de Newton,
+          o momento linear, que mais uma vez tem sua conservação devido à
+          segunda e a terceira leis de Newton. Agora temos mais uma quantidade
+          conservada, então é natural analisar as leis de Newton para sistemas
+          rotatórios para entender o que está acontecendo. </p>
+
+      </section>
+
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Torque e Momento Angular</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Vamos começar essa análise com o nosso velho amigo trabalho, que é
+          definido como \[ W = \int_{\mathbf{r}_A}^{\mathbf{r}_B} d
+          \mathbf{r}\cdot \mathbf{F} \] onde essa definição é dada em termos de
+          coordenadas Euclidianas. Queremos agora reescrever essa expressão de
+          maneira que a rotação do sistema seja manifesta. Isso significa, em
+          particular, que reescreveremos a a diferencial \(d\mathbf{r}\) tem
+          termos do versor \(\hat{\theta}\), e também assumiremos que os
+          vetores \(\mathbf{r}_A\) e \(\mathbf{r}_B\) são relacionados por uma
+          rotação, e portanto podem ser parametrizados por ângulos \(\theta_A\)
+          e \(\theta_B\). Colocando esses fatos juntos temos \[ W =
+          \int_{\theta_A}^{\theta_B} (\hat{\theta}\cdot \mathbf{F}) r d \theta
+          = \int_{\theta_A}^{\theta_B} (\hat{n} \times \hat{r} )\cdot
+          \mathbf{F} r d \theta  \] e usando a identidade \( (\mathbf{A} \times
+          \mathbf{B}) \cdot \mathbf{C} = (\mathbf{C} \times \mathbf{A}) \cdot
+          \mathbf{B}\), que podemos facilmente provar usando o simbolo de
+          Levi-Civita \[ (\mathbf{A}\times \mathbf{B}) \cdot \mathbf{C} =
+          (\mathbf{A}\times \mathbf{B})_i C_i = \epsilon_{ijk} A_i B_j C_k =
+          \epsilon_{kij} C_k A_i B_j = (\mathbf{C}\times \mathbf{A}) \cdot
+          \mathbf{B}  \] onde \(A_i, B_i, C_i\) denotam as componentes dos seus
+          respectivos vetores, e também usamos a convenção de Einstein para
+          indices repetidos. Portanto, temos que o trabalho também pode ser
+          escrito como \[ W = \int_{\theta_A}^{\theta_B} (\hat{r} \times
+          \mathbf{F}) \cdot \hat{n} d\theta  \] e essa expressão é análoga ao
+          que tinhamos antes para o deslocamente linear. O termo entre
+          parênteses é o vetor axial (também chamado de pseudo-vetor) \[
+          \vec{\tau} = \mathbf{r} \times \mathbf{F} \] e ele assume a função da
+          força na definição do trabalho. Essa quantidade é chamada de
+          <b>torque</b>. Observe ainda que usando a segunda lei de Newton,
+          temos que o torque satisfaz \[ \vec{\tau} = \mathbf{r} \times
+          \dot{\mathbf{p}} = \frac{d}{dt} (\mathbf{r}\times \mathbf{p}) \] onde
+          usamos que \( \dot{\mathbf{r}} \times \mathbf{p} = m \dot{\mathbf{r}}
+          \times \dot{\mathbf{r}} = 0 \) logo temos que o torque é escrito como
+          \[ \vec{\tau} = \dot{\mathbf{L}} \qquad \mathbf{L} = \mathbf{r}
+          \times \mathbf{p} \] O vetor axial \(\mathbf{L}\) é chamado de
+          <b>momento angular</b> e ele assume o papel do momento linear. </p>
+
+        <p>É bastante pertinente considerar a expressão explícita para o
+          momento angular e para o torque. Considere o sistema rotacionado
+          acima, então temos que \[ \mathbf{L} = m r \hat{r}\times
+          (\dot{r}\hat{r} + r \dot{\theta} \hat{\theta}) = m r^2 \dot{\theta}
+          \hat{n} \] que vemos imediatamente que \[ \mathbf{L} = \ell
+        \hat{n} = m r^2 \dot{\theta} \hat{n} \quad \Rightarrow \quad \vec{\tau}
+        = \dot{\ell} \hat{n} \] e imediatamente podemos reconhecer que no caso
+        de simetrias centrais, o momento angular é conservado, de onde também
+        concluímos que nesse caso, temos que o torque é nulo. </p>
+
+        <h3>Sistema de Partícular e Equilíbrio</h3>
+
+        <p>Considerando um sistema de \(N\) partículas, definimos o torque
+          total como a soma dos torques individuais de cada uma das partículas,
+          ou seja \[ \vec{\tau} = \sum_i \vec{\tau}_i = \sum_i \mathbf{r}_i
+          \times \mathbf{F}_i  \] assim como no caso linear, temos que a força
+          é decomposta numa força externa e e forças de interação mútual.
+          Portanto \[ \vec{\tau} = \sum_i \mathbf{r}_i \times \left(
+          \mathbf{F}^{(ext)}_i + \sum_{j \neq i} \mathbf{F}_{ij} \right) \] e
+          usando as mesmas ideias anteriores, temos que \[ \vec{\tau} = \sum_i
+          \mathbf{r}_i \times \mathbf{F}^{(ext)}_i + \sum_{i &lt j}
+          (\mathbf{r}_i - \mathbf{r}_j) \times \mathbf{F}_{ij} \] de
+          onde concluímos que \[ \vec{\tau} = \sum_i \mathbf{r}_i \times
+          \mathbf{F}^{(ext)}_i + \sum_{i &lt j} \mathbf{r}_{ji}\times
+          \mathbf{F}_{ij} \] Usando agora a terceira lei de Newton, que
+          afirma que que a força de \(\mathbf{F}_{ij} = - \mathbf{F}_{ji}
+          \parallel \mathbf{r}_{ij}\) temos que o torque resultante é \[
+          \vec{\tau} = \sum_i \mathbf{r}_i \times \mathbf{F}^{(ext)}_i  \] e na
+          ausência de torques externos o momento é conservado. </p>
+
+        <p>Um último aspecto que devemos mencionar é que nos nossos estudos
+          iniciais de equilíbrio, impomos que a resultante das forças seja
+          nula. Isso é insuficiente pois um sistema com resultante nula ainda
+          pode rotacionar. Devemos portanto definir um sistema em repouco como
+          aquele que tanto a força resultante quanto o torque resultante são
+          nulos. Falaremos mais sobre equilíbrio na próxima seção. </p>
+
+      </section>
+
+
+
+
+    </main>
+
+  </body>
+</html>

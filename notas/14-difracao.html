@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Difração</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Difração</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Princípio de Huygens-Fresnel</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos de difração de ondas.
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>O problema que tentamos analisar agora consiste em analisar a
+          propagação de ondas transmitida através de um orifício (ou fenda)
+          pequena. De modo ainda mais espefícico, queremos entender o padrão de
+          interferência que ocorre num anteparo que está a uma certa distância
+          desse orifício. </p>
+
+        <img class="text-img diffraction" src="https://www.shutterstock.com/image-vector/diffraction-light-pattern-on-dark-260nw-1652320468.jpg" alt="diffraction">
+
+        <p>Dependendo da forma do orifício, da distância e do comprimento de
+          onda, diferentes padrões de interferência aparecem no anteparo. Nosso
+          objetivo nessa seção é discutir alguns desses aspectos. </p>
+
+        <p>O ponto de partida para o nosso estudo é o princípio de Huygens (ver
+          Kleber Daum Machado, cap 27). Esse princípio estabelece que dada uma
+          frante de onda, devemos considerar cada ponto dessa frente de onda
+          como uma mini-fonte de onda. E cada uma dessas mini-fontes gera uma
+          mini-onda (onda secundária) esférica. Uma frente de onda ulterior é a
+          resultante da interferência de todas as ondas secundárias. Sem
+          nenhuma barreira, uma frente de onda continuaria se propagando dessa
+          forma indefinidamente.</p>
+
+        <p>Quando a frente de onda passa por algum orifício, que é o caso que
+          nos interessa agora, temos que a amplitude da onda refratada não pode
+          ser a mesma em todas as direções, e que na verdade, essa amplitude
+          deve ter um máximo na direção normal à propagação da frente de onda
+          \(\theta =0\), e decresce lentamente enquanto um elemento de área \(d
+          \sigma\) de uma mini-onda esférica varre a frente de onda, atingindo
+          um mínimo na direção perpendicular à propagação da onda \(\theta =
+          \pi/2\). </p>
+
+        <p>Matematicamente, o princípio de Huygens-Fresnel estabelece que dado um 
+          ponto \(P\) n anteparo, a onda resultante é dado pelas contribuições 
+          da onda no ponto \(P'\), de um fator de obliquidade somado por todo o 
+          elemento de área \(d\sigma\) que varre a frente de onda, ou seja 
+          \[ v(P) = \int_{\sigma} F(\theta') v(P') \frac{e^{ikr}}{r} d \sigma \]
+          onda a integral é somada sobre todo o orifício. 
+        </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Integral de Kirchhoff</h2>
+        </div>
+
+        <h3>Idendidade de Green</h3>
+
+        <p> Começamos relembrando o teorema do divergente: \[ \int dV \nabla
+          \cdot \mathbf{J} = \oint_{\partial V} d\mathbf{S}\cdot \mathbf{J}\]
+          onde \(\partial V\) é o contorno do volume \(V\) e \(d \mathbf{S}\) é
+          o seu elemento de área. Assumindo agora duas funções \(\Psi\) e
+          \(\Phi\), consideramos os casos onde \(\mathbf{J} = \Phi\nabla \Psi\)
+          e \(\mathbf{J} = \Psi\nabla \Phi\), e subtraindo os resultados temos
+          que \[ \begin{array}{l} \int dV\left(\Psi \Delta \Phi - \Phi \Delta
+          \Psi \right)\\= \oint_{\partial V} d\mathbf{S}\cdot\left( \Psi \nabla
+          \Phi - \Phi \nabla \Psi \right) \end{array} \]
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <p> Existem alguns argumentos <i>handwaving</i> para o calculo do fator
+          de obriquidade, e.g. o método das Zonas de Fresnel (que pode ser
+          encontrado no Moysés Nessenzveig vol.4 ou no livro do Born e Wolf,
+          Principles of Optics). Kirchhoff trouxe o princípio de
+          Huygens-Fresnel para um patamar um pouco mais formal. Born e Wolf
+          falam em seu livro que existem poucos resultados formais em óptica, e
+          no livro do Jackson de Eletrodinâmica, o Jackson destaca os aspectos
+          ``errados'' das hipóteses de Kirchhoff, então devemos olhar para os
+          resultados abaixo com um pouco de atenção. Faço referência ao livro
+          do Jackson para uma leitura mais crítica. </p>
+
+        <p>Começamos nossa análise com uma expansão em Fourier de uma solução
+          da equação de onda, ou seja \[ V(t, \mathbf{r}) =
+          \frac{1}{\sqrt{2\pi}} \int d \omega U(\mathbf{r}, \omega) e^{i\omega
+          t} \] onde por simplicidade, ignorarei a dependencia em \(\omega\) da
+          função \(U(\mathbf{r}, \omega)\). Inserindo na equação de onda,
+          recuperamos a equação de Helmholtz onde \(k^2 = \omega^2/ c^2\). Ou
+          seja \[ \left(\Delta + k^2\right) U(\mathbf{r}) = 0 \] Devemos
+          interpretar a solução acima, \(V(t, \mathbf{r})\) como uma das
+          componentes do campo eletromagnético, e chamamos essa análise de
+          difração escalar. Felizmente, diversos fenômenos ópticos podem ser
+          estudados considerando-se apenas essa análise escalar, ver
+          [Wolf-Born]. </p>
+        
+        <p>O problema que estamos tentando resolver é descrito da seguinte
+          forma. Uma onda tem origem no ponto \(P_0\), na região \(I\), que
+          está a uma distância \(\mathbf{r}\) de uma abertura \(A\) de alguma
+          superfície \(\Sigma_I\). A parte coberta dessa superfície é denotada
+          por \(B\). Ao passar pela abertura \(A\), a radiação começa a se
+          propagar na região \(II\), e queremos determinar a forma funcional da
+          onda na posição \(\mathbf{s}\). A região \(II\) é rodeada por uma
+          superfície \(\Sigma_{II}\) que não participa do problema. A ideia que
+          queremos executar é relacionar o campo na posição \(\mathbf{s}\) com
+          os campos na posição da abertura \(A\). 
+        </p>
+
+        <p>Lembrando que estamos usando ondas eféricas, a função de Green para
+          a equação de Helmholtz acima é dada por \[ G(s', s) =
+          \frac{e^{ik(s)}}{4 \pi (s' - s)} \qquad (\Delta + k^2) G(s', s) = -
+          \delta(s' - s) \] Onde \(\mathbf{s})\) é um ponto no interior do
+          volume e estamos considerando que a integral (e a derivada) é sobre
+          as coordenadas \(\mathbf{s}'\). Para prosseguirmos na nossa análise,
+          precisamos das identidades de Green que provamos na caixa ao lado.
+        </p>
+
+        <p> Consideramos o volume \(V\) como a região delimitada pelo contorno
+          \(\Sigma_I \cup \Sigma_{II}\), que é parametrizada pelas coordenadas
+          \(\mathbf{s}'\). Além disso, assumimos que \[\Psi(\mathbf{s}) =
+          U(\mathbf{s}) \qquad \Psi(\mathbf{s}, \mathbf{s}') = G(\mathbf{s},
+          \mathbf{s}')\] e inserindo na identidade de Green temos \[ \int dV
+          \left[ - k^2 U G - \delta(s - s')U - \delta(s - s') + G k^2 U
+          \right]= \oint_{\partial V} dS \hat{n}\cdot\left( U \nabla G - G
+          \nabla U\right)\] de onde concluímos que 
+          \[ U(\mathbf{s}) =
+          \oint_{\partial V} dS \hat{n}'\cdot\left( U \nabla G - G \nabla
+          U\right)\] 
+          onde na expressão acima, consideramos o versor normal
+          \(\hat{n}' = -\hat{n}\) apontando para dentro do do volume \(V\).
+        </p>
+
+        <p>Substituindo a expressão para a função de Green, temos que o campo
+          na posição \(\mathbf{s}\) é dada por 
+          \[ U(\mathbf{s}) = \frac{1}{4 \pi} \oint_{\partial V} dS
+          \hat{n}'\cdot\left( U \nabla \left( \frac{e^{ik(s-s')}}{|s - s'|}
+          \right) -  \left( \frac{e^{ik(s-s')}}{|s - s'|} \right) \nabla
+          U\right)\] 
+          Nesse ponto devemos substituir os valores do campo e das suas
+          derivadas no contorno \(\partial V\), e essas expressões não são
+          conhecidas em geral. Para contornar esse problema, Kirchhoff fez
+          algumas hipóteses -- que não estavam completamente corretas, diga-se
+          de passagem, mas que quando corrigidos não diferem tanto do resultado
+          obtido por Kirchhoff. Para uma discussão sobre as condições de
+          contorno que devem ser impostas, ver o livro do Jackson. </p>
+
+        <p><span>Hipóteses de Kirchhoff</span> Consideramos que na abertura
+          \(A\) (que tomamos como \(s' = 0\)) os campos não diferem muito da
+          sua forma antes de atingir entrar na superfície, portanto \[
+          \Rightarrow \ A: \quad U = U(\mathbf{r}) \qquad \hat{n}' \cdot \nabla
+          U = \hat{n}' \cdot \nabla_r U(\mathbf{r})  \] Além disso, supomos que
+          na superfície \(B\) os campos se anulam, e que a a superfície \(C\)
+          está tão longe que não influencia no sistema. O problema dessas
+          hipóteses é que essas condições de contorno são muito fortes, e
+          precisam ser corrigidas.</p>
+
+        <p>Se antes de atingir a abertura, as ondas eram descritas por ondas
+          esféricas, então temos que \[ U(\mathbf{r}) = a_0\frac{e^{ikr}}{r}
+          \qquad  \nabla U(\mathbf{r}) = a_0\frac{e^{ikr}}{r} \left( ik -
+          \frac{1}{r} \right) \hat{r} \] e escrevendo o ângulo entre os
+          versores \(\hat{r}\) e \(\hat{n}\) como \(\cos(n,r)\), temos que \[
+          \hat{n}\cdot \nabla U(\mathbf{r}) = a_0\frac{e^{ikr}}{r} \left( ik -
+          \frac{1}{r} \right) \cos(n,r)  \] </p>
+
+        <p>Substituindo essa expressão na expressão para o campo (lembre que o
+          gradiente é sobre as coordenadas \(\mathbf{s}'\)) e
+          ignorando termos quadráticos no denominador temos que \[
+          U(\mathbf{s}) = - \frac{i a_0 k}{2 \pi} \oint_{\partial V} dS
+          \frac{e^{ikr}}{r} \frac{e^{ik(s - s')}}{(s - s')} \hat{n}'\cdot\left(
+          \hat{s} + \hat{r} \right) 
+          = - \frac{i a_0 k}{2 \pi} \oint_{A} dS
+          \frac{e^{ik(r+s)}}{rs} \left( \cos(n,s) + \cos(n,r)\right) \] 
+        </p>
+
+        <p>Observe que essa expressão é exatamente o que queríamos. O que o
+          princípio de Huygens-Fresnel descreve em palavras, a integral acima
+          apresenta do ponto de vista matemático. Nesse sentido, podemos obter
+          o fator de obliquidade como o temos na integral dependente os
+          ângulos. De fato, podemos ainda simplificar essa expressão
+          considerando que a onda incidente é normal à abertura, de tal forma
+          que \( \cos(n,r) =1\) de maneira que 
+          \[ U(\mathbf{s}) = - \frac{i a_0 k}{2
+          \pi} \frac{e^{ikr}}{r} \oint_{A} dS \frac{e^{iks}}{s} \left( 1 +
+          \cos\theta\right) \] 
+        </p>
+
+        <p>Na prática, o que desejamos fazer agora é simplificar um pouco mais a integral 
+        acima, e encontrar o padrão de difração para alguns casos em particular. </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Diração de Fraunhofer</h2>
+        </div>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Na prática, resolver analiticamente as integrais que discutimos
+          acima não é uma tarefa muito simples. Por isso, é importante
+          considerar algumas aproximações para obter alguns resultados exatos.
+        </p>
+
+        <p>Para evitar confusão na nossa discussão abaixo, vamos idenficar o ponto 
+        dento do volume onde estamos medindo a onda por \(P\).
+          \[ U(P) = - \frac{i a_0 k}{2
+          \pi} \frac{e^{ikr}}{r} \oint_{A} dS \frac{e^{iks}}{s} \left( 1 +
+          \cos\theta\right) \] 
+          logo, \(s\) na expressão acima identifica a distância entre \(P\) e um ponto 
+          \(Q\) na abertura.
+        </p>
+
+        <p> O ponto \(P\), medido com relação a origem (localizado na abertura) é dado por 
+          \(P = (x, y, z)\), ap passo que pontos na abertura são paramerizados por 
+          \(Q = (\xi, \eta, 0)\). Dessa forma, podemos calcular \(s\) como 
+          \[
+          s = |P - Q| = \sqrt{(x - \xi)^2 + (y - \eta)^2 + z^2}
+          =  \sqrt{ x^2 + y^2 + z^2 + \xi^2 + \eta^2 - 2(x \xi + y \eta)} 
+          \]
+          Usando que \(|P| = \sqrt{ x^2 + y^2 + z^2}\), temos que 
+          \[ 
+          s = 
+          \sqrt{ |P|^2 + \xi^2 + \eta^2 - 2(x \xi + y \eta)} 
+          = |P|\sqrt{ 1 + \frac{\xi^2 + \eta^2 - 2(x \xi + y \eta)}{|P|^2}} 
+          \]
+          e expandindo em série temos 
+          \[
+          s \simeq |P| - \frac{(x \xi + y \eta}{|P|} + \frac{\xi^2 + \eta}{|P|} 
+          \]
+          O limite onde os termos \(\xi^2 \) e \(\eta^2\) podem ser negligenciados é chamado de difração de 
+          <b>Fraunhofer</b> enquando o limite onde esses termos são relevantes é chamado de difração 
+          de <b>Fresnel</b>. Felizmente, diversos fenômenos de difração podem ser estudados no limite 
+          de Fraunhofer. 
+          Definindo os parâmetros 
+          \( \alpha = \frac{x}{|P|} \qquad \beta = \frac{y}{|P|}  \), temos 
+          \[ s = |P| - (\alpha \xi + \beta \eta )  \]
+          portanto 
+          \[ U(P) = - \frac{i a_0 k e^{ik(r +|P|)}}{\pi r |P|}  \oint_{A} dS e^{-ik(\alpha \xi + \beta \eta)} 
+          \] 
+          De fato, a constante de proporcionalidade é o termo menos importante nessa expressão (e de fato, abaixo)
+          consideramos apenas razões entre intensidade, o que remove essas constantes de proporcionalidade completamente, 
+          por isso colecionamos esse termo como uma constante \(C_0\), logo 
+          \[ 
+          U(P) = C_0 \oint_{A} dS e^{-ik(\alpha \xi + \beta \eta)} 
+          \] 
+          Com essa expressão, podemos começar a nos divertir um pouco. A ideia agora é considerar aberturas \(A\) 
+          com diferentes formatos e calcular o a onda resultante. De fato, calcularemos a intensidade das ondas, 
+          que é dado pelo quadrado do campo, ou seja 
+          \[ I = |U(P)|^2 \]
+        </p>
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Exemplos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>De posse da expressão 
+          \[ 
+          U(P) = C_0 \oint_{A} dS e^{-ik(\alpha \xi + \beta \eta)} 
+          \] 
+          vamos considerar alguns exemplos interessantes para a difração. 
+        </p>
+
+        <h3>Abertura Retangular e a Fenda Simples</h3>
+        
+        <p>
+        O primeiro exemplo que consideraremos é o caso onde a abertura \(A\) é um 
+          retângulo de lados \(2a\) e \(2b\). Então 
+          \[ U(P) = C_0 \int_{-a}^{a} d\xi e^{-ik\alpha \xi} \int_{-b}^{b} d \eta e^{-ik\beta \eta}  \]
+          e fazendo essa integral temos que 
+          \[ U(P) = C_0 \left( 2\frac{\sin (k\alpha a)}{k\alpha} \right) \left(
+          2\frac{\sin (k\beta b)}{k\beta} \right) = A C_0  
+          \left(\frac{\sin (k\alpha a)}{k\alpha a} \right) \left( \frac{\sin (k\beta b)}{k\beta b} \right)  
+          \]
+          onde \(A = 4 ab\) é a área do retângulo. Como \(\alpha = x/|P| = \sin\theta\) e \(\beta = y/|P| = \sin\psi\), 
+          o ângulo de inclinação mínimo ocorre logo a frente da origem, o que significa que \(x = y \to 0\), 
+          portanto \(\alpha = \beta\to 0\), ou seja, o ângulo \(\theta = 0\). Nesse limite 
+          \[ \lim_{x\to 0} \frac{\sin x}{x} = 1 \] o que significa que 
+          \( U(0) = A C_0 \).
+          Dessa forma, podemos calcular a intensidade como 
+          \[ I(\theta) = |U(P)|^2 = I(0) 
+          \left(\frac{\sin (k\alpha a)}{k\alpha a} \right)^2 \left( \frac{\sin (k\beta b)}{k\beta b} \right)^2
+          \]
+        </p>
+
+        <img class="text-img rectangle" src="https://i.stack.imgur.com/T7ekl.jpg" alt="rectangle">
+
+        <p>Podemos tomar o limite onde \(b\to 0\), e considerar o famoso exemplo da difração por uma fenda. Logo
+          \[ I(\theta) = I(0) \left(\frac{\sin (k\alpha a)}{k\alpha a} \right)^2 \]
+          cujo padrão de difração é representado na figura ao lado. Observe que nesse caso, a intensidade tem mínimos para 
+          \( k\alpha a = \pm n \pi\) , exceto o caso onde \(n=0\), que é na verdade um máximo.
+           
+        </p>
+
+        <h3>Abertura Circular</h3>
+
+        <img class="text-img circular" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsites.ualberta.ca%2F~pogosyan%2Fteaching%2FPHYS_130%2Fimages%2F1000px-Airy-3d.svg.png&f=1&nofb=1&ipt=5e81ad63385e3c87779570351807bbaed5a49258620e55888017949b491545ef&ipo=images" alt="circular aperture">
+        <p>Vamos considerar agora uma abertura circular. Nesse caso, devemos usar coordenadas 
+        polares, ou seja, 
+        \[ \xi = \rho' \cos\theta' \qquad \eta = \rho' \sin \theta' \]
+        Além disso, escrevemos 
+          \[ x = \rho \cos \theta \qquad y = \rho \sin\theta \]
+          Ainda temos que 
+          \[ 
+          \alpha = \frac{x}{|P|} = \frac{\rho \cos\theta}{|P|}\qquad 
+          \beta = \frac{y}{|P|} = \frac{\rho \sin\theta}{|P|}
+          \]
+          Finalmente, como estamos no limite de Fraunhofer, devemos ter que o ângulo 
+          \[ 
+          \sin\phi = \frac{\rho}{r} \simeq \phi
+          \]
+          Dessa forma, 
+          \[ \alpha \xi + \beta\eta = \frac{\rho\rho'}{r}\left( \cos\theta \cos\theta' + \sin\theta \sin\theta' \simeq \rho' \phi \cos(\theta - \theta')
+          \right) \]
+          Podemos inclusive escolher \(\theta = 0\). O que nos resta portanto a integral 
+          \[ U(P) = C_0 \int_0^D \int_0^{2\pi} \rho' d\rho' d \theta' e^{-ik\rho'\phi \cos\theta'} \]
+          Usando a representação integral da função de Bessel 
+          \[ J_n(x) = \frac{1}{2\pi i^n} \int_0^{2\pi} d\alpha e^{in\alpha} e^{ix\cos\alpha}\]
+          temos que 
+          \[ 
+          U(P) = 2 \pi C_0 \int_0^D d \rho' \ \rho' J_0(k\rho'\phi)
+          \]
+          Usando agora a propriedade 
+          \[ x J_0(x) = \frac{d}{dx}(x J_1(x)) \]
+          podemos escrever a onda como 
+          \[ U(P) = C'_0 \left( \frac{J_1(k\phi D)}{k\phi D} \right) \]
+          e a intensidade é dada por 
+          \[ I(\phi) = I(0) \left( \frac{J_1(k\phi D)}{k\phi D} \right)^2 \]
+
+
+
+        </p>
+
+
+      </section>
+
+
+  </main>
+
+</body>
+</html>

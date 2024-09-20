@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Corpos Rígidos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread"> 
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Corpos Rígidos</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Introdução</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> 
+          Essa seção é uma continuação do nosso estudo de sistemas que estão rotacionando. 
+          Consideramos agora o caso onde um sistema de \(N\) partícular está girando, mas 
+          de maneira que a distância relativa entre qualquer par de partículas é fixo, ou seja 
+          \[ |\mathbf{r}_i - \mathbf{r}_j| = constante_{ij} \]
+          Esses sistemas são chamados de <b>corpos rígidos</b>, e descrevem, com boa aproximação, 
+          sistemas materiais mais realistas. 
+        </p>
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Momento de Inércia</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Conside que a iésima partícula num sistema de \(N\) partículas esta
+          girando ao redor de um eixo \(\hat{n}\), de tal maneira que a sua
+          posição e velocidade são dados por 
+          \[\mathbf{r}_i = r_i \hat{r} \qquad \mathbf{v}_i=\dot{\mathbf{r}}_i = 
+          \boldsymbol{\omega} \times \mathbf{r}_i\]
+          onde \(\boldsymbol{\omega} = \dot{\theta}\hat{n}\) é a velocidade angular de todas 
+          as partículas desse sistema, pois a distância entre as partículas é constante.  
+          Também assumimos 
+          que a distância \(r_i\) entre a partícula e a origem do sistema 
+          de coordenadas é fixa. A magnitude da velocidade é dada por 
+          \[ v_i = \omega r_i \]
+          De fato, na expressão assuma assumimos que o angulo entre os vetores \(\mathbf{r}\)
+          e \(\boldsymbol{\omega}\) é \(\pi/2\), mas isso não é necessário. 
+          Podemos fixar o eixo de rotação tal que 
+          \[ \boldsymbol{\omega} = \omega\hat{k} \equiv \dot{\theta} \hat{k} \]
+          O importante é entender 
+          que os ângulos entre o vetor posição e a velocidade angular é genérico. Dessa forma,
+          temos que 
+          \[ \mathbf{v}_i = \boldsymbol{\omega} \times \mathbf{r}_i \]
+          portanto
+          \[ v_i = \omega r_i \sin\phi = \omega d_i  \]
+          onde \(d_i = r_i \sin\phi\) é a distância entre o eixo de rotação e a 
+          iésima partícula. 
+        </p>
+
+        <p>Iremos calcular agora a energia cinética desse sistema de partículas. Observe 
+          que \[ \mathbf{v}_i = d_i \dot{\theta} \hat{\theta} \quad \Rightarrow 
+          v_i = d_i^2 \dot{\theta}^2 = d_i^2 \omega^2\]
+          portanto a energia cinética total é 
+          \[ T = \frac{1}{2}\omega^2 \sum_{i=1}^N m_i d_i^2 \equiv 
+          \frac{I}{2}\omega^2 \qquad I = \sum_{i=1}^N m_i d_i^2 
+          \]
+          onde a quantidade \(I\) é chamada <b>momento de inércia</b>.
+          Para um sistema contínuo de partícular, temos que o momento de inércia é definido por 
+          \[ I = \int_V d^3r \rho(\mathbf{r}) r^2 \]
+          onde \(\rho(\mathbf{r})\) é a densidade do corpo. 
+        </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Exemplos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p> É instrutivo considerar o calculo de momento de inercia para dois
+          corpos rígidos mais simples. Dessa discussão buscaremos entender um
+          pouco mais profundamente esse problema, e ao final do texto
+          discutiremos exemplos um pouco mais robustos. </p>
+
+        <h3>Aro circular: Bambolê</h3>
+
+        <img class="text-img hoop" src="https://i.gifer.com/origin/b2/b2c40c955940d505f7fe3c1d65ab5857.gif" alt="Hula Hoop">
+
+        <p>Vamos considerar o exemplo mais simples para aquecer. Um bambolê de raio \(a\)
+        e densidade uniforme. O elemento de volume é apenas o elemento de linha, onde 
+        devemos integrar sobre o intervalo \((0, 2\pi)\), que dá a massa do bambolê. 
+          Portanto temos 
+        \[ I = M a^2  \]</p>
+
+        <h3>Bastão</h3>
+
+        <p>O próximo exemplo é o bastão de comprimento \(\ell\) e densidade uniforme dada 
+          por \(\rho = M/\ell\). Consideraremos o eixo de rotação como a reta 
+          perpendicular ao bastão, e preso a uma das suas extremidades. O momento de 
+          inercia é 
+          \[ I = \rho\int_0^\ell dx x^2 = \frac{M \ell^2}{3} \]
+        </p>
+
+        <p>Podemos agora considerar o eixo de rotação como sendo o centro do bastão, portanto 
+          \[ I = \rho\int_{-\ell/2}^{\ell/2} dx x^2 = 
+          \left.\frac{M}{3\ell} x^3 \right|_{-\ell/2}^{\ell/2} =  \frac{M \ell^2}{12}  \]
+          Observe portanto, que o momento de inercia não é uma propriedade intrinseca do 
+          objeto (como é a sua massa), mas depende da escolha do eixo de rotação. 
+        </p>
+
+        <img class="text-img moment" src="https://i.pinimg.com/originals/8b/bc/ca/8bbcca5c515a5df581becfae08042ce0.jpg" alt="">
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Teorema do Eixo Paralelo</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Queremos agora encontrar uma relação entre o momento de inercial calculado 
+          ao redor de um eixo genérico e o momento de inercial calculado com relação 
+          a um eixo (paralelo ao primeiro), mas que passe pelo centro de massa. A primeira 
+          coisa que devemos fazer é parametrizar essas posições. Consideramos a origem 
+          no eixo genérico que queremos calcular. O vetor posição da iésima 
+          partícular com relação à origem é 
+          dado por \(\mathbf{r}_i\). O centro de massa é definido por 
+          \[ \mathbf{R} = \frac{1}{M} \sum_i m_i \mathbf{r}_i \]
+          e a posição da iésima partícula com relação ao centro de massa é dada por
+          \[\mathbf{r}_i = \mathbf{R} + \mathbf{y}_i\]
+          Por definição, temos que a posição relativa satisfaz \(\sum_i m_i \mathbf{y}=0\).
+        </p>
+
+        <p>Usando essas definições, temos que o centro de massa com relação ao
+          eixo passando pela origem é
+          \[ I = \sum_i m_i  (\hat{n}\times \mathbf{r}_i)\cdot 
+          (\hat{n}\times \mathbf{r}_i)  \]
+          e com relação ao eixo passando pelo centro
+          de massa é
+          \[ I_{cm} = \sum_i m_i (\hat{n}\times \mathbf{y}_i)\cdot 
+          (\hat{n}\times \mathbf{y}_i)\]
+        </p>
+        
+        <p>Substituindo a relação entre os dois vetores, temos que
+          \begin{align} I  & = \sum_i m_i [\hat{n}\times (\mathbf{R} +
+          \mathbf{y}_i))] \cdot [\hat{n}\times (\mathbf{R} + \mathbf{y}_i))]\\
+          & = \sum_i m_i \left[ (\hat{n}\times \mathbf{R}) \cdot (\hat{n}\times
+          \mathbf{R}) +  (\hat{n}\times \mathbf{y}_i) \cdot (\hat{n}\times
+          \mathbf{y}_i) +  2 (\hat{n}\times \mathbf{y}_i) \cdot (\hat{n}\times
+          \mathbf{R})   \right] \end{align} onde o ultimo termo é nulo pois \(
+          \sum_i m_i \mathbf{y}_i = 0\). Além disso, temos que \[
+          (\hat{n}\times \mathbf{R}) \cdot (\hat{n}\times \mathbf{R}) = (R \sin
+          \phi)^2 = h^2 \] onde \(\phi\) é o ângulo entre o eixo de rotação e o
+          vetor \(\mathbf{R}\). Portanto, \(h\) é a distância entre os dois
+          vetores. Colocando todos esses fatos juntos, temos que 
+          \[ I = I_{cm} + M h^2 \]
+          e esse resultado é conhecido como o <b>Teorema dos Eixos Paralelos.</b>
+        </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Teorema Trabalho Energia Cinética</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Antes de prosseguir com a generalização desses resultados, queremos
+          analisar a energia desses sistemas rotatórios. De fato, usando a
+          parametrização que definimos acima, onde o vetor posição
+          \(\mathbf{r}_i\) é decomposto em termos da posição do centro de massa
+          e pela distância do centro de massa e a posição da iésima partícula,
+          ou seja \[ \mathbf{r}_i = \mathbf{R} + \mathbf{y}_i\], temos que a
+          velocidade é dada por \[\mathbf{v}_i = \mathbf{V}_{cm} +
+          \boldsymbol{\omega} \times \mathbf{y}_i \] podemos mostrar que a
+          energia cinética é dada por \[ T = \frac{1}{2}\sum_i m_i
+          \mathbf{v}_i^2 =  \frac{1}{2}\sum_i m_i \left( \mathbf{V}_{cm}^2 +
+          (\boldsymbol{\omega} \times \mathbf{y}_i) \cdot (\boldsymbol{\omega}
+          \times \mathbf{y}_i)  \right)\] onde o termo cruzado é nulo pois
+          \(\sum_i m_i \mathbf{y}_i =0\). Portanto temos que \[ T =
+          \frac{1}{2}\sum_i m_i \mathbf{v}_i^2 =  \frac{M}{2}\mathbf{V}_{cm}^2
+          + \frac{I_{cm}}{2}\omega^2 \] Cada uma das partículas é descrita em
+          termos de 3 graus de liberdade translacionais, descritos pelo centro
+          de massa, e 3 graus de liberdade rotacionais. </p>
+
+        <p>Já provamos anteriormente como o trabalho translacional é definido
+          pela variação da energia cinética translacional. É simples provar
+          esse resultado para o caso rotacional. Observe que \[W =
+          \int_{\theta_0}^{\theta_1} \boldsymbol{\tau} \cdot
+          d\boldsymbol{\theta} = \int_{t_0}^{t_1} \boldsymbol{\tau} \cdot
+          \dot{\theta} dt =  \int_{t_0}^{t_1} I_{cm}\boldsymbol{\alpha} \cdot
+          \dot{\theta} dt  \] onde \(\alpha = \ddot{\theta}\). Portanto \[W =
+          \left.\frac{I_{cm}}{2} \dot{\theta}^2\right|_{t_0}^{t_1} =
+          \frac{I_{cm}}{2}\omega^2(t_1) -  \frac{I_{cm}}{2}\omega^2(t_0)  \] o
+          que prova a relação entre trabalho e energia cinética para o caso da
+          rotação. </p>
+
+
+      </section>
+
+
+
+
+
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Formalização</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <p>Até agora fomos heróis da resistência. Usar essa notação vetorial
+          pode ser (e em geral é) confusa quando estamos trabalhando com
+          sistemas com mais de 2 partículas. Para cada partícula em 3 dimensões, temos 
+        3 graus de liberdade translacionais e 3 rotacionais. Isso quer dizer quer 
+        dizer que para um sistema de \(N\) partículas, temos um total de \(6 N\) graus 
+        de liberdade, o que pode se tornar algo progressivamente complicado -- se não tivermos 
+        cargas conservadas suficiente para eliminar a maioria desses graus de liberdade.</p>
+
+        <p>O nosso objetivo nessa seção é revisitar e generalizar os tópicos que discutimos 
+        acima. Isso não apenas esclarecerá algumas definições que usamos até agora, mas 
+        tornará nossas expressões mais simples. O custo para isso é que embora os resultados 
+        finais sejam mais simples, precisaremos deixar o nosso formalismo um pouco mais 
+        sofisticado. Essa é uma conservação das dificuldades.</p>
+
+        <h3>Rotações e Transformações da Base</h3>
+
+        <p>Sabemos que o vetor \(\mathbf{r}\) pode ser escrito em termos de
+          duas bases, a saber \(\{\mathbf{e}_a | a=1,2,3\}\), fixa, e
+          \(\{\mathbf{e}'_a(t) | a =1, 2, 3\}\) que está rotacionando. 
+          Além disso, sabemos que essas bases são ortonormais, ou seja 
+          \[ \mathbf{e}_a \cdot \mathbf{e}_b = \delta_{ab} \qquad 
+          \mathbf{e}'_a(t) \cdot \mathbf{e}'_b(t) = \delta_{ab}  \]
+          Portanto, temos que 
+          \[ \mathbf{r} = x_a(t) \mathbf{e}_a = x'_a \mathbf{e}'_a(t)  \]
+          No nosso problema, é desnecessário distinguir os indices definindo os 
+          vetores \(a =1, 2, 3\), dos indices definindo as suas componentes 
+          \(i = 1, 2,3 \). Na base canônica dada por 
+          \[ \mathbf{e}_1 = (1,0,0)  \qquad \mathbf{e}_2 = (0,1,0) \qquad \mathbf{e}_3 
+          = (0,0,1)  \] pode ser denotada em termos do delta de Kronecker como 
+          \( (\mathbf{e}_a)_i = \delta_{ai}\). 
+        </p>
+
+        <p>Aprendemos em álgebra linear que podemos encontrar transformações lineares 
+        relacionando essas duas bases ortogonais, ou seja, temos que existe um operador linear 
+          \(R: \mathbb{R}^3 \to \mathbb{R}^3\), visto como um espaço vetorial, tal que 
+          \[
+          \begin{pmatrix}
+          \mathbf{e}'_1 \\ \mathbf{e}'_2 \\ \mathbf{e}'_3
+          \end{pmatrix} 
+          = R(t) \cdot
+          \begin{pmatrix}
+          \mathbf{e}_1 \\ \mathbf{e}_2 \\ \mathbf{e}_3
+          \end{pmatrix} 
+          \]
+          ou em termos das componentes (e usando a convenção de Einstein para indices 
+          repetidos), temos que 
+          \[ \mathbf{e}'_a = \sum_b R_{ab} \mathbf{e}_b \]
+          e usando a ortogonalidade das bases, podemos encontrar as componentes da matriz 
+          que representa o operador linear \(R\) como 
+          \[ R_{ab} = \mathbf{e}'_a \cdot \mathbf{e}_b \]
+          onde a partir de agora omitiremos a dependencia temporal. 
+        </p>
+
+        <p>Usando esses fatos gerais, podemos determinar as propriedades que a matriz \(R\)
+        deve satisfazer. Em primeiro lugar, ela deve respeitar a orgonormalizada das duas bases, 
+        portanto temos que 
+          \[ \delta_{ab} = 
+          \mathbf{e}'_a(t) \cdot \mathbf{e}'_b(t) =  
+          R_{ac} R_{bd} \mathbf{e}_c \cdot \mathbf{e}_d  = 
+          R_{ac} R_{bd} \delta_{cd} = R_{ac} R_{bc} = = R_{ac} R^T_{cb}  \]
+          e essa condição nos diz que o operador \(R\) é ortogonal. Ou seja 
+          \[ R \cdot R^T = \mathbf{Id}_{3\times 3} \]
+        </p>
+
+        <p>Tomando o determinante dessa expressão vemos que \(\det R = \pm 1\),
+          onde o sinal de menos denota transformações discretas, como
+          reflexões, e portanto não são conectadas à identidade (ou seja, não
+          podemos considerar transformações infinitesimais). As matrizes com
+          determinante unitário, por outro lado, são as matrizes de rotação que
+          precisamos. Como uma curiosidade para os leitores interessados em
+          matemática, essas propriedadas definem o conjunto de matrizes \(R\)
+          como o grupo ortogonal especial, denotado por \(SO(3, \mathbb{R})\).
+        </p>
+
+        <h3>Velocidade Angular</h3>
+
+        <p>Agora que formalizamos um pouco as rotações, precisamos entender
+          como essas ideias são aplicadas nas cinemática rotacional. Escrevendo
+          o vetor posição como \[ \mathbf{r} = r_a \mathbf{e}_a = r_a R_{ab}
+          \mathbf{e}_b  \] e agora podemos tomar a derivada dessa expressão
+        para encontrar a velocidade angular. Alternativamente, podemos
+        simplesmente considerar a derivada da base coordenada em si, ou seja 
+        \[
+        \frac{d \mathbf{e}'_a }{dt} = \left( \frac{d R_{ab}}{dt} \right)\mathbf{e}_b 
+        \]
+        e como as matrizes \(R\) são inversíveis, temos que 
+        \[
+        \frac{d \mathbf{e}'_a }{dt} = \left(\frac{d R_{ab}}{dt} \right) 
+        R^{-1}_{bc}\mathbf{e}'_c \equiv \omega_{ac} \mathbf{e}'_c 
+        \qquad \omega_{ac} := \left(\frac{d R_{ab}}{dt} \right) 
+        R^{-1}_{bc}
+        \]
+        que como o leitor já pode imaginar, o objeto \(\omega_{ab}\) será, de alguma 
+        maneira relacionado à velocidade angular. Observe no entando, que eles não podem 
+        ser iguais, pois a velocidade angular é um vetor, enquanto que esse novo objeto 
+        é um tensor de rank 2, por isso temos que investigar esse objeto mais de perto. 
+        Observe inicialmente que uma vez que \(R_{ac} R_{cb} = \delta_{ab}\), 
+        demos que 
+        \[ \dot{R}_{ac} R_{cb} + R_{ac} \dot{R}_{cb} = 0 \quad 
+        \Rightarrow \quad \omega_{ab} + \omega_{ba} = 0 \]
+        o que implica a antisimetria do tensor \(\omega_{ab}\). Além disso, nossa 
+        experiência com o estudo de rotações sugere que 
+        a derivada da base coordenada deve ter a forma 
+        \[\frac{d \mathbf{e}'_a }{dt} = \boldsymbol{\omega} \times \mathbf{e}'_a \]
+        e como sabemos que as componentes do produto vetorial em termos do tensor de Levi-Civita
+        são dadas por 
+        \[ \mathbf{x}\times \mathbf{y}|_a = \epsilon_{abc} x_b y_c\]
+        somos levados a conclusão que 
+        \[ \omega_{ab} = \epsilon_{abc} \omega_{c} \]
+        onde tratamos as constantes \(\omega_a\) como as componentes da velocidade 
+        angular nas coordenadas rotatorias, ou seja 
+        \[ \boldsymbol{\omega} = \omega_a \mathbf{e}'_a \]
+        Dessa maneira, concluímos que 
+        \[
+        \frac{d \mathbf{e}'_a}{dt} = \omega_{ac} \mathbf{e}'_c =  
+          \epsilon_{acb } \omega_b \mathbf{e}'_c = - \omega_b \mathbf{e}'_a \times \mathbf{e}'_b 
+          = \boldsymbol{\omega} \times \mathbf{e}'_a 
+        \]
+        </p>
+
+        <h3>Tensor de Inercia</h3>
+
+        <p>
+          Agora que possuímos um conhecimento mais robusto das rotações, é interessante 
+          calcular a energia cinética usando as componentes da velocidade angular. 
+          Lembre que 
+          \begin{align}
+          T & = \frac{1}{2} \sum_i m_i \dot{\mathbf{r}}_i \cdot \dot{\mathbf{r}}_i \\
+          & = \frac{1}{2} \sum_i m_i ( \boldsymbol{\omega} \times \mathbf{r}_i)\cdot 
+          (\boldsymbol{\omega} \times \mathbf{r}_i)\\
+          & = \frac{1}{2} \sum_i m_i \epsilon_{abc}\epsilon_{ade}\omega_b (\mathbf{r}_i)_c
+          \omega_d (\mathbf{r}_i)_e\\
+          & = \frac{1}{2} \sum_i m_i (\delta_{bd}\delta_{ce} - \delta_{be}\delta_{cd})
+          \omega_b (\mathbf{r}_i)_c \omega_d (\mathbf{r}_i)_e\\
+          & = \frac{1}{2} \sum_i m_i (
+          (\boldsymbol{\omega} \cdot \boldsymbol{\omega}) ( \mathbf{r}_i\cdot \mathbf{r}_i) - 
+          (\boldsymbol{\omega}\cdot \mathbf{r}_i)^2
+          )
+          \end{align}
+          Agora queremos extrair a velocidade angular do somatório. Para isso, vamos escrever 
+          \[ 
+          \boldsymbol{\omega} \cdot \boldsymbol{\omega} = \omega_a \delta_{ab} \omega_b
+          \qquad 
+          (\boldsymbol{\omega}\cdot \mathbf{r}_i)^2 = \omega_a (\mathbf{r}_i)_a 
+          \omega_b (\mathbf{r}_i)_b 
+          \]
+          portanto, a energia cinética pode ser reescrita como 
+          \[ 
+          T =  \frac{1}{2} \omega_a \left( 
+          \sum_i m_i (
+          \delta_{ab} (\mathbf{r}_i\cdot \mathbf{r}_i) - 
+          (\mathbf{r}_i)_a(\mathbf{r}_i)_b
+          \right) \omega_b
+          \equiv\frac{1}{2} \omega_a I_{ab} \omega_b
+          \]
+          onde os objetos \(I_{ab}\) são as componentes do tensor de inércia 
+          \[\mathcal{I} = \frac{1}{2} (I_{ab} + I_{ba})\mathbf{e}'_a\otimes \mathbf{e}'_b \]
+        </p>
+
+        <p>Por completeza, podemos escrever explicitamente esse tensor como 
+        \[ 
+          \mathcal{I} = 
+          \begin{pmatrix}
+          I_{11} & I_{12} & I_{13} \\
+          I_{21} & I_{22} & I_{23} \\
+          I_{31} & I_{32} & I_{33} \\
+          \end{pmatrix} = 
+          \sum_i m_i
+          \begin{pmatrix}
+          (x_{i2})^2 + (x_{i3})^2 & -x_{i1}x_{i2} & - x_{i1} x_{i3}\\
+          -x_{i1}x_{i2}  & (x_{i1})^2 + (x_{i3})^2 & - x_{i2} x_{i3}\\
+          - x_{i1} x_{i3} &  - x_{i2} x_{i3} & (x_{i1})^2 + (x_{i2})^2 \\
+          \end{pmatrix}
+        \]
+          e para uma configuração contínua, temos que 
+        \[ 
+          \mathcal{I} = 
+          \int d^3 r
+          \begin{pmatrix}
+          x_{2}^2 + x_{3}^2 & -x_{1}x_{2} & - x_{1} x_{3}\\
+          -x_{1}x_{2}  & x_{1}^2 + x_{3}^2 & - x_{2} x_{3}\\
+          - x_{1} x_{3} &  - x_{2} x_{3} & x_{1}^2 + x_{2}^2 \\
+          \end{pmatrix}
+        \]
+          Finalmente, como a representação matricial desse tensor é simétrica, podemos encontrar 
+          diagonalizar essa sistema de tal maneira que o tensor de inercia é dado por 
+          \[ 
+          \mathcal{I} = 
+          \begin{pmatrix}
+          I_{1} &  & \\
+          & I_{2} &\\
+           & & I_{3} 
+          \end{pmatrix}
+          \]
+          onde \(I_1, I_2, I_3\) são chamados de momentos principais de inercia. 
+          A base onde os momentos de inercia principais podem ser calculados é exatamente 
+          a base ao longo dos eixos principais de rotação. Com essa definição, podemos 
+          calcular os momentos de inercia para alguns exemplos mais interessantes.
+        </p>
+
+        <h3>Momento Angular</h3>
+
+        <p>Usando a expressão para o tensor de inércia podemos escrever reescrever o 
+          momento angular. Considere 
+          \begin{align}
+          \mathbf{L} & = \sum_i m_i \mathbf{r}_i \times (\boldsymbol{\omega} \times \mathbf{r}_i) \\
+          & = \sum_i m_i ( (\mathbf{r}_i\cdot\mathbf{r}_i) \boldsymbol{\omega} - (\mathbf{r}_i\cdot \boldsymbol{\omega} ) \cdot{\mathbf{r}}_i) \\
+          & = \omega_a\sum_i m_i ( (\mathbf{r}_i\cdot\mathbf{r}_i) \delta_{ab} - (\mathbf{r}_i)_a (\mathbf{r}_i)_b) \mathbf{e}'_b\\
+          & = \omega_a I_{ab} \mathbf{e}'_b
+          \end{align}
+        </p>
+
+        <h3>Teorema dos eixos paralelos</h3>
+
+        <p>Antes de voltarmos a calcular os momentos de inercia para alguns casos, 
+          devemos calcular o tensor de inercia para rotações ao redor do centro de massa. 
+          Considere que o vetor \(\mathbf{r}_i\) é o vetor posição com relação ao centro 
+          de massa (e não com relação à origem). Portanto, esse ponto satisfaz o vínculo 
+          \( \sum_i m_i \mathbf{r}_i =0 \). Considerando agora uma rotação ao redor de um 
+          outro eixo que passa pelo ponto \(\mathbf{c}\), temos que o tensor de inercia é 
+          dado por 
+          \begin{align} 
+          (I_{\mathbf{c}})_{ab} & = \sum_i m_i \left( (\mathbf{r}_i - \mathbf{c})^2 \delta_{ab} - (\mathbf{r}_i - \mathbf{c})_a (\mathbf{r}_i - \mathbf{c})_b    \right)\\ 
+          & = \sum_i m_i \left( \mathbf{r}_i\cdot\mathbf{r}_i \delta_{ab} - (\mathbf{r}_i)_a (\mathbf{r}_i)_b +  
+          + \mathbf{c}\cdot\mathbf{c} \delta_{ab} - \mathbf{c}_a \mathbf{c}_b \right)
+          \end{align} 
+          onde utilizamos o vinculo \( \sum_i m_i \mathbf{r}_i =0 \) para alguns dos termos. Portanto 
+          \[ 
+          (I_{\mathbf{c}})_{ab} = (I_{cm})_{ab}  + M(\mathbf{c}\cdot\mathbf{c} \delta_{ab} - \mathbf{c}_a \mathbf{c}_b )
+          \]
+        </p>
+
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Exemplos</h2>
+        </div>
+
+      </section>
+
+      <section class="item">
+
+        <h3>Bastão</h3>
+
+        <p>Vamos reconsiderar o exemplo do bastão. Orientamos o bastão na direção do eixo \(z\), de 
+          tal forma que \(x_3 \in (0, \ell)\), e \(x_1 = x_2 = 0\). Portanto, o tensor de inercia é dado por 
+          \[ 
+          \mathcal{I} = 
+          \int_{-\ell/2}^{\ell/2} d x_3 
+          \begin{pmatrix}
+          x_{3}^2 &  & \\
+          & x_{3}^2 & \\
+          &   & 0\\
+          \end{pmatrix}
+          \]
+          o que mostra que por simetria \(I_1 = I_2\), já que a o bastão pode girar apenas no 
+          plano \(XZ\) ou \(YZ\). Portanto, assumindo como antes uma distribuição uniforme 
+          de massa, temos que o momento de inercia ao redor do centro de massa é
+          \[I_1 = I_2 = \frac{M \ell^2}{12}\]
+          Utilizando o teorema dos eixos paralelos, podemos calcular o momento de inercia 
+          para rotações ao redor de uma das extremidades. Considere que \(\mathbf{c} = (0,0, -\ell/2)\), então
+          \[ 
+          I = 
+          \frac{M \ell^2}{12} 
+          \begin{pmatrix}
+          1 &  & \\
+          & 1 & \\
+          &   & 0\\
+          \end{pmatrix} + 
+          \frac{M \ell^2}{4} 
+          \begin{pmatrix}
+          1 &  & \\
+          & 1 & \\
+          &   & 0\\
+          \end{pmatrix}
+          = \frac{M \ell^2}{3} 
+          \begin{pmatrix}
+          1 &  & \\
+          & 1 & \\
+          &   & 0\\
+          \end{pmatrix}
+          \]
+        </p>
+
+        <h3>Disco</h3>
+
+        <p> Orientamos o disco de tal maneira que o seu eixo central é o eixo \(Z\). Tomamos 
+          que a distribuição de massa é uniforme \( \pi R^2 \rho = M\), e que o raio do 
+          disco é \(r\). Portanto, esse corpo gira no plano \(XY\), e fixamos \(x_3=0\). 
+          \[ 
+          \mathcal{I} = 
+          \int_{D} d x_1 d x_2 
+          \begin{pmatrix}
+          x_{1}^2 & - x_1 x_2  & \\
+          -x_1 x_2 & x_{2}^2 & \\
+          &   & x_1^2 + x_2^2\\
+          \end{pmatrix}
+          \]
+          Usando coordenadas polares, temos que 
+          \[ I_{12} = I_{21} = \rho \int_0^R \int_0^{2 \pi} r dr d\theta \ (r^2 \cos\theta \sin \theta) = 0 \]
+          Finalmente, temos 
+          \[ I_1 = \frac{M}{\pi R^2} \int_0^R \int_0^{2 \pi} r dr d\theta (r^2 \cos^2\theta) =  \frac{M R^2}{4 \pi} \int_0^{2 \pi} d\theta \cos^2\theta  \]
+          De maneira similar temos que 
+          \[ I_2 = \frac{M}{\pi R^2} \int_0^R \int_0^{2 \pi} r dr d\theta (r^2 \sin^2\theta) =  \frac{M R^2}{4 \pi} \int_0^{2 \pi} d\theta \sin^2\theta  \]
+          Podemos calcular explicitamente essa integral por força bruta usando as identidades 
+          \[ \cos^2\theta = \frac{1}{2} (1 + \cos2\theta) \qquad \sin^2\theta = \frac{1}{2} (1 - \cos2\theta) \] 
+          onde é simpls verificar que 
+          \[ \int_0^{2 \pi} \cos 2 \theta =\left. \frac{1}{2} \sin 2 \theta \right|_0^{2\pi} = 0 \]
+          portanto 
+          \[ 
+          \int_0^{2 \pi} d\theta \cos^2\theta = \int_0^{2 \pi} d\theta \sin^2\theta = \pi         
+          \]
+          De onde concluímos que 
+          \[ I_1 = I_2 = \frac{M R^2}{4} \qquad I_3 = \frac{M R^2}{2} \]
+
+
+
+
+
+        </p>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

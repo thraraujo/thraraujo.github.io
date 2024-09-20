@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <title>Lei de Ampere</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/images.css" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main class="artigo">
+
+      <section class="item spread">
+        <nav>
+          <div class="menu"> <a href="./index.html">Cursos</a> </div>
+          <div class="menu"> <a href="./index.html#planos">Planos</a> </div>
+          <div class="menu"> <a href="./index.html#exercicios">Exercícios</a> </div>
+        </nav>
+      </section>
+
+      <section class="item spread">
+        <h1>Magnetostática: Lei de Ampère</h1> 
+      </section>
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Magnetostática</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos da lei de Ampère.
+        </p>
+
+        <p>
+          Permissividade do vácuo
+          \[\varepsilon_0 = 885\times 10^{-2} C^2  N^{-1} m^{-12}\] 
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <h3>Axiomas da teoria</h3>
+
+        <p> Vimos no nosso estudo da lei de Gauss que cargas elétricas em
+          repouso geram um campo elétrico estático, ou seja, independente do
+          tempo. Agora queremos estudar o que acontece quando consideramos
+          cargas elétricas em movimento. Esse análise nos conduzirá a noção de
+          magnetostática. Experimentos mostraram que quando cargas elétricas
+          estão em movimento numa velocidade \(\mathbf{v}\), existirá uma força
+          perpendicular a direção da velocidade. Isso motivou a definição de um
+          campo vetorial \(\mathbf{B}\) que hoje chamamos de campo magnético, e
+          desempenha um papel análogo ao do campo elétrico que estudamos
+          anteriormente. </p>
+
+        <p>No caso da magnetostática temos dois axiomas: 
+          <ol> 
+          <li>Força de Lorentz</li>
+          <li>Ausência de Monopolos Magnéticos</li>
+        </ol>
+        </p>
+
+        <p> <span>Força de Lorentz</span> 
+          O nosso primeiro axioma é a expressão matemática da força que acabamos
+          de descrever, que é a força de Lorentz. Para uma carga elétrica \(q\)
+          movendo-se a valocidade \(\mathbf{v}\) na presença de um campo
+          elétrico \(\mathbf{E}\) e num campo magnético \(\mathbf{B}\), a força
+          nessa partícula é dada por \[ \mathbf{F} = q\left( \mathbf{E} +
+          \mathbf{v} \times \mathbf{B} \right) \] 
+          Como a força é medida em Newtons, a carga em Coulombs, velocidade
+          em metros por segundo, temos que o campo magnético é dado em \(N s
+          C^{-1} m^{-1}\), que é chamada de Tesla.</p>
+
+        <p>Vamos considerar agora o termo magnético na força de Lorentz e vamos calcular o 
+        trabalho necessario para descolar uma carga elétrica do ponto \(A\) para o ponto \(B\).
+          \[ W_m = \int_A^B \mathbf{F}_m \cdot d \mathbf{r} 
+          = \int_{t_A}^{t_B} (\mathbf{v}\times \mathbf{B}) \cdot \mathbf{v} dt = 0\] 
+          pois \((\mathbf{v}\times \mathbf{B}) \perp \mathbf{v} \). 
+          Ou seja, a força magnética nunca realiza trabalho.
+        </p>
+
+        <p> É muito importante entender que por ser um axioma da teoria, não é
+          possível se provar nenhuma das expressões axima. e escolhemos esses
+          dois axiomas pois esses são, na minha opinião, os axiomas mais
+          econômicos disponíveis. Caso o leitor prefira, é possível derivar os
+          resultados acima usando um conjunto diferente de axiomas: A lei de
+          Biot-Savart, por exemplo. De fato, uma leitura cuidadosa do livro do
+          Jackson revela que naquele caso, ele é exatamente essa a hipótese
+          básica das suas considerações. </p>
+
+        <p> <span>Monopolos Magnéticos</span>
+          O nosso segundo axioma é a ausência de monopolos magnéticos. Isso
+          significa que, usando o que aprendemos no caso eletrostático, não
+          existe uma carga mangnética, o que implica que a lei de Gauss para o
+          caso magnético é dado por \[ \nabla \cdot \mathbf{B} = 0 \] ou seja,
+          usando a forma integral, temos que para qualquer superfície Gaussiana
+          \[ \int_{\Sigma} d \mathbf{S} \cdot \mathbf{B} = 0 \] </p>
+
+        <p>Na prática, isso significa que as linhas do campo magnético são
+          todas fechadas: ou seja, a mesma quantidade de linhas de campo saindo
+          da superfície Gaussiana, deve ser a mesma quantidade de linhas
+          entrando a superfície Gaussiana.</p>
+
+        <p>Uma das consequências da lei da Gauss magnética acima é que podemos
+          escrever o campo magnético, assumindo que ele é definido globalmente
+          em \(\mathbb{R}^3\) que \[ \mathbf{B} = \nabla \times \mathbf{A}\]
+          onde chamamos o campo vetorial \(\mathbf{A}\) de potencial vetor.</p>
+
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Correntes</h2>
+        </div>
+
+        <p>
+          Nessa seção começamos a discutir aspectos da lei de Ampère.
+        </p>
+
+        <p>
+          Permissividade do vácuo
+          \[\varepsilon_0 = 885\times 10^{-2} C^2  N^{-1} m^{-12}\] 
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <h3>Corrente num fio</h3>
+
+        <p>Começamos o nosso estudo com a definição de carga elétrica, que é o
+          fluxo de cargas elétricas por segundo num dado ponto. Sua unidade é
+          dada por Coulomb por segundo, também chamado de Ampères. Essa
+          definição é bastante convenciente para o caso de correntes sendo
+          transportadas num fio, que podemos assumir ser unidimensional. Se a
+          densidade de carga por unidade de comprimento é dada por \(\lambda\),
+          e as cargas se movem a uma velocidade de magnitude \(v\), a corrente
+          é dada por \[ I = \lambda v \] De fato, a carga é uma quantidade
+          vetorial, \[ \mathbf{J} = \lambda \mathbf{v}\]</p>
+
+        <p>De acordo com a nossa definição, a corrente é dada por \[ \mathbf{J}
+          = \frac{dQ}{dt} \hat{v} \] onde \(\hat{v}\) é o versor ao longo da
+          velocidade. Ou seja \[ dQ = \int I dr \], de onde concluímos que \[
+          \mathbf{F}_m = \int dq (\mathbf{v}\times \mathbf{B}) =  \int dr
+          \left(\mathbf{J}\times \mathbf{B}\right) \] </p>
+
+        <h3>Corrente numa superfície</h3>
+
+        <p>Para uma superfície, podemos definir uma faixa de largura \(d l\)
+          paralela a direção de propagação das cargas. A corrente nessa faixa é
+          dada por \[ d \mathbf{J} = \mathbf{J}^{(s)} d l \] onde
+          \(\mathbf{J}^{(s)} = \sigma \mathbf{v}\) em que \(\sigma\) é uma
+          densidade superficial de cargas. A corrente é a integral dessa quantidade sobre 
+          toda superfície, ou seja 
+          \[ I = \int d\mathbf{J}\cdot \hat{v} = \int \mathbf{J}^{(s)}\cdot d \vec{l} \]
+        </p>
+
+        <p>Podemos escrever a força de Lorentz em termos dessa corrente
+          superficial. Ou seja \[ \mathbf{F}_m = \int da \left(\mathbf{J}^{(s)}
+          \times \mathbf{B} \right) \]</p>
+
+        <h3>Corrente num volume</h3>
+
+        <p>Para uma volume, podemos definir uma suprfície de área \(d s\)
+          perpendicular a direção de propagação das cargas. A corrente passando
+          por essa área é dada por \[ d \mathbf{J} = \mathbf{J}^{(v)} d s \]
+          onde \(\mathbf{J}^{(v)} = \rho \mathbf{v}\) em que \(\rho\) é uma
+          densidade volumétrica de cargas. A corrente é a integral dessa
+          quantidade sobre todo o volume, ou seja \[ I = \int d\mathbf{J}\cdot
+          \hat{v} = \int \mathbf{J}^{(v)}\cdot d \vec{s} \] </p>
+
+        <p>Podemos escrever a força de Lorentz em termos dessa corrente
+          volumétrica. Ou seja \[ \mathbf{F}_m = \int dV \left(\mathbf{J}^{(v)}
+          \times \mathbf{B} \right) \]</p>
+
+        <h3>Equação da Continuidade</h3>
+
+
+        <p>Observe que a nossa discussão sobre correntes é muito semelhante ao
+          que falamos sobre fluidos. De fato, as correntes elétricas são
+          análogas aos fluidos em movimento. Concluiremos essa seção com uma
+          discussão sobre a conservação de cargas elétricas num volume
+          infinitesimal.</p>
+
+        <p>Considerando um volume infinitesimal, o fluxo de cargas entrando
+          nesse volume poro unidade de tempo é exatamente a definição de
+          corrente, portanto assumindo que a corrente é perpendicular a uma das
+          faces desse cubo infinitesimal, temos que \[ I = \int d\vec{S}\cdot
+          \mathbf{J}^{(v)} = \int dV  \nabla\cdot \mathbf{J}^{(v)} \] que é a
+          quantidade de carga entrando nesse volume. Ao mesmo tempo, temos que
+          por conservação de carga, a mesma quantidade de carga deve deixar
+          esse volume, ou seja \[ I = - \frac{\partial Q}{\partial t} = - \int
+          dV \frac{\partial \rho}{\partial t}\] Igualando essas duas expressões
+          chagamos a equação da continuidade \[ \frac{\partial \rho}{\partial
+          t} + \nabla \cdot \mathbf{J}^{(v)} = 0 \] A magnetostática é definida
+          precisamente para situações onde \(\frac{\partial \rho}{\partial t} =
+          0\), ou seja \(\nabla \cdot \mathbf{J}^{(v)}=0\). 
+        </p>
+
+        </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Lei de Ampère</h2>
+        </div>
+
+        <p>
+        </p>
+
+        <p>
+          Permeabilidade do vácuo:
+          \[ 
+          \mu_0 = 1.25663706212(19)×10^{-6} N/ A^2
+          \]
+        </p>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Vimos que o segundo axioma implica que as linhas do campo magnético
+          são todas fechadas. Isso implica que se considerarmos uma corrente
+          elétrica passando num fio, o campo elétrico será dada por curvas ao
+          redor desse fio. Consequentemente, cada linha do campo definirá uma
+          superfície \(\Sigma\) tal que a velocidade das cargas, e a corrente
+          elétrica, é normal à essa superfície.  </p>
+
+        <p>Vendo a corrente \(\mathbf{J}\) como um fluxo, o que de fato ela é,
+          podemos considerar a sua integral pela superfície \(\Sigma\) tal que
+          \(\partial \Sigma\) é uma linha de força do campo margnético, tal que
+          \[ I = \int_{\Sigma} \mathbf{J}^{(v)}\cdot d\mathbf{S}\] o que é nada
+          mais que o fato óbvio de que o fluxo de cargas passando pela
+          superfície \(\Sigma \) é a corrente elétrica. </p>
+
+        <p>Repetindo o que dissemos acima, o contorno da superfície \(\Sigma\)
+          é uma linha de campo. Considerando a integral de linha do campo
+          magnético \(\mathbf{B}\) sobre o contorno \(\partial \Sigma\), e
+          usando o teorema de Stokes temos \[ \oint_{\partial \Sigma}
+          \mathbf{B}\cdot d\mathbf{r} = \int_{\Sigma} d \mathbf{S}\cdot (
+          \nabla \times \mathbf{B}) \] </p>
+
+        <p>A lei de Ampère segue da observação da relação natural entre essas
+          duas quantidades. Em particular, da relação linear entre a magnitude
+          do campo elétrico e da corrente elétrica. Portanto \[ \oint_{\partial
+          \Sigma} \mathbf{B}\cdot d\mathbf{r} = \mu_0 I \] onde a constante de
+          proporcionalidade \(\mu_0 \) é chamada de permeabilidade do vácuo.
+          Essa expressão é a lei de Ampère na sua forma integral. </p>
+
+        <p>Podemos escrever a lei de Ampère na forma diferencial como: 
+          \[ \nabla \times \mathbf{B} = \mu_0 \mathbf{J}^{(v)} \]
+        </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Lei de Biot-Savart</h2>
+        </div>
+
+        <p>Aqui queremos calcular \[ \nabla\times(\nabla \times \mathbf{A})\]
+          Podemos calcular essa expressão fazendo o cálculo explícito, o que é
+          laborioso, ou podemos usar o simbolo de Levi-Civita, que deixa tudo
+          um pouco mais simples. O símbolo de Leci-Civita \(\epsilon_{123}\) é
+          definido como o sinal da permutação de \((1,2,3)\). </p>
+
+        <p>Em termos do símbolo de Levi-Civita, a iésima componente do produto
+          vetorial é dada por \[ \mathbf{A}\times \mathbf{B}|_i =
+          \epsilon_{ijk} A_j B_k\] onde usamos a convenção de Einstein para
+          símbolos repetidos. O produto de dois símbolos de Levi-Civita é dado
+          por \[ \epsilon_{ijk} \epsilon_{lmn} = \begin{vmatrix} \delta_{il} &
+          \delta_{im} & \delta_{in} \\ \delta_{jl} & \delta_{jm} & \delta_{jn}
+          \\ \delta_{kl} & \delta_{km} & \delta_{kn} \end{vmatrix} \] onde
+          \(\delta_{ij}\) é o delta de Kronecker. Usando esses fatos, temos que
+          \[ \nabla\times (\nabla\times \mathbf{A})|_i =
+          \epsilon_{ijk}\partial_j (\nabla\times \mathbf{A})_k \] ou seja \[
+          \nabla\times (\nabla\times \mathbf{A})|_i = \epsilon_{ijk}
+          \epsilon_{kmn}  \partial_j \partial_m A_n \] Como \[ \epsilon_{kij}
+          \epsilon_{kmn} = \delta_{im}\delta_{jn} - \delta_{in}\delta_{jm} \]
+          concluímos facilmente que \[ \nabla(\nabla \times \mathbf{A}) =
+          \nabla(\nabla\cdot \mathbf{A}) - \Delta(\mathbf{A}) \] </p>
+
+        <p>Usando o simbolo de Levi-Civita, podemos calcular \[ \nabla \times
+          (f(\mathbf{r})\vec{\xi}) \] onde \(\vec{\xi}\) é um vetor constante.
+          \[ \nabla \times (f(\mathbf{r})\vec{\xi})|_i = \epsilon_{ijk}
+          \partial_j (f(\mathbf{r}) \xi_k) \] então \[ \nabla \times
+          (f(\mathbf{r})\vec{\xi}) =  - \vec{\xi} \times \nabla f\] </p>
+
+
+      </section>
+
+
+      <section class="item">
+
+        <h3>Simetria de Calibre</h3>
+
+        <p> Agora que já entendemos quais são as equações que descrevem os
+          fenômenos magnetostáticos, podemos nos concentrar em entender mais de
+          perto o potencial vetor \(\mathbf{A}\), que é definido pela condição
+          \( \mathbf{B}  = \nabla \times \mathbf{A}\). </p>
+
+        <p>Do ponto de vista clássico, apenas o campo magnético \(\mathbf{B}\)
+          é fisicamente acessível, e o vetor potencial é um objeto auxiliar que
+          usamos para calcular o campo magnético. Essa afirmação precisa ser
+          revista quando estamos estudando mecânica quântica, pois existem
+          fenômenos físicos que mostram que de fato o potencial vetor é um
+          objeto físico mensurável: veja o feito Aharanov-Bohm. De toda
+          maneira, para a presente situação, podemos sim pensar nesse potencial
+          como um objeto auxiliar.</p> 
+
+        <p>Usando a expressão do campo magnético em termos do potencial vetor,
+          é simples verificar que temos uma família de vetores potenciais \[
+          \mathbf{A} = \mathbf{A}' + \nabla f\] que dão o mesmo campo magnético
+          \(\mathbf{B}\), pois \(\nabla \times \nabla f = 0\) para toda função
+          \(f: \mathbb{R}^3 \to \mathbb{R}\). Essa redundância na definição do
+          potencial vetor é chamada de simetria de gauge, ou calibre. </p>
+
+        <p>A importância dessa simetria de calibre é que, como o nome já diz,
+          podemos usá-la para calibrar as equações que precisamos resolver, e
+          em particular, usaremos essa simetria de maneira que as nossas
+          equações fiquem mais simples. </p>
+
+        <p>A escolha que faremos agora, e que justificaremos abaixo, é um
+          calibre onde \[ \nabla \cdot \mathbf{A} = 0\qquad \Rightarrow \qquad
+          \Delta f = - \nabla \cdot \mathbf{A}' \] que é chamado de gauge de
+          Coulomb.</p>
+
+        <h3>Lei de Biot-Savart</h3>
+
+        <p>Agora vamos calcular a expressão para o potencial vetor. Usando a
+          lei de Ampère, temos \[ \nabla \times (\nabla \times \mathbf{A}) =
+          \mu_0 \mathbf{J}^{(v)} \] e usando a identidade \[ \nabla(\nabla
+          \times \mathbf{A}) = \nabla(\nabla\cdot \mathbf{A}) -
+          \Delta(\mathbf{A}) \] e usando o gauge de Coulomb, concluímos que as
+          componentes do potencial vetor satisfazem as equações de Poisson \[
+          \Delta A_i = - \mu_0 J_i\qquad i =1, 2, 3 \] </p>
+
+        <p>No nosso estudo de eletrostática, calculamos o função de Green para
+          o potencial escalar e agora temos exatamente o mesmo problema. Já
+          sabemos que a função de Green para o operador Laplaciano é \[
+          \nabla\left( \frac{1}{|\mathbf{r} - \mathbf{r}'|} \right) = - 4 \pi
+          \delta^{(3)}(\mathbf{r} - \mathbf{r}') \] de onde concluímos que \[
+          A_i(\mathbf{r})  = \frac{\mu_0}{4 \pi} \int dV
+          \frac{J_i(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} \qquad i=1,2,3\]
+          portanto \[ \mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4 \pi} \int dV
+          \frac{\mathbf{J}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} \] </p>
+
+        <p>Finalmente podemos tomar o rotacional da expressão acima e encontrar
+          o campo elétrico como \[ \mathbf{B} =
+          \nabla\times\mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4 \pi} \int dV
+          \frac{\mathbf{J}(\mathbf{r}') \times (\mathbf{r} -
+          \mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|^3} \] que é conhecida como
+          lei de Biot-Savart. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Dipolos Magnéticos</h2>
+        </div>
+
+        <p> Para resolver a integral ao redor do loop, vamos usar o teorema de
+          Stokes. Considerando o versor normal a superfície \(\hat{n}\), temos
+          que \[ \oint_{C}d\mathbf{r}'\cdot \hat{n}  (\mathbf{r}'\cdot
+          \mathbf{r}) = \int_S d\mathbf{S}\cdot \nabla' \times \left ( \hat{n}
+          (\mathbf{r}'\cdot \mathbf{r})  \right) \] Em termos do tensor de
+          Levi-Civita temos \[ \oint_{C}d\mathbf{r}'\cdot \hat{n}
+          (\mathbf{r}'\cdot \mathbf{r}) = \int_S \epsilon_{ijk} dS_i
+          \partial'_j \left ( \hat{n}_k  (\mathbf{r}'\cdot \mathbf{r})  \right)
+          \] onde podemos ver que as derivadas atuam apenas nas coordenadas
+          linha. Portanto \[ \oint_{C}d\mathbf{r}'\cdot \hat{n}
+          (\mathbf{r}'\cdot \mathbf{r}) = \int_S \epsilon_{ijk} dS_i \left (
+          \hat{n}_k  \mathbf{r}_j  \right) \] E finalmente, podemos reorganizar
+          esses resultados como \[ \hat{n}\cdot
+          \oint_{C}d\mathbf{r}'(\mathbf{r}'\cdot \mathbf{r}) = \hat{n}\cdot
+          \int_S d\mathbf{S} \times \mathbf{r} \] </p>
+
+        <p>Definimos o vetor \[ \mathcal{S} = \int_S d \mathbf{S} \] e o
+          momento de dipolo magnético \[ \mathbf{m} = I \mathcal{S} \]</p>
+
+      </section>
+
+
+      <section class="item">
+
+        <p>Agora vamos considerar uma corrente \(I = \int_S d\mathbf{s} \cdot
+          \mathbf{J}^{(v)}\) (abaixo ignoramos o superscrito \(v\)) num loop
+          circular \(C\) de raio \(R\). O potencial vetor é dado por \[
+          \mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4 \pi} \int_S ds \oint_{C}
+          d\mathbf{r}' \frac{\mathbf{J}(\mathbf{r}')}{|\mathbf{r} -
+          \mathbf{r}'|} \] onde a integral sobre o volume foi decomposta em
+          termos da área transversal \(S\) e do comprimento do aro circular
+          \(C\). Sabemos que a corrente depende apenas da área transversal, por
+          isso escrevemos \[ \mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4 \pi}
+          \int_S ds \mathbf{J}(\mathbf{r}')
+          \oint_{C}\frac{d\mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|} \] </p>
+
+        <p>Agora podemos nos perguntar o que acontece quando tomamos o ponto
+          \(\mathbf{r}\) muito longe do aro. Em particular, vamos considerar o
+          caso onde \(|\mathbf{r}| &gt&gt |\mathbf{r}'|\). Considerando uma
+          expansão de Taylor temos \[ \mathbf{A}(\mathbf{r}) \simeq
+          \frac{\mu_0}{4 \pi} \int_S ds \mathbf{J}(\mathbf{r}')
+          \oint_{C}d\mathbf{r}' \frac{1}{|\mathbf{r}|} \left(1 + \frac{2
+          \mathbf{r}\cdot \mathbf{r}'}{|\mathbf{r}|^2}\right) \] Temos que a
+          primeira integral é trivialmente zero, e é uma consequência da
+          ausência de monopolos magnéticos. Portanto \[ \mathbf{A}(\mathbf{r})
+          \simeq \frac{\mu_0}{4 \pi} \int_S ds \mathbf{J}(\mathbf{r}')
+          \oint_{C}d\mathbf{r}' \frac{2 \mathbf{r}\cdot
+          \mathbf{r}'}{|\mathbf{r}|^3} \] </p>
+
+        <p>Usando o resultado que encontramos na caixa ao lado, temos que \[
+          \mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4 \pi}  \frac{\mathbf{m}\times
+          \mathbf{r}}{|\mathbf{r}|^3} \] que é o potencial vetor de um dipolo
+          magnético em regiões muito distantes do aro circular. Calcular o
+          campo magnético \(\mathbf{B}\) é apenas uma questão de tomar o
+          rotacional do potencial acima, o que deixamos como um exercício. </p>
+
+      </section>
+
+
+      <section class="item">
+        <div class="h2-blocks">
+          <h2>Campo Magnético em Matéria</h2>
+        </div>
+
+        <p> A ideia básica dessa seção é que momentos de dipolo magnético
+          existem naturalmente nos materiais, e isso ocorre devido a dois
+          mecanismos físicos: 
+        <ul> 
+          <li>Elétrons orbitando o núcleo atômico
+          carregam momento angular o que gera naturalmente um momento de dipolo
+          magnético. </li> 
+          <li>Spin dos elétrons também contribuem para o
+            momento de dipolo magnético. </li> 
+        </ul> 
+        </p>
+      </section>
+
+
+      <section class="item">
+
+        <h3>Magnetização</h3>
+
+        <p>Assim como fizemos no caso da polarização, vamos definir agora um efeito médio 
+        da contribuição de todos os momentos de dipolo magnético. O efeito coletivo é chamado 
+          de magnetização e é tipicamente proporcional ao campo magnético \(\mathbf{B}\). </p>
+
+        <p>Vamos escolher uma relação de proporcionalidade que é um tanto quanto exótica, mas 
+        que pagará seus dividendos no futuro. Escreveremos a magnetização como 
+          \[ \mathbf{M} = \frac{1}{\mu_0} \frac{ \chi_m}{1 + \chi_m}\mathbf{B} \]
+          onde \(\chi_m\) é chamada de susceptibilidade magnética. 
+        </p>
+
+        <p>Materiais magnéticos ocorrem em 3 classes: 
+          <ol>
+          <li><b>Diamagnetismo</b> Materiais que \(\chi_m\in (-1,0)\) orientam seus spins 
+          na direção contrária ao campo magnético aplicado.</li>
+          <li><b>Paramagnetismo</b> Materiais que \(\chi_m&gt 0\) orientam seus spins 
+          na mesma direção do campo magnético aplicado.</li>
+          <li><b>Ferromagnetismo</b> Materiais que \(\mathbf{M}\neq 0\) mesmo quando 
+            \(\mathbf{B}=0\). Esses são os materiais que chamamos de imã. 
+          </li>
+          </ol>
+        Não trataremos de nenhum aspecto mais avançado desses materiais aqui, pois todos 
+        exigem um tratamento quântico. De fato, pode-se provar que num universo clássico, 
+        magnetização não seria possível. Ver o 
+        <a href="https://en.wikipedia.org/wiki/Bohr%E2%80%93Van_Leeuwen_theorem"> 
+          teorema de Bohr-Van Leeuwen</a></p>
+        
+
+        <h3>Lei de Ampere</h3>
+
+      <p>Agora faremos o mesmo tipo de manipulação que fizemos no caso
+          elétrico. Primeiro, observe que podemos somar sobre todas as
+          contribuições do dipolos de maneira que o potencial vetor é escrito
+          como \[ \mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int d^3r'
+          \frac{\mathbf{M}(\mathbf{r}') \times (\mathbf{r} -
+          \mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|^3} = \frac{\mu_0}{4\pi} \int
+          d^3r' \mathbf{M}(\mathbf{r}') \times
+          \nabla'\left(\frac{1}{|\mathbf{r} - \mathbf{r}'|} \right) \]
+          Integrando por partes, encontramos \[ \mathbf{A}(\mathbf{r}) =
+          \frac{\mu_0}{4\pi} \int d^3r' \left[  \nabla'\times \left(\frac{
+          \mathbf{M} (\mathbf{r}') }{|\mathbf{r} - \mathbf{r}'|} \right) +
+          \frac{\nabla' \times \mathbf{M}(\mathbf{r}') }{|\mathbf{r} -
+          \mathbf{r}'|} \right] \] onde o primeiro termo é de superfície (como
+          podemos ver ao usar o teorema de Stokes) e o segundo termo é uma
+          contribuição de uma nova corrente -- compare sua forma com o
+          potencial vetor que derivamos quando estudamos a lei de Biot-Savart.
+          Portanto, \[ \mathbf{J}_b = \nabla \times \mathbf{M} \]
+        </p>
+
+        <p>De posse dessa expressão, podemos modificar a lei de Ampère apropriadamente. 
+          \[ \nabla \times \mathbf{B} = \mu_0 \left( \mathbf{J} + \mathbf{J}_b\right) \]
+          ou seja, 
+          \[ 
+          \nabla \times \mathbf{H} = \mathbf{J}\qquad 
+          \mathbf{H} = \frac{1}{\mu_0}\mathbf{B} - \mathbf{M}
+          \] 
+          que é a forma da lei de Ampère na presença de matéria. É muito importante 
+          mencionar que como não necessariamente temos que \(\nabla \cdot \mathbf{H} = 0\), 
+          não podemos nos dar o luxo de esquecer o campo magnético \(\mathbf{B}\). 
+        </p>
+
+        <p>Finalmente, podemos escrever a relação entre o campo magnético \(\mathbf{B}\) 
+          e a indução \(\mathbf{H}\). 
+          \[ 
+          \mathbf{H} = \frac{1}{\mu_0}\mathbf{B} - \mathbf{M} = 
+\frac{1}{\mu_0}\mathbf{B} -  \frac{\chi_m}{\mu_0(1 + \chi_m)}\mathbf{B} = \frac{1}{\mu_0(1 + \chi_m)}\mathbf{B} 
+          \]
+          ou seja 
+          \[ 
+          \mathbf{B} = \mu_0(1 + \chi_m) \mathbf{H} = \mu \mathbf{H} 
+          \]
+          onde \(\mu = \mu_0 (1 + \chi_m)\) é chamado de permeabilidade. Finalmente, 
+          podemos ver que a relação entre a indução e a magnetização é a relação 
+          \[ \mathbf{M} = \chi_m \mathbf{H} \]
+        </p>
+
+
+
+
+
+      </section>
+
+
+
+
+  </main>
+
+</body>
+</html>
