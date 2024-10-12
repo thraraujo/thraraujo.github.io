@@ -3,7 +3,17 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
     background-color: #f4f4f4;
+}
+
+.container {
+    width: 60%; /* adjust the width based on your preference */
+    max-width: 1200px; /* optional: restrict the max width */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 }
 
 header {
