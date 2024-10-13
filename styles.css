@@ -16,6 +16,18 @@ body {
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 3.0);
 }
 
+.code-block {
+    background-color: #f4f4f4;  /* Light background for the code */
+    border: 1px solid #ccc;      /* Light gray border */
+    border-radius: 5px;          /* Rounded corners */
+    padding: 1px;                /* Smaller padding */
+    font-family: "Courier New", Courier, monospace; /* Monospaced font */
+    font-size: 1rem;             /* Code font size */
+    color: #333;                 /* Text color */
+    overflow-x: auto;            /* Horizontal scroll if needed */
+    white-space: pre;            /* Preserve spaces and line breaks */
+}
+
 header {
     background: #35424a;
     color: #ffffff;

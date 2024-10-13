@@ -1,0 +1,121 @@
+\section{Handling Errors}
+
+Here I need to talk about details on the errors. I need to observe this section, because it is useful. References are~\cite{geeks,errors, errors:types}.
+
+\subsection{Raising errors}
+
+Suppose that we want to color a text. Then we can raise some errors
+\begin{listing}{1}
+def colorize(text, color):
+    colors = ("cyan", "yellow", "blue", "green", "magenta")
+    if type(text) is not str:
+        raise TypeError("text must be instance of str")
+    if color not in colors:
+        raise ValueError("color is invalid color")
+    print(f"Printed {text} in {color}"
+colorize([], 'cyan')
+colorize(34, "red")    
+\end{listing}
+There are different types of Errors, see references above. I need to understand the subtleties related to these Errors.
+
+\subsection{Try, except, else and finally}
+
+Sometimes we expect some error, for example in an input. So, instead breaking the code, we can use the Try and Expect. The code tries something, if it works that is okay, if it does not work, it returns something else that we can use to correct our code.
+\begin{listing}{1}
+def get(d,key):
+    try:
+        return d[key]
+    except KeyError:
+        return None
+d = {"name": "Ricky"}
+print(get(d, "city"))
+d["city"]    
+\end{listing}
+
+It can be complemented with \verb|else| and \verb|finally|. The syntax is 
+\begin{listing}{1}
+while True: 
+    try: 
+        "This block will test the excepted error to occur"
+    except
+        "Here you can handle the error"
+    else: 
+        "If there is no exception then this block will be executed"
+    finally:
+        "Finally block always gets executed either exception is generated or not"
+\end{listing}
+
+As an example
+\begin{listing}{1}
+while True:
+    try:
+        num = int(input("please enter a number: "))
+    except ValueError:
+    	print("That's not a number!")
+    else:
+    	print("Good job, you entered a number!")
+    	break
+    finally:
+    	print("RUNS NO MATTER WHAT!")
+print("REST OF GAME LOGIC RUNS!")        
+\end{listing}
+
+Another example
+\begin{listing}{1}
+def divide(a,b):
+    try:
+    	result = a/b
+    except ZeroDivisionError:
+    	print("don't divide by zero please!")
+    except TypeError as err:
+    	print("a and b must be ints or floats")
+    	print(err)
+    else:
+    	print(f"{a} divided by {b} is {result}")    
+\end{listing}
+we can also collect the \verb|except| blocks, but we cannot be specific about the \verb|Error|, that is
+\begin{listing}{1}
+def divide(a,b):
+    try:
+    	result = a/b
+    except (ZeroDivisionError, TypeError) as err:
+    	print("Something went wrong!")
+    	print(err)
+    else:
+    	print(f"{a} divided by {b} is {result}")    
+\end{listing}
+
+\subsection{Debugging}
+
+Here we can debug with the module \verb|pdb|. The basic commands are
+\begin{verbatim}
+# l (list)
+# n (next line)
+# p (print)
+# c (continue - finishes debugging)        
+\end{verbatim}
+We use this code as
+\begin{verbatim}
+import pdb
+pdb.set_trace() # This part says where the debugging starts
+# or in one line
+import pdb; pdb.set_trace()    
+\end{verbatim}
+
+See an example 
+\begin{listing}{1}
+import pdb
+
+first = "First"
+second = "Second"
+pdb.set_trace()
+result = first + second
+third = "Third"
+result += third
+print(result)
+
+def add_numbers(a, b, c, d):
+    import pdb; pdb.set_trace() 
+    return a + b + c + d
+add_numbers(1,2,3,4)        
+\end{listing}

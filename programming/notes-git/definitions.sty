@@ -1,0 +1,200 @@
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{definitions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% PACKAGES %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% STYLES  AND TYPESETTING
+
+\linespread{1} % Simple line spacing in the document  
+\parskip 5pt % Paragraph spacing
+
+\usepackage{fullpage}
+%\usepackage[margin=3cm]{geometry}
+%\usepackage[a4paper, textwidth = 450 pt, textheight = 650 pt]{geometry} % Page layout
+\usepackage{hyperref} % Hyperlinks
+\usepackage{graphicx}% Graphics, ex. \includegraphics
+\usepackage{xcolor}% Obviously for colors, This package is better than colors
+\usepackage{acronym} % Define acronyms
+\usepackage{fancybox} % Several different styles of boxes
+\usepackage{tikz} % Drawing package
+\usetikzlibrary{arrows,decorations.markings}
+%\usetikzlibrary{mindmap,backgrounds}
+\usepackage[tikz]{mdframed} % For drawing frames 
+\usepackage{framed} % shaded box is defined in this package
+\usepackage{caption,subcaption} % Well... it is obvious
+\usepackage{marginnote} %  used instead of \marginpar where \marginpar cannot be used
+\usepackage{todonotes} %  used instead of \marginpar where \marginpar cannot be used
+\usepackage{microtype} % Makes the typing neater 
+\usepackage{cite,mcite} % the package cite improves citations, for example, [5,6,7,8] becomes [5-8]. the package mcite implements multiple citations in a single entry
+%\usepackage{chapterbib} % Multiple .bib files. 
+%\usepackage{wrapfig} % wrap text around figures
+%\usepackage{verbatim} % Verbatim, also implements \begin{comment} and \end{comment}
+%\usepackage[en-US, showisoZ=false, showseconds=false]{datetime2} 
+\usepackage{manfnt}%\dbend and other symbols
+\usepackage{stmaryrd}%this package defines the double struck brackets \llbracket and \rrbracket 
+%\usepackage{fourier}%font family, it is cute but does not look very professional
+\usepackage{xfrac}%it defines the nice \sfrac{}{}
+
+%%%%%%% STYLE FOR SECTIONS AND SUBSECTIONS %%%%%%%%%%%%%
+
+%\usepackage{titlesec}
+%\titleformat*{\section}{\filcenter\normalfont\MakeUppercase}
+%\titleformat*{\subsection}{\normalfont\MakeUppercase}
+%\titleformat*{\subsubsection}{\normalfont\MakeUppercase}
+
+%% MATH
+
+\usepackage{amsthm,mathtools,amssymb,amsmath} % American Mathematical Society packages for math typesetting. amsmath<mathtools - I do not need to load the amsmath package. 
+\usepackage{bbold} % bbold math family, ex. \mathbb{1}
+\usepackage{tikz-cd} % tckz for commutative diagrams
+\usepackage{ytableau} % Young diagrams
+\usepackage{bm} % Bold fonts. I can use with greek letters and it is better for mathmode.
+\usepackage{mathrsfs} %Math script, mathscr, that does not overwrite \mathcal 
+\usepackage{cancel} % For canceling expressions - I shouldn't load a package for sucha  mundane use. 
+%\usepackage{manfnt} % Knuth's "manual" fonts. Dangerous bend \dbend
+
+%% PHYSICS
+
+\usepackage{slashed} % Feynman slashed characters: ex. slashed{\gamma}
+\usepackage{simpler-wick} % Wick contractions
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% THEOREMS %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}[theorem]
+\newtheorem{claim}{Claim}[theorem]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem*{corollary2}{Corollary}
+\newtheorem*{remark}{Remark}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{definition}{Definition}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%%%%%% FRAME BOXES %%%
+%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% Round squares with title in the top %%%%%%%%
+
+\newenvironment{itembox}[1]{\begin{mdframed}[
+		roundcorner=10pt,
+		frametitlefont=\normalfont,
+		frametitleaboveskip=\dimexpr-0.7\baselineskip,skipabove=\topskip,
+		innertopmargin=\dimexpr-0.65\baselineskip,
+		innerbottommargin=\dimexpr0.65\baselineskip,
+		frametitle={\tikz{\node[anchor=base,rectangle,fill=white] {\strut #1};}}]}
+	{\end{mdframed}}
+
+%%%%% Round squares with yellow background in the top %%%%%
+
+\newenvironment{roundbox}[1]{\begin{mdframed}[
+		outerlinewidth=1, 
+		roundcorner = 10pt,
+		userdefinedwidth=2.3cm,
+		align=center,
+		backgroundcolor = light-yellow,
+		outerlinecolor = MyDarkBlue,
+		innertopmargin = \topskip, 
+		splittopskip = \topskip]}
+	{\end{mdframed}}
+
+%%%%% Round squares with yellow background in the top
+
+\newenvironment{resultbox}[1]{\begin{mdframed}[
+		outerlinewidth=1, 
+		roundcorner = 10pt,
+		align=center,
+		backgroundcolor = shadecolor,
+		outerlinecolor = MyDarkBlue,
+		innertopmargin=\dimexpr-0.65\baselineskip,
+		innertopmargin = \topskip, 
+		splittopskip = \topskip]}
+	{\end{mdframed}}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%%%%%% COLORS %%%%%%
+%%%%%%%%%%%%%%%%%%
+
+% It accepts integer values in the interval [0,255] == divide the value by 255 to get in the interval [0,1]
+
+\definecolor{MyDarkBlue}{rgb}{0.15,0.15,0.45}
+\definecolor{shadecolor}{rgb}{0.85,0.85,0.85}
+\definecolor{light-blue}{rgb}{0.15,0.15,0.65}
+\definecolor{light-yellow}{rgb}{1,0.98,0.73}
+\definecolor{link-blue}{rgb}{0.15,0.15,0.65}
+\definecolor{link-red}{rgb}{0.8,0.15,0.1}
+\definecolor{link-green}{rgb}{0.15,0.50,0.15}
+\definecolor{link}{rgb}{0.45,0.18,0.22}
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%%%%%% MACROS %%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\def\normord{{\scriptstyle {{\bullet}\atop{\bullet}}}}
+%\def\fnor{\genfrac{}{}{0pt}{3}{\times}{\times}}%normal ordering for fermionic fields.
+%\def\normordboson{ {\scriptstyle {{\star}\atop{\star}}}}
+
+\newcommand{\Comment}[1]{{}}
+
+\def\red{\textcolor{red}}
+\def\blue{\textcolor{blue}}
+\def\purple{\textcolor{purple}}
+\def\violet{\textcolor{violet}}
+\def\cyan{\textcolor{cyan}}
+\def\magenta{\textcolor{magenta}}
+
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bse}{\begin{subequations}}
+\newcommand{\ese}{\end{subequations}}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\Tr}{\textrm{Tr}}
+
+\DeclarePairedDelimiter{\bra}{\langle}{\rvert}
+\DeclarePairedDelimiter{\ket}{\lvert}{\rangle}
+\DeclarePairedDelimiterX{\bracket}[2]{\langle}{\rangle}{#1\vert#2}
+\DeclarePairedDelimiterX{\bbracket}[2]{\langle\!\langle}{\rangle\!\rangle}{#1\vert#2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% OPERATORS %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\card}{\operatorname{Card.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% ACRONYMS %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\acrodef{tl}[\textsc{TL}]{Temperley-Lieb}
+\acrodef{aba}[\textsc{ABA}]{Algebraic Bethe Ansatz}
+\acrodef{hbe}[\textsc{HBE}]{Hirota Bilinear Equations}
+\acrodef{dwpf}[\textsc{DWPF}]{Domain Wall Partition Function}
+\acrodef{jcg}[\textsc{JCG}]{Jaynes-Cummings-Gaudin}

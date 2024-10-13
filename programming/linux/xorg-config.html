@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../research.html">Research</a></li>
+                <li><a href="../../things.html">Things</a></li>
+                <li><a href="../../writings.html">Writings</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="linux">
+
+        <h1><u>Xorg Config  Linux</u></h1>
+
+            <p> Here is a summary of the Xorg configuration.</p>
+
+            <h3>Xorg Keyboard</h3>
+
+            <p>Keyboard config, see more details here:  
+            <a href="https://wiki.archlinux.org/title/Xorg/Keyboard_configuration"
+               class="external-link" target="_blank" rel="noopener">Keyboard configuration</a>
+            </p>
+
+            <p> In the file:<code>/etc/X11/xorg.conf.d/00-keyboard.conf</code> I have added the following code:</p>
+
+            <div class="code-block">
+                <pre><code>
+                Section "InputClass"
+                        Identifier "system-keyboard"
+                        MatchIsKeyboard "on"
+                        Option "XkbLayout" "us, br"
+                        Option "XkbModel" "pc105"
+                    Option "XkbOptions" "ctrl:nocaps"
+                    Option "XkbOptions" "compose:menu"
+                    Option "AutoRepeat" "200 30"
+                EndSection
+                </code></pre>
+            </div>
+
+            <p>I have also added the following lines to my <code>.profile</code></p>
+            <div class="code-block">
+                <pre><code>
+                setxkbmap -option ctrl:nocaps 
+                setxkbmap -option compose:menu
+                xset r rate 200 30
+                </code></pre>
+            </div>
+            <p>I have also added the code <code>xset r rate 250 30</code> to my <code>.Xclients</code> file.</p>
+
+            <h3>Xorg Touchpad</h3>
+
+            <p>Now I want to consider natural scrolling.
+              In the file file <code>/etc/X11/xorg.conf.d/10-touchpad.conf</code>
+              I add the code:</p> 
+            <div class="code-block">
+                <pre><code>
+                Section "InputClass"
+                        Identifier "system-touchpad"
+                        Driver "libinput"
+                        Option "NaturalScrolling" "true"
+                EndSection
+                </code></pre>
+            </div>
+
+            <p> See more: 
+            <a href="https://wiki.archlinux.org/title/Libinput"
+               class="external-link" target="_blank" rel="noopener">Libinput</a>
+            </p>
+
+            <h3>Displays</h3>
+
+            <p>The fonts for my i3 config are ridiculously small, I and need to change the DPI. 
+              Here I follow Section 5.3 of
+              <a href="https://wiki.archlinux.org/title/Xorg"
+                class="external-link" target="_blank" rel="noopener">Display Size and DPI</a>.<p>
+
+            <p>Setting the DPI manually had no effect, see section 5.3.1, but then I read the section 5.3.1.2 
+            ando noticed that there is a caveat. This is exactly what is happening to my monitor. In summary, 
+            I need to change the GTK config.</p>
+
+            <p>In conclusion, in my Xresources, located at <code>/etc/X11/Xresources</code>, I added</p>
+            <div class="code-block">
+                <pre><code>
+                xft.dpi: 144
+                </code></pre>
+            </div>
+            <p>By the way, the value 144 has an explanation. In the Xorg page cited above there is 
+            the quote:</p>
+
+            <blockquote>
+            <i><b>Note:</b> While you can set any dpi you like and applications using Qt and GTK
+            will scale accordingly, it is recommended to set it to 96, 120 (25% higher),
+            144 (50% higher), 168 (75% higher), 192 (100% higher) etc., to reduce scaling
+            artifacts to GUIs that use bitmaps. Reducing it below 96 dpi may not reduce
+            the size of the GUIs graphical elements, as typically the lowest dpi the
+            icons are made for is 96.</i>
+            </blockquote>
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thiago</p>
+    </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+\section{Fundamental aspects of the language}
+
+We need to understand the basics of the language, we first write the \verb|file.java|
+and run the command 
+\begin{listing}{1}
+javac file.java
+\end{listing}
+With this command, the file is compiled to a \verb|file.class| file, and we can now run
+\begin{listing}{1}
+java file     
+\end{listing}    
+We do not need to specify the extension \verb|.class|, since it is the only extension the compiler 
+can run.
+
+\subsection{Hello World}
+
+See the source file (\verb|HelloWorld.java|), we have the following structure
+\begin{listing}{1}
+public class HelloWorld {
+    /* Principal method 
+     * of the class */
+    public static void main (String[] args){
+        System.out.println("Hello World!");
+        System.out.println("This is a second sentence");
+    }// end of the method
+}// end of the class
+\end{listing}
+So, we define a class and that it is public. In what follows we define the methods associated to 
+this class. It defines the type of return, name of the method and the type of arguments it accepts. 
+
+The import point is that we have some keywords above. For example
+\begin{itemize}
+    \item \verb|public| is an access modifier. It specify the scope of our code. How other parts 
+of the program can access the code.
+    \item \verb|class| defines the class block. Anything between the brackets \verb|{ }| is part 
+of the class.
+    \item \verb|HelloWorld| is the name of the class. It needs to have the name of the \verb|.java|
+file. 
+\end{itemize}
+Between the brackets we have the methods. Methods are collections of statements that perform 
+operations. In our simple code, we also have the \verb|main| method. It is a special method that 
+java looks 
+when we run a program. 
+\begin{itemize}
+    \item \verb|static| is a keyword we will discuss in the future. 
+    \item \verb|void| is a keyword that denotes that the method will nor return anything.    
+\end{itemize}
+
+\subsubsection{Keywords}
+
+There are some keywords that are protected in java. There is a wikipedia entry for these keywords: 
+\href{https://en.wikipedia.org/wiki/List_of_Java_keywords}{Java Keywords}.
+
+\subsubsection{Comments}
+
+There are different ways to add comments. For example, we can have comments in single lines. We can
+also have comments spanning multiple lines. These are
+\begin{listing}{1}
+// These are single line comment
+
+/* This is a 
+multiple line comment */ 
+\end{listing}
+
+\subsection{Variables}
+
+It is a way to store information in our computer. For example, let us define a variable:
+\begin{listing}{1}
+public class HelloWorld {
+    /* Principal method 
+     * of the class */
+    public static void main (String[] args){
+        System.out.println("Hello World!");
+        System.out.println("This is a second sentence");
+
+        int my_first_number = 5;
+        System.out.println(my_first_number);
+    }// end of the method
+}// end of the class
+\end{listing}
+
+\subsection{Primitive types}
+
+There are different types of data. So far we have been working with integers, but there are seven 
+other primitive, the building blocks of java coding, data types. The primitive types are
+\begin{enumerate}
+    \item byte
+    \item short
+    \item int
+    \item long
+    \item float
+    \item double
+    \item char
+    \item boolean
+\end{enumerate}
+Besides the course, see also~\cite{w3school}.
+
+\subsubsection{Byte, short, int and long}
+
+Let us consider the first four primitive types. The byte type has 8 bits, the short has 16 bits, 
+the integer has 32 bits and the long has 64 bits. We can test the size of these data types with 
+the following code:
+\begin{listing}{1}
+public class Primitive {
+    public static void main(String[] args) {
+        int myValue = 10000;
+        int myMinValue = Integer.MIN_VALUE;
+        int myMaxValue = Integer.MAX_VALUE;
+        System.out.println("Integer minimum value =" + myMinValue);
+        System.out.println("Integer maximum value =" + myMaxValue);
+
+        byte myMinByteValue = Byte.MIN_VALUE;
+        byte myMaxByteValue = Byte.MAX_VALUE;
+        System.out.println("Byte minimum value =" + myMinByteValue);
+        System.out.println("Byte maximum value =" + myMaxByteValue);
+
+        short myMinShortValue = Short.MIN_VALUE;
+        short myMaxShortValue = Short.MAX_VALUE;
+        System.out.println("Short minimum value =" + myMinShortValue);
+        System.out.println("Short maximum value =" + myMaxShortValue);
+
+        long myMinLongValue = Long.MIN_VALUE;
+        long myMaxLongValue = Long.MAX_VALUE;
+        System.out.println("Long minimum value =" + myMinLongValue);
+        System.out.println("Long maximum value =" + myMaxLongValue);
+    }
+}
+\end{listing}
+It is important to pay attention to these definitions, otherwise we can find errors in our code. 
+In general, java assumes that we are using integers in our calculations. 
+\paragraph{Casting} Furthermore, sometimes we need to convert types of numbers. For example, suppose we take the 
+minimum byte number and divide by two, it certainly fits in the integers, but java does not know that
+so we need to tell him about it. This is the concept of \emph{casting}. For example 
+\begin{listing}{1}
+byte newByteValue = (byte) (myMinByteValue / 2);
+\end{listing}
+
+\subsubsection{Floads and doubles}
+
+Now we want to consider two more primitive data types. These deal with decimal values. Floats have 
+single precision (so they occupy 32 bits) while Double have double precision (64 bits). 
+It is important to know that double is the default data type for decimal numbers.
+
+We can consider the example (we can put the code below inside a class, see the codes) 
+\begin{listing}{1}
+      float myMinFloatValue = Float.MIN_VALUE;
+      float myMaxFloatValue = Float.MAX_VALUE;
+      System.out.println("Float minimum value =" + myMinFloatValue);
+      System.out.println("Float maximum value =" + myMaxFloatValue);
+
+      double myMinDoubleValue = Double.MIN_VALUE;
+      double myMaxDoubleValue = Double.MAX_VALUE;
+      System.out.println("Double minimum value =" + myMinDoubleValue);
+      System.out.println("Double maximimum value =" + myMaxDoubleValue);
+
+      int myIntValue = 5;
+      float myFloatValue = (float) 5.25; // Equivalent to 5.25f
+      double myDoubleValue = 5.25; //We can also write 5.25d
+\end{listing}
+We can also test precision of these data structures as 
+\begin{listing}{1}
+      float myMinFloatValue = Float.MIN_VALUE;
+      float myMaxFloatValue = Float.MAX_VALUE;
+      System.out.println("Float minimum value =" + myMinFloatValue);
+      System.out.println("Float maximum value =" + myMaxFloatValue);
+
+      double myMinDoubleValue = Double.MIN_VALUE;
+      double myMaxDoubleValue = Double.MAX_VALUE;
+      System.out.println("Double minimum value =" + myMinDoubleValue);
+      System.out.println("Double maximimum value =" + myMaxDoubleValue);
+
+      int myIntValue = 5 / 3;
+      float myFloatValue = 5f / 3f;
+      double myDoubleValue = 5d / 3d;
+
+      System.out.println("MyIntValue = " + myIntValue);
+      System.out.println("MyFloatValie = " + myFloatValue);
+      System.out.println("MyDoubleValue = " + myDoubleValue);
+\end{listing}
+
+We can use float and doubles to do most of our programs, but for precise calculations, we can use
+BigDecimal numbers, that is more precise. We shall eventually return to this point. 
+
+
+\subsubsection{Char and Boolean}
+
+Now we consider the last two types of data. The \verb|char| type stores a single character. It 
+occupies 16 bits, since it allows us to store data in Unicode. \verb|Boolean|, these are True or 
+False, Yes ou No, 1 or 2, as usual.
+
+
+\subsubsection{Strings}
+
+Finally, we also have \verb|strings|. It is not a primitive data, it is a class; but enjoys a favoritism in java, 
+so we can work with it more easily. It is essentially a sequence of characters.
+One funny thing is the following, we can concatenate strings and numbers, because java converts the 
+appropriate numbers to strings. On the other hand, it does not do the converse, that is, java does 
+not translate (at least immediately), strings into numbers. For example 
+\begin{listing}{1}
+    String myString = "10";
+    int myInt = 50;
+    String lastString = myString + myInt;
+    int lastInt = myString + myInt // it gives an error
+    System.out.println("MyString is equal to " + lastString)
+\end{listing}
+
+In java, strings are immutable. So, we cannot change the string after it was created. When we 
+replace the string, as we have done above, it basically creates a new string and discarted.
+
+Moreover, the method of appeding strings as we did above is inneficient.We will learn better ways
+in the future, in particular something called \verb|StringBuffer|.
+
+\subsection{Operators, operands and expressions}
+
+Operators are special symbols to do specifics operations. Operands are the objects subject to the 
+operations. Expressions are formed with variables, literals and methods. 
+We have the following operators, see~\cite{w3school}:
+\begin{enumerate}
+    \item Arithmetic: \verb|+|, \verb|-|, \verb|*|, \verb|/|, \verb|%|, \verb|++|, \verb|--|
+    \item Assignment: \verb|=|, \verb|+=|, \verb|-=|, \verb|*=|, \verb|/=|, \verb|%=|
+    \item Comparison: \verb|==|, \verb|!=|, \verb|>|, \verb|<|, \verb|>=|, \verb|>=|
+    \item Logical: \verb|&&| (and), \(\Vert\) (or), \verb|!| (not)
+    \item Bitwise: \verb|>>|, \verb|<<|, \verb|&|, \verb|>>>|, \verb|^|,\(\vert\)
+\end{enumerate}
+The arithmetic and assignement operators are somewhat straigtforward. 
+Let us consider now the comparisson operators.
+
+A summary of these operators are here\cite{oracle}. See also a table of 
+operator precedence~\cite{precedence}.
+
+\subsubsection{Conditional statements and logical operators}
+
+In order to consider the condisional operators, we need to understand some conditionals in java. 
+
+\paragraph{If} The easiest condisionals are given by the \verb|if| and \verb|else| 
+statements. In particular, we follow the example
+\begin{listing}{1}
+public class Operators {
+    public static void main(String[] args) {
+        boolean isAlien = false;
+        if (isAlien == false) {
+            System.out.println("It is not an alien");
+            System.out.println("and I am scared of aliens");
+        }
+        // Conditional if and logical "and" and "or" operators.
+        int topScore = 80;
+        if (topScore == 100) {
+        System.out.println("Yout got the highest score"); 
+        }
+        int secondTopScore = 90;
+        if ((topScore > secondTopScore) && (topScore <100)) {
+            System.out.println("you got the second highest score, 
+            and it was smaller than 100");
+        }
+        if ((topScore < 90) || (secondTopScore > 90)) {
+            System.out.println("One or both conditions are true");
+        }
+        boolean isTired = false;
+        if (!isTired) {
+            System.out.println("This is a final conditional");
+        }
+    }
+}
+\end{listing}
+In this example, we have instances of the logical operators ``and'' (\verb|&&|), 
+``or'' (\(\Vert\)) and ``not'' (\verb|!|). Observe that in the test of ``not'', we can write
+\verb|!isTired| or \verb|isTired == False| if we want to test if it is False, or 
+\verb|isTired| or \verb|isTired == True| if we want to test if it is True. 
+
+\paragraph{Else} We can also exceptions for the if blocks. For 
+example:
+\begin{listing}{1}
+public class Else {
+    public static void main(String[] args) {
+        int age = 35;
+        if (age > 40) {
+         System.out.println("You are not young any longer"); 
+        } else if (age < 40 && age < 35){
+        System.out.println("You do not have much time");
+        } else {
+            System.out.println("You're okay");
+        }
+    }
+}
+\end{listing}
+
+
+
+
+\subsubsection{Ternary operators}
+
+The ternary operator is defined by the question mark (\verb|?|). The syntax is the following:
+\begin{verbatim}
+variable = Expression ? Output1 : Output2
+\end{verbatim}
+And the idea is that it tests if the \verb|Expression| is True. In this case, variable assumes the value \verb|Output1|, if the \verb|Expression| is False, the variable assumes the value \verb|Output2|.
+\begin{listing}{1}
+public class Operators {
+    public static void main(String[] args) {
+        boolean isCar = false;
+        boolean wasCar = isCar ? true : false;
+        if (wasCar) {
+            System.out.println("This is true");
+        }
+        // Below, we can also write ... = (!isCar == True) ? ...
+        int outputTrue = !isCar ? 1 : 2;
+        System.out.println("The output is " + outputTrue);
+        int outputFalse = isCar ? 1 : 2;
+        System.out.println("The output is " + outputFalse);
+    }
+}
+\end{listing}
+
+
+\subsubsection{Challenge}
+
+Here is the proposed challenge:
+\begin{listing}{1}
+public class Operators {
+    public static void main(String[] args) {
+//        ========================= CHALLENGE ====================
+//
+//        The idea is to do the following:
+//        1) Create two doubles with values 20.00 and 80.00 
+//        2) Add both number together and multiply by 100.00
+//        3) Find the remainder of this last operation by 40.00
+//        4) Create a boolean which: 
+//              a) is True if the remainder is zero
+//              b) is False if the remainder is not zero
+//        5) Write an if-else statement that displays a message
+//        if the boolean of #4 not true
+//
+//
+        double variable1 = 20d;
+        double variable2 = 20d;
+        double variable3 = (variable1 + variable2) * 100d;
+        System.out.println(variable3);
+        double remainder = (double) (variable3 % 40);
+        System.out.println("The remainder is " + remainder);
+        boolean teste = (remainder == 0) ? true : false;
+        if (!teste) {
+            System.out.println("You got some remainder.");
+        }
+    }
+}
+\end{listing}

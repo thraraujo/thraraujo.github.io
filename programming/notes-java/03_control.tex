@@ -1,0 +1,415 @@
+\section{Control flow statements}
+
+In this section we learn some important aspects of the language. In particular, we will learn
+\begin{itemize}
+    \item Switch
+    \item For
+    \item While 
+    \item Do-while
+\end{itemize}
+
+\subsection{Switch}
+
+The switch statement is an alternative to the if-else statement. It works as follows:
+\begin{listing}{1}
+public class Switch {
+    public static void main(String[] args) {
+   
+    int number = 2;
+
+    switch (number) {
+        case 1:
+            System.out.println("The number is one");
+            break;
+
+        case 2:
+            System.out.println("The number is two");
+
+        case 3: case 4: 
+            System.out.println("The number is three or four");
+
+        default:
+            System.out.println("Another number");
+            break;
+    }
+
+   }
+}
+\end{listing}
+The \verb|case| is equivalent to the \verb|if| and \verb|else if| statements, and the \verb|default|
+is equivalent to the \verb|else| statement. We also have the \verb|break|, and it stops the code block.
+On the other hand, it has some limitations, in particular, in the \verb|if-else|, we can test different
+variables, while in the \verb|switch| case we can only test one variable. Observe that we can combine
+the cases in a single line -- case 3 and 4 above. 
+
+Here are two nice examples:
+\begin{listing}{1}
+public class Numbers {
+    public static void main(String[] args) {
+    printNumberInWord(7);
+    }
+
+    public static void printNumberInWord(int number) {
+    switch (number) {
+        case 0:
+            System.out.println("zero".toUpperCase());
+            break;
+
+        case 1:
+            System.out.println("one".toUpperCase());
+            break;
+
+        case 2:
+            System.out.println("two".toUpperCase());
+            break;
+
+        case 3:
+            System.out.println("three".toUpperCase());
+            break;
+
+        case 4:
+            System.out.println("four".toUpperCase());
+            break;
+
+        case 5:
+            System.out.println("five".toUpperCase());
+            break;
+
+        case 6:
+            System.out.println("six".toUpperCase());
+            break;
+
+        case 7:
+            System.out.println("seven".toUpperCase());
+            break;
+
+        case 8:
+            System.out.println("eight".toUpperCase());
+            break;
+
+        case 9:
+            System.out.println("nine".toUpperCase());
+            break;
+
+        default:
+            System.out.println("other".toUpperCase());
+            break;
+    }
+    }
+
+}
+\end{listing}
+
+The second example is:
+\begin{listing}{1}
+public class LeapYear {
+    public static void main(String[] args) {
+    System.out.println(isLeapYear(1986));
+    System.out.println(getDaysInMonth(2,1600));
+    System.out.println(getDaysInMonth(-2,2000));
+    System.out.println(getDaysInMonth(12,21600));
+    System.out.println(getDaysInMonth(2,1986));
+    }
+
+    public static boolean isLeapYear(int year) { 
+    boolean result = false; 
+    if (year < 1 || year > 9999) {
+    result = false;
+    } else {
+    if ((year % 4 == 0) && (year % 100 != 0)) {
+    result = true;
+    } else if (year % 100 == 0 && year % 400 == 0) {
+    result = true;
+    } else {
+    result = false;
+    }
+    }
+    return result;
+    }
+
+    public static int getDaysInMonth(int month, int year) { 
+    if (month < 1 || month >12 || year < 1 || year > 9999) { 
+    return -1;
+    }
+    int days;
+    boolean leap = isLeapYear(year);
+
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            days = 31;
+            break;
+
+        case 4: case 6: case 9: case 11: 
+            days = 30;
+            break;
+
+        default:
+            if (leap) {
+            days = 29;
+            } else { 
+            days = 28;
+            }
+            break;
+    }
+    return days; 
+    }
+}
+\end{listing}
+
+\subsection{For}
+
+The syntax is standard. See the example:
+\begin{listing}{1}
+public class Interest {
+    public static void main(String[] args) {
+   // for(initial; termination; increment)
+        /* 
+    for(int i = 0; i <= 9; i++) { 
+    System.out.println(i + 1 + 
+    "% Interest of 1000000 is " + calculateInterest(1000000, i + 1));
+    }
+    */
+    for(int i = 9; i >= 0; i--) { 
+    System.out.println(i + 1 + 
+    "% Interest of 1000000 is " + calculateInterest(1000000, i + 1));
+    }
+    }
+    public static double calculateInterest(double amount, double rate) {    
+    return (amount * (rate / 100));
+    }
+}
+\end{listing}
+
+Another example
+\begin{listing}{1}
+public class PrimeChecker {
+   public static void main(String[] args) {
+   for (int i = 15; i <= 30; i++) {
+      System.out.println(i + " is prime: " + isPrime(i));
+   }
+   }
+
+   public static boolean isPrime(int n) {
+   int test = 0;
+   if (n < 2) {
+      return false;
+   } else {
+   for (int i = 2; i <= n / 2; i++) {
+      if (n % i == 0) {
+      test += 1;
+      } 
+   }
+   if (test == 0) {
+      return true;
+   } else {
+      return false;
+   }
+   }
+   }
+}
+\end{listing}
+ The code above is not the best. One can remember that the \verb|return| break the loop, 
+ so we can improve the code. 
+
+ Finally, see the example:
+\begin{listing}{1}
+public class SumOdd {
+   public static void main(String[] args) {
+   System.out.println(isOdd(7));
+   System.out.println(sumOdd(1,100));
+   System.out.println(sumOdd(-1,100));
+   System.out.println(sumOdd(101,101));
+   System.out.println(sumOdd(100,1000));
+   }
+
+   public static boolean isOdd(int number) {
+      if (number % 2 == 1 && number != 0) {
+         return true;
+      } else {
+      return false;
+      }
+   }
+
+   public static int sumOdd(int start, int end) {
+      int sum = 0;
+
+      if (end < start || start < 0 || end < 0) {
+      return -1;
+      } else {
+
+      for (int index = start; index <= end; index++) {
+      if (isOdd(index)) {
+      sum += index; 
+      }
+      }; 
+      return sum;
+      }
+   }
+}
+\end{listing}
+
+
+\subsection{While \& Do While}
+
+The syntax is similar to what we have done so far. See the example:
+\begin{listing}{1}
+public class EvenChecker {
+   public static void main(String[] args) {
+   
+      int start = 0;
+      int end = 10;
+
+//      while (start <= end) {
+//      System.out.println("Is " + start + " even? " + isEvenNumber(start));
+//      start++;
+//      }
+
+      do {
+      System.out.println("Is " + start + " even? " + isEvenNumber(start));
+      start++;
+      } while (start <= end);
+   }
+
+   public static boolean isEvenNumber(int number) {
+   if (number % 2 == 0) {
+      return true;
+   } else {
+   return false;
+   }
+   }
+
+}
+\end{listing}
+The part with and without comments are equivalent.
+
+\subsection{Parsing values from a string}
+
+Sometimes, we need to convert a string to a different data type. We can do it 
+with the parse method as follows:
+\begin{listing}{1}
+public class ParseString {
+   public static void main(String[] args) {
+   String numberAsString = "2000";
+   System.out.println(numberAsString);
+
+   int number = Integer.parseInt(numberAsString);
+   System.out.println(number);
+
+   number += 1;
+   numberAsString += 1;
+   System.out.println(number);
+   System.out.println(numberAsString);
+   }
+
+}
+\end{listing}
+In this example, observe that if we try to add a number to a string, java automatically converts
+the number to a string.
+
+
+\subsection{User input}
+
+In order to provide the user the ability to insert values, we use the method \verb|scanner|. See
+\begin{listing}{1}
+import java.util.Scanner;
+
+public class UserInput {
+
+   public static void main(String[] args) {
+
+   Scanner scanner = new Scanner(System.in);
+
+   System.out.println("Enter your year of birth: ");
+   int yearOfBirth = scanner.nextInt();
+   scanner.nextLine(); // it handles next line character
+   int age = 2022 - yearOfBirth;
+
+   System.out.println("Enter your name: ");
+   String name = scanner.nextLine();
+
+   System.out.println("Your name is " + name + " and you're " + age + " years old");
+
+   scanner.close();
+   }
+}
+\end{listing}
+The keyword \verb|new| creates a new instance of scanner.
+
+In order to avoid negative numbers and words instead numbers, one can do the following
+\begin{listing}{1}
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your year of birth:");
+
+        boolean hasNextInt = scanner.hasNextInt();
+
+        if(hasNextInt) {
+            int yearOfBirth = scanner.nextInt();
+            scanner.nextLine(); // handle next line character (enter key)
+
+            System.out.println("Enter your name: ");
+            String name = scanner.nextLine();
+            int age = 2018 - yearOfBirth;
+
+            if(age >= 0 && age <= 100) {
+                System.out.println("Your name is " + name + ", and you are " + age + " years old.");
+            } else {
+                System.out.println("Invalid year of birth");
+            }
+        } else {
+            System.out.println("Unable to parse year of birth.");
+        }
+
+        scanner.close();
+    }
+}begin{listing}{1}
+\end{listing}
+
+The next example has all the important features of our discussion.
+\begin{listing}{1}
+import java.util.Scanner;
+
+public class InputSum {
+   public static void main(String[] args) {
+      
+      int sum = 0;
+      int counter = 1;
+
+      // Next line defines the variable scanner
+      Scanner scanner = new Scanner(System.in);
+
+      System.out.println("Enter 10 integers");
+
+      while (counter <= 10) {
+      
+      System.out.println("Enter number #" + counter + ":");
+
+      // Next line, we define the variable that tests if the variable is an integer
+      boolean isInteger = scanner.hasNextInt();
+
+      if (isInteger) {
+
+         // read the user number 
+         int number = scanner.nextInt();
+         sum += number;
+         counter++;
+         } else {
+            System.out.println("Invalid Number");
+         }
+
+      // Here we call the scanner again. In the next loop, the user inserts another number
+      scanner.nextLine();
+      }
+
+      System.out.println("The total is: " + sum);
+
+      scanner.close();
+
+   }
+}
+\end{listing}

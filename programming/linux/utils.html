@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../research.html">Research</a></li>
+                <li><a href="../../things.html">Things</a></li>
+                <li><a href="../../writings.html">Writings</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="linux">
+
+        <h1><u>Utilities</u></h1>
+
+
+        <h3>Pdftk utility</h3>
+        <p>This is a good utility to merge pdfs. The basic command to merge pdfs 01.pdf 
+        and 02.pdf is the following</p>
+
+            <div class="code-block">
+                <pre><code>
+                pdftk 01.pdf 02.pdf cat output merged.pdf
+                </code></pre>
+            </div>
+
+
+        <h3>GPG File</h3>
+
+        <p>Commands</p>
+            <div class="code-block">
+                <pre><code>
+                 tar -cf <folder>.tar.gz <folder>                                # create tar file
+
+                 gpg -c --no-symkey-cache -- cipher-algo AES256 <file> # create gpg file
+
+                 gpg <file>.gpg                                        # open file
+                </code></pre>
+            </div>
+
+            <p>See more on the mental outlaw channel: 'Do this before putting your files in the cloud'</p>
+
+
+        <h3>Burn Live USB</h3>
+
+        <p>Here we learn how to burn a flesh drive with Linux using the dd util.
+          The information below can be found here:
+          <a href="https://arcolinux.com/everything-you-need-to-know-about-burning-an-iso-to-usb/"
+                         class="external-link" target="_blank" rel="noopener">Burn USB with dd</a>
+        </p>
+            <div class="code-block">
+                <pre><code>
+                sudo fdisk -l               # See drive. It might be something like: /dev/sda or /dev/sdb.
+
+                sudo dd bs=4M if=/path/to/arcolinux...iso of=/dev/sdX status=progress && sync
+                </code></pre>
+            </div>
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thiago</p>
+    </footer>
+
+</div>
+</body>
+</html>

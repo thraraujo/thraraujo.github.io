@@ -1,0 +1,356 @@
+\section{Comma Separated Values - CSV}
+
+It a popular format for formular data. We can use the \verb|csv| module to work with this format. 
+
+\subsection{Reading}
+
+Here we have 
+\begin{itemize}
+    \item \verb|reader| : it lets us to iterate over rows of the CSV as lists.
+    \item \verb|DictReader| : it lets us to iterate over rows of the CSV as OrderedDicts.
+\end{itemize}
+
+\subsubsection{reader}
+
+Here we have the following example
+\begin{listing}{1}
+from csv import reader
+with open('fighters.csv') as file:
+    csv_reader = reader(file)
+    for row in csv_reader:
+        print(row)    
+\end{listing}
+
+We can work with this objects as follows, 
+\begin{listing}{1}
+from csv import reader
+with open('fighters.csv') as file:
+    csv_reader = reader(file)
+    next(csv_reader)
+    for fighter in csv_reader:
+        print(f'{fighter[0]} is from {fighter[1]}')    
+\end{listing}
+We add the line \verb|next(csv_reader)| because we do not want to print the headers, otherwise the header would also be printed. 
+
+We could also convert this data into a list (the \verb|csv_reader| is an iterator)
+\begin{listing}{1}
+from csv import reader
+with open('fighters.csv') as file:
+    csv_reader = reader(file)
+    data = list(csv_reader)
+    print(data)    
+\end{listing}
+
+\subsubsection{DictReader}
+
+We use the syntax 
+\begin{listing}{1}
+from csv import DictReader
+with open('fighters.csv') as file:
+    csv_reader = DictReader(file)
+    for row in csv_reader:
+        print(row)    
+\end{listing}
+The rows are now an ordered dictionary.
+
+\begin{shaded}{Notes}
+It is important to mention that the delimeter does not need to be a \emph{comma}, it can be other symbols, as long as it is consistent all along the file. For example 
+\begin{listing}{1}
+from csv import reader
+with open('foobar.csv') as file:
+    csv_reader = reader(file, delimiter = "|")
+    for row in csv_reader:
+        print(row)
+\end{listing}
+\end{shaded}
+
+
+\subsection{Writing}
+
+Here we use 
+\begin{itemize}
+    \item \verb|writer| : creates a writer object for writing CSV
+    \item \verb|DictWriter| : it creates a writer object for writing using dictionaries 
+\end{itemize}
+
+\subsubsection{writer}
+
+For example 
+\begin{listing}{1}
+from csv import writer
+with open('fighters.csv', 'w') as file:
+    csv_writer = writer(file)    
+    csv_writer.writerow(["character", "Move"])
+    csv_writer.writerow(["Ryu", "Hadouken"])
+\end{listing}
+
+\paragraph{Example} Let us copy the information of a CSV file and create another file with everything capitalized. 
+\begin{listing}{1}
+from csv import reader, writer
+
+with open('fighters.csv') as file:
+    csv_reader = reader(file)
+    fighters = [[s.upper() for s in row] for row in csv_reader]
+    # for row in fighters:
+    #     print(row)
+
+with open('screaming_fighters.csv', 'w') as file:
+    csv_writer = writer(file)
+    for fighter in fighters:
+        csv_writer.writerow(fighter)    
+\end{listing}
+
+We can also nest everything 
+\begin{listing}{1}
+from csv import reader, writer
+
+with open('fighters.csv') as file:
+    csv_reader = reader(file)
+    with open('screaming_fighters.csv', 'w') as file:
+        csv_writer = writer(file)
+        for fighter in csv_reader:
+            csv_writer.writerow([s.upper() for s in fighter])    
+\end{listing}
+
+
+\subsubsection{DictWriter}
+ 
+This case is more convoluted since we need more structures. For example
+\begin{listing}{1}
+from csv import DictWriter
+
+with open("more_fighters.csv", "w") as file:
+    headers = ["Character" , "Move"]
+    csv_writer = DictWriter(file, fieldnames=headers)
+    csv_writer.writeheader()
+    csv_writer.writerow({"Character": "Ryu", "Move": "Hadouken"})
+\end{listing}
+
+\paragraph{Example}
+
+Now we want to convert cm to inches in the list of fighters. See Colt's solution. 
+\begin{listing}{1}
+from csv import DictReader, DictWriter
+
+def cm_to_in(cm):
+    return float(cm) * 0.393701
+
+with open("fighters.csv") as file:
+    csv_reader = DictReader(file)
+    fighters = list(csv_reader)
+
+with open("inches_fighters.csv", "w") as file:
+    headers = ("Name","Country","Height")
+    csv_writer = DictWriter(file, fieldnames=headers)
+    csv_writer.writeheader()
+    for f in fighters:
+        csv_writer.writerow({
+            "Name": f["Name"],
+            "Country": f["Country"],
+            "Height": cm_to_in(f["Height (in cm)"])
+        })    
+\end{listing}
+
+\paragraph{Exercise} In this exercise, we take add information to a existing CSV. My solution
+\begin{listing}{1}
+from csv import reader, writer
+
+def add_user(first, last):
+    with open("users.csv", "r") as file:
+        csv_file = list(reader(file))
+        csv_file.append([first, last])
+    
+    with open("users.csv", "w") as file:
+        csv_write = writer(file)
+        for row in csv_file:
+            csv_write.writerow(row)    
+\end{listing}
+
+Colt's solution
+\begin{listing}{1}
+import csv
+
+def add_user(first_name, last_name):
+    with open("users.csv", "a") as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow([first_name, last_name])    
+\end{listing}
+
+\paragraph{Exercise} Here is another exercise that prints the full name of the users. 
+\begin{listing}{1}
+from csv import DictReader
+
+def print_users():
+    with open("users.csv", "r") as file:
+        csv_reader = DictReader(file)
+        for user in csv_reader:
+            print(f"{user['First Name']} {user['Last Name']}")
+
+print_users()    
+\end{listing}
+
+\paragraph{Example}
+
+Here, another example that finds the arguments and tells the index
+\begin{listing}{1}
+from csv import reader
+
+def find_user(first, last):
+    with open("users.csv") as file:
+        csv_list = list(reader(file))
+        for row in csv_list:
+            if row[0] == first and row[1] == last:
+                result = csv_list.index(row)
+                break
+            else:
+                result = "{} {} not found.".format(first, last)
+    return result    
+\end{listing}
+
+Colt's solution gives
+\begin{listing}{1}
+import csv
+
+def find_user(first_name, last_name):
+    with open("users.csv") as csvfile:
+        csv_reader = csv.reader(csvfile)
+        for (index, row) in enumerate(csv_reader):
+            first_name_match = first_name == row[0]
+            last_name_match = last_name == row[1]
+            if first_name_match and last_name_match:
+                return index
+        return "{} {} not found.".format(first_name, last_name)    
+\end{listing}
+
+\paragraph{Example} Another example, this exercise changes the entries and counts how many entries we have changed. 
+\begin{listing}{1}
+def update_users(old_first, old_last, new_first, new_last):
+    counter = 0
+    with open("users.csv") as csvfile:
+        csv_list = list(csv.reader(csvfile))
+        for row in csv_list:
+            if row[0] == old_first and row[1] == old_last:
+                counter += 1
+                row[0] = new_first
+                row[1] = new_last    
+
+        with open('users.csv', 'w') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            for row in csv_list:
+                csv_writer.writerow(row)
+
+    print(counter)    
+\end{listing}
+
+Colt's solution 
+\begin{listing}{1}
+import csv
+
+def update_users(old_first, old_last, new_first, new_last):
+    with open("users.csv") as csvfile:
+        csv_reader = csv.reader(csvfile)
+        rows = list(csv_reader)
+    
+    count = 0
+    with open("users.csv", "w") as csvfile:
+        csv_writer = csv.writer(csvfile)
+        for row in rows:
+            if row[0] == old_first and row[1] == old_last:
+                csv_writer.writerow([new_first, new_last])
+                count += 1
+            else:
+                csv_writer.writerow(row)
+    
+    return "Users updated: {}.".format(count)    
+\end{listing}
+
+
+\paragraph{Example} Finally, this example deletes the user. 
+
+\begin{listing}{1}
+import csv
+
+def delete_users(first, last):
+    counter = 0
+    with open("users.csv") as csvfile:
+        csv_list = list(csv.reader(csvfile))
+        for row in csv_list:
+            if row[0] == first and row[1] == last:
+                j = csv_list.count(row)
+                counter = j
+                while j > 0:
+                    j -= 1
+                    csv_list.remove(row)
+
+        with open('users.csv', 'w') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            for row in csv_list:
+                csv_writer.writerow(row)
+
+    return "Users deleted: {}.".format(counter)    
+\end{listing}
+
+Colt's solution
+\begin{listing}{1}
+import csv
+
+def delete_users(first_name, last_name):
+    with open("users.csv") as csvfile:
+        csv_reader = csv.reader(csvfile)
+        rows = list(csv_reader)
+    
+    count = 0
+    with open("users.csv", "w") as csvfile:
+        csv_writer = csv.writer(csvfile)
+        for row in rows:
+            if row[0] == first_name and row[1] == last_name:
+                count += 1
+            else:
+                csv_writer.writerow(row)
+    
+    return "Users deleted: {}.".format(count)    
+\end{listing}
+
+
+
+\subsection{Pickling}
+
+Thie idea here is that we can store (pickle) a data in a serialized manner. See example 
+\begin{listing}{1}
+import pickle
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+
+    def __repr__(self):
+        return f"{self.name} is a {self.species}"
+
+    def make_sound(self, sound):
+        print(f"this animal says {sound}")
+
+
+class Cat(Animal):
+    def __init__(self, name, breed, toy):
+        super().__init__(name, species="Cat") # Call init on parent class
+        self.breed = breed
+        self.toy = toy
+
+    def play(self):
+        print(f"{self.name} plays with {self.toy}")
+
+
+blue = Cat("Blue", "Scottish Fold", "String")
+
+# To pickle an object:
+with open("pets.pickle", "wb") as file:
+    pickle.dump(blue, file)
+
+# To unpickle something:
+# with open("pets.pickle", "rb") as file:
+# 	zombie_blue = pickle.load(file)
+# 	print(zombie_blue)
+# 	print(zombie_blue.play())    
+\end{listing}
+
+See also \verb|jsonpickling|.

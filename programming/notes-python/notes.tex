@@ -1,0 +1,97 @@
+\documentclass[a4paper,11pt]{amsart}
+
+\pdfoutput=1 
+
+\usepackage{definitions}
+
+\hypersetup{
+	pdftitle={python},
+	pdfsubject={programming},
+	pdfauthor={Thiago Araujo},
+	pdfkeywords={python},
+	pdfsubject={programming},
+	colorlinks=true,linkcolor=link,citecolor=link,urlcolor=link,linktocpage
+}
+
+\usepackage{moreverb} % This package improves the verbatim. Now we can write codes that considers 
+%the TAB. Moreover, we can use numbered verbatim. Quite handy to write codes. 
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title[Notes on Python]{Notes on Python 3}
+
+\author{Thiago Araujo}
+
+\email{\texttt{\href{thgr.araujo@gmail.com}{thgr.araujo@gmail.com}}} 
+
+\keywords{Python}
+%\subjclass[2020]{37K10, 82B20, 82B23}
+%\date{\today}
+
+\begin{abstract}
+Here I collect some basic facts on python 3.
+
+\bigskip
+
+\noindent \textbf{Keywords:} Python
+\end{abstract}
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Introduction}
+
+Here I follow~\cite{pythontutorial} and the course of Colt Steele at Udemy~\cite{csteele}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{01_data.tex}
+
+\input{02_functions.tex}
+
+\input{03_modules.tex}
+
+\input{04_oop.tex}
+
+\input{05_iterators.tex}
+
+\input{06_decorators.tex}
+
+\input{07_nested.tex}
+
+\clearpage
+
+\appendix 
+
+\input{ap_errors.tex}
+
+\input{ap_fileio.tex}
+
+\input{ap_extra.tex}
+
+\input{ap_csv.tex}
+
+\input{ap_sql.tex}
+
+\clearpage
+
+\bibliographystyle{utphys}
+\bibliography{library.bib}
+
+\end{document}

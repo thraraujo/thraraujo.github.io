@@ -1,0 +1,302 @@
+\section{Iterators \& Generators}
+
+\subsection{Iterables \& Iterator} Let us understand the differences between these two classes of objects.
+
+{\bf \# Iterable} is an object which will return an iterator when \verb|iter()| is called on it.
+
+For example, the string \verb|'HELLO'| is an iterable, but is not an iterator. A list is also an example of iterable. 
+
+{\bf \# Iterator} is an object that can be iterated upon. An object which returns data, one element at a time when \verb|next()| is called on it. 
+
+When we call \verb|next()| on an iterator, the iterator returns the next item. It keeps doing so until it raises a \verb|StopIteraction| error.
+
+For example:   
+\begin{listing}{1}
+name = 'melissa' # melissa is a iterable.
+it_name = iter(name) # now we define the iterator it_name 
+next(it_name)
+\end{listing}
+This is what the \verb|for|-loops do behind the scene. It calls the \verb|next()| over and over again.
+
+\subsubsection{Creating iterators}
+
+Here we want to use a version of \verb|for|-loops. It will help us to understand what is happening behind the curtains. 
+\begin{listing}{1}
+def my_for(iterable):
+iterator = iter(iterable)
+while True:
+    try:
+        print(next(iterator))
+    except StopIteration:
+        break
+
+my_for('melissa')
+my_for([1,2,3,4,5]) 
+\end{listing}
+
+I can also do more interesting things with this function. For example:
+\begin{listing}{1}
+def my_for(iterable, func):
+    iterator = iter(iterable)
+    while True:
+        try:
+            thing = next(iterator)
+        except StopIteration:
+            break
+        else:
+            func(thing)
+
+def square(num):            
+    print(num ** 2)
+
+my_for('melissa', print)
+my_for([1,2,3,4,5], square)  
+\end{listing}
+
+\subsubsection{Writing a custom iterator}
+
+Here we want to create our version of \verb|range|. Here we call it \verb|Counter|.
+\begin{listing}{1}
+class Counter:
+    def __init__(self, low, high):
+        self.current = low
+        self.high = high 
+
+    def __iter__(self):
+        return self 
+
+    def __next__(self):
+        if self.current < self.high:
+            num = self.current
+            self.current += 1
+            return num 
+        raise StopIteration
+
+for x in Counter(50,70):
+    print(x)
+\end{listing}
+
+\subsubsection{Making the Deck class iterable}
+
+Remember the exercise we have done on the Deck class. We want to make it iterable. Starting from that class we have defined, we want to do something of the form 
+\begin{listing}{1}
+my_deck = Deck()
+
+for card in my_deck:
+    print(card)
+\end{listing}
+We need to add the following line to the \verb|Deck()| class
+\begin{listing}{1}
+    def __iter__(self):
+        return iter(self.cards)
+\end{listing}
+
+\subsection{Generators}
+
+These are also iterators. It is an easy and quicker way to create iterators. It also needs less memory. 
+
+\subsubsection{Generator functions}
+
+While functions use \verb|return| once and they return the return value. Generator functions, on the other hand, use \verb|yield| and can be used multiple times. Also, they return generators. An an example
+\begin{listing}{1}
+def count_up(max):
+    count = 1
+    while count <= max:
+        yield count
+        count += 1    
+\end{listing}
+When the program executes the \verb|yield|, it stops there waiting the \verb|next|. We can execute it as follows
+\begin{listingcont}
+count = count_up(5)
+print(next(count))
+print(next(count))
+print(next(count))    
+print(list(count))
+\end{listingcont}
+
+Another funny example 
+\begin{listing}{1}
+def week():    
+    days_week = ['Monday', 'Tuesday', 'Wednesday',
+    'Thursday', 'Friday', 'Saturday', 'Sunday']
+    count = 'Monday'
+    for day in days_week:
+        yield day    
+\end{listing}
+
+\subsubsection{Infinite generator}
+
+We can create an infinite generator. Let us create a function that we want to create a function that return \(1,2,3,4\) and \(1,2,3,4\) and so on and so forth. It is like the \(4/4\) beat in music. 
+
+The brute force way is basically the following
+\begin{listing}{1}
+def current_beat(max):    
+    # max = 100
+    nums = [1,2,3,4]
+    i = 0
+    result = []
+    while len(result) < max:
+        if i >= len(nums): i =0
+        result.append(nums[i])
+        i += 1
+    return result
+
+print(current_beat(100))    
+\end{listing}
+But this is not what we want. We want one thing at a time. Moreover, we do not want to collect all results in a giant list. Then 
+\begin{listing}{1}
+def current_beat():
+    i = 0
+    while True:
+        if i >= len(nums): i = 0
+        yield nums[i]
+        i += 1
+\end{listing}
+
+Another funny problem 
+\begin{listing}{1}
+def yes_or_no():
+    ans = 'yes'
+    while True:
+        yield ans
+        ans = 'no' if ans == 'yes' else 'yes'    
+\end{listing}
+
+\subsubsection{Example: Song}
+
+Another funny exercise. My solution
+\begin{listing}{1}
+def make_song(count = 99, beverage = 'soda'):
+    n = 0
+    while True: 
+        if count - n == 1:
+            yield f'Only 1 bottle of {beverage} left!'
+        elif count - n == 0:
+            yield f'No more {beverage}!'
+            raise StopIteration
+        else: 
+            yield f'{count - n} bottles of {beverage} on the wall.'
+        n += 1            
+
+song = make_song(5,'kombucha')
+
+print(next(song))
+print(next(song))
+print(next(song))
+print(next(song))
+print(next(song))
+print(next(song))
+print(next(song))    
+\end{listing}
+
+Colt's solution
+\begin{listing}{1}
+def make_song(verses=99, beverage="soda"):
+    for num in range(verses, -1, -1):
+        if num > 1:
+            yield "{} bottles of {} on the wall.".format(num, beverage)
+        elif num == 1:
+            yield "Only 1 bottle of {} left!".format(beverage)
+        else:
+            yield "No more {}!".format(beverage)    
+\end{listing}
+
+
+\subsubsection{Fibonacci numbers}
+
+Let us see some advantages of generators with the nice example of the Fibonacci numbers. The code with ordinary functions is heavy
+\begin{listing}{1}
+def fib_list(max):
+    nums = []
+    a, b = 0, 1
+    while len(nums) < max:
+        nums.append(b)
+        a, b = b, a + b
+    return nums
+
+print(fib_list(10))    
+\end{listing}
+
+Here with generator
+\begin{listing}{1}
+def fib_gen(max):
+    x = 0
+    y = 1
+    count = 0
+    while count < max: 
+        x, y = y, x + y
+        yield x
+        count += 1
+
+for n in fib_gen(50):
+    print(n)      
+\end{listing}
+
+
+\subsubsection{Getting multiples}
+
+First example for Getting multiples:
+\begin{listing}{1}
+# MY CODE: 
+def get_multiples(number = 1, count = 10):
+    default_numbers = list(range(1,count+1))
+    for n in default_numbers:
+        yield number * n
+        
+# COLT'S CODE 
+def get_multiples(num=1, count=10):
+    next_num = num
+    while count > 0:
+        yield next_num
+        count -= 1
+        next_num += num        
+\end{listing}
+
+For infinite multiples:
+\begin{listing}{1}
+# MY CODE 
+def get_unlimited_multiples(num = 1):
+    n = 1
+    while True:
+        yield n * num
+        n += 1
+
+
+sevens = get_unlimited_multiples(7)
+A = [next(sevens) for i in range(15)] 
+print(A)
+
+ones = get_unlimited_multiples()
+B = [next(ones) for i in range(20)] 
+print(B)    
+\end{listing}
+and 
+\begin{listingcont}
+# COLT'S CODE     
+def get_unlimited_multiples(num=1):
+    next_num = num
+    while True:
+        yield next_num
+        next_num += num
+\end{listingcont}
+
+
+\subsubsection{Generator expressions}
+
+This is the equivalent of list comprehensions. It is an easy way to define generators. The syntax is 
+\begin{listing}{1}
+g1 = (num for num in range(1,10)) 
+
+type(g1)
+> <class 'generator'>
+\end{listing}
+This is equivalent to 
+\begin{listingcont}
+def nums():
+    for num in range(1,10):
+        yield num 
+
+g2 = nums()
+type(g2)
+> <class 'generator'>
+\end{listingcont}

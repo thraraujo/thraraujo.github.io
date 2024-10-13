@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../research.html">Research</a></li>
+                <li><a href="../../things.html">Things</a></li>
+                <li><a href="../../writings.html">Writings</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="linux">
+
+        <h1><u>Ignoring Command Output in Linux</u></h1>
+
+        <p>
+          In Linux, you can ignore the output of a command by
+          redirecting it to <code>/dev/null</code>, a special file
+          that discards all data written to it. There are different
+          ways to ignore various types of output:
+        </p>
+
+            <div class="code-block">
+                <pre><code>
+
+                command > /dev/null # To ignore the standard output of a command
+
+                command 2> /dev/null # To ignore the standard error of a command
+
+                command > /dev/null 2>&1 # To ignore both the standard output and standard error of a command
+
+
+                # Examples: 
+
+                ls > /dev/null # If you want to ignore the standard output of ls
+
+                ls /root 2> /dev/null # If you want to ignore the standard error of ls (e.g., when it encounters a directory it cannot access)
+
+                ls /root > /dev/null 2>&1 # If you want to ignore both the standard output and standard error of ls
+
+                command &>/dev/null # In Bash, you can use &>/dev/null to ignore both stdout and stderr
+
+                ls /some/directory > /dev/null 2>&1 # To ignore the output of a command that lists the contents of a directory
+
+                </code></pre>
+            </div>
+
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thiago</p>
+    </footer>
+
+</div>
+</body>
+</html>

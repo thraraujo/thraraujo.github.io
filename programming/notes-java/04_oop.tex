@@ -1,0 +1,566 @@
+\section{Object Oriented Programming}
+
+Now we try to understand the basics of Object Oriented Programming (OOP).
+
+\subsection{Classes} 
+
+Starting with classes, these are blueprints for the objects we will create. We have been creating 
+classes since day one. Moreover, we have been creating variables inside methods, local variables, 
+but now we will consider variables which are defined on the classes themselves. These variables 
+are called \emph{fields}. The fields are traditionally kept private. 
+\begin{listing}{1}
+public class Car {
+
+    private int doors; 
+    // it is conventional to define these fields in private. 
+    // It is the encapsulation
+    private int wheels; 
+    private String model; 
+    private String engine; 
+    private String colour; 
+
+    // Setter
+    public void setModel(String model) {
+        String validModel = model.toLowerCase();
+        if (validModel.equals("carrera") || validModel.equals("commodore")) {
+                this.model = model; 
+        } else {
+                this.model = "Unknown"; 
+        }
+        // Observe that we have the field 'model' and the parameter 'model'. 
+        // The keyword 'this' refers to the field.  
+    }
+
+    // Getter
+    public String getModel() {
+        return this.model;
+    }
+}
+\end{listing}
+Now we can create an instance of this class in a Main file. Private means that these variables
+are not available outside the class Car. We can run this class in the main method 
+\begin{listing}{1}
+public class Main {
+    public static void main(String[] args) {
+        Car porsche = new Car();
+        Car holden = new Car();
+        porsche.setModel("Carrera");
+        System.out.println("Model is " + porsche.getModel());
+    }
+}
+\end{listing}
+
+\subsection{Constructors}
+
+See the class \verb|BankAccount| in my notes. It is a lot of typing if we want to initialize instances.
+Instead using setters, one can save some time using constructors. 
+\begin{listing}{1}
+public class BankAccount {
+
+    private long accountNumber;
+    private long balance;
+    private long phoneNumber;
+    private String customerName;
+    private String email;
+
+    // constructor
+    public BankAccount() {
+    // empty constructor
+    // default values can be imposed as 
+    // this(1111, 0, "default", "default", "default"); 
+    }
+
+    public BankAccount(long accountNumber, long balance, String phoneNumber, String customerName, 
+        string email) {
+        // We can use setters here, but it is not recommended 
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.phoneNumber = phoneNumber;
+        this.customerName = customerName;
+        this.email = email;
+    }
+
+    . . .
+}
+\end{listing}
+Observe that we had to include an empty constructor to be able to use the \verb|new BankAccount()| 
+as before. If we do not define a constructor, Java define the empty constructor for us. 
+It is simple to conclude that this is a method overloading.
+Actually, it is a good practice to write several constructors to allow several different configurations, 
+but it is recommended to use the \verb|this(foo, bar)| to enter the default values. 
+Then, in the main class, we can pass the constructor as 
+\begin{listing}{1}
+BankAccount melissaAccount = new BankAccount(23579, 1000, "2345", "Melissa Araujo", "myemail@melissa.com");
+\end{listing}
+
+
+\subsection{Inheritance}
+
+The idea is to create classes that inherit features of other classes. For example,
+one can try to build a general class for animals, and create other classes for 
+specific types of animals. Say, there are some general features that all animals 
+should satisfy, but there are others thar only small classes of animals have. 
+See how it works. We start defining the class animals
+\begin{listing}{1}
+public class Animal {
+    
+    private String name;
+    private int brain;
+    private int body;
+    private int size;
+    private int weight;
+
+    public void set(String name){
+        this.name = name;
+    }
+    public void set(int brain){
+        this.brain = brain;
+    }
+    public void setBody(int body) {
+        this.body = body;
+    }
+    public void setSize(int size) {
+        this.size = size;
+    }
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public int getBrain() {
+        return brain;
+    }
+    public int getBody() {
+        return body;
+    }
+    public int getSize() {
+        return size;
+    }
+    public int getWeight() {
+        return weight;
+    }
+
+
+    public Animal(String name, int brain, int body, int size, int weight) {
+        this.name = name;
+        this.brain = brain;
+        this.body = body;
+        this.size = size;
+        this.weight = weight;
+    }
+
+    public void eat() {
+        System.out.println("method called...");
+    }
+
+    public void move(int speed) {
+        System.out.println("Animal is moving at " + speed);
+    }
+}
+\end{listing}
+Next, we define animals, we explain the syntax later 
+\begin{listing}{1}
+public class Dog extends Animal { 
+
+    private int eyes;
+    private int legs;
+    private int tail;
+    private int teeth;
+    private String coat;
+    
+    // public Animal(String name, int brain, int body, int size, int weight) {
+        // super(name, brain, body, size, weight);
+    // }
+    // Actually, we do not need to use all the arguments, since some of them are 
+    // obvious for dogs, for example, the number of brains, we do 
+
+    public Dog(String name, int size, int weight, int eyes, int legs, int tail, int teeth, String coat) {
+        super(name, 1, 1, size, weight);
+            this.eyes = eyes;
+            this.legs = legs;
+            this.tail = tail;
+            this.teeth = teeth;
+            this.coat = coat;
+    }
+    
+    // We can override methods for specific methods. 
+
+    private void chew() {
+       System.out.println("Dog.chew() method");
+    }
+    
+    @Override
+    public void eat() {
+        System.out.println("Dog.eat() called");
+        chew();
+        super.eat();
+    }
+    
+    public void walk() {
+        System.out.println("Dog.walk() called");
+        super.move(5);
+    }
+    
+    public void run() {
+        System.out.println("Dog.run() called");
+        move(10);
+    }
+
+    private void moveLegs(int speed) {
+        System.out.println("Dog.moveLegs() called");
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move() called");
+        moveLegs(speed);
+        super.move(speed);
+    }
+
+}
+\end{listing}
+We use the keyword \verb|extends| to initialize the class \verb|Animal|. Then we 
+write the constructor, and we add \verb|super| to call the Animals features.
+Without the super keyword, java looks for the method inside the subclass, the 
+one that has been overriden. Moreover, the methods of Animals are also available 
+here. 
+
+\subsection{Some terminology}
+
+Here we discuss some terminology we have been using so far. 
+
+\subsubsection{Reference \& Object \& Instance \& Class}
+
+We have been using these keywords for a while, and now it is time to understand the differences 
+with a little more detail. Use an anology of building a house. 
+
+\emph{Classes} are blueprints for houses. Using these blueprints, one can build as many houses as 
+one wants. Each house we build is an \emph{instance}, also known as an \emph{object}. Each house 
+has an address, this is the \emph{reference}.
+\begin{listing}{1}
+    . . .
+    House blueHouse = new House("blue");
+    House anotherHouse = blueHouse;
+    . . .
+\end{listing}
+In this example, we have an object of type House, and two references: \verb|blueHouse| and 
+\verb|anotherHouse|.
+
+\subsubsection{This \& Super}
+
+The keyword \verb|super| is used to access the parent class members, that is, variables and methods.
+The keyword \verb|this| is used to call the current class members (variables and methods). This is 
+required when we have a parameter with the same name as an instance vatiable (field). 
+
+The keyword \verb|this| is commonly used in setters and getters, while the keyword \verb|super| is 
+commonly used with method overriding, that is, then we call a method with the same name from a
+method in the parent class.
+\begin{listing}{1}
+    . . . // We are in a SubClass (child class 
+@Override 
+    public void printMethod() {
+        super.printMethod(); // it class a method from SuperClass (parent)
+    }
+\end{listing}
+Without this \verb|super| keyword, the method would be recursive. 
+
+We also have the \verb|this()| and \verb|super()| calls - notice the brackets. We use this() to call
+a constructor from another overloaded constructor in the same class. Is can only be used in a 
+constructor, and in fact, it must be the first statement of this constructor. It helps us to reduce
+code repetition (DRY - don't repeat yourself).
+
+The only way to call a parent constructor is using the super(). If we don't add it, the compiler 
+inserts it for us. Is also must be the first statement. We cannot use both, this() and super(), 
+in the same constructor. 
+
+Let us consider some example. First, the bad example: 
+\begin{listing}{1}
+class Rectangle {
+    private int x;
+    private int y;
+    private int width;
+    private int height;
+
+    public Rectangle () {
+        this.x = 0;
+        this.y = 0;
+        this.weight = 0; 
+        this.height = 0;
+    }
+
+    public Rectangle (int width, int height) {
+        this.x = 0;
+        this.y = 0;
+        this.weight = weight; 
+        this.height = height;
+    }
+
+    public Rectangle (int x, int y, int weight, int height) {
+        this.x = x;
+        this.y = y;
+        this.weight = weight; 
+        this.height = height;
+    }
+
+}
+\end{listing}
+Now, the good example:
+\begin{listing}{1}
+class Rectangle {
+    private int x;
+    private int y;
+    private int width;
+    private int height;
+
+    // 1st constructor
+    public Rectangle () {
+        this(0, 0); // calls the 2nd constructor
+    }
+
+    // 2nd constructor
+    public Rectangle (int width, int height) {
+        this(0, 0, width, height); // calls the 3rd constructor
+    }
+
+    // 3rd constructor
+    public Rectangle (int x, int y, int weight, int height) {
+        // initialize variables 
+        this.x = x;
+        this.y = y;
+        this.weight = weight; 
+        this.height = height;
+    }
+
+}
+\end{listing}
+No matter what constructor we call, the variables will always be initialized by the 3rd constructor.
+
+Now, let us consider an example of the super() call. First, the parent class Shape:
+\begin{listing}{1}
+class Shape { 
+    private int x; 
+    private int y; 
+
+    public Shape(int x, int y) {
+        this.x = x;
+        this.y = y; 
+    }
+}
+\end{listing}
+Now, the child class Rectangle: 
+\begin{listingcont}
+class Rectangle extends Shape {
+    private int width; 
+    private height; 
+
+    // 1st constructor
+    public Rectangle (int x, int y) {
+        this(x, y, 0, 0); // calls the 2nd constructor
+    }
+
+    // 2nd constructor
+    public Rectangle (int x, int y, int weight, int height) {
+        // initialize variables 
+        super(x, y); // calls constructor from parent class (Shape)
+        this.weight = weight; 
+        this.height = height;
+    }
+
+}
+\end{listingcont}
+
+
+\subsubsection{Method Overloading \& Method Overriding}
+
+\paragraph{Overloading} Method overloading means providing two or more separate methods in a 
+class with the same name but different parameters. Method returns type may or may not be 
+different and that allows us to reuse the same method name. It allows to avoid duplication. 
+It does not have anything to do with Polymorphism, but Java Devs often refer to overloading as 
+Compile Time Polymorphism. It can be used inside the same class and/or in child classes, since child 
+classes inherit the methods from their parent class. 
+
+\paragraph{Overriding} It denotes the definition of a method in a child class that already exists 
+in the parent class with same signature (same name and arguments). It is also called Runtime 
+Polymorphism and Dynamic Method Dispatch. It is recommended to put @Override immediately above 
+the method. It can be defined just in child classes.
+
+Let consider some simple examples: 
+\begin{listing}{1}
+class Dog { 
+    public void bark() {
+        System.out.println("woof");
+    }
+
+    /Overloading
+    public void bark(int number) {
+        for (int i = 0; i < number, i++) {
+            System.out.println("woof");
+        }
+    }
+}
+
+class GermanShepherd extends Dog {
+    
+    // Overriding 
+    @Override 
+    public void bark() { 
+        system.out.println("woof woof woof");
+    }
+}
+\end{listing}
+
+The main differences are summarized in figure~\ref{fig:over}.
+\begin{figure}[htb!]
+	\includegraphics[width=0.7\textwidth]{over.png}
+    \caption{Comparison Overloading and Overring.}
+	\label{fig:over}
+\end{figure}
+
+Finally, it might be confusing the terminology \emph{covariant} above, but it 
+denotes how the return type varies as we go to a SubClass. For example, consider 
+two classes
+\begin{listing}{1}
+class Burguer {
+// fields, methods, ...
+}
+
+class HealthyBurguer extends Burguer {
+// fields, methods, ...
+}
+\end{listing}
+
+\begin{listing}{1}
+class BurguerFactory {
+    public Burguer createBurguer() {
+        return new Burguer();
+    }
+}
+
+class HealthyBurguerFactory {
+    public HealthyBurguer createBurguer() {
+        return new HealthyBurguer();
+    }
+}
+\end{listing}
+
+
+\subsubsection{Static Methods \& Instance Methods}
+
+\paragraph{Static Methods} These methods are declared using a verb|static| modifier. These 
+methods can't access instance methods and instances variables directly. They are
+usually used for operations that don't require any data from an instance of the 
+class (from 'this'). When we see a method that does not use instance variables, that
+methods should be declared as static. 
+\begin{listing}{1}
+class Calculator {
+    public static void printSum(int a, int b) {
+        System.out.println("sum = " + (a + b));
+    }
+}
+\end{listing}
+and
+\begin{listing}{1}
+public class Main {
+    public static void main(String[] args) {
+        Calculator.printSum(5,10); // call static method 
+        printHello(); // call static method 
+    }
+
+    public static void printHello() {
+        System.out.println("Hello");
+    }
+}
+\end{listing}
+Observe that we do not need an instance to apply the method. It is what makes this
+a static class.
+
+\paragraph{Instance Methods} These methods belong to an instance of a class. To use 
+an instance method, we need to use the \verb|new| keyword.
+\begin{listing}{1}
+class Dog {
+    public void bark() {
+        System.out.println("woof");
+    }
+}
+\end{listing}
+and
+\begin{listing}{1}
+public class Main {
+    public static void main(String[] args) {
+        Dog rex = new Dog(); // create instance
+        rex.bark(); // call instance method 
+    }
+}
+\end{listing}
+
+Should we use static or instance methods? 
+\begin{figure}[htb!]
+	\includegraphics[width=0.7\textwidth]{methods.png}
+    \caption{Shold we use static or instance methods?}
+	\label{fig:methods}
+\end{figure}
+
+
+\subsubsection{Static Variables \& Instance Variables}
+
+\paragraph{Static} These are defined using the keyword static. They are also known as static member
+variables. They are not used very often, but might be useful in some particular cases, for 
+example, when we need an imput of the user, that is, in scanners. 
+
+In any case, see the behaviour of these variables in the following example: 
+\begin{listing}{1}
+class Dog { 
+    private static String name; 
+
+    public Dog(String name) {
+        Dog.name = name;
+    }
+
+    public void printName() {
+        System.out.println("name = " + name);
+    }
+}
+\end{listing}
+and 
+\begin{listing}{1}
+public class Main {
+    public static void main(String[] args) {
+        Dog rex = new Dog("rex"); // create instance rex
+        Dog fluffy = new Dog("fluffy"); // create instance fluffy
+        rex.printName(); // prints fluffy
+        fluffy.printName(); // prints fluffy
+    }
+}
+\end{listing}
+It prints \verb|fluffy| in both cases, because we have changed the variable name to fluffy when we 
+create the instance fluffy. 
+
+\paragraph{Instance} We do not use the keyword static. Moreover, instance variables are also known 
+as fields or member variables. Instance variables belong to the instance of a class. It represents 
+the state of a given instance. Consider the previous example, but without the keyword static. Then 
+\begin{listing}{1}
+class Dog { 
+    private String name; 
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    public void printName() {
+        System.out.println("name = " + name);
+    }
+}
+\end{listing}
+and 
+\begin{listing}{1}
+public class Main {
+    public static void main(String[] args) {
+        Dog rex = new Dog("rex"); // create instance rex
+        Dog fluffy = new Dog("fluffy"); // create instance fluffy
+        rex.printName(); // prints rex
+        fluffy.printName(); // prints fluffy
+    }
+}
+\end{listing}
