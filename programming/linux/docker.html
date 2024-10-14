@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+        <section id="linux">
+
+        <h1><u>Docker Installation and initial configuration</u></h1>
+
+            <p>Some details on the installation of docker. Here, I suppose I'm using the dnf package manager.</p>
+
+            <p>
+            I started in the official website:
+            <a href="https://docs.docker.com/engine/install/fedora/#install-using-the-repository" class="external-link"
+               target="_blank" rel="noopener">Install Using the Repository</a>
+            </p>
+
+            <div class="code-block">
+                <pre><code>
+                sudo dnf -y install dnf-plugins-core
+                sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+                sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+                </code></pre>
+            </div>
+
+        <p>At this point, it is also useful to follow the playlist:
+            <a href="https://www.youtube.com/watch?v=PgR3Wc4_X1g&list=PLT98CRl2KxKECHltRib03tG8pyKEzwf9t&index=3" class="external-link"
+               target="_blank" rel="noopener">Learn Linux TV</a>.
+        </p>
+
+            <div class="code-block">
+                <pre><code>
+                sudo systemctl enable docker
+                sudo systemctl start docker
+                systemctl status docker
+                </code></pre>
+            </div>
+
+        <p>Run the first test.</p>
+
+            <div class="code-block">
+                <pre><code>
+                sudo docker run hell-world
+                </code></pre>
+            </div>
+
+        <p>The problem now is that we need to run ~sudo~. We fix this with</p>
+
+            <div class="code-block">
+                <pre><code>
+                sudo usermod -aG docker thiago 
+                </code></pre>
+            </div>
+
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+</body>
+</html>
