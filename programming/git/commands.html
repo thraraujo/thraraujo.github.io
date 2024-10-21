@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="git">
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+        <h1><u>Some Useful Git Commands</u></h1>
+
+
+        <h3>Push a tag to remote</h3>
+
+            <div class="code-block">
+                <pre><code>
+                git push origin <tag_name>
+
+                # not recommended
+                git push --tags
+                </code></pre>
+            </div>
+            <p>See more: <a
+              href="https://stackoverflow.com/questions/5195859/how-do-you-push-a-tag-to-a-remote-repository-using-git"
+                class="external-link" target="_blank" rel="noopener">push a tag to a remote</a></p>
+
+
+
+        <h3>Tag to older commit</h3>
+
+            <div class="code-block">
+                <pre><code>
+                git tag v1.2 9fceb02
+
+                # with message 
+                git tag -a v1.2 9fceb02 -m "Message here"
+                </code></pre>
+            </div>
+            <p>See more: <a
+                           href="https://stackoverflow.com/questions/4404172/how-to-tag-an-older-commit-in-git"
+                class="external-link" target="_blank" rel="noopener">push a tag to a remote</a></p>
+
+
+        <h3>Forget deleted branches</h3>
+
+            <div class="code-block">
+                <pre><code>
+                git remote prune origin
+                </code></pre>
+            </div>
+            <p>See more: <a
+                           href="https://stackoverflow.com/questions/5094293/git-remote-branch-deleted-but-still-it-appears-in-branch-a"
+                class="external-link" target="_blank" rel="noopener">push a tag to a remote</a></p>
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+</body>
+</html>

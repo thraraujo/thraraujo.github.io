@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="git">
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+        <h1><u>Git Fetch</u></h1>
+
+        <p>
+        I always wandered how I could compare my local and remote repos. Since I 
+        might have more than one laptop, it is important to keep track of modifications, 
+        and it would be nice to compare if my local repo is updated with github repo. 
+        </p>
+
+        <p>
+        Here is a nice answer from stackoverflow: 
+          <a href="https://stackoverflow.com/questions/11935633/git-diff-between-a-remote-and-local-repository"
+                class="external-link" target="_blank" rel="noopener">'git diff' between a remote and local repository</a></p>
+        </p>
+
+        <p>
+        Let me reproduce the important part of HieroB's answer -- just notice that in 
+        my case,  have renamed my branches from <b>master</b> to <b>main</b>. 
+        </p>
+
+        <blockquote>
+        <i>
+        <p>To compare a local working directory against a remote branch, for example origin/master:
+        `git fetch origin master` This tells git to fetch the branch named 'master'
+          from the remote named 'origin'. git fetch will not affect the files in your
+          working directory; it does not try to merge changes like git pull does. </p>
+
+        <p>`git diff --summary FETCH_HEAD` When the remote branch is fetched, it can be
+          referenced locally via FETCH_HEAD. The command above tells git to diff the
+          working directory files against FETCHed branch's HEAD and report the
+          results in summary format. Summary format gives an overview of the changes,
+          usually a good way to start. If you want a bit more info, use --stat
+          instead of --summary. </p>
+
+        <p>`git diff FETCH_HEAD -- mydir/myfile.js` If you want to<br>
+          see changes to a specific file, for example myfile.js, skip the --summary<br>
+          option and reference the file you want (or tree).</p>
+
+        <p>
+         As noted, origin references the remote repository and master references the<br>
+         branch within that repo. By default, git uses the name origin for a remote, so
+         if you do git clone <url> it will by default call that remote origin. Use git
+         remote -v to see what origin points to.</p>
+         </i>
+        </blockquote>
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+</body>
+</html>
