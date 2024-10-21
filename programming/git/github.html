@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="github">
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+<h1>Github</h1>
+
+<p>We now start a discussion of one of the big topics: Github. It is a
+host platform for git repositories. There are important reasons to use
+Github, for example, to backup our projects, improve collaborations,
+and be part of the open-source community.</p>
+
+<h2>Cloning repos</h2>
+
+<p>With cloning, we do not need to create all our projects from
+scratch; we can clone an existing repo. All we need is the URL of the
+repo we want to clone. The command is:</p>
+
+<pre><code>git clone &lt;url&gt;</code></pre>
+
+<p>Note that anyone can clone a public repository. Moreover, this command is not tied exclusively to Github.</p>
+
+<h2>Github setup</h2>
+
+<p>The first thing we need to do is to generate SSH keys. See
+details <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">here</a>. The
+whole process is a bit tedious, but not difficult.</p>
+
+<h2>Creating Github repos</h2>
+
+<p>Now we want to create new Github repositories. There are two situations:</p>
+
+<h3>Uploading repos</h3>
+
+<p>If we already have repositories in our machine, and we want to upload them to Github, we follow these steps:</p>
+
+<ol>
+  <li>Create a new Github repo</li>
+  <li>Connect a local repo (add a remote)</li>
+  <li>Push up our changes</li>
+</ol>
+
+<h3>Starting from scratch</h3>
+
+<p>The other option is when we want to start a brand-new project. In this case, we do the following:</p>
+
+<ol>
+  <li>Create a new Github repo</li>
+  <li>Clone it to our machine</li>
+  <li>Do some work locally</li>
+  <li>Push up our changes</li>
+</ol>
+
+<p>This second option is easy if we understand the first.</p>
+
+<h3>Git remote</h3>
+
+<p>Once we create a Github repo, we need to tell git about the
+existence of the Github project. To view the existing remotes on my
+computer, we use the following command:</p>
+
+<pre><code>git remote -v</code></pre>
+
+<p>The <code>-v</code> stands for verbose. If the remote does not exist, we can create a new one with:</p>
+
+<pre><code>git remote add &lt;name&gt; &lt;url&gt;</code></pre>
+
+<p>A standard name is <code>origin</code>. We can change the name of a remote or delete it with:</p>
+
+<pre><code>git remote rename &lt;old_name&gt; &lt;new_name&gt;
+git remote remove &lt;name&gt;</code></pre>
+
+<h3>Git push</h3>
+
+<p>Now we want to push our modifications. We do it with the command:</p>
+
+<pre><code>git push &lt;remote&gt; &lt;branch&gt;</code></pre>
+
+<p>We do not need to push the branch we have locally to the same branch on Github. We can even change the branch names with:</p>
+
+<pre><code>git push &lt;remote&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</code></pre>
+
+<p>Finally, pay attention to the flag <code>-u</code>:</p>
+
+<pre><code>git push -u &lt;remote&gt; &lt;branch&gt;</code></pre>
+
+<p>The <code>-u</code> stands for upstream. It links the Github repo
+to our local machine, simplifying future commands. After setting this,
+we can push our modifications with:</p>
+
+<pre><code>git push</code></pre>
+
+<h3>Master & Main</h3>
+
+<p>In line with Github’s recent updates, we can use the
+term <code>main</code> instead of <code>master</code>. To change the
+branch name of our repos, we use:</p>
+
+<pre><code>git branch -M main</code></pre>
+
+<h3>Forcing push</h3>
+
+<p>If we amend a commit and try to push this modification to Github,
+it will reject the changes as a safety measure. To force the push, we
+can use:</p>
+
+<pre><code>git push -f</code></pre>
+
+<p>This command will overwrite the previous commit (the one we are
+amending). If someone else is working on it, it may cause problems. To
+avoid this in team settings, we can use personal branches. For solo
+projects, it should be fine.</p>
+
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+</body>
+</html>
+

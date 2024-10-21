@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+
+        <section id="git">
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+        <h1>Fundamental aspects</h1>
+
+        <h2>Username &amp; Email</h2>
+
+        <p>Here I want to define the username and email to my git repositories. First thing we do is the following:</p>
+
+<pre><code>
+git config --global user.name "NAME"
+git config --global user.email "E-MAIL"
+</code></pre>
+
+        <p>This defines, respectively, the username and email. We can change it anytime we want, but keep it consistent. We can check it with:</p>
+
+        <pre><code>
+git config user.name
+git config user.email
+        </code></pre>
+
+        <h2>First Commands</h2>
+
+        <h3>Status</h3>
+
+        <p>The first thing we need to understand is the command:</p>
+
+        <pre><code>git status
+        </code></pre>
+
+        <p>It gives information on the current status of a git repository and its contents.</p>
+
+        <h3>Init</h3>
+
+        <p>The next command is:</p>
+
+        <pre><code>git init
+        </code></pre>
+
+        <p>It makes the directory we are in a git repository. We run this command one time per project.</p>
+
+        <p>The init creates a directory <code>.git</code> (it is hidden). If
+        we delete this folder, it destroys the git history, so the directory
+        is not a repository anymore. A common git mistake is the following:
+        Once we create a repository, git watches everything that happens in
+        the repository, even the creation of nested folders. For this reason,
+        we do not run the git init in a folder inside a repository, as it
+        avoids mistakes.</p>
+
+        <h2>Committing</h2>
+
+        <h3>Add</h3>
+
+        <p>Now we want to commit the modifications we do on our projects.</p>
+
+        <pre><code>git add file1 file2 file3
+        </code></pre>
+
+        <p>Once we have modified our project, we can pack the modifications or part of them using the add command.</p>
+
+        <p>Also, we can add all modifications at once with:</p>
+
+        <pre><code>git add .
+        </code></pre>
+
+        <h3>Commit</h3>
+
+        <p>Now we can commit the modifications we have done.</p>
+
+        <pre><code>git commit
+        </code></pre>
+
+        <p>In this option, we will need to provide the message using vim. Or we can write the message as follows:</p>
+
+        <pre><code>git commit -m "my message"
+        </code></pre>
+
+        <h3>Log</h3>
+
+        <p>This command gives a log of commits of a project.</p>
+
+        <pre><code>git log
+        </code></pre>
+
+        <p>There are many options available (see documentation). One particularly useful option is the following:</p>
+
+        <pre><code>git log --abbrev-commit
+        </code></pre>
+
+        <p>That gives a shorter commit name. Another useful option is:</p>
+
+        <pre><code>git log --oneline
+        </code></pre>
+
+        <p>It gives a short version of the commit message.</p>
+
+        <h3>Amend</h3>
+
+        <p>Suppose we want to fix a mistake we make in a previous commit. Then we can do the following:</p>
+
+        <pre><code>git commit -m 'some message'
+git add forgotten_file
+git commit --amend
+        </code></pre>
+
+        <h3>Gitignore</h3>
+
+        <p>Here I just add the file <code>.gitignore</code> and list the files
+        and folders we do not want to track. There are several patterns to
+        follow. Some patterns are:</p>
+
+        <pre><code>.DS_Store   # it ignores files called .DS_Store
+folderName/   # It ignores an entire directory
+*.log         # it ignores everything with the .log extension
+        </code></pre>
+
+        <h2>Branching</h2>
+
+        <p>This is one of the last fundamental tools we learn in
+        git. Everything else is secondary. The idea here is that if we need to
+        modify our project, or work simultaneously with other people, we can
+        create other branches of the project and merge them afterwards.</p>
+
+        <p>The default branch when we create a repository — that is, when we
+        git init — is called <code>master branch</code>. When we
+        type <code>git log</code>, we see that the most
+        recent <code>commit</code> is called <code>HEAD</code>. As a matter of
+        fact, it is written something of the form <code>HEAD ->
+        master</code>. It refers to the thing we are currently working on.</p>
+
+        <h3>Git branch</h3>
+
+        <p>Here we can start with our first command. It is:</p>
+
+        <pre><code>git branch
+        </code></pre>
+
+        <p>That gives the existing branches in our repository. Moreover, the <code>*</code> indicates our current branch.</p>
+
+        <h3>Creating and switching branches</h3>
+
+        <p>In order to create new branches, we use the same syntax, except that now we add the name of the branch, that is:</p>
+
+        <pre><code>git branch &lt;new_branch&gt;
+        </code></pre>
+
+        <p>Observe that this command just creates another branch for us, but
+        it does not change our work to the new branch. We can change the
+        branch with:</p>
+
+        <pre><code>git switch &lt;branch_name&gt;
+        </code></pre>
+
+        <p>It is important to notice that this command creates a new branch based on the current head.</p>
+
+        <p>There is another command to switch between branches, it is:</p>
+
+        <pre><code>git checkout &lt;branch_name&gt;
+        </code></pre>
+
+        <p>This command does a zillion other things, so the <code>switch</code> was introduced to be a simpler alternative.</p>
+
+        <p>Finally, we can create and switch to the new branch at once; we just need to introduce a flag <code>-c</code>:</p>
+
+        <pre><code>git switch -c &lt;branch_name&gt;
+git checkout -b &lt;branch_name&gt;
+        </code></pre>
+
+        <p>Finally, there is something important we need to understand. If we
+        switch to new branches without committing the modifications, these
+        would be lost. So, we need to commit (or stash them), and just after
+        that, we switch to new branches. Actually, sometimes, when the files
+        do not exist in other branches — and there is no risk of conflicts —
+        the files follow us to the new branch.</p>
+
+        <h3>Deleting and renaming branches</h3>
+
+        <p>We can delete the branch with the command:</p>
+
+        <pre><code>git branch -d &lt;branch_name&gt;
+        </code></pre>
+
+        <p>It works if the branch is fully merged. Otherwise, instead
+        of <code>-d</code>, we can use <code>-D</code>, which denotes
+        force. We cannot delete inside the branch.</p>
+
+        <p>Moreover, we can rename the branch with:</p>
+
+        <pre><code>git branch -m &lt;new_branch_name&gt;
+        </code></pre>
+
+        <p>In order to rename, we need to be inside the branch.</p>
+
+        <h2>Merging branches</h2>
+
+        <p>Finally, we have the last fundamental concept of git: Merging
+        different branches. We need to keep in mind that the master branch
+        should not be used for experiments; in other words, we must use the
+        master branch just for “permanent” coding.</p>
+
+        <p>This discussion is somewhat straightforward. We use the following command:</p>
+
+        <pre><code>git merge &lt;name_modified_branch&gt;
+        </code></pre>
+
+        <p>We need to be in the branch we want to update. Moreover, it is
+        worth noticing that the merge is temporary, and it means that no
+        branch is destroyed in the process.</p>
+
+        <p>On the other hand, there are at least three different situations we need to distinguish when we merge branches.</p>
+
+        <h3>Fast-forward</h3>
+
+        <p>The first case is very easy. It is basically the case where the
+        older commit is kept as it was, and the new branch basically adds new
+        information. In this case, the commit just brings the old commit to a
+        new point, and the two branches are similar. Evidently, if we change
+        any branch, they diverge again.</p>
+
+        <h3>Merging without conflicts</h3>
+
+        <p>The second type of merging is when two branches are modified, but
+        no conflicts are found. It happens, for example, when the branches
+        touch different files or add new files.</p>
+
+        <p>In this case, git creates a new commit unifying all modifications.</p>
+
+        <h3>Merging with conflicts</h3>
+
+        <p>The last case is when there are conflicts. In this case, git reports the conflicts, and we need to manually resolve them.</p>
+
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+
+</body>
+</html>
