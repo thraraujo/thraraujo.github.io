@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="network">
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+        <h1><u>MAC Address</u></h1>
+
+            <p>MAC means <b>Medium Access Control</b>.</p>
+
+            <p>I can see the MAC address of my device with:</b>
+
+                <pre><code>
+$ ifconfig # see the field *ether* entry.
+
+$ ip link show
+$ nmcli device show | grep GENERAL.HWADDR
+$ cat /sys/class/net/*/address # this several addresses
+$ cat /sys/class/net/wlp0s20f3/address # this seems to be the most convenient
+                </code></pre>
+
+        <p>In order to check my network, I install the util `nmap`, and I scan my network</p>
+                <pre><code>
+$ sudo nmap -sP 192.168.15.0/24
+
+$ arp -a # I can check the MAC addresses of devices connected to my network.
+                </code></pre>
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+</body>
+</html>
