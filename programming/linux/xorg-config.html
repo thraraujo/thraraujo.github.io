@@ -36,7 +36,6 @@
             <p> In the file:<code>/etc/X11/xorg.conf.d/00-keyboard.conf</code> I have added the following code:</p>
 
             <div class="code-block">
-                <pre><code>
                 Section "InputClass"
                         Identifier "system-keyboard"
                         MatchIsKeyboard "on"
@@ -46,16 +45,13 @@
                     Option "XkbOptions" "compose:menu"
                     Option "AutoRepeat" "200 30"
                 EndSection
-                </code></pre>
             </div>
 
             <p>I have also added the following lines to my <code>.profile</code></p>
             <div class="code-block">
-                <pre><code>
                 setxkbmap -option ctrl:nocaps 
                 setxkbmap -option compose:menu
                 xset r rate 200 30
-                </code></pre>
             </div>
             <p>I have also added the code <code>xset r rate 250 30</code> to my <code>.Xclients</code> file.</p>
 
@@ -65,13 +61,11 @@
               In the file file <code>/etc/X11/xorg.conf.d/10-touchpad.conf</code>
               I add the code:</p> 
             <div class="code-block">
-                <pre><code>
                 Section "InputClass"
                         Identifier "system-touchpad"
                         Driver "libinput"
                         Option "NaturalScrolling" "true"
                 EndSection
-                </code></pre>
             </div>
 
             <p> See more: 
@@ -92,9 +86,7 @@
 
             <p>In conclusion, in my Xresources, located at <code>/etc/X11/Xresources</code>, I added</p>
             <div class="code-block">
-                <pre><code>
                 xft.dpi: 144
-                </code></pre>
             </div>
             <p>By the way, the value 144 has an explanation. In the Xorg page cited above there is 
             the quote:</p>

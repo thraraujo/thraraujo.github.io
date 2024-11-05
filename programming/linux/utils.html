@@ -30,9 +30,7 @@
         and 02.pdf is the following</p>
 
             <div class="code-block">
-                <pre><code>
                 pdftk 01.pdf 02.pdf cat output merged.pdf
-                </code></pre>
             </div>
 
 
@@ -40,13 +38,11 @@
 
         <p>Commands</p>
             <div class="code-block">
-                <pre><code>
                  tar -cf <folder>.tar.gz <folder>                                # create tar file
 
                  gpg -c --no-symkey-cache -- cipher-algo AES256 <file> # create gpg file
 
                  gpg <file>.gpg                                        # open file
-                </code></pre>
             </div>
 
             <p>See more on the mental outlaw channel: 'Do this before putting your files in the cloud'</p>
@@ -60,11 +56,9 @@
                          class="external-link" target="_blank" rel="noopener">Burn USB with dd</a>
         </p>
             <div class="code-block">
-                <pre><code>
                 sudo fdisk -l               # See drive. It might be something like: /dev/sda or /dev/sdb.
 
                 sudo dd bs=4M if=/path/to/arcolinux...iso of=/dev/sdX status=progress && sync
-                </code></pre>
             </div>
 
         </section>

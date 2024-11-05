@@ -28,7 +28,6 @@
 
         <h3>Getting started</h3>
             <div class="code-block">
-                <pre><code>
                 vim file                    # Open file.
                 vim file1 file2             # Open file1 and file2
                 vim -R file                 # Open file in read mode
@@ -48,13 +47,11 @@
 
                 :set spell                  # Start the spell checking
                 :set cc=100                 # Creates a vertical line at character 100 (cc=colorcolumn)
-                </code></pre>
             </div>
 
 
         <h3>Navigation</h3>
             <div class="code-block">
-                <pre><code>
                 h                           # Left
                 j                           # Down
                 k                           # Up
@@ -88,7 +85,6 @@
                 [[                          # Go to the beginning of the section
                 ]]                          # Go to the beginning of the next section
 
-                </code></pre>
             </div>
         <p>
         If we consider the notation _nh_, where _n_ is a number known as _replication factor_, the left
@@ -104,7 +100,6 @@
 
         <h3>Editing</h3>
             <div class="code-block">
-                <pre><code>
                 i                           # Insert cursor goes to the beginning of the block cursor
                 I                           # Insert cursor goes to the beginning of the line
                 0i                          # Insert cursor goes to the beginning of the line.
@@ -144,7 +139,6 @@
 
                 gq                          # Format paragraph
                 gwip                        # Reflow paragraph
-                </code></pre>
             </div>
         <p>
         When we delete a character, word or line, vim saves the deleted object in a
@@ -158,7 +152,6 @@
 
         <h3>Copy and Paste</h3>
             <div class="code-block">
-                <pre><code>
                 yw                          # Yank (Copy) word
                 yy                          # Yank the whole line
                 Y                           # Yank the whole line. Equivalent to yy
@@ -168,20 +161,17 @@
                 P                           # Paste before the cursor
                 "+y                         # Yank into the system clipboard
                 "+p                         # Paste from the system clipboard
-                </code></pre>
             </div>
 
 
         <h3>Search</h3>
             <div class="code-block">
-                <pre><code>
                 /pattern                    # Search pattern forward
                 ?pattern                    # Search pattern backward
                 n                           # Repeat search in the same direction
                 N                           # Repeat search in the opposite direction
                 /                           # Repeat search forward
                 ?                           # Repeat search backward
-                </code></pre>
             </div>
 
 
