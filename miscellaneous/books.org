@@ -1,7 +1,5 @@
 ** Books and Articles
 
-- [[https://nossabiblialivre.com/][A Nossa Bíblia Livre - Osvaldo Luiz Ribeiro]]
-
 - [[https://www.marxists.org/portugues/biblioteca.htm][Biblioteca Marxista]]
 
 - [[https://www.marxists.org/portugues/tematica/livros/por/pdf/50.pdf][Do Socialismo Utópico ao Socialismo Científico - Friedrich Engels]]

@@ -30,8 +30,8 @@ img {
 }*/
 
 .container {
-    width: 60%; /* adjust the width based on your preference */
-    max-width: 1200px; /* optional: restrict the max width */
+    width: 100%; /* adjust the width based on your preference */
+    max-width: 2000px; /* optional: restrict the max width */
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 3.0);
