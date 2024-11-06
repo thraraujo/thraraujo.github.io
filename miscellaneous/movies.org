@@ -1,5 +1,9 @@
 * Filmes completos no youtube
 
+- [[https://www.youtube.com/watch?v=mGTfTUR6BdY][Macunaíma]]
+
+- Ópera do Malandro: [[https://www.youtube.com/watch?v=q-KT_pE2-rYa][Link 01]] e [[https://www.youtube.com/watch?v=lkH0nPiF7mE][Link 02]]
+
 - [[https://www.youtube.com/watch?v=-fVzlgKy9gw&list=PL8uaBjKrKP7l7V_XmzszgW5BoN58MRMqD][The Warriors]] O enredo desse filme é muito simples, mas isso não
   significa que é um filme trivial.
 
@@ -9,7 +13,6 @@
   documentário é produzido atualizando as vicissitudes na vida dos
   membros desse grupo. Uma delas (não direi quem para evitar spoilers)
   se torna um(a) físico(a).
-
 
 - [[https://youtu.be/WoLF5C4ipZk][Durval Discos]] Esse é um filme muito simples, mas contém uma certa
   opressão psicológica que achei meio perturbadora.
@@ -31,7 +34,7 @@
 - [[https://youtu.be/tzyepsKbmQc][O Cheiro do Ralo]] Um filme muito bom sobre um ser humano
   detestável. "A Vida é Dura".
 
-- [[https://www.youtube.com/watch?v=k0RYQVkQmWU][Revolution OS]], [[https://www.youtube.com/watch?v=zPt_e9Cdk08][The Code e ]] [[https://www.youtube.com/watch?v=tc4ROCJYbm0][AT&T Archives: The UNIX Operating System]]
+- [[https://www.youtube.com/watch?v=k0RYQVkQmWU][Revolution OS]], [[https://www.youtube.com/watch?v=zPt_e9Cdk08][The Code]], e [[https://www.youtube.com/watch?v=tc4ROCJYbm0][AT&T Archives: The UNIX Operating System]]
   Os dois primeiros documentários são sobre a criação do GNU/Linux,
   enquanto terceiro é (uma peça publicitária?) sobre o sistema UNIX.
 
@@ -45,12 +48,9 @@
 
 - [[https://www.youtube.com/watch?v=TmEltxUxY8o&list=PLwofSJv5MPByBHOrHWQzbtYtoN_i-D8f_][Colônia Cecília (Minisérie)]]
 
-- Macunaíma
-
 - [[https://www.youtube.com/watch?v=T9xUI9oQhyo][Para Viver um Grande Amor]]
 
 - [[https://www.youtube.com/watch?v=82AIAaoH7M8][Vidas Secas]]
 
 - Morte e Vida Severina: [[https://www.youtube.com/watch?v=x-k083e62yY][Link 01]] e [[https://www.youtube.com/watch?v=cVSLt7KmXI4][Link 02]]
 
-- Ópera do Malandro: [[https://www.youtube.com/watch?v=q-KT_pE2-rYa][Link 01]] e [[https://www.youtube.com/watch?v=lkH0nPiF7mE][Link 02]]
