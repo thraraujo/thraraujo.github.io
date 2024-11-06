@@ -31,8 +31,11 @@ O clássico do Camel. Duas das minhas músicas favoritas do Camel estão nesse �
 
 #+begin_quote
 Once he wore grey, he fell and slipped away
+
 From everybody's sight.
+
 The wizard of them all, came back from his fall
+
 This time wearing white.
 #+end_quote
 
