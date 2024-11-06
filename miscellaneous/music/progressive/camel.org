@@ -30,12 +30,9 @@ O clássico do Camel. Duas das minhas músicas favoritas do Camel estão nesse �
 [[https://www.youtube.com/watch?v=keu5fRyRtNw][Lady Fantasy]] e [[https://www.youtube.com/watch?v=aPenjGbLtLU][The White Rider]] que é uma música sobre Gandalf:
 
 #+begin_quote
-Once he wore grey, he fell and slipped away
-
-From everybody's sight.
-
-The wizard of them all, came back from his fall
-
+Once he wore grey, he fell and slipped away\\
+From everybody's sight.\\
+The wizard of them all, came back from his fall\\
 This time wearing white.
 #+end_quote
 
