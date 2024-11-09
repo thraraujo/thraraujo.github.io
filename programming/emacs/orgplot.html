@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="emacs">
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+        <h1><u>Org-plot</u></h1>
+
+            <p>Org-plot is a nice emacs tool to plot some graphs in an org file directly from a table.</p>
+
+            <p>First thing to do is to install gnuplot</p>
+
+            <div class="code-block">
+    sudo apt install gnuplot # Debian/Ubuntu
+
+    sudo dnf install gnuplot # Fedora
+            </div>
+
+            <p>I added the following lines to my config:</p>
+
+            <div class="code-block">
+  ;; Orgplot
+  (use-package gnuplot)
+  (autoload 'gnuplot-mode "gnuplot" "Gnuplot mode" t)
+  (setq auto-mode-alist
+        (append '(("\\.plt\\'" . gnuplot-mode)) auto-mode-alist))
+            </div>
+
+            <p>After that, we run</p>
+
+            <div class="code-block">
+  M-x org-plot/gnuplot
+           </div>
+            <p>or <b>C-c " g</b>.</p>
+
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+</body>
+</html>
