@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Araujo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="linux">
+
+        <p><a href="../../stuff.html">Back</a></p>
+
+        <h1><u>Virtual Environment</u></h1>
+
+        <p>
+            The new versions of my beloved GNU/Linux have made it difficult to
+            pip-install some obscure Python packages. Apparently, developers don't
+            think their users are capable of making wise judgments regarding the
+            usability of their systems… and they're probably right. Anyone with
+            two functional neurons can see that the GNU/Linux community has some…
+            anyway, I digress.
+         </p>
+
+        <p>
+            The important thing now is that I need to create a virtual environment
+            to carry out my inconsequential experiments... probably with Docker, but here
+            I just want to do it for my Jupyter Lab calculations. 
+        </p>
+
+
+        <p>
+            So, run the commad below to create and activate the Python virtual environment:
+        </p>
+
+            <div class="code-block">
+            python -m venv my-virtual-env
+
+            source myenv/bin/activate
+            </div>
+
+        <p>
+          Now we can have some fun pip-installing all my stuff... and to make it permanent
+          and reinstall it in other machine, just do:
+        </p>
+
+            <div class="code-block">
+            pip freeze > requirements.txt
+
+            pip install -r requirements.txt
+            </div>
+
+        <p>
+          That's all folks!!
+        </p>
+
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+
+</div>
+</body>
+</html>
