@@ -40,7 +40,9 @@
             <div class="code-block">
                  tar -cf folder.tar.gz folder                          # create tar file
 
-                 gpg -c --no-symkey-cache -- cipher-algo AES256 file   # create gpg file
+                 gpg -c --no-symkey-cache --cipher-algo AES256 file   # create gpg file
+
+                 gpg -c --no-symkey-cache --s2k-mode 3 --s2k-digest-algo SHA512 --s2k-count 65011712 file # improves the previous command
 
                  gpg file.gpg                                          # open file
             </div>
