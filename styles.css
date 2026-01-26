@@ -23,11 +23,10 @@ body {
     }
 }
 
-/*
 img {
-    max-width: 100%;
-    height: auto;
-}*/
+  max-width: 100%;
+  height: auto;
+}
 
 .container {
     width: 100%; /* adjust the width based on your preference */
