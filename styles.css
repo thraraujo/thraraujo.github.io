@@ -23,13 +23,15 @@ body {
     }
 }
 
+/*
 img {
   max-width: 100%;
   height: auto;
 }
+*/
 
 .container {
-    width: 100%; /* adjust the width based on your preference */
+    width: 150%; /* adjust the width based on your preference */
     max-width: 2000px; /* optional: restrict the max width */
     background-color: #f4f4f4;
     padding: 20px;
