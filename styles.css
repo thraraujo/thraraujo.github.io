@@ -91,3 +91,19 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+.lists {
+    display: flex;
+    gap: 2rem;              /* space between columns */
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.list {
+    min-width: 200px;
+}
+
+.list ul {
+    padding-left: 1.2rem;   /* keeps bullets aligned nicely */
+}
