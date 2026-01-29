@@ -1,1 +1,4 @@
-* 8,12,16,20 * * 1,2,3,4,5 /home/thiago/.config/scripts/02-pci-scraping/pci-jobs.sh
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+
+0 9 * * 1-5 /home/thiago/Work-repos/thraraujo.github.io/scripts/scraping-arxiv/arxiv.sh >> /home/thiago/logs/arxiv/arxiv-$(date +\%F-\%H\%M).log 2>&1

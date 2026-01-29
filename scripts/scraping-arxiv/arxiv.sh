@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting arXiv scrape"
+
+
+
+
 ARXIV=(hep-th math-ph nlin-ph cond-mat.stat-mech)
 
 BASE_DIR="/home/thiago/Work-repos/thraraujo.github.io/scripts/scraping-arxiv/"
@@ -30,3 +36,8 @@ do
 
     rm "$TEMP_FILE"
 done
+
+
+
+
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Finished successfully"
