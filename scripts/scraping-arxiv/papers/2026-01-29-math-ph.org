@@ -1,0 +1,27 @@
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov
+https://arxiv.org/abs/2601.20277 | The variable-length stem structures in three-soliton resonance of the Kadomtsev-Petviashvili II equation | Feng Yuan, Jingsong He, Yi Cheng
+https://arxiv.org/abs/2601.20373 | Miniatures on Open Quantum Systems | Jan Derezinski, Vojkan Jaksic, Claude-Alain Pillet
+https://arxiv.org/abs/2601.20762 | A Zero-Range Model for the Efimov Effect in the Born-Oppenheimer Approximation | G. Basti, D. Ferretti, A. Teta
+https://arxiv.org/abs/2601.19765 | Spectral Codes: A Geometric Formalism for Quantum Error Correction | Satoshi Kanno, Yoshi-aki Shimada
+https://arxiv.org/abs/2601.19993 | The homological algebra of 2d integrable field theories | Marco Benini, Alexander Schenkel, Benoit Vicedo
+https://arxiv.org/abs/2601.20012 | F-symbols and R-symbols for the Drinfeld center of the Haagerup subfactor | Fabian M\"aurer, Ulrich Thiel, Gert Vercleyen
+https://arxiv.org/abs/2601.20068 | Potential Carroll Structures and Special Carrollian Manifolds | Samuel Blitz, Gabriel Herczeg, David McNutt
+https://arxiv.org/abs/2601.20095 | First-Hitting Location Laws as Boundary Observables of Drift--Diffusion Processes | Yen-Chi Lee
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov
+https://arxiv.org/abs/2601.20235 | A Unified Variational Functional for Equidistribution and Alignment in Moving Mesh Adaptation | Wenbin Wang, Yunqing Huang, Huayi Wei
+https://arxiv.org/abs/2601.20739 | Toward the noncommutative minimal model program for Fano varieties | Tomohiro Karube, Antonios-Alexandros Robotis, Vanja Zuliani
+https://arxiv.org/abs/2601.20752 | Spectrum-generating algebra and intertwiners of the resonant Pais-Uhlenbeck oscillator | Andreas Fring, Ian Marquette, Takano Taira
+https://arxiv.org/abs/2601.20799 | Jacobi Hamiltonian Integrators: construction and applications | Ad\'erito Ara\'ujo, Gon\c{c}alo Inoc\^encio Oliveira, Jo\~ao Nuno Mestre
+https://arxiv.org/abs/2601.20828 | TQFTs do not detect the Milnor sphere | Ben Gripaios, Oscar Randal-Williams
+https://arxiv.org/abs/2601.20841 | Fast Solvers for the Reynolds Equation on Piecewise Linear Geometries | Sarah Dennis, Thomas G. Fai
+https://arxiv.org/abs/2111.10979 | Renormalization of crossing probabilities in the dilute Potts model | Pete Rigas
+https://arxiv.org/abs/2412.20336 | Moduli spaces and breather dynamics of analytic solutions in Heisenberg exchange-free chiral magnets | Bruno Barton-Singer, Stefano Bolognesi, Sven Bjarke Gudnason, Roberto Menta
+https://arxiv.org/abs/2502.14749 | The formation of a soliton gas condensate for the focusing Nonlinear Schr\"odinger equation | Aikaterini Gkogkou, Guido Mazzuca, Kenneth D. T-R McLaughlin
+https://arxiv.org/abs/2504.19512 | Gapped Boundaries of Kitaev's Quantum Double Models: A Lattice Realization of Anyon Condensation from Lagrangian Algebras | Mu Li, Xiao-Han Yang, Xiao-Yu Dong
+https://arxiv.org/abs/2509.07069 | Consistent Four-derivative Heterotic Truncations and the Kerr-Sen Solution | Liang Ma, Yi Pang, Robert J. Saskowski, Minghao Xia
+https://arxiv.org/abs/2512.05477 | Quantum geometry and $X$-wave magnets with $X=p,d,f,g,i$ | Motohiko Ezawa
+https://arxiv.org/abs/2512.12621 | Existence and nonexistence results for a nonlocal isoperimetric problem on $\mathbb{H}^n$ | Haizhong Li, Bo Yang
+https://arxiv.org/abs/2601.04840 | Three-dimensional Brownian loop soup clusters | Antoine Jego, Titus Lupu
+https://arxiv.org/abs/2601.06369 | Exact Solutions for Compactly Supported Parabolic and Landau Barriers | Peter Collas, David Klein
+https://arxiv.org/abs/2601.19993 | The homological algebra of 2d integrable field theories | Marco Benini, Alexander Schenkel, Benoit Vicedo
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov

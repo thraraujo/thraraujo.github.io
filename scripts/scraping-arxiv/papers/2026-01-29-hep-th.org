@@ -1,0 +1,66 @@
+https://arxiv.org/abs/2601.20286 | Quantum Cosmology as a Hydrogen atom: Discrete $\Lambda$ and cyclic Universes from Wheeler-DeWitt quantization | Dipayan Mukherjee, Harkirat Singh Sahota, S. Shankaranarayanan
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov
+https://arxiv.org/abs/2601.19977 | On the Wilson-Fisher fixed point in the limit of integer spacetime dimensions | Bernardo Zan
+https://arxiv.org/abs/2601.19979 | Exploring the holographic entropy cone via reinforcement learning | Temple He, Jaeha Lee, Hirosi Ooguri
+https://arxiv.org/abs/2601.19981 | Timelike Entanglement Signatures of Ergodicity and Spectral Chaos | Rathindra Nath Das, Arnab Kundu, Nemai Chandra Sarkar
+https://arxiv.org/abs/2601.19983 | Twisting Twistor space | Tim Meier, Eggon Viana
+https://arxiv.org/abs/2601.19993 | The homological algebra of 2d integrable field theories | Marco Benini, Alexander Schenkel, Benoit Vicedo
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov
+https://arxiv.org/abs/2601.20274 | Gluon knots as the dynamical core of baryons | Fan Lin, Xinyang Wang
+https://arxiv.org/abs/2601.20349 | Topological defects and scalar field modes in cosmological backgrounds | A. A. Saharian, G. V. Mirzoyan, G. H. Harutyunyan, R. M. Avagyan
+https://arxiv.org/abs/2601.20514 | Tidal perturbations and Love Symmetry for five-dimensional charged rotating black holes | M. Cveti\v{c}, M. A. Liao, M. M Stetsko
+https://arxiv.org/abs/2601.20567 | Localization-delocalization transition at weak coupling in two-color matrix QCD | Nirmalendu Acharyya, Prasanjit Aich, Arkajyoti Bandyopadhyay, Sachindeo Vaidya
+https://arxiv.org/abs/2601.20820 | Gravitationally Induced UV Completion of an $O(N)$ Scalar Theory | Alfio M. Bonanno, Emiliano M. Glaviano
+https://arxiv.org/abs/2601.19982 | FORM Version 5.0 | J. Davies, T. Kaneko, C. Marinissen, T. Ueda, J. A. M. Vermaseren
+https://arxiv.org/abs/2601.20003 | G\"{o}del-symmetric backgrounds and explicit spacetime symmetry breaking | C\'esar Riquelme, Carlos M. Reyes, A. F. Santos
+https://arxiv.org/abs/2601.20004 | Branch structure and nonextensive thermodynamics of Kalb-Ramond-ModMax black holes: observational signatures | Erdem Sucu, Izzet Sakalli, Emmanuel N. Saridakis
+https://arxiv.org/abs/2601.20053 | General Scalar Field Inflation ACT Attractors: Utilizing the $n_s(r)$ relation | V. K. Oikonomou
+https://arxiv.org/abs/2601.20056 | A Remedy of the Trans-Planckian Censorship Problem with Smooth Slow-roll to Power-law Inflation Transitions in Scalar Field Theory | S. D. Odintsov, V. K. Oikonomou
+https://arxiv.org/abs/2601.20070 | An Analytic Scale-dependent Dark Matter Profile and the Baryonic Tully-Fisher Relation | V. K. Oikonomou
+https://arxiv.org/abs/2601.20150 | Resurrecting the coherent state variational algorithm for large $N$ gauge theories | Laurence G. Yaffe
+https://arxiv.org/abs/2601.20166 | Complex nonlinear sigma model | Kazuki Yamamoto, Kohei Kawabata
+https://arxiv.org/abs/2601.20286 | Quantum Cosmology as a Hydrogen atom: Discrete $\Lambda$ and cyclic Universes from Wheeler-DeWitt quantization | Dipayan Mukherjee, Harkirat Singh Sahota, S. Shankaranarayanan
+https://arxiv.org/abs/2601.20436 | Violation of the Leggett-Garg inequality in photon-graviton conversion | Kimihiro Nomura, Akira Taniguchi, Kazushige Ueda
+https://arxiv.org/abs/2601.20527 | Thermodynamic Consistency as a Reliability Test for Complex Langevin Simulations | Anosh Joseph, Arpith Kumar
+https://arxiv.org/abs/2601.20530 | Pathology of the Unified Dark Sectors in Modified General Relativity | Mohsen Khodadi
+https://arxiv.org/abs/2601.20553 | Gravitational wave detection via photon-graviton scattering and quantum interference | K. Hari (IIT Bombay), S. Shankaranarayanan (IIT Bombay)
+https://arxiv.org/abs/2601.20557 | Detector's response to coherent Rindler and Minkowski photons | Pradeep Kumar Kumawat, Dipankar Barman, Bibhas Ranjan Majhi
+https://arxiv.org/abs/2601.20645 | Photon emission due to vacuum instability under the action of a quasi-constant electric field | T. C. Adorno, S. P. Gavrilov, D. M. Gitman
+https://arxiv.org/abs/2601.20752 | Spectrum-generating algebra and intertwiners of the resonant Pais-Uhlenbeck oscillator | Andreas Fring, Ian Marquette, Takano Taira
+https://arxiv.org/abs/2601.20828 | TQFTs do not detect the Milnor sphere | Ben Gripaios, Oscar Randal-Williams
+https://arxiv.org/abs/2601.20860 | Quantum teleportation in expanding FRW universe | Babak Vakili
+https://arxiv.org/abs/2406.01907 | Extended Massive Ambitwistor String | Christian Kunz
+https://arxiv.org/abs/2411.04857 | Spectral Constraints on Theories of Colored Particles and Gravity | Aaron Hillman, Yu-tin Huang, Laurentiu Rodina, Justinas Rumbutis
+https://arxiv.org/abs/2411.09409 | Post-Newtonian Effective Field Theory Approach to Entanglement Harvesting, Quantum Discord and Bell's Nonlocality Bound Near a Black Hole | Feng-Li Lin, Sayid Mondal
+https://arxiv.org/abs/2502.00357 | S-duality in higher-derivative corrections of heterotic supergravity | Mohammad R. Garousi
+https://arxiv.org/abs/2502.03581 | Extended Massive Ambitwistor String II | Christian Kunz
+https://arxiv.org/abs/2502.19468 | String islands, discrete theta angles and the 6D $\mathcal{N} = (1,1)$ string landscape | Zihni Kaan Baykara, H\'ector Parra De Freitas, Houri-Christina Tarazi
+https://arxiv.org/abs/2503.20865 | Non-invertible symmetries of two-dimensional Non-Linear Sigma Models | Guillermo Arias-Tamargo, Chris Hull, Maxwell L. Vel\'asquez Cotini Hutt
+https://arxiv.org/abs/2506.00525 | Gravitomagnetism from Temporal Dimensional Reduction | Mehran Z-Abyaneh, Mehrdad Farhoudi
+https://arxiv.org/abs/2507.17813 | Massive deformations of supersymmetric Yang-Mills matrix models | Adrien Martina
+https://arxiv.org/abs/2508.16721 | Symmetries, anomalies, and dualities of two-dimensional Non-Linear Sigma Models | Guillermo Arias-Tamargo, Maxwell L. Vel\'asquez Cotini Hutt
+https://arxiv.org/abs/2508.21068 | Framed defects in ABJ(M) | Marco S. Bianchi, Luigi Castiglioni, Silvia Penati, Marcia Tenser, Diego Trancanelli
+https://arxiv.org/abs/2509.07069 | Consistent Four-derivative Heterotic Truncations and the Kerr-Sen Solution | Liang Ma, Yi Pang, Robert J. Saskowski, Minghao Xia
+https://arxiv.org/abs/2511.05979 | Conformal bootstrap in Mellin space from GG systems | Koushik Ray
+https://arxiv.org/abs/2511.09642 | Full spectrum of Love numbers of Reissner-Nordstrom black hole in D-dimensions | Minghao Xia, Liang Ma, Yi Pang, H. Lu
+https://arxiv.org/abs/2512.07946 | Conformal Defects in Neural Network Field Theories | Pietro Capuozzo, Brandon Robinson, Benjamin Suzzoni
+https://arxiv.org/abs/2601.16256 | Conservative Black Hole Scattering at Fifth Post-Minkowskian and Second Self-Force Order | Mathias Driesse, Gustav Uhre Jakobsen, Gustav Mogull, Christoph Nega, Jan Plefka, Benjamin Sauer, Johann Usovitsch
+https://arxiv.org/abs/2601.18449 | Hamiltonian formulation of the $1+1$-dimensional $\phi^4$ theory in a momentum-space Daubechies wavelet basis | Mrinmoy Basak, Debsubhra Chakraborty, Nilmani Mathur, Raghunath Ratabole
+https://arxiv.org/abs/2601.19339 | Heat kernel approach to the one-loop effective action for nonlinear electrodynamics | Evgeny I. Buchbinder, Darren T. Grasso, Joshua R. Pinelli
+https://arxiv.org/abs/2403.13182 | The modular properties of $\mathfrak{sl}(2)$ torus $1$-point functions | Matthew Krauel, Jamal Noel Shafiq, Simon Wood
+https://arxiv.org/abs/2412.20336 | Moduli spaces and breather dynamics of analytic solutions in Heisenberg exchange-free chiral magnets | Bruno Barton-Singer, Stefano Bolognesi, Sven Bjarke Gudnason, Roberto Menta
+https://arxiv.org/abs/2503.23193 | Gravitational Landscapes: black holes with linear equations of state in asymptotically safe gravity | Ramin Hassannejad, Fatimah Shojai, Kazuharu Bamba
+https://arxiv.org/abs/2504.05708 | Thermodynamic supercriticality and complex phase diagram for the AdS black hole | Zhen-Ming Xu, Robert B. Mann
+https://arxiv.org/abs/2507.10696 | Twisting inflation to sub-Planckian axion decay constants | Peter Adshead, Suddhasattwa Brahma, Indranil Das
+https://arxiv.org/abs/2507.20307 | Confronting Inflation and Reheating with Observations: Improved Predictions | Ying-Ying Ye, Bao-Min Gu
+https://arxiv.org/abs/2509.16310 | Spectral instability of horizonless compact objects within astrophysical environments | Kyriakos Destounis, Mateus Malato Corr\^ea, Caio F. B. Macedo, Rodrigo Panosso Macedo
+https://arxiv.org/abs/2509.19704 | Holographic Aspects of Dynamical Mean-Field Theory | Kouichi Okunishi, Akihisa Koga
+https://arxiv.org/abs/2510.18022 | Constraining a de Broglie--Bohm quantum bounce cosmology with Planck data | Micol Benetti, Rudnei O. Ramos, Renato Silva, Gustavo S. Vicente
+https://arxiv.org/abs/2510.25605 | $QQ\bar Q\bar Q$ Quark System and Gauge/String Duality | Oleg Andreev
+https://arxiv.org/abs/2512.04986 | Inflationary relics from an Ultra-Slow-Roll plateau | Albert Escriv\`a, Jaume Garriga, Shi Pi
+https://arxiv.org/abs/2512.06082 | Hidden symmetries for tidal Love numbers: Generalities and applications to analog black holes | Valerio De Luca, Brandon Khek, Justin Khoury, Mark Trodden
+https://arxiv.org/abs/2512.15256 | Quantum Entanglement of Anyonic Charges and Emergent Spacetime Geometry | Hoang-Anh Le, Hyun Cheol Lee, S. -R. Eric Yang
+https://arxiv.org/abs/2601.18653 | Order Out of Noise and Disorder: Fate of the Frustrated Manifold | Igor Halperin
+https://arxiv.org/abs/2601.19779 | Tropical symmetries of cluster algebras | James Drummond, \"Omer G\"urdo\u{g}an, Jian-Rong Li
+https://arxiv.org/abs/2601.19993 | The homological algebra of 2d integrable field theories | Marco Benini, Alexander Schenkel, Benoit Vicedo
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov
