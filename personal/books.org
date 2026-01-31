@@ -11,7 +11,9 @@
 
 ** *Ebooks Kindle*
 - Filosofia  : Convite a Filosofia - Marilena Chauí
-- Politica   : A Essência do Cristianismo - Ludwig Feuerbach
+- Religião   : A Essência do Cristianismo - Ludwig Feuerbach
+- Religião   : Origens - Mircea Eliade
+- Política   : Nietzsche, O Rebelde Aristocrata - Domenico Losurdo
 - Clássicos  : Teogonia - Hesíodo
 - Brasileiro : Triste Fim de Policarpo Quaresma - Lima Barreto
 - Melissinha : Histórias Verdadeiras - Luciano de Samósata
