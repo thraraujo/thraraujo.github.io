@@ -2,17 +2,15 @@
 #+AUTHOR: Thiago Araujo
 #+YEAR: 2026
 
-* *Reading books*
-
 ** *Físicos*
 - Filosofia  : História da Filosofia, vol. 1 - Copleston
 - Religião   : O Sagrado e o Profano - Mircea Eliade
 - Religião   : Números - Bíblia
 
 ** *Ebooks Kindle*
+- Política   : [[file:2026-losurdo-rebelde-aristocrata.org][Nietzsche, O Rebelde Aristocrata - Domenico Losurdo]]
 - Filosofia  : Convite a Filosofia - Marilena Chauí
 - Religião   : Origens - Mircea Eliade
-- Política   : [[file:2026-losurdo-rebelde-aristocrata.org][Nietzsche, O Rebelde Aristocrata - Domenico Losurdo]]
 - Clássicos  : Teogonia - Hesíodo
 - Brasileiro : Triste Fim de Policarpo Quaresma - Lima Barreto
 - Melissinha : Histórias Verdadeiras - Luciano de Samósata

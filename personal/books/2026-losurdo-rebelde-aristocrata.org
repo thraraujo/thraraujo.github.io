@@ -1,9 +1,8 @@
-#+TITLE: O Rebvelde Aristocrata
+#+TITLE: O Rebelde Aristocrata
 #+AUTHOR: Thiago Araujo
 #+YEAR: 2026
 
 * *Cap 1*
-
 ** 1.1 & 1.2
 Losurdo argumenta como O Nascimento da Tragédia é um livro político, e
 toda a interpretação desse livro como um louvor a Wagner ou uma ode à
