@@ -4,6 +4,6 @@ echo "#######"
 echo "TEACHING:"
 awk -F';' '{sum += $4} END {printf "%.2f\n", sum}' 2026.csv
 echo "#######"
-echo "PROGRAMMING AND READING:"
+echo "OTHER:"
 awk -F';' '{sum += $5} END {printf "%.2f\n", sum}' 2026.csv
 
