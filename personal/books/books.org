@@ -8,6 +8,7 @@
 - Religião   : Números - Bíblia
 
 ** *Ebooks Kindle*
+- Política   : O Capital - Marx
 - Política   : [[file:2026-losurdo-rebelde-aristocrata.org][Nietzsche, O Rebelde Aristocrata - Domenico Losurdo]]
 - Filosofia  : [[file:2026-chaui-convite-filosofia.org][Convite a Filosofia - Marilena Chauí]]
 - Clássicos  : Teogonia - Hesíodo

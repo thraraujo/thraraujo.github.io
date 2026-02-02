@@ -8,4 +8,3 @@ zinn-justin
 alexandrov
 mironov
 morozov
-
