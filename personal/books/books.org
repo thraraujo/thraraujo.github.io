@@ -4,7 +4,7 @@
 
 ** *Físicos*
 - Filosofia  : História da Filosofia, vol. 1 - Copleston
-- Religião   : O Sagrado e o Profano - Mircea Eliade
+- Religião   : [[file:2026-eliade-sagrado-profano.org][O Sagrado e o Profano - Mircea Eliade]]
 - Religião   : Números - Bíblia
 
 ** *Ebooks Kindle*
