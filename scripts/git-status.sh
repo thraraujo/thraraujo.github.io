@@ -6,10 +6,9 @@ gitRepos=(
     $HOME/.config/scripts/
     $HOME/Work-repos/wiki/
     $HOME/Work-repos/thraraujo.github.io
-    $HOME/Work-repos/pySymmPol/
+    $HOME/Work-repos/pysymmpol/
     $HOME/Work-repos/cv-projects-documents/
     $HOME/Work-repos/papers/research-notebooks/
-    $HOME/Work-repos/papers/fisica-geral/
     $HOME/Work-repos/papers/slavnov/
 )
 
