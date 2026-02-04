@@ -2,15 +2,23 @@
 #+AUTHOR: Thiago Araujo
 #+YEAR: 2026
 
+* *Reading*
+
 ** *Físicos*
 - Filosofia  : História da Filosofia, vol. 1 - Copleston
 - Religião   : O Sagrado e o Profano - Mircea Eliade
-- Religião   : Números - Bíblia
 
 ** *Ebooks Kindle*
+- História   : The History of the World - Alex Woolf
+- História   : The History of the World - Jeremy Black
 - Política   : Do Socialismo Utopico ao Socialismo Científico - Engels
 - Política   : Nietzsche, O Rebelde Aristocrata - Domenico Losurdo
 - Filosofia  : Convite a Filosofia - Marilena Chauí
 - Clássicos  : Teogonia - Hesíodo
 - Brasileiro : Triste Fim de Policarpo Quaresma - Lima Barreto
 - Melissinha : Histórias Verdadeiras - Luciano de Samósata
+
+* *To Read*
+
+- Marx e a História - Gustavo Machado
+- Marx e a Filosofia - Gustavo Machado
