@@ -9,8 +9,8 @@ RESEARCH=$(awk -F '|' "NR==$SEMINAR {print \$4}" ./speaker.org)
 DAY=$(awk -F '|' "NR==$SEMINAR {print \$5}" ./speaker.org)
 
 BASE_DIR="/home/thiago/Work-repos/thraraujo.github.io/seminars-templates/"
-touch "./speakers/$NAME.org"
-OUTPUT="./speakers/$NAME.org"
+touch "./output/$NAME.org"
+OUTPUT="./output/$NAME.org"
 
 sed "s/{GENDER}/$GENDER/
     s/{NAME}/$NAME\ $SURNAME/
