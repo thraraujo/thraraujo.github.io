@@ -11,8 +11,8 @@ RESEARCH=$(awk -F '|' "NR==$SEMINAR {print \$4}" ./speaker.org)
 DAY=$(awk -F '|' "NR==$SEMINAR {print \$1}" ./speaker.org)
 
 BASE_DIR="/home/thiago/Work-repos/thraraujo.github.io/seminars-templates/"
-touch "./output/$NAME.org"
-OUTPUT="./output/$NAME.org"
+touch "./output/$NAME-convite.org"
+OUTPUT="./output/$NAME-convite.org"
 
 sed "s/{GREATINGS}/$PRONOUN01\ $TREATMENT\ $NAME\ $SURNAME/
      s/{PRONOUN}/$PRONOUN02/
