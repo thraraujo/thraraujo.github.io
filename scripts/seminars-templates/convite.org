@@ -1,15 +1,15 @@
-{GENDER} {NAME}, 
+{GREATINGS}, 
 
-Espero que este e-mail lhe encontre bem.
+Espero que este e-mail {PRONOUN} encontre bem.
 
 Meu nome é Thiago Araujo e sou docente do Departamento de Física da
 UFF em Volta Redonda. Atualmente, estou na organização do nosso ciclo
-de seminários e gostaria de lhe convidar para ministrar uma palestra
-presencial em nosso campus.
+de seminários e gostaria de {PRONOUN} convidar para ministrar uma
+palestra presencial em nosso campus.
 
 Temos acompanhado suas contribuições na "{RESEARCH}" e
 acreditamos que seria uma oportunidade valiosa para nossa comunidade
-conhecer mais sobre seus resultados da sua pesquisa.
+conhecer mais sobre os resultados da sua pesquisa.
 
 Gostaria de destacar que este ciclo de seminários tem como prioridade
 absoluta o nosso corpo discente. Por isso, buscamos uma apresentação
