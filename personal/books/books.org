@@ -7,11 +7,12 @@
 ** *Físicos*
 - Filosofia  : História da Filosofia, vol. 1 - Copleston
 - Religião   : O Sagrado e o Profano - Mircea Eliade
+- Matemática : Princíopios de Combinatória e Probabilidade - Tertuliano Franco
+- Política   : Nietzsche, O Rebelde Aristocrata - Domenico Losurdo (To print)
 
 ** *Ebooks Kindle*
 - História   : The History of the World - Jeremy Black
 - Política   : Do Socialismo Utopico ao Socialismo Científico - Engels
-- Política   : Nietzsche, O Rebelde Aristocrata - Domenico Losurdo
 - Filosofia  : Convite a Filosofia - Marilena Chauí
 - Clássico   : Teogonia - Hesíodo
 - Brasileiro : Triste Fim de Policarpo Quaresma - Lima Barreto
