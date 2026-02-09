@@ -12,7 +12,6 @@
 
 ** *Ebooks Kindle*
 - História   : The History of the World - Jeremy Black
-- Política   : Do Socialismo Utopico ao Socialismo Científico - Engels
 - Filosofia  : Convite a Filosofia - Marilena Chauí
 - Clássico   : Teogonia - Hesíodo
 - Classico   : Histórias Verdadeiras - Luciano de Samósata
@@ -22,3 +21,11 @@
 
 - Marx e a História - Gustavo Machado
 - Marx e a Filosofia - Gustavo Machado
+- O Sonho De Um Homem Ridículo - Fiódor Dostoiévski
+- A morte de Ivan Ilitch, Liev Tolstói
+- O Capote - Gogol
+- Diario de um louco - Gogol
+
+* *Read - 2026*
+
+- Política   : Do Socialismo Utopico ao Socialismo Científico - Engels
