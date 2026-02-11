@@ -14,7 +14,6 @@
 - História   : The History of the World - Jeremy Black
 - Filosofia  : Convite a Filosofia - Marilena Chauí
 - Clássico   : Teogonia - Hesíodo
-- Classico   : Histórias Verdadeiras - Luciano de Samósata
 - Brasileiro : Triste Fim de Policarpo Quaresma - Lima Barreto
 
 * *To Read*
@@ -25,7 +24,11 @@
 - A morte de Ivan Ilitch, Liev Tolstói
 - O Capote - Gogol
 - Diario de um louco - Gogol
+- Histórias - Herodoto
+- História da Guerra do Poloponeso - Tucidides
+- Helenicas - Xenofonte
 
 * *Read - 2026*
 
 - Política   : Do Socialismo Utopico ao Socialismo Científico - Engels
+- Classico   : Histórias Verdadeiras - Luciano de Samósata
