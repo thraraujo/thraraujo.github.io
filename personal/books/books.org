@@ -7,13 +7,13 @@
 ** *Físicos*
 - Filosofia  : História da Filosofia, vol. 1 - Copleston
 - Religião   : O Sagrado e o Profano - Mircea Eliade
-- Matemática : Princíopios de Combinatória e Probabilidade - Tertuliano Franco
 - Política   : Nietzsche, O Rebelde Aristocrata - Domenico Losurdo
+- Matemática : Princíopios de Combinatória e Probabilidade - Tertuliano Franco
 
 ** *Ebooks Kindle*
 - História   : The History of the World - Jeremy Black
 - Filosofia  : Convite a Filosofia - Marilena Chauí
-- Gregos     : Teogonia - Hesíodo
+- História   : Histórias - Herodoto
 - Brasileiro : Triste Fim de Policarpo Quaresma - Lima Barreto
 - Outros     : Você não merece ser feliz - Craque Daniel
 
@@ -22,11 +22,10 @@
 ** *Kindle*
 
 *** Greeks
-- Iliada - Homero
-- Odisseia - Homero
-- Histórias - Herodoto
-- História da Guerra do Poloponeso - Tucidides
-- Helenicas - Xenofonte
+- Iliada : Homero
+- Odisseia : Homero
+- História da Guerra do Poloponeso : Tucidides
+- Helenicas : Xenofonte
 
 ** *To Buy*
 
@@ -40,4 +39,5 @@
 * *Read - 2026*
 
 - Política   : Do Socialismo Utopico ao Socialismo Científico - Engels
-- Classico   : Histórias Verdadeiras - Luciano de Samósata
+- Clássico   : Histórias Verdadeiras - Luciano de Samósata
+- Clássico   : Teogonia - Hesíodo
