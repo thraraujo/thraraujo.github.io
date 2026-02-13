@@ -1,7 +1,18 @@
-#+TITLE: Estágio Probatório #+AUTHOR: Thiago Araujo
+#+TITLE: Estágio Probatório
+#+AUTHOR: Thiago Araujo
 #+YEAR: 2026
 
+
+* *Novo estágio probatório*
+
+- https://capacitacaoeggp.vr.uff.br/?page_id=3918
+- https://www.gov.br/servidor/pt-br/acesso-a-informacao/gestao-de-pessoas/desempenho-e-desenvolvimento-de-pessoas/estagio-probatorio-servidor
+- https://www.gov.br/servidor/pt-br/acesso-a-informacao/gestao-de-pessoas/desempenho-e-desenvolvimento-de-pessoas/AvaliaGOV/FAQEstagioProbatorio20250507.pdf
+
+
 * *Solicitação de Homologação de Estágio Probatório*
+
+- https://cppd.uff.br/processos/estagio-probatorio/
 
 ** Documentos necessários
 
