@@ -1,0 +1,5 @@
+https://arxiv.org/abs/2602.16088 | Group character averages via a single Laguerre | Alexei Morozov, Kazumi Okuyama
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov
+https://arxiv.org/abs/2602.16255 | Piecewise integrability of the discrete Hasimoto map for analytic prediction and design of helical peptides | Yiquan Wang
+https://arxiv.org/abs/2602.16267 | On the Lie noncommutative integrability | A. V. Tsiganov
+https://arxiv.org/abs/2601.20213 | Averages of Exponentials from the point of view of Superintegrability | A. Morozov

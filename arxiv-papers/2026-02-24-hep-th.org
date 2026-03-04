@@ -1,0 +1,4 @@
+https://arxiv.org/abs/2602.08143 | Elliptic Ruijsenaars-Toda and elliptic Toda chains: classical r-matrix structure and relation to XYZ chain | D. Murinov, A. Zotov
+https://arxiv.org/abs/2602.13903 | Integrable open elliptic Toda chain with boundaries | A. Zotov
+https://arxiv.org/abs/2512.21982 | Relating auxiliary field formulations of $4d$ duality-invariant and $2d$ integrable field theories | Nicola Baglioni, Daniele Bielli, Michele Galli, Gabriele Tartaglino-Mazzucchelli
+https://arxiv.org/abs/2602.13903 | Integrable open elliptic Toda chain with boundaries | A. Zotov

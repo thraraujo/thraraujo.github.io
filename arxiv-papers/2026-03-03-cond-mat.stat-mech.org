@@ -1,0 +1,2 @@
+https://arxiv.org/abs/2603.00317 | Coarse-grained Shannon entropy of random walks with shrinking steps | Alexander Feigel, Alexandre V. Morozov
+https://arxiv.org/abs/2603.02158 | Crossover from generalized to conventional hydrodynamics in nearly integrable systems under relaxation time approximation | Saikat Santra, Maciej {\L}ebek, Mi{\l}osz Panfil

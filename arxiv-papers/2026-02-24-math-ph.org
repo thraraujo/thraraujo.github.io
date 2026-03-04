@@ -1,0 +1,5 @@
+https://arxiv.org/abs/2602.08143 | Elliptic Ruijsenaars-Toda and elliptic Toda chains: classical r-matrix structure and relation to XYZ chain | D. Murinov, A. Zotov
+https://arxiv.org/abs/2602.13903 | Integrable open elliptic Toda chain with boundaries | A. Zotov
+https://arxiv.org/abs/2602.18687 | Existence of Riemannian invariants for integrable systems of hydrodynamic type | Alexey V. Bolsinov, Andrey Yu. Konyaev, Vladimir S. Matveev
+https://arxiv.org/abs/2602.13903 | Integrable open elliptic Toda chain with boundaries | A. Zotov
+https://arxiv.org/abs/2602.16255 | Piecewise integrability of the discrete Hasimoto map for analytic prediction and design of helical peptides | Yiquan Wang

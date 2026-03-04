@@ -1,0 +1,2 @@
+https://arxiv.org/abs/2602.23421 | Integrability breaking in semiclassical strings in Koopman-Krylov space | Rathindra Nath Das, Saskia Demulder
+https://arxiv.org/abs/2510.12290 | Classification and Birational Equivalence of Dimer Integrable Systems for Reflexive Polygons | Minsung Kho, Norton Lee, Rak-Kyeong Seong
