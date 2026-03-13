@@ -1,0 +1,4 @@
+https://arxiv.org/abs/2603.11172 | Integrable Free and Interacting Fermions | Zhao Zhang
+https://arxiv.org/abs/2603.12113 | Integrability from Homotopy Algebras | Luigi Alfonsi, Leron Borsten, Mehran Jalali Farahani, Hyungrok Kim, Martin Wolf, Charles Alastair Stephen Young
+https://arxiv.org/abs/2511.11521 | Integrability for the spectrum of Jordanian AdS/CFT | Sibylle Driezen, Fedor Levkovich-Maslyuk, Adrien Molines
+https://arxiv.org/abs/2601.09935 | Analytic approach to boundary integrability with application to mixed-flux $AdS_3 \times S^3$ | Julio Cabello Gil, Sibylle Driezen

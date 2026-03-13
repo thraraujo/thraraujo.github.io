@@ -1,0 +1,3 @@
+https://arxiv.org/abs/2603.11712 | Weak integrability breaking perturbations in classical integrable models on the lattice | Sara Vanovac, Catherine McCarthy, Federica Maria Surace, Olexei I. Motrunich
+https://arxiv.org/abs/2603.11172 | Integrable Free and Interacting Fermions | Zhao Zhang
+https://arxiv.org/abs/2511.11521 | Integrability for the spectrum of Jordanian AdS/CFT | Sibylle Driezen, Fedor Levkovich-Maslyuk, Adrien Molines
