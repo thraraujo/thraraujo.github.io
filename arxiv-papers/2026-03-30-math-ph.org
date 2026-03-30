@@ -1,0 +1,2 @@
+https://arxiv.org/abs/2512.07742 | Strong zero modes in integrable spin-S chains | Fabian H. L. Essler, Paul Fendley, Eric Vernier
+https://arxiv.org/abs/2505.05199 | Integrability and Chaos via fractal analysis of Spectral Form Factors: Gaussian approximations and exact results | Lorenzo Campos Venuti, Jovan Odavi\'c, Alioscia Hamma
