@@ -1,5 +1,0 @@
-https://arxiv.org/abs/2603.01722 | Ultraviolet completion of the inflationary paradigm | Leonardo Modesto, Lorenzo Orlando
-https://arxiv.org/abs/2603.01619 | A lift of the colored Jones polynomial of a knot | Stavros Garoufalidis, Campbell Wheeler
-https://arxiv.org/abs/2510.08125 | Noncommutative Regge-Wheeler potential: some nonperturbative results | Nikola Herceg, Tajron Juri\'c, A. Naveena Kumara, Andjelo Samsarov, Ivica Smoli\'c
-https://arxiv.org/abs/2602.13903 | Integrable open elliptic Toda chain with boundaries | A. Zotov
-https://arxiv.org/abs/2602.13903 | Integrable open elliptic Toda chain with boundaries | A. Zotov

@@ -1,1 +1,0 @@
-https://arxiv.org/abs/2505.23602 | Eigenstate Thermalization Hypothesis (ETH) for off-diagonal matrix elements in integrable spin chains | Federico Rottoli, Vincenzo Alba

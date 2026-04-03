@@ -1,4 +1,0 @@
-https://arxiv.org/abs/2601.09013 | Dirac Sources for Nonmetricity and Torsion in Metric-affine Gravity | James T. Wheeler
-https://arxiv.org/abs/2603.16915 | General off-diagonal integrability of metric and nonmetric geometric flow and Finsler-Lagrange-Hamilton modified Einstein equations | Sergiu I. Vacaru
-https://arxiv.org/abs/2603.17018 | On deforming and breaking integrability | Ysla F. Adans, Marius de Leeuw, Tristan McLoughlin
-https://arxiv.org/abs/2603.17394 | W-algebras of the Deligne-Cvitanovi\'{c} Exceptional series and the minimal 3d ${\mathcal N}=4$ SCFT | Thomas Creutzig, Niklas Garner, Byeonggi Go, Heeyeon Kim

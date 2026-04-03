@@ -1,2 +1,0 @@
-https://arxiv.org/abs/2603.07855 | Explicit Construction of Floquet-Bloch States from Arbitrary Solution Bases of the Hill Equation | Gregory V Morozov
-https://arxiv.org/abs/2603.07344 | A one-parameter integrable deformation of the Dirac--sinh-Gordon system | Laith H. Haddad

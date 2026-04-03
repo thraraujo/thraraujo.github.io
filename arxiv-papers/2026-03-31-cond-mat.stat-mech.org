@@ -1,2 +1,0 @@
-https://arxiv.org/abs/2603.27930 | A symmetry formula for correlation functions in the superintegrable chiral Potts spin chain | Haoran Zhu
-https://arxiv.org/abs/2411.01270 | Towers of Quantum Many-body Scars from Integrable Boundary States | Kazuyuki Sanada, Yuan Miao, Hosho Katsura

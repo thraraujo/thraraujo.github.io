@@ -1,3 +1,0 @@
-https://arxiv.org/abs/2510.24406 | Penrose limits and TsT for fibered $I$-branes | Marcelo R. Barbosa, Horatiu Nastase, Lucas S. Sousa
-https://arxiv.org/abs/2603.14439 | Geometric Aspects of Covariant Phase Space Formalism: Solution Space Slicings and Surface Charge Integrability | M. Golshani, M. M. Sheikh-Jabbari, V. Taghiloo, M. H. Vahidinia
-https://arxiv.org/abs/2509.04795 | The principal W-algebra of $\mathfrak{psl}_{2|2}$ | Zachary Fehily, Christopher Raymond, David Ridout

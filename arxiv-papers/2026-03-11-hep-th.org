@@ -1,1 +1,0 @@
-https://arxiv.org/abs/2603.06634 | A new Uncertainty Principle in Machine Learning | V. Dolotin, A. Morozov

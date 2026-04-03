@@ -1,2 +1,0 @@
-https://arxiv.org/abs/2506.16841 | Weyl's Relations, Integrable Matrix Models and Quantum Computation | B. Sriram Shastry, Emil A. Yuzbashyan, Aniket Patra
-https://arxiv.org/abs/2509.04795 | The principal W-algebra of $\mathfrak{psl}_{2|2}$ | Zachary Fehily, Christopher Raymond, David Ridout

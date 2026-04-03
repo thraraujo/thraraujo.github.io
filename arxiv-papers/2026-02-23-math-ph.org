@@ -1,2 +1,0 @@
-https://arxiv.org/abs/2602.16088 | Group character averages via a single Laguerre | Alexei Morozov, Kazumi Okuyama
-https://arxiv.org/abs/2602.17987 | Superintegrability and choreographic obstructions in dihedral $n$-body Hamiltonian systems | Adrian M Escobar-Ruiz, Manuel Fernandez-Guasti
